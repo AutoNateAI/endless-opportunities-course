@@ -1,0 +1,269 @@
+rules_version = '2';
+service cloud.firestore {
+  match /databases/{database}/documents {
+    
+    // ══════════════════════════════════════════════════════════════════
+    // HELPER FUNCTIONS
+    // ══════════════════════════════════════════════════════════════════
+    
+    // Check if user is authenticated
+    function isAuthenticated() {
+      return request.auth != null;
+    }
+    
+    // Check if user is the document owner
+    function isOwner(userId) {
+      return isAuthenticated() && request.auth.uid == userId;
+    }
+    
+    // Check if user has admin role
+    function isAdmin() {
+      return isAuthenticated() && 
+             exists(/databases/$(database)/documents/users/$(request.auth.uid)) &&
+             get(/databases/$(database)/documents/users/$(request.auth.uid)).data.role == 'admin';
+    }
+    
+    // ══════════════════════════════════════════════════════════════════
+    // USER COLLECTION
+    // ══════════════════════════════════════════════════════════════════
+    
+    match /users/{userId} {
+      // Users can read their own profile, admins can read all
+      allow read: if isOwner(userId) || isAdmin();
+      
+      // Users can create their own profile
+      allow create: if isOwner(userId);
+      
+      // Users can update their own profile (but not role), admins can update any
+      allow update: if isOwner(userId) || isAdmin();
+      
+      // Only admins can delete users
+      allow delete: if isAdmin();
+      
+      // All user subcollections and nested data (courseProgress, lessonProgress, etc.)
+      match /{document=**} {
+        allow read, write: if isOwner(userId) || isAdmin();
+      }
+    }
+    
+    // ══════════════════════════════════════════════════════════════════
+    // LEGACY: TOP-LEVEL COURSE PROGRESS (if any old data exists)
+    // ══════════════════════════════════════════════════════════════════
+    
+    match /courseProgress/{docId} {
+      allow read, write: if isAuthenticated();
+    }
+    
+    // ══════════════════════════════════════════════════════════════════
+    // LEGACY: TOP-LEVEL ACTIVITY ATTEMPTS
+    // ══════════════════════════════════════════════════════════════════
+    
+    match /activityAttempts/{attemptId} {
+      allow read, write: if isAuthenticated();
+    }
+    
+    // ══════════════════════════════════════════════════════════════════
+    // PARTNERSHIP PORTAL (Admin Only)
+    // ══════════════════════════════════════════════════════════════════
+    
+    match /partners/{partnerId} {
+      // Only admins can read/write partners
+      allow read, write: if isAdmin();
+      
+      // Interactions subcollection
+      match /interactions/{interactionId} {
+        allow read, write: if isAdmin();
+      }
+      
+      // Attachments subcollection
+      match /attachments/{attachmentId} {
+        allow read, write: if isAdmin();
+      }
+      
+      // Partner courses subcollection
+      match /courses/{courseId} {
+        allow read, write: if isAdmin();
+      }
+      
+      // Analytics events subcollection
+      match /analytics/{eventId} {
+        allow read, write: if isAdmin();
+      }
+    }
+    
+    // ══════════════════════════════════════════════════════════════════
+    // ORGANIZATIONS
+    // ══════════════════════════════════════════════════════════════════
+    
+    match /organizations/{orgId} {
+      allow read: if isAuthenticated();
+      allow write: if isAdmin();
+    }
+    
+    // ══════════════════════════════════════════════════════════════════
+    // COURSES (metadata)
+    // ══════════════════════════════════════════════════════════════════
+    
+    match /courses/{courseId} {
+      allow read: if isAuthenticated();
+      allow write: if isAdmin();
+    }
+    
+    // ══════════════════════════════════════════════════════════════════
+    // USER ANALYTICS (computed by Cloud Functions)
+    // ══════════════════════════════════════════════════════════════════
+    
+    // Users can read their own analytics, only Cloud Functions can write
+    match /userAnalytics/{userId} {
+      allow read: if isOwner(userId);
+      // Write access is restricted to Cloud Functions (via Admin SDK)
+      // Admin SDK bypasses security rules, so this effectively means
+      // no client-side writes are allowed
+      allow write: if false;
+    }
+    
+    // ══════════════════════════════════════════════════════════════════
+    // LEADERBOARDS (computed by Cloud Functions)
+    // ══════════════════════════════════════════════════════════════════
+    
+    // Leaderboards are readable by any authenticated user
+    match /leaderboards/{leaderboardId} {
+      allow read: if isAuthenticated();
+      // Only Cloud Functions can write leaderboard data
+      allow write: if false;
+    }
+    
+    // ══════════════════════════════════════════════════════════════════
+    // CONNECTIONS (peer matching)
+    // ══════════════════════════════════════════════════════════════════
+    
+    // Users can read connections they're part of
+    // Users can create connections where they are the initiator
+    // Users can update connections they're part of (accept/decline)
+    match /connections/{connectionId} {
+      allow read: if isAuthenticated() && 
+                     request.auth.uid in resource.data.participants;
+      allow create: if isAuthenticated() && 
+                       request.auth.uid == request.resource.data.initiatorId;
+      allow update: if isAuthenticated() && 
+                       request.auth.uid in resource.data.participants;
+      allow delete: if false; // Connections are soft-deleted via status
+    }
+    
+    // ══════════════════════════════════════════════════════════════════
+    // ACHIEVEMENTS (earned by users)
+    // ══════════════════════════════════════════════════════════════════
+
+    // Users can read their own achievements
+    // Only Cloud Functions can create/update achievements
+    match /achievements/{achievementId} {
+      allow read: if isAuthenticated() &&
+                     request.auth.uid == resource.data.userId;
+      allow write: if false; // Only Cloud Functions can write
+    }
+
+    // ══════════════════════════════════════════════════════════════════
+    // PRODUCTS (marketplace)
+    // ══════════════════════════════════════════════════════════════════
+
+    match /products/{productId} {
+      // Anyone can read products (public catalog)
+      allow read: if true;
+      // Only admins can write products
+      allow write: if isAdmin();
+    }
+
+    // ══════════════════════════════════════════════════════════════════
+    // PURCHASES (marketplace transactions)
+    // ══════════════════════════════════════════════════════════════════
+
+    match /purchases/{purchaseId} {
+      // Users can read their own purchases
+      allow read: if isAuthenticated() &&
+                     resource.data.userId == request.auth.uid;
+      // Only Cloud Functions can write (via Admin SDK)
+      allow write: if false;
+    }
+
+    // ══════════════════════════════════════════════════════════════════
+    // RETURNS (customer return requests)
+    // ══════════════════════════════════════════════════════════════════
+
+    match /returns/{returnId} {
+      // Users can read their own returns
+      allow read: if isAuthenticated() &&
+                     resource.data.userId == request.auth.uid;
+      // Users can create returns with their own userId
+      allow create: if isAuthenticated() &&
+                       request.resource.data.userId == request.auth.uid;
+      // Only admins/Cloud Functions can update or delete returns
+      allow update, delete: if isAdmin();
+    }
+
+    // ══════════════════════════════════════════════════════════════════
+    // FEED POSTS (AI-generated content feed)
+    // ══════════════════════════════════════════════════════════════════
+
+    match /feedPosts/{postId} {
+      // Anyone authenticated can read published posts
+      allow read: if isAuthenticated() && resource.data.status == 'published';
+      // Admins can read any status
+      allow read: if isAdmin();
+      // Only admin/Cloud Functions can create/update/delete posts
+      allow write: if isAdmin();
+
+      // Comments subcollection
+      match /comments/{commentId} {
+        // Authenticated users can read comments
+        allow read: if isAuthenticated();
+        // Users can create comments with their own userId
+        allow create: if isAuthenticated() &&
+                         request.resource.data.userId == request.auth.uid;
+        // Users can update/delete their own comments
+        allow update, delete: if isAuthenticated() &&
+                                 resource.data.userId == request.auth.uid;
+      }
+
+      // Likes subcollection (userId as doc ID)
+      match /likes/{userId} {
+        // Authenticated users can read likes
+        allow read: if isAuthenticated();
+        // Users can only create/delete their own like
+        allow create, delete: if isAuthenticated() && userId == request.auth.uid;
+      }
+    }
+
+    // ══════════════════════════════════════════════════════════════════
+    // COMMENT THREADS (AI-generated conversation threads)
+    // ══════════════════════════════════════════════════════════════════
+
+    match /commentThreads/{threadId} {
+      // Authenticated users can read comment threads
+      allow read: if isAuthenticated();
+      // Only admin/Cloud Functions can write
+      allow write: if isAdmin();
+    }
+
+    // ══════════════════════════════════════════════════════════════════
+    // PERSONAS (AI content creators)
+    // ══════════════════════════════════════════════════════════════════
+
+    match /personas/{personaId} {
+      // Authenticated users can read personas
+      allow read: if isAuthenticated();
+      // Only admin/Cloud Functions can write
+      allow write: if isAdmin();
+    }
+
+    // ══════════════════════════════════════════════════════════════════
+    // SCRAPED DATA (pipeline source content)
+    // ══════════════════════════════════════════════════════════════════
+
+    match /scrapedData/{docId} {
+      // Only admins can read scraped data
+      allow read: if isAdmin();
+      // Only admin/Cloud Functions can write
+      allow write: if isAdmin();
+    }
+  }
+}

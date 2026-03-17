@@ -1,0 +1,27 @@
+{
+  "hosting": {
+    "public": "courses",
+    "ignore": [
+      "firebase.json",
+      "**/.*",
+      "**/node_modules/**"
+    ]
+  },
+  "firestore": {
+    "rules": "firestore.rules",
+    "indexes": "firestore.indexes.json"
+  },
+  "storage": {
+    "rules": "storage.rules"
+  },
+  "functions": [
+    {
+      "source": "firebase-functions",
+      "codebase": "analytics",
+      "runtime": "nodejs20"
+    },
+    {
+      "source": "functions"
+    }
+  ]
+}

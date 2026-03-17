@@ -1,0 +1,627 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Endless Opportunities | Powered by AutoNateAI</title>
+    <meta
+      name="description"
+      content="A standalone learning hub for Endless Opportunities: youth-centered AI problem solving lessons, secure sign-in, and an instructor analytics view powered by AutoNateAI."
+    />
+    <meta property="og:title" content="Endless Opportunities | Powered by AutoNateAI" />
+    <meta
+      property="og:description"
+      content="Explore the AI Problem Solving Academy, sign in, and move through five weeks of guided learning."
+    />
+    <meta property="og:image" content="../assets/courses/course-endless-opportunities.png" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Endless Opportunities | Powered by AutoNateAI" />
+    <meta
+      name="twitter:description"
+      content="Youth-centered AI problem solving lessons, secure sign-in, and instructor analytics."
+    />
+    <meta name="twitter:image" content="../assets/courses/course-endless-opportunities.png" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Space+Grotesk:wght@500;700&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      :root {
+        --bg: #07110c;
+        --panel: rgba(13, 30, 22, 0.82);
+        --panel-strong: rgba(16, 38, 28, 0.94);
+        --line: rgba(158, 255, 196, 0.16);
+        --text: #f2f7f2;
+        --muted: #a8bcad;
+        --accent: #6ee7a0;
+        --accent-strong: #27c46c;
+        --accent-warm: #ffd166;
+        --shadow: 0 28px 80px rgba(0, 0, 0, 0.38);
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+
+      body {
+        margin: 0;
+        font-family: "Manrope", sans-serif;
+        color: var(--text);
+        background:
+          radial-gradient(circle at top left, rgba(110, 231, 160, 0.18), transparent 28%),
+          radial-gradient(circle at right 20%, rgba(255, 209, 102, 0.12), transparent 24%),
+          linear-gradient(180deg, #08120d 0%, #07110c 36%, #091610 100%);
+      }
+
+      a {
+        color: inherit;
+        text-decoration: none;
+      }
+
+      code {
+        font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
+      }
+
+      .shell {
+        width: min(1180px, calc(100% - 32px));
+        margin: 0 auto;
+      }
+
+      .topbar {
+        position: sticky;
+        top: 0;
+        z-index: 10;
+        backdrop-filter: blur(18px);
+        background: rgba(7, 17, 12, 0.74);
+        border-bottom: 1px solid rgba(158, 255, 196, 0.08);
+      }
+
+      .topbar-inner {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 16px;
+        padding: 18px 0;
+      }
+
+      .brand {
+        display: inline-flex;
+        align-items: center;
+        gap: 12px;
+        font-weight: 800;
+        letter-spacing: -0.03em;
+      }
+
+      .brand-mark {
+        width: 44px;
+        height: 44px;
+        display: grid;
+        place-items: center;
+        border-radius: 14px;
+        background: linear-gradient(135deg, rgba(110, 231, 160, 0.24), rgba(255, 209, 102, 0.18));
+        border: 1px solid rgba(158, 255, 196, 0.14);
+      }
+
+      .brand-copy span {
+        display: block;
+      }
+
+      .brand-copy .eyebrow {
+        font-size: 0.74rem;
+        text-transform: uppercase;
+        letter-spacing: 0.12em;
+        color: var(--accent);
+      }
+
+      .brand-copy .title {
+        font-family: "Space Grotesk", sans-serif;
+        font-size: 1rem;
+      }
+
+      .nav {
+        display: flex;
+        align-items: center;
+        gap: 12px;
+        flex-wrap: wrap;
+        justify-content: flex-end;
+      }
+
+      .nav a {
+        color: var(--muted);
+        font-size: 0.95rem;
+      }
+
+      .btn {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        gap: 10px;
+        border-radius: 999px;
+        padding: 14px 20px;
+        font-weight: 700;
+      }
+
+      .btn-primary {
+        background: linear-gradient(135deg, var(--accent-strong), var(--accent));
+        color: #05200f;
+        box-shadow: 0 14px 32px rgba(39, 196, 108, 0.28);
+      }
+
+      .btn-secondary {
+        background: rgba(255, 255, 255, 0.04);
+        border: 1px solid var(--line);
+      }
+
+      .hero {
+        padding: 72px 0 56px;
+      }
+
+      .hero-grid {
+        display: grid;
+        grid-template-columns: 1.15fr 0.85fr;
+        gap: 28px;
+        align-items: stretch;
+      }
+
+      .hero-panel,
+      .glass-card,
+      .feature-card,
+      .roadmap-card,
+      .cta-panel {
+        border: 1px solid var(--line);
+        background: var(--panel);
+        box-shadow: var(--shadow);
+      }
+
+      .hero-panel {
+        border-radius: 32px;
+        padding: 34px;
+      }
+
+      .eyebrow-pill {
+        display: inline-flex;
+        align-items: center;
+        gap: 10px;
+        border-radius: 999px;
+        padding: 10px 14px;
+        background: rgba(110, 231, 160, 0.08);
+        border: 1px solid rgba(110, 231, 160, 0.18);
+        color: var(--accent);
+        font-size: 0.8rem;
+        font-weight: 700;
+        text-transform: uppercase;
+        letter-spacing: 0.08em;
+      }
+
+      h1,
+      h2,
+      h3 {
+        margin: 0;
+        font-family: "Space Grotesk", sans-serif;
+        letter-spacing: -0.04em;
+      }
+
+      h1 {
+        margin-top: 20px;
+        font-size: clamp(2.8rem, 7vw, 5rem);
+        line-height: 0.96;
+      }
+
+      .hero-copy {
+        margin-top: 20px;
+        max-width: 680px;
+        font-size: 1.08rem;
+        line-height: 1.75;
+        color: var(--muted);
+      }
+
+      .hero-actions,
+      .cta-actions {
+        display: flex;
+        gap: 14px;
+        margin-top: 28px;
+        flex-wrap: wrap;
+      }
+
+      .hero-meta {
+        display: grid;
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        gap: 14px;
+        margin-top: 32px;
+      }
+
+      .hero-stat {
+        border-radius: 22px;
+        padding: 18px;
+        background: rgba(255, 255, 255, 0.03);
+        border: 1px solid rgba(255, 255, 255, 0.05);
+      }
+
+      .hero-stat strong {
+        display: block;
+        margin-top: 8px;
+        font-size: 1.35rem;
+      }
+
+      .hero-stat span {
+        color: var(--muted);
+        font-size: 0.9rem;
+      }
+
+      .glass-card {
+        border-radius: 32px;
+        padding: 26px;
+        display: flex;
+        flex-direction: column;
+        gap: 18px;
+        background: linear-gradient(180deg, rgba(16, 38, 28, 0.96), rgba(10, 22, 16, 0.96));
+      }
+
+      .glass-card img,
+      .preview-frame img {
+        width: 100%;
+        border-radius: 22px;
+        border: 1px solid rgba(255, 255, 255, 0.08);
+        display: block;
+      }
+
+      .caption {
+        display: inline-flex;
+        align-items: center;
+        gap: 10px;
+        font-size: 0.8rem;
+        color: var(--accent-warm);
+        text-transform: uppercase;
+        letter-spacing: 0.1em;
+      }
+
+      .section {
+        padding: 18px 0 64px;
+      }
+
+      .section-head {
+        display: flex;
+        justify-content: space-between;
+        gap: 18px;
+        align-items: end;
+        margin-bottom: 26px;
+      }
+
+      .section-head p,
+      .feature-card p,
+      .roadmap-card p,
+      .glass-card p,
+      .cta-panel p,
+      .preview-copy p {
+        color: var(--muted);
+        line-height: 1.7;
+      }
+
+      .feature-grid,
+      .roadmap-grid,
+      .preview-grid {
+        display: grid;
+        gap: 18px;
+      }
+
+      .feature-grid {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+      }
+
+      .roadmap-grid {
+        grid-template-columns: repeat(5, minmax(0, 1fr));
+      }
+
+      .preview-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+
+      .feature-card,
+      .roadmap-card {
+        border-radius: 24px;
+        padding: 22px;
+      }
+
+      .feature-kicker,
+      .roadmap-week {
+        color: var(--accent);
+        font-size: 0.8rem;
+        text-transform: uppercase;
+        letter-spacing: 0.08em;
+        font-weight: 800;
+      }
+
+      .roadmap-card strong {
+        font-size: 1.55rem;
+        color: var(--accent-warm);
+      }
+
+      .preview-frame {
+        border-radius: 28px;
+        overflow: hidden;
+        border: 1px solid var(--line);
+        background: var(--panel-strong);
+        box-shadow: var(--shadow);
+      }
+
+      .preview-copy {
+        padding: 20px 22px 22px;
+      }
+
+      .cta-panel {
+        border-radius: 34px;
+        padding: 30px;
+        display: flex;
+        justify-content: space-between;
+        gap: 24px;
+        align-items: center;
+        background:
+          linear-gradient(120deg, rgba(39, 196, 108, 0.15), rgba(255, 209, 102, 0.08)),
+          var(--panel);
+      }
+
+      .footer {
+        padding: 0 0 56px;
+      }
+
+      .footer-card {
+        border-top: 1px solid rgba(158, 255, 196, 0.12);
+        padding-top: 22px;
+        display: flex;
+        justify-content: space-between;
+        gap: 18px;
+        color: var(--muted);
+        flex-wrap: wrap;
+      }
+
+      .footer-card strong {
+        color: var(--text);
+      }
+
+      @media (max-width: 1024px) {
+        .hero-grid,
+        .feature-grid,
+        .preview-grid {
+          grid-template-columns: 1fr;
+        }
+
+        .roadmap-grid {
+          grid-template-columns: repeat(2, minmax(0, 1fr));
+        }
+      }
+
+      @media (max-width: 720px) {
+        .topbar-inner,
+        .section-head,
+        .cta-panel,
+        .footer-card {
+          flex-direction: column;
+          align-items: flex-start;
+        }
+
+        .hero-meta,
+        .roadmap-grid {
+          grid-template-columns: 1fr;
+        }
+
+        .nav {
+          width: 100%;
+          justify-content: flex-start;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <header class="topbar">
+      <div class="shell topbar-inner">
+        <a class="brand" href="../index.html">
+          <span class="brand-mark">🚀</span>
+          <span class="brand-copy">
+            <span class="eyebrow">Powered by AutoNateAI</span>
+            <span class="title">Endless Opportunities</span>
+          </span>
+        </a>
+        <nav class="nav">
+          <a href="../auth/login.html">Sign In</a>
+          <a href="../auth/register.html">Create Account</a>
+          <a href="../admin/analytics/endless-opportunities.html">Analytics</a>
+          <a class="btn btn-primary" href="../endless-opportunities/week0-intro/">Start Week 0</a>
+        </nav>
+      </div>
+    </header>
+
+    <main>
+      <section class="hero">
+        <div class="shell hero-grid">
+          <article class="hero-panel">
+            <span class="eyebrow-pill">Youth AI Problem Solving Academy</span>
+            <h1>Build real problem-solvers, not passive watchers.</h1>
+            <p class="hero-copy">
+              Endless Opportunities now has its own learning hub: a focused five-week experience
+              where students learn how to ask sharper questions, work with data, build useful things,
+              and present what they made. The platform experience, sign-in flow, and lesson analytics are
+              all powered by AutoNateAI.
+            </p>
+            <div class="hero-actions">
+              <a class="btn btn-primary" href="../endless-opportunities/week0-intro/">Enter the Academy</a>
+              <a class="btn btn-secondary" href="../auth/register.html">Get Student Access</a>
+            </div>
+            <div class="hero-meta">
+              <div class="hero-stat">
+                <span>Program Format</span>
+                <strong>5 Weeks</strong>
+              </div>
+              <div class="hero-stat">
+                <span>Learning Style</span>
+                <strong>Interactive + Narrative</strong>
+              </div>
+              <div class="hero-stat">
+                <span>Built With</span>
+                <strong>Auth + Analytics</strong>
+              </div>
+            </div>
+          </article>
+
+          <aside class="glass-card">
+            <span class="caption">Standalone Course Portal</span>
+            <img src="../assets/courses/course-endless-opportunities.png" alt="Endless Opportunities course artwork" />
+            <div>
+              <h2>One clean destination for learning, access control, and class visibility.</h2>
+              <p>
+                Students authenticate once, move through protected lesson pages, and instructors can review
+                engagement from a dedicated EO analytics dashboard. AutoNateAI is embedded as the platform layer,
+                not as an afterthought.
+              </p>
+            </div>
+          </aside>
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="shell">
+          <div class="section-head">
+            <div>
+              <span class="eyebrow-pill">What This Portal Covers</span>
+              <h2 style="margin-top: 16px;">The extracted EO experience</h2>
+            </div>
+            <p>
+              This standalone repo is focused on exactly what matters here: the Endless Opportunities course,
+              secure sign-in, role-based access checks, and a class analytics surface for admins.
+            </p>
+          </div>
+          <div class="feature-grid">
+            <article class="feature-card">
+              <div class="feature-kicker">Protected Lessons</div>
+              <h3>Organization-gated course flow</h3>
+              <p>Lesson pages are still protected behind Firebase Auth plus the <code>endless-opportunities</code> organization requirement.</p>
+            </article>
+            <article class="feature-card">
+              <div class="feature-kicker">Student Access</div>
+              <h3>Simple sign-in and registration</h3>
+              <p>The auth flow is trimmed for this course so users land back in the academy instead of the old multi-course dashboard.</p>
+            </article>
+            <article class="feature-card">
+              <div class="feature-kicker">Admin View</div>
+              <h3>EO-specific analytics</h3>
+              <p>Instructors and admins can review accuracy, attempts, participation, and struggling activities without sorting through other programs.</p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="shell">
+          <div class="section-head">
+            <div>
+              <span class="eyebrow-pill">Weekly Journey</span>
+              <h2 style="margin-top: 16px;">Five weeks from curiosity to portfolio</h2>
+            </div>
+            <p>The original lesson structure is intact. Students still move through the same sequential EO path, but now in its own dedicated repo.</p>
+          </div>
+          <div class="roadmap-grid">
+            <article class="roadmap-card">
+              <div>
+                <div class="roadmap-week">Week 0</div>
+                <h3>The Game We Live In</h3>
+                <p>Frame life as a series of solvable problems and connect AI to opportunity.</p>
+              </div>
+              <strong>01</strong>
+            </article>
+            <article class="roadmap-card">
+              <div>
+                <div class="roadmap-week">Week 1</div>
+                <h3>The Art of Questions</h3>
+                <p>Learn how sharp questions create better thinking, better prompts, and better results.</p>
+              </div>
+              <strong>02</strong>
+            </article>
+            <article class="roadmap-card">
+              <div>
+                <div class="roadmap-week">Week 2</div>
+                <h3>Working with Data</h3>
+                <p>See how information becomes usable when it is structured, compared, and interpreted.</p>
+              </div>
+              <strong>03</strong>
+            </article>
+            <article class="roadmap-card">
+              <div>
+                <div class="roadmap-week">Week 3</div>
+                <h3>Building Real Things</h3>
+                <p>Turn ideas into practical outputs with small systems, workflows, and hands-on exercises.</p>
+              </div>
+              <strong>04</strong>
+            </article>
+            <article class="roadmap-card">
+              <div>
+                <div class="roadmap-week">Week 4</div>
+                <h3>Problem Solver Portfolio</h3>
+                <p>Package what was learned into a clear body of work students can show and continue building on.</p>
+              </div>
+              <strong>05</strong>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="shell">
+          <div class="section-head">
+            <div>
+              <span class="eyebrow-pill">Instructor Visibility</span>
+              <h2 style="margin-top: 16px;">AutoNateAI surfaces the class signal</h2>
+            </div>
+            <p>The analytics page stays course-specific. Admins can see how students are progressing without pulling data from the rest of the old site.</p>
+          </div>
+          <div class="preview-grid">
+            <article class="preview-frame">
+              <img src="../assets/screenshots/dashboard-preview.png" alt="Preview of student dashboard interface" />
+              <div class="preview-copy">
+                <h3>Student progress context</h3>
+                <p>The learning flow still tracks completion and activity so students can pick up where they left off.</p>
+              </div>
+            </article>
+            <article class="preview-frame">
+              <img src="../assets/screenshots/analytics0preview.png" alt="Preview of analytics dashboard" />
+              <div class="preview-copy">
+                <h3>EO analytics at a glance</h3>
+                <p>Accuracy, participation, timeline activity, and struggling exercises are visible through the dedicated admin view.</p>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="shell">
+          <div class="cta-panel">
+            <div>
+              <span class="eyebrow-pill">Powered by AutoNateAI</span>
+              <h2 style="margin-top: 16px;">Ready to launch students into the academy?</h2>
+              <p>Sign in if you already have access, create an account if you are onboarding a new learner, or jump straight into Week 0 if you are testing the extracted site.</p>
+            </div>
+            <div class="cta-actions">
+              <a class="btn btn-primary" href="../auth/login.html">Student Sign In</a>
+              <a class="btn btn-secondary" href="../auth/register.html">Create Account</a>
+              <a class="btn btn-secondary" href="../admin/analytics/endless-opportunities.html">Open Analytics</a>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <div class="shell footer-card">
+        <div>
+          <strong>Endless Opportunities x AutoNateAI</strong>
+          <div>A standalone course portal for AI problem solving instruction.</div>
+        </div>
+        <div>
+          <strong>Built into this extraction</strong>
+          <div>Landing page, auth flow, protected lessons, and EO analytics.</div>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

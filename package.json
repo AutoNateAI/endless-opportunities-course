@@ -1,0 +1,13 @@
+{
+  "name": "eo-course",
+  "private": true,
+  "scripts": {
+    "dev": "firebase emulators:start --only hosting",
+    "dev:full": "firebase emulators:start --only hosting,functions",
+    "setup:functions": "npm --prefix firebase-functions install && npm --prefix functions install",
+    "deploy": "firebase deploy"
+  },
+  "devDependencies": {
+    "firebase-tools": "^14.6.0"
+  }
+}
