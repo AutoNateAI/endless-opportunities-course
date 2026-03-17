@@ -5,9 +5,11 @@
     "dev": "firebase emulators:start --only hosting --project autonateai-learning-hub",
     "dev:full": "firebase emulators:start --only hosting,functions --project autonateai-learning-hub",
     "setup:functions": "npm --prefix firebase-functions install && npm --prefix functions install",
-    "deploy": "firebase deploy"
+    "deploy": "firebase deploy",
+    "deploy:pages": "gh-pages -d courses -b gh-pages -m \"Deploy GitHub Pages\""
   },
   "devDependencies": {
-    "firebase-tools": "^14.6.0"
+    "firebase-tools": "^14.6.0",
+    "gh-pages": "^6.3.0"
   }
 }

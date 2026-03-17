@@ -28,6 +28,20 @@ npm run dev:full
 
 This starts Firebase hosting and functions emulators together.
 
+## GitHub Pages
+
+Deploy the static site to the `gh-pages` branch with:
+
+```bash
+npm run deploy:pages
+```
+
+For GitHub Pages settings, use:
+
+- Source: `Deploy from a branch`
+- Branch: `gh-pages`
+- Folder: `/ (root)`
+
 ## Important
 
 - Client-side Firebase config is in `courses/shared/js/firebase-config.js`
