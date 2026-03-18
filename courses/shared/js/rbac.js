@@ -1,5 +1,5 @@
 /**
- * Role-Based Access Control (RBAC) Service for AutoNateAI Learning Hub
+ * Role-Based Access Control (RBAC) Service for the learning hub
  * 
  * Handles user roles, organization access, and course permissions.
  * 
@@ -634,6 +634,7 @@ const RBACService = {
   handleAccessDenied(reason = 'unauthorized') {
     const path = window.location.pathname;
     let basePath = '';
+    const currentCourseId = document.body?.dataset?.course || this.getCourseIdFromPath(path);
     
     // Calculate base path
     const parts = path.split('/');
@@ -651,13 +652,17 @@ const RBACService = {
         break;
 
       case 'unauthorized':
-        // Redirect to catalog with message
-        window.location.href = basePath + 'catalog.html?error=unauthorized';
+        // Redirect to the current course landing when possible
+        window.location.href = currentCourseId
+          ? `${basePath}course/${currentCourseId}.html?error=unauthorized`
+          : basePath + 'index.html?error=unauthorized';
         break;
 
       case 'organization':
-        // Redirect to enterprise page
-        window.location.href = basePath + 'enterprise.html?error=organization';
+        // Redirect to the current course landing when possible
+        window.location.href = currentCourseId
+          ? `${basePath}course/${currentCourseId}.html?error=organization`
+          : basePath + 'index.html?error=organization';
         break;
 
       default:
@@ -673,6 +678,19 @@ const RBACService = {
     console.log('🔐 Current User Permissions:', permissions);
     console.log('🔐 Accessible Courses:', await this.getAccessibleCourses());
     return permissions;
+  },
+
+  getCourseIdFromPath(pathname) {
+    const parts = pathname.split('/');
+    const coursesIndex = parts.indexOf('courses');
+    if (coursesIndex !== -1 && parts[coursesIndex + 1]) {
+      const potentialCourse = parts[coursesIndex + 1];
+      if (!['auth', 'shared', 'dashboard', 'course', 'blog', 'assets'].includes(potentialCourse)) {
+        return potentialCourse;
+      }
+    }
+
+    return null;
   }
 };
 
@@ -687,4 +705,3 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   }, 200);
 });
-

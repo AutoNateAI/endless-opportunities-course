@@ -1,8 +1,6 @@
 /**
- * Route Guard for AutoNateAI Learning Hub
- * Protects course content from unauthorized access
- * 
- * Integrates with RBACService for role-based and organization-based access control.
+ * Route Guard for the learning hub.
+ * Protects course content from unauthorized access.
  */
 
 const RouteGuard = {
@@ -46,7 +44,12 @@ const RouteGuard = {
       }
     }
     
-    // Check if it's a course lesson page (protected)
+    const requirements = this.getCourseRequirements();
+    if (requirements?.requiresAuth) {
+      return true;
+    }
+
+    // Check if it's a legacy course lesson page (protected)
     if (path.includes('/ch0-') ||
         path.includes('/ch1-') || 
         path.includes('/ch2-') || 
@@ -70,6 +73,9 @@ const RouteGuard = {
    * @returns {string|null} Course ID or null if not in a course
    */
   getCourseFromPath() {
+    const courseFromBody = document.body?.dataset?.course;
+    if (courseFromBody) return courseFromBody;
+
     const path = window.location.pathname;
     const parts = path.split('/');
     
@@ -101,11 +107,26 @@ const RouteGuard = {
    * Initialize route guard with RBAC integration
    */
   async init() {
+    if (this._initPromise) {
+      return this._initPromise;
+    }
+
+    this._initPromise = this._runInit();
+    return this._initPromise;
+  },
+
+  async _runInit() {
     // Wait for Firebase and services to initialize
     if (!window.FirebaseApp || !window.AuthService) {
       console.error('Firebase or AuthService not loaded');
       return;
     }
+
+    if (!window.FirebaseApp.getAuth()) {
+      window.FirebaseApp.init();
+    }
+
+    await window.AuthService.init();
 
     // Wait for auth state to be determined
     const user = await window.AuthService.waitForAuthState();

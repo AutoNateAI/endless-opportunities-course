@@ -135,7 +135,7 @@ const DataService = {
             body: `${courseName} is now ${milestone}% complete.`,
             source: 'progress',
             relatedId: courseId,
-            link: `../dashboard/course.html?id=${courseId}`,
+            link: `../course/${courseId}.html`,
             metadata: { progressPercent: milestone }
           });
           notificationMilestones[milestone] = true;
@@ -256,7 +256,7 @@ const DataService = {
             body: `You've spent ${milestone.hours} hour${milestone.hours === 1 ? '' : 's'} learning in ${courseName}.`,
             source: 'progress',
             relatedId: courseId,
-            link: `../dashboard/course.html?id=${courseId}`,
+            link: `../course/${courseId}.html`,
             metadata: { hours: milestone.hours }
           });
           timeMilestonesNotified[milestone.seconds] = true;
@@ -456,7 +456,7 @@ const DataService = {
         body: `You're enrolled in ${courseData.name}.`,
         source: 'progress',
         relatedId: courseId,
-        link: `../dashboard/course.html?id=${courseId}`
+        link: `../course/${courseId}.html`
       });
       return { success: true };
     } catch (error) {
@@ -1606,4 +1606,3 @@ const DataService = {
 
 // Export
 window.DataService = DataService;
-

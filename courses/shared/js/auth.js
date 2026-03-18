@@ -1,6 +1,6 @@
 /**
- * Authentication Service for AutoNateAI Learning Hub
- * Handles user registration, login, logout, and session management
+ * Authentication Service for the learning hub.
+ * Handles user registration, login, logout, and session management.
  */
 
 const AuthService = {
@@ -10,16 +10,23 @@ const AuthService = {
   redirectAfterLogin: null,
   _authReadyPromise: null,
   _authReadyResolve: null,
+  _initialized: false,
 
   /**
    * Initialize auth service and set up auth state listener
    */
   init() {
+    if (this._initialized && this._authReadyPromise) {
+      return this._authReadyPromise;
+    }
+
     const auth = window.FirebaseApp.getAuth();
     if (!auth) {
       console.error('Firebase Auth not initialized');
-      return;
+      return Promise.resolve(null);
     }
+
+    this._initialized = true;
 
     // Create a promise that resolves when auth is truly ready
     this._authReadyPromise = new Promise((resolve) => {
@@ -63,6 +70,8 @@ const AuthService = {
       
       this.notifyListeners(user);
     });
+
+    return this._authReadyPromise;
   },
 
   /**
@@ -320,4 +329,3 @@ const AuthService = {
 
 // Export
 window.AuthService = AuthService;
-

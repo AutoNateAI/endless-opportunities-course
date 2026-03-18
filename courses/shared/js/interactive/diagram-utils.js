@@ -846,8 +846,8 @@ window.DiagramUtils = {
 };
 
 /**
- * Fix navbar links to point to the correct course dashboard
- * Auto-runs on page load for lesson pages
+ * Fix lesson navbar links to point back to the real course landing page.
+ * Auto-runs on page load for lesson pages.
  */
 (function fixNavbarLinks() {
   // Get course ID from body data attribute
@@ -856,7 +856,7 @@ window.DiagramUtils = {
   
   if (!courseId) return;
   
-  const courseDashboardUrl = `../../dashboard/course.html?id=${courseId}`;
+  const courseDashboardUrl = `../../course/${courseId}.html`;
   
   // Course display names
   const courseNames = {
