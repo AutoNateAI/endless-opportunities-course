@@ -4,6 +4,9 @@
  */
 
 const AuthService = {
+  DEFAULT_COURSE_ID: 'endless-opportunities',
+  DEFAULT_COURSE_HOME: '../dashboard/course.html?id=endless-opportunities',
+
   // State
   currentUser: null,
   authStateListeners: [],
@@ -208,6 +211,9 @@ const AuthService = {
 
     try {
       await userRef.set(userData, { merge: true });
+      await userRef.set({
+        organizationAccess: firebase.firestore.FieldValue.arrayUnion(this.DEFAULT_COURSE_ID)
+      }, { merge: true });
       await prefsRef.set({
         inApp: true,
         email: false,
@@ -220,6 +226,7 @@ const AuthService = {
         },
         createdAt: firebase.firestore.FieldValue.serverTimestamp()
       }, { merge: true });
+      await this.ensureDefaultCourseAccess(user, additionalData.displayName);
       console.log('User document created/updated');
     } catch (error) {
       console.error('Error creating user document:', error);
@@ -239,11 +246,45 @@ const AuthService = {
       await userRef.update({
         lastLoginAt: firebase.firestore.FieldValue.serverTimestamp()
       });
+      await this.ensureDefaultCourseAccess(user);
     } catch (error) {
       // Document might not exist yet
       if (error.code === 'not-found') {
         await this.createUserDocument(user);
       }
+    }
+  },
+
+  /**
+   * Ensure the signed-in user can access the EO course and has a courseProgress doc.
+   */
+  async ensureDefaultCourseAccess(user, displayName = null) {
+    const db = window.FirebaseApp.getDb();
+    if (!db || !user?.uid) return;
+
+    const userRef = db.collection('users').doc(user.uid);
+    const progressRef = userRef.collection('courseProgress').doc(this.DEFAULT_COURSE_ID);
+
+    try {
+      await userRef.set({
+        organizationAccess: firebase.firestore.FieldValue.arrayUnion(this.DEFAULT_COURSE_ID),
+        displayName: displayName || user.displayName || user.email?.split('@')[0] || 'Student',
+        lastLoginAt: firebase.firestore.FieldValue.serverTimestamp()
+      }, { merge: true });
+
+      await progressRef.set({
+        courseId: this.DEFAULT_COURSE_ID,
+        courseName: 'Endless Opportunities',
+        courseIcon: '🚀',
+        enrolledAt: firebase.firestore.FieldValue.serverTimestamp(),
+        lastActivity: firebase.firestore.FieldValue.serverTimestamp(),
+        progressPercent: 0,
+        completedLessons: 0,
+        totalLessons: 5,
+        lessons: {}
+      }, { merge: true });
+    } catch (error) {
+      console.error('Error ensuring default course access:', error);
     }
   },
 

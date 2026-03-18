@@ -124,7 +124,10 @@ const DataService = {
         }
       });
       
-      const progressPercent = Math.round((completedLessons / 7) * 100);
+      const totalLessons = this.getLessonsStructure(courseId).totalLessons;
+      const progressPercent = totalLessons > 0
+        ? Math.round((completedLessons / totalLessons) * 100)
+        : 0;
 
       const milestonePercents = [25, 50, 75, 100];
       for (const milestone of milestonePercents) {
@@ -152,11 +155,11 @@ const DataService = {
       await progressRef.set({
         progressPercent,
         completedLessons,
-        totalLessons: 7, // Fixed for our 7-chapter courses (includes ch0-origins)
+        totalLessons,
         notificationMilestones
       }, { merge: true });
       
-      console.log('📊 Course progress updated:', completedLessons, '/ 7 complete');
+      console.log('📊 Course progress updated:', completedLessons, '/', totalLessons, 'complete');
     } catch (error) {
       console.error('Error recalculating progress:', error);
     }
@@ -436,6 +439,7 @@ const DataService = {
     const progressRef = db.collection('users').doc(user.uid)
                          .collection('courseProgress').doc(courseId);
     
+    const totalLessons = this.getLessonsStructure(courseId).totalLessons;
     const enrollmentData = {
       courseId,
       courseName: courseData.name,
@@ -444,7 +448,7 @@ const DataService = {
       lastActivity: firebase.firestore.FieldValue.serverTimestamp(),
       progressPercent: 0,
       completedLessons: 0,
-      totalLessons: 7, // Includes ch0-origins pre-quest
+      totalLessons,
       lessons: {}
     };
     

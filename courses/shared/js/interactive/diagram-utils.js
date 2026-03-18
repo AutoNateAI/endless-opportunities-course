@@ -856,7 +856,7 @@ window.DiagramUtils = {
   
   if (!courseId) return;
   
-  const courseDashboardUrl = `../../course/${courseId}.html`;
+  const courseDashboardUrl = `../../dashboard/course.html?id=${courseId}`;
   
   // Course display names
   const courseNames = {

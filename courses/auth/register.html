@@ -195,7 +195,7 @@
         // Check if already logged in
         window.AuthService.onAuthStateChanged((user) => {
           if (user && !showingSuccess) {
-            const redirect = window.AuthService.getRedirectUrl() || '../course/endless-opportunities.html';
+            const redirect = window.AuthService.getRedirectUrl() || '../dashboard/course.html?id=endless-opportunities';
             window.location.href = redirect;
           }
         });
@@ -322,7 +322,7 @@
 
           // Redirect after 2 seconds
           setTimeout(() => {
-            const redirect = window.AuthService.getRedirectUrl() || '../course/endless-opportunities.html';
+            const redirect = window.AuthService.getRedirectUrl() || '../dashboard/course.html?id=endless-opportunities';
             window.location.href = redirect;
           }, 2000);
         }

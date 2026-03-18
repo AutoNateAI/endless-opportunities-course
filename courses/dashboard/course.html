@@ -1,0 +1,540 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Student Dashboard | Endless Opportunities</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../shared/css/dashboard.css">
+  <style>
+    .dashboard { display: none !important; }
+    .dashboard.ready { display: flex !important; }
+    .auth-loading {
+      position: fixed;
+      inset: 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: var(--bg-primary);
+      z-index: 9999;
+    }
+    .auth-loading.hidden { display: none; }
+    .loading-content { text-align: center; color: var(--text-primary); }
+    .loading-spinner {
+      width: 40px;
+      height: 40px;
+      border: 3px solid rgba(121, 134, 203, 0.25);
+      border-top-color: var(--accent-primary);
+      border-radius: 50%;
+      margin: 0 auto 1rem;
+      animation: spin 0.8s linear infinite;
+    }
+    @keyframes spin { to { transform: rotate(360deg); } }
+
+    .hero-card {
+      display: grid;
+      gap: 1rem;
+      padding: 1.6rem;
+      border-radius: var(--radius-xl);
+      background:
+        linear-gradient(120deg, rgba(121, 134, 203, 0.12), rgba(77, 182, 172, 0.1)),
+        var(--bg-card);
+      border: 1px solid rgba(255, 255, 255, 0.06);
+      margin-bottom: var(--space-xl);
+    }
+    .hero-card__eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      width: fit-content;
+      padding: 0.35rem 0.8rem;
+      border-radius: 999px;
+      background: rgba(121, 134, 203, 0.14);
+      color: var(--accent-primary);
+      font-size: 0.75rem;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+    }
+    .hero-card__title {
+      font-family: var(--font-display);
+      font-size: clamp(1.8rem, 4vw, 2.8rem);
+      line-height: 1;
+    }
+    .hero-card__copy {
+      max-width: 60ch;
+      color: var(--text-secondary);
+    }
+    .hero-card__actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.75rem;
+    }
+
+    .btn-primary,
+    .btn-secondary {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      padding: 0.85rem 1.15rem;
+      border-radius: 999px;
+      font-weight: 700;
+      text-decoration: none;
+      border: 1px solid transparent;
+    }
+    .btn-primary {
+      background: linear-gradient(135deg, var(--accent-primary), var(--accent-secondary));
+      color: #081018;
+    }
+    .btn-secondary {
+      background: rgba(255, 255, 255, 0.03);
+      color: var(--text-primary);
+      border-color: rgba(255, 255, 255, 0.08);
+    }
+
+    .dashboard-grid {
+      display: grid;
+      grid-template-columns: 1.15fr 0.85fr;
+      gap: var(--space-lg);
+    }
+    .panel-card {
+      background: var(--bg-card);
+      border: 1px solid rgba(255,255,255,0.06);
+      border-radius: var(--radius-lg);
+      padding: 1.25rem;
+      display: grid;
+      gap: 1rem;
+    }
+    .panel-card h2 {
+      font-family: var(--font-display);
+      font-size: 1.1rem;
+    }
+    .course-progress {
+      display: grid;
+      gap: 0.85rem;
+    }
+    .progress-track {
+      height: 10px;
+      overflow: hidden;
+      border-radius: 999px;
+      background: rgba(255,255,255,0.06);
+    }
+    .progress-fill {
+      height: 100%;
+      width: 0;
+      border-radius: 999px;
+      background: linear-gradient(90deg, var(--accent-primary), var(--accent-secondary));
+      transition: width 0.4s ease;
+    }
+    .lesson-list {
+      display: grid;
+      gap: 0.75rem;
+    }
+    .lesson-row {
+      display: flex;
+      gap: 0.85rem;
+      align-items: center;
+      justify-content: space-between;
+      padding: 0.9rem 1rem;
+      border-radius: 14px;
+      background: rgba(255,255,255,0.03);
+      border: 1px solid rgba(255,255,255,0.04);
+    }
+    .lesson-row__meta { min-width: 0; }
+    .lesson-row__title { font-weight: 600; }
+    .lesson-row__desc { font-size: 0.83rem; color: var(--text-muted); }
+    .lesson-row__status {
+      white-space: nowrap;
+      font-size: 0.78rem;
+      font-weight: 700;
+      padding: 0.35rem 0.6rem;
+      border-radius: 999px;
+    }
+    .lesson-row__status.complete {
+      background: rgba(102, 187, 106, 0.16);
+      color: var(--accent-success);
+    }
+    .lesson-row__status.active {
+      background: rgba(255, 213, 79, 0.14);
+      color: var(--accent-warning);
+    }
+    .lesson-row__status.locked {
+      background: rgba(255,255,255,0.06);
+      color: var(--text-muted);
+    }
+    .insight-list,
+    .activity-list {
+      display: grid;
+      gap: 0.75rem;
+    }
+    .insight-item,
+    .activity-item {
+      padding: 0.95rem 1rem;
+      border-radius: 14px;
+      background: rgba(255,255,255,0.03);
+      border: 1px solid rgba(255,255,255,0.04);
+    }
+    .insight-item__title,
+    .activity-item__title {
+      font-weight: 600;
+    }
+    .insight-item__desc,
+    .activity-item__meta {
+      color: var(--text-secondary);
+      font-size: 0.85rem;
+      margin-top: 0.35rem;
+    }
+    .learning-style {
+      display: grid;
+      gap: 0.5rem;
+      padding: 1rem;
+      border-radius: 16px;
+      background: rgba(121, 134, 203, 0.08);
+      border: 1px solid rgba(121, 134, 203, 0.16);
+    }
+    .learning-style__label {
+      font-size: 0.78rem;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      color: var(--text-muted);
+      font-weight: 700;
+    }
+    .learning-style__title {
+      font-family: var(--font-display);
+      font-size: 1.3rem;
+    }
+    .empty-state {
+      color: var(--text-secondary);
+      padding: 1rem;
+      border-radius: 14px;
+      background: rgba(255,255,255,0.03);
+      border: 1px dashed rgba(255,255,255,0.1);
+    }
+    @media (max-width: 980px) {
+      .dashboard-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+    @media (max-width: 768px) {
+      .hero-card { padding: 1.2rem; }
+      .hero-card__actions { flex-direction: column; }
+      .hero-card__actions a { width: 100%; }
+    }
+  </style>
+
+  <script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-app-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-auth-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-firestore-compat.js"></script>
+</head>
+<body>
+  <div class="auth-loading" id="auth-loading">
+    <div class="loading-content">
+      <div class="loading-spinner"></div>
+      <p>Loading your student dashboard...</p>
+    </div>
+  </div>
+
+  <div class="dashboard" id="dashboard-content">
+    <aside class="sidebar" id="sidebar">
+      <a href="../course/endless-opportunities.html" class="sidebar-logo">
+        <div class="logo-icon">🚀</div>
+        <span class="logo-text">Endless Opportunities</span>
+      </a>
+
+      <nav class="sidebar-nav">
+        <div class="nav-section">
+          <span class="nav-section-title">Student</span>
+          <ul class="nav-list">
+            <li class="nav-item">
+              <a href="course.html?id=endless-opportunities" class="nav-link active">
+                <span class="nav-icon">🏠</span>
+                <span class="nav-text">Dashboard</span>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a href="progress.html?id=endless-opportunities" class="nav-link">
+                <span class="nav-icon">📈</span>
+                <span class="nav-text">My Progress</span>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a href="../course/endless-opportunities.html" class="nav-link">
+                <span class="nav-icon">🧭</span>
+                <span class="nav-text">Course Home</span>
+              </a>
+            </li>
+          </ul>
+        </div>
+        <div class="nav-section">
+          <span class="nav-section-title">Account</span>
+          <ul class="nav-list">
+            <li class="nav-item">
+              <a href="#" class="nav-link" id="logout-link">
+                <span class="nav-icon">🚪</span>
+                <span class="nav-text">Sign Out</span>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+
+      <div class="sidebar-user">
+        <div class="user-card">
+          <div class="user-avatar" id="user-avatar">?</div>
+          <div class="user-info">
+            <div class="user-name" id="user-name">Loading...</div>
+            <div class="user-streak" id="user-streak">Preparing your dashboard</div>
+          </div>
+        </div>
+      </div>
+
+      <button class="sidebar-toggle" id="sidebar-toggle" type="button">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <polyline points="15 18 9 12 15 6"></polyline>
+        </svg>
+      </button>
+    </aside>
+
+    <div class="sidebar-overlay" id="sidebar-overlay"></div>
+
+    <main class="main-content">
+      <header class="main-header">
+        <div class="header-left">
+          <button class="mobile-menu-btn" id="mobile-menu-btn">☰</button>
+          <h1 class="page-title">Student Dashboard</h1>
+        </div>
+      </header>
+
+      <div class="content-area">
+        <section class="hero-card">
+          <div class="hero-card__eyebrow">Course Progress</div>
+          <div class="hero-card__title" id="hero-title">Welcome back</div>
+          <div class="hero-card__copy" id="hero-copy">Your EO progress and recommendations will show up here.</div>
+          <div class="hero-card__actions">
+            <a class="btn-primary" id="continue-link" href="../endless-opportunities/week0-intro/">Continue Learning</a>
+            <a class="btn-secondary" href="progress.html?id=endless-opportunities">Open Full Progress View</a>
+          </div>
+        </section>
+
+        <section class="stats-grid">
+          <article class="stat-card">
+            <div class="stat-header">
+              <div class="stat-icon courses">🚀</div>
+            </div>
+            <div class="stat-value" id="stat-progress">0%</div>
+            <div class="stat-label">Course complete</div>
+          </article>
+          <article class="stat-card">
+            <div class="stat-header">
+              <div class="stat-icon lessons">📚</div>
+            </div>
+            <div class="stat-value" id="stat-lessons">0 / 5</div>
+            <div class="stat-label">Weeks completed</div>
+          </article>
+          <article class="stat-card">
+            <div class="stat-header">
+              <div class="stat-icon streak">🔥</div>
+            </div>
+            <div class="stat-value" id="stat-streak">0</div>
+            <div class="stat-label">Current streak</div>
+          </article>
+          <article class="stat-card">
+            <div class="stat-header">
+              <div class="stat-icon time">🎯</div>
+            </div>
+            <div class="stat-value" id="stat-accuracy">0%</div>
+            <div class="stat-label">Accuracy</div>
+          </article>
+        </section>
+
+        <section class="dashboard-grid">
+          <article class="panel-card">
+            <h2>Your EO journey</h2>
+            <div class="course-progress">
+              <div class="progress-track"><div class="progress-fill" id="progress-fill"></div></div>
+              <div id="progress-summary" class="stat-label">0 of 5 weeks complete</div>
+            </div>
+            <div class="lesson-list" id="lesson-list"></div>
+          </article>
+
+          <div style="display:grid; gap: var(--space-lg);">
+            <article class="panel-card">
+              <h2>Learning profile</h2>
+              <div class="learning-style">
+                <div class="learning-style__label">Learning style</div>
+                <div class="learning-style__title" id="learning-style-title">Still emerging</div>
+                <div id="learning-style-copy" class="stat-label">Complete a few more activities to unlock a clearer pattern.</div>
+              </div>
+            </article>
+
+            <article class="panel-card">
+              <h2>Recommendations</h2>
+              <div class="insight-list" id="recommendation-list"></div>
+            </article>
+
+            <article class="panel-card">
+              <h2>Recent activity</h2>
+              <div class="activity-list" id="activity-list"></div>
+            </article>
+          </div>
+        </section>
+      </div>
+    </main>
+  </div>
+
+  <script src="../shared/js/firebase-config.js"></script>
+  <script src="../shared/js/auth.js"></script>
+  <script src="../shared/js/route-guard.js"></script>
+  <script src="../shared/js/data-service.js"></script>
+  <script src="../shared/js/user-analytics-service.js"></script>
+  <script>
+    const COURSE_ID = 'endless-opportunities';
+
+    function formatTimestamp(value) {
+      const date = value?.toDate?.() || (value?._seconds ? new Date(value._seconds * 1000) : null);
+      if (!date) return 'No timestamp yet';
+      return date.toLocaleDateString(undefined, { month: 'short', day: 'numeric' });
+    }
+
+    function setupSidebar() {
+      const sidebar = document.getElementById('sidebar');
+      const overlay = document.getElementById('sidebar-overlay');
+      const mobileBtn = document.getElementById('mobile-menu-btn');
+      const collapseBtn = document.getElementById('sidebar-toggle');
+
+      mobileBtn?.addEventListener('click', () => sidebar.classList.toggle('open'));
+      overlay?.addEventListener('click', () => sidebar.classList.remove('open'));
+      collapseBtn?.addEventListener('click', () => sidebar.classList.toggle('collapsed'));
+    }
+
+    function renderLessonList(courseProgress) {
+      const container = document.getElementById('lesson-list');
+      const lessons = window.DataService.getLessonsStructure(COURSE_ID).lessons;
+      const nextLesson = window.DataService.getNextLesson(courseProgress, COURSE_ID);
+
+      container.innerHTML = lessons.map((lesson) => {
+        const lessonData = courseProgress?.lessons?.[lesson.id] || {};
+        const isComplete = lessonData.completed || lessonData.progressPercent >= 100;
+        const isActive = nextLesson?.lessonId === lesson.id && !isComplete;
+        const statusClass = isComplete ? 'complete' : (isActive ? 'active' : 'locked');
+        const statusText = isComplete ? 'Complete' : (isActive ? 'Next up' : 'In progress');
+
+        return `
+          <div class="lesson-row">
+            <div class="lesson-row__meta">
+              <div class="lesson-row__title">${lesson.icon} ${lesson.name}</div>
+              <div class="lesson-row__desc">${lesson.desc}</div>
+            </div>
+            <div class="lesson-row__status ${statusClass}">${statusText}</div>
+          </div>
+        `;
+      }).join('');
+    }
+
+    function renderRecommendations(recommendations) {
+      const container = document.getElementById('recommendation-list');
+      if (!recommendations.length) {
+        container.innerHTML = '<div class="empty-state">No recommendations yet. Finish a few activities and they will appear here.</div>';
+        return;
+      }
+
+      container.innerHTML = recommendations.map((item) => `
+        <div class="insight-item">
+          <div class="insight-item__title">${item.icon} ${item.title}</div>
+          <div class="insight-item__desc">${item.description}</div>
+        </div>
+      `).join('');
+    }
+
+    function renderActivity(attempts) {
+      const container = document.getElementById('activity-list');
+      if (!attempts.length) {
+        container.innerHTML = '<div class="empty-state">No activity has been tracked yet. Start a lesson and your recent work will appear here.</div>';
+        return;
+      }
+
+      container.innerHTML = attempts.map((attempt) => `
+        <div class="activity-item">
+          <div class="activity-item__title">${attempt.correct ? '✅' : '📝'} ${attempt.lessonId || attempt.activityId}</div>
+          <div class="activity-item__meta">
+            ${attempt.activityType || 'activity'} · ${attempt.correct ? 'Correct' : 'Needs another try'} · ${formatTimestamp(attempt.createdAt)}
+          </div>
+        </div>
+      `).join('');
+    }
+
+    document.addEventListener('DOMContentLoaded', async () => {
+      setupSidebar();
+
+      if (window.FirebaseApp) {
+        window.FirebaseApp.init();
+      }
+
+      await window.AuthService.init();
+      const user = await window.AuthService.waitForAuthState();
+
+      if (!user) {
+        window.AuthService.setRedirectUrl(window.location.href);
+        window.location.href = '../auth/login.html';
+        return;
+      }
+
+      await window.AuthService.ensureDefaultCourseAccess(user);
+
+      const [courseProgress, insights, recommendations, attempts] = await Promise.all([
+        window.DataService.getCourseProgress(COURSE_ID),
+        window.UserAnalyticsService.getLearningInsights(user.uid),
+        window.UserAnalyticsService.getRecommendations(user.uid),
+        window.DataService.getActivityAttempts({ courseId: COURSE_ID, limit: 6 })
+      ]);
+
+      const completedLessons = window.DataService.getCompletedLessonsCount(courseProgress, COURSE_ID);
+      const totalLessons = window.DataService.getLessonsStructure(COURSE_ID).totalLessons;
+      const progressPercent = courseProgress?.progressPercent ?? Math.round((completedLessons / totalLessons) * 100);
+      const nextLesson = window.DataService.getNextLesson(courseProgress, COURSE_ID);
+      const accuracy = insights.analytics?.persistenceMetrics?.overallAccuracy
+        ? Math.round(insights.analytics.persistenceMetrics.overallAccuracy * 100)
+        : 0;
+      const streak = insights.engagement?.currentStreak || 0;
+
+      document.getElementById('user-name').textContent = user.displayName || user.email || 'Student';
+      document.getElementById('user-avatar').textContent = (user.displayName || user.email || 'S').trim().charAt(0).toUpperCase();
+      document.getElementById('user-streak').textContent = streak > 0 ? `🔥 ${streak}-day streak` : 'Start a streak today';
+
+      document.getElementById('hero-title').textContent = `Welcome back, ${(user.displayName || 'student').split(' ')[0]}`;
+      document.getElementById('hero-copy').textContent = nextLesson?.allComplete
+        ? 'You have completed every EO week. Review your progress details and keep sharpening your strongest skills.'
+        : `Your next best move is ${nextLesson.lessonName}. Keep building your momentum one week at a time.`;
+      document.getElementById('continue-link').href = nextLesson?.link || '../endless-opportunities/week0-intro/';
+      document.getElementById('continue-link').textContent = nextLesson?.allComplete
+        ? 'Review Progress'
+        : `Continue ${nextLesson.lessonLabel || 'Week'} ${nextLesson?.lessonIndex + 1}`;
+
+      document.getElementById('stat-progress').textContent = `${progressPercent}%`;
+      document.getElementById('stat-lessons').textContent = `${completedLessons} / ${totalLessons}`;
+      document.getElementById('stat-streak').textContent = String(streak);
+      document.getElementById('stat-accuracy').textContent = `${accuracy}%`;
+      document.getElementById('progress-fill').style.width = `${progressPercent}%`;
+      document.getElementById('progress-summary').textContent = `${completedLessons} of ${totalLessons} weeks complete`;
+
+      document.getElementById('learning-style-title').textContent = `${insights.learningStyle.icon} ${insights.learningStyle.name}`;
+      document.getElementById('learning-style-copy').textContent = insights.learningStyle.description;
+
+      renderLessonList(courseProgress || {});
+      renderRecommendations(recommendations);
+      renderActivity(attempts);
+
+      document.getElementById('logout-link').addEventListener('click', async (event) => {
+        event.preventDefault();
+        await window.AuthService.logout();
+        window.location.href = '../course/endless-opportunities.html';
+      });
+
+      document.getElementById('auth-loading').classList.add('hidden');
+      document.getElementById('dashboard-content').classList.add('ready');
+    });
+  </script>
+</body>
+</html>
