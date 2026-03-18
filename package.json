@@ -2,11 +2,12 @@
   "name": "eo-course",
   "private": true,
   "scripts": {
+    "build": "node scripts/build-gh-pages.mjs",
     "dev": "firebase emulators:start --only hosting --project autonateai-learning-hub",
     "dev:full": "firebase emulators:start --only hosting,functions --project autonateai-learning-hub",
     "setup:functions": "npm --prefix firebase-functions install && npm --prefix functions install",
     "deploy": "firebase deploy",
-    "deploy:pages": "gh-pages -d courses -b gh-pages -m \"Deploy GitHub Pages\""
+    "deploy:pages": "gh-pages -d dist -b gh-pages -m \"Deploy GitHub Pages\""
   },
   "devDependencies": {
     "firebase-tools": "^14.6.0",
