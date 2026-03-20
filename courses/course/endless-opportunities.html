@@ -405,6 +405,51 @@
         padding: 10px 0 18px;
       }
 
+      .video-feature {
+        display: grid;
+        gap: 14px;
+      }
+
+      .video-frame {
+        border-radius: 26px;
+        overflow: hidden;
+        border: 1px solid var(--line);
+        background:
+          radial-gradient(circle at top left, rgba(127, 226, 159, 0.16), transparent 24%),
+          var(--bg-panel-strong);
+        box-shadow: var(--shadow);
+      }
+
+      .video-frame video {
+        width: 100%;
+        display: block;
+        aspect-ratio: 16 / 9;
+        background: #020604;
+      }
+
+      .video-copy {
+        display: grid;
+        gap: 10px;
+        padding: 18px;
+        border-radius: 24px;
+        border: 1px solid var(--line);
+        background: var(--bg-panel);
+        box-shadow: var(--shadow);
+      }
+
+      .video-copy p,
+      .video-copy li {
+        color: var(--muted);
+        line-height: 1.65;
+      }
+
+      .video-list {
+        display: grid;
+        gap: 8px;
+        margin: 0;
+        padding-left: 18px;
+      }
+
       .section-head {
         display: grid;
         gap: 10px;
@@ -701,6 +746,40 @@
               </div>
             </div>
           </aside>
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="shell video-feature">
+          <div class="section-head">
+            <div>
+              <span class="eyebrow-pill">New Promo Video</span>
+              <h2 style="margin-top: 12px;">See the product before you ever click into a week</h2>
+            </div>
+            <p>
+              This cut uses real EO screens, a generated voiceover, and motion-timed product shots to show how the course teaches through storytelling diagrams, interactive activities, and student progress feedback.
+            </p>
+          </div>
+
+          <div class="video-frame">
+            <video
+              controls
+              playsinline
+              preload="metadata"
+              poster="../assets/screenshots/dashboard-preview.png"
+            >
+              <source src="../assets/video/eo-course-promo.mp4" type="video/mp4" />
+            </video>
+          </div>
+
+          <div class="video-copy">
+            <h3>What the promo emphasizes</h3>
+            <ul class="video-list">
+              <li>Mobile-first landing and dashboard flow instead of a cluttered course homepage.</li>
+              <li>Interactive diagram lessons with narration and guided playback.</li>
+              <li>Embedded activities and progress analytics so students keep proving they learned it.</li>
+            </ul>
+          </div>
         </div>
       </section>
 
