@@ -512,9 +512,13 @@
         DiagramUtils.initPageAnimations();
         DiagramUtils.setupBackToTop();
 
-        // Load story and quiz data from JSON
-        const response = await fetch("story.json");
-        const pageData = await response.json();
+        // Load story and storyboard data from JSON
+        const [storyResponse, storyboardResponse] = await Promise.all([
+          fetch("story.json"),
+          fetch("storyboards.json"),
+        ]);
+        const pageData = await storyResponse.json();
+        const storyboardData = await storyboardResponse.json();
 
         // Create a shared audio engine pointing to the audio folder
         const audioEngine = new AudioNarrationEngine("audio");
@@ -719,6 +723,7 @@
             audioEngine,
             storyId: story.id,
             forcedVoice: "sage",
+            storyboardFrames: storyboardData[story.id] || [],
           });
         });
 

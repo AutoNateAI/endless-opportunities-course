@@ -33,6 +33,7 @@ class StorytellingDiagram {
       storyId: containerId, // Default to containerId, can be overridden
       audioEngine: null, // Optional shared audio engine
       forcedVoice: null,
+      storyboardFrames: [],
       ...options
     };
     this.currentStep = -1;
@@ -68,6 +69,8 @@ class StorytellingDiagram {
     
     // Show all nodes/edges initially (dimmed)
     this.showAllDimmed();
+
+    this.setupStoryboardStrip();
     
     // Setup controls
     this.setupControls();
@@ -285,6 +288,90 @@ class StorytellingDiagram {
   hideTooltip() {
     this.tooltip.classList.remove('visible');
     this.tooltipNode = null;
+  }
+
+  // ============================================
+  // STORYBOARD STRIP
+  // ============================================
+
+  setupStoryboardStrip() {
+    const frames = Array.isArray(this.options.storyboardFrames)
+      ? this.options.storyboardFrames
+      : [];
+    if (!frames.length) return;
+
+    const canvas = document.getElementById(this.containerId);
+    const container = canvas?.closest('.diagram-container');
+    if (!canvas || !container || container.querySelector('.diagram-storyboard')) return;
+
+    const strip = document.createElement('div');
+    strip.className = 'diagram-storyboard';
+    strip.innerHTML = `
+      <div class="diagram-storyboard-topline">
+        <span class="diagram-storyboard-label">Narrated story frames</span>
+        <div class="diagram-storyboard-dots" aria-label="Story frames"></div>
+      </div>
+      <div class="diagram-storyboard-stage"></div>
+      <div class="diagram-storyboard-captions"></div>
+    `;
+
+    const dots = strip.querySelector('.diagram-storyboard-dots');
+    const stage = strip.querySelector('.diagram-storyboard-stage');
+    const captions = strip.querySelector('.diagram-storyboard-captions');
+
+    frames.forEach((frame, index) => {
+      const image = document.createElement('img');
+      image.className = 'diagram-storyboard-frame';
+      image.src = frame.src;
+      image.alt = frame.alt || frame.title || `Story frame ${index + 1}`;
+      image.loading = 'lazy';
+      image.decoding = 'async';
+      image.dataset.storyboardFrame = String(index);
+      stage.appendChild(image);
+
+      const dot = document.createElement('button');
+      dot.type = 'button';
+      dot.className = 'diagram-storyboard-dot';
+      dot.dataset.storyboardDot = String(index);
+      dot.setAttribute('aria-label', `Go to frame ${index + 1}`);
+      dot.addEventListener('click', () => this.jumpToStep(index));
+      dots.appendChild(dot);
+
+      const caption = document.createElement('button');
+      caption.type = 'button';
+      caption.className = 'diagram-storyboard-caption';
+      caption.dataset.storyboardCaption = String(index);
+      caption.innerHTML = `
+        <span class="diagram-storyboard-caption-index">${String(index + 1).padStart(2, '0')}</span>
+        <span>${frame.caption || frame.title || `Story frame ${index + 1}`}</span>
+      `;
+      caption.addEventListener('click', () => this.jumpToStep(index));
+      captions.appendChild(caption);
+    });
+
+    canvas.before(strip);
+    this.storyboardStrip = strip;
+    this.updateStoryboardFrame(0);
+  }
+
+  updateStoryboardFrame(index) {
+    if (!this.storyboardStrip) return;
+
+    this.storyboardStrip.querySelectorAll('[data-storyboard-frame]').forEach((frame) => {
+      frame.classList.toggle('is-active', Number(frame.dataset.storyboardFrame) === index);
+    });
+
+    this.storyboardStrip.querySelectorAll('[data-storyboard-dot]').forEach((dot) => {
+      dot.classList.toggle('is-active', Number(dot.dataset.storyboardDot) === index);
+    });
+
+    this.storyboardStrip.querySelectorAll('[data-storyboard-caption]').forEach((caption) => {
+      const isActive = Number(caption.dataset.storyboardCaption) === index;
+      caption.classList.toggle('is-active', isActive);
+      if (isActive) {
+        caption.scrollIntoView({ block: 'nearest', inline: 'center', behavior: 'smooth' });
+      }
+    });
   }
 
   // ============================================
@@ -550,6 +637,7 @@ class StorytellingDiagram {
     }
     if (connection) connection.style.display = 'none';
     captionContainer.classList.remove('active');
+    this.updateStoryboardFrame(0);
     this.updateExplorerForNode(this.storySteps[0]?.nodeId || null);
   }
 
@@ -598,6 +686,10 @@ class StorytellingDiagram {
     }, 100);
 
     this.focusedNodeId = step.nodeId || null;
+    const stepIndex = this.storySteps.indexOf(step);
+    if (stepIndex >= 0) {
+      this.updateStoryboardFrame(stepIndex);
+    }
     this.updateExplorerForNode(this.focusedNodeId);
     this.updateProgressDots();
   }
@@ -828,6 +920,7 @@ class StorytellingDiagram {
     this.clearEdgeAnimations();
     this.showAllDimmed();
     this.currentStep = -1;
+    this.updateStoryboardFrame(0);
     
     this.updatePlayButtonUI();
 
