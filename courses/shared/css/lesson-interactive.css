@@ -1059,7 +1059,15 @@ pre {
   display: none;
 }
 
+.diagram-container.storyboard-only .diagram-story {
+  display: none;
+}
+
 .diagram-container.storyboard-only .playback-controls {
+  display: none;
+}
+
+.diagram-container.storyboard-only .settings-bar {
   display: none;
 }
 
