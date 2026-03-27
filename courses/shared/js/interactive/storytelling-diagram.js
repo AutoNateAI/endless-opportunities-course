@@ -32,6 +32,7 @@ class StorytellingDiagram {
       audioBasePath: 'audio',
       storyId: containerId, // Default to containerId, can be overridden
       audioEngine: null, // Optional shared audio engine
+      forcedVoice: null,
       ...options
     };
     this.currentStep = -1;
@@ -52,6 +53,15 @@ class StorytellingDiagram {
   init() {
     // Use shared audio engine if provided, otherwise create one
     this.narrator = this.options.audioEngine || new AudioNarrationEngine(this.options.audioBasePath);
+
+    if (this.options.forcedVoice) {
+      this.narrator.waitForManifest().then(() => {
+        this.narrator.setVoice(this.options.forcedVoice);
+        if (this.voiceSelect) {
+          this.voiceSelect.value = this.options.forcedVoice;
+        }
+      });
+    }
     
     // Create cytoscape with custom styles
     this.cy = this.createCustomDiagram();
@@ -416,9 +426,14 @@ class StorytellingDiagram {
     this.voiceSelect = container.querySelector('.voice-select');
     if (this.voiceSelect) {
       this.populateVoices();
-      this.voiceSelect.addEventListener('change', (e) => {
-        this.narrator.setVoice(e.target.value);
-      });
+      if (this.options.forcedVoice) {
+        this.voiceSelect.disabled = true;
+        this.voiceSelect.title = `${this.options.forcedVoice} is forced for this lesson`;
+      } else {
+        this.voiceSelect.addEventListener('change', (e) => {
+          this.narrator.setVoice(e.target.value);
+        });
+      }
     }
 
     this.narrator.onSpeakingChange = (speaking) => {
@@ -459,6 +474,10 @@ class StorytellingDiagram {
       this.voiceSelect.innerHTML = voices
         .map((v) => `<option value="${v.id}" ${v.id === this.narrator.currentVoice ? 'selected' : ''}>${v.label}</option>`)
         .join('');
+
+      if (this.options.forcedVoice && voices.some((voice) => voice.id === this.options.forcedVoice)) {
+        this.voiceSelect.value = this.options.forcedVoice;
+      }
     };
     
     tryPopulate();

@@ -402,6 +402,9 @@
 
       // Create a shared audio engine pointing to the audio folder
       const audioEngine = new AudioNarrationEngine('audio');
+      await audioEngine.waitForManifest();
+      audioEngine.setVoice('sage');
+      console.log('🎙️ Forced week1 voice:', audioEngine.currentVoice);
 
       // ============================================
       // DIAGRAM ELEMENTS (Cytoscape data)
@@ -476,7 +479,7 @@
           story.id,
           elements,
           story.steps,
-          { audioEngine, storyId: story.id }
+          { audioEngine, storyId: story.id, forcedVoice: 'sage' }
         );
       });
 
