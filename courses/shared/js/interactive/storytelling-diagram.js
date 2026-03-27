@@ -34,6 +34,8 @@ class StorytellingDiagram {
       audioEngine: null, // Optional shared audio engine
       forcedVoice: null,
       storyboardFrames: [],
+      storyboardOnly: false,
+      musicBedSrc: null,
       ...options
     };
     this.currentStep = -1;
@@ -47,6 +49,7 @@ class StorytellingDiagram {
     this.tooltipNode = null;
     this.narrator = null;
     this.focusedNodeId = null;
+    this.musicBed = null;
     
     this.init();
   }
@@ -64,20 +67,25 @@ class StorytellingDiagram {
       });
     }
     
-    // Create cytoscape with custom styles
-    this.cy = this.createCustomDiagram();
-    
-    // Show all nodes/edges initially (dimmed)
-    this.showAllDimmed();
-
     this.setupStoryboardStrip();
+    this.setupMusicBed();
     
     // Setup controls
     this.setupControls();
     this.setupProgressDots();
     this.setupAudioControls();
-    this.setupCustomInteractivity();
-    this.setupExplorer();
+
+    if (this.options.storyboardOnly) {
+      this.hideGraphPresentation();
+    } else {
+      // Create cytoscape with custom styles
+      this.cy = this.createCustomDiagram();
+      
+      // Show all nodes/edges initially (dimmed)
+      this.showAllDimmed();
+      this.setupCustomInteractivity();
+      this.setupExplorer();
+    }
   }
 
   createCustomDiagram() {
@@ -327,6 +335,11 @@ class StorytellingDiagram {
       image.loading = 'lazy';
       image.decoding = 'async';
       image.dataset.storyboardFrame = String(index);
+      image.style.setProperty('--narration-pan-duration', `${6.2 + (index % 3) * 0.45}s`);
+      image.style.setProperty('--pan-x-from', index % 2 === 0 ? '-1.2%' : '1.1%');
+      image.style.setProperty('--pan-y-from', index % 3 === 0 ? '-0.8%' : '0.5%');
+      image.style.setProperty('--pan-x-to', index % 2 === 0 ? '1.2%' : '-1.1%');
+      image.style.setProperty('--pan-y-to', index % 3 === 0 ? '0.8%' : '-0.5%');
       stage.appendChild(image);
 
       const dot = document.createElement('button');
@@ -358,7 +371,13 @@ class StorytellingDiagram {
     if (!this.storyboardStrip) return;
 
     this.storyboardStrip.querySelectorAll('[data-storyboard-frame]').forEach((frame) => {
-      frame.classList.toggle('is-active', Number(frame.dataset.storyboardFrame) === index);
+      const isActive = Number(frame.dataset.storyboardFrame) === index;
+      frame.classList.toggle('is-active', isActive);
+      if (isActive) {
+        frame.style.animation = 'none';
+        void frame.offsetWidth;
+        frame.style.removeProperty('animation');
+      }
     });
 
     this.storyboardStrip.querySelectorAll('[data-storyboard-dot]').forEach((dot) => {
@@ -399,9 +418,15 @@ class StorytellingDiagram {
 
     // Fit button
     const fitBtn = container.querySelector('[data-action="fit"]');
-    if (fitBtn) fitBtn.addEventListener('click', () => this.cy.fit(50));
+    if (fitBtn) {
+      if (this.options.storyboardOnly) {
+        fitBtn.style.display = 'none';
+      } else {
+        fitBtn.addEventListener('click', () => this.cy?.fit(50));
+      }
+    }
 
-    if (!container.querySelector('[data-action="explore"]')) {
+    if (!this.options.storyboardOnly && !container.querySelector('[data-action="explore"]')) {
       const playbackRight = container.querySelector('.playback-right');
       if (playbackRight) {
         const exploreBtn = document.createElement('button');
@@ -420,14 +445,20 @@ class StorytellingDiagram {
     if (resetBtn) {
       resetBtn.addEventListener('click', () => {
         this.stop();
-        this.cy.layout(DiagramUtils.LAYOUTS.hierarchical).run();
-        setTimeout(() => {
-          this.cy.fit(50);
-          this.showAllDimmed();
+        if (this.cy) {
+          this.cy.layout(DiagramUtils.LAYOUTS.hierarchical).run();
+          setTimeout(() => {
+            this.cy.fit(50);
+            this.showAllDimmed();
+            this.currentStep = -1;
+            this.updateProgressDots();
+            this.resetCaption();
+          }, 100);
+        } else {
           this.currentStep = -1;
           this.updateProgressDots();
           this.resetCaption();
-        }, 100);
+        }
       });
     }
 
@@ -435,7 +466,9 @@ class StorytellingDiagram {
     const exportBtn = container.querySelector('[data-action="export"]');
     if (exportBtn) {
       exportBtn.addEventListener('click', () => {
-        DiagramUtils.exportDiagram(this.cy, this.containerId);
+        if (this.cy) {
+          DiagramUtils.exportDiagram(this.cy, this.containerId);
+        }
       });
     }
   }
@@ -453,12 +486,14 @@ class StorytellingDiagram {
   pause() {
     this.isPaused = true;
     this.narrator.pause();
+    this.pauseMusicBed();
     this.updatePlayButtonUI();
   }
 
   resume() {
     this.isPaused = false;
     this.narrator.resume();
+    this.playMusicBed();
     this.updatePlayButtonUI();
   }
 
@@ -470,6 +505,7 @@ class StorytellingDiagram {
     this.narrator.stop();
     this.clearEdgeAnimations();
     this.clearWordHighlights();
+    this.pauseMusicBed(true);
     this.updatePlayButtonUI();
   }
 
@@ -505,7 +541,12 @@ class StorytellingDiagram {
         this.updateAudioToggleUI();
         this.updateSpeedControlVisibility();
         this.narrator.setMuted(!this.options.audioEnabled);
-        if (!this.options.audioEnabled) this.narrator.stop();
+        if (!this.options.audioEnabled) {
+          this.narrator.stop();
+          this.pauseMusicBed(true);
+        } else if ((this.isPlaying && !this.isPaused) || this.currentStep >= 0) {
+          this.playMusicBed();
+        }
       });
     }
 
@@ -583,6 +624,33 @@ class StorytellingDiagram {
       this.audioToggle.classList.add('muted');
       if (icon) icon.textContent = '🔇';
       if (label) label.textContent = 'Off';
+    }
+  }
+
+  setupMusicBed() {
+    if (!this.options.musicBedSrc) return;
+
+    this.musicBed = new Audio(this.options.musicBedSrc);
+    this.musicBed.loop = true;
+    this.musicBed.preload = 'auto';
+    this.musicBed.volume = 0.18;
+  }
+
+  playMusicBed() {
+    if (!this.musicBed || !this.options.audioEnabled) return;
+
+    const playPromise = this.musicBed.play();
+    if (playPromise && typeof playPromise.catch === 'function') {
+      playPromise.catch(() => {});
+    }
+  }
+
+  pauseMusicBed(reset = false) {
+    if (!this.musicBed) return;
+
+    this.musicBed.pause();
+    if (reset) {
+      this.musicBed.currentTime = 0;
     }
   }
 
@@ -721,63 +789,67 @@ class StorytellingDiagram {
     this.shouldStop = true;
     this.narrator.stop();
     this.clearEdgeAnimations();
+    this.pauseMusicBed(true);
 
     this.animationMode = true;
     this.currentStep = stepIndex;
     this.focusedNodeId = this.storySteps[stepIndex]?.nodeId || null;
 
-    // Reset all elements first
-    this.cy.elements().removeClass('story-dimmed story-active story-complete');
-    this.cy.nodes().style('opacity', 0.3);
-    this.cy.edges().style('opacity', 0.15);
+    const currentStepData = this.storySteps[stepIndex];
 
-    // Mark all steps UP TO (but not including) current as complete
-    for (let i = 0; i < stepIndex; i++) {
-      const step = this.storySteps[i];
-      
-      if (step.nodeId) {
-        const node = this.cy.getElementById(step.nodeId);
-        node.addClass('story-complete');
-        node.style('opacity', 1);
+    if (this.cy) {
+      // Reset all elements first
+      this.cy.elements().removeClass('story-dimmed story-active story-complete');
+      this.cy.nodes().style('opacity', 0.3);
+      this.cy.edges().style('opacity', 0.15);
+
+      // Mark all steps UP TO (but not including) current as complete
+      for (let i = 0; i < stepIndex; i++) {
+        const step = this.storySteps[i];
+        
+        if (step.nodeId) {
+          const node = this.cy.getElementById(step.nodeId);
+          node.addClass('story-complete');
+          node.style('opacity', 1);
+        }
+
+        if (step.edges) {
+          for (const edgeSpec of step.edges) {
+            const edge = this.cy.edges().filter(e => 
+              e.source().id() === edgeSpec.from && e.target().id() === edgeSpec.to
+            );
+            edge.addClass('story-complete');
+            edge.style({
+              'opacity': 1,
+              'width': 3,
+              'line-style': 'solid',
+              'line-color': '#4db6ac',
+              'target-arrow-color': '#4db6ac'
+            });
+          }
+        }
       }
 
-      if (step.edges) {
-        for (const edgeSpec of step.edges) {
+      // Highlight CURRENT step as active
+      if (currentStepData.nodeId) {
+        const node = this.cy.getElementById(currentStepData.nodeId);
+        node.addClass('story-active');
+        node.style('opacity', 1);
+        
+        this.zoomToNode(node);
+        this.animateNodeGlow(node);
+      }
+
+      // Animate current edges
+      if (currentStepData.edges) {
+        for (const edgeSpec of currentStepData.edges) {
           const edge = this.cy.edges().filter(e => 
             e.source().id() === edgeSpec.from && e.target().id() === edgeSpec.to
           );
-          edge.addClass('story-complete');
-          edge.style({
-            'opacity': 1,
-            'width': 3,
-            'line-style': 'solid',
-            'line-color': '#4db6ac',
-            'target-arrow-color': '#4db6ac'
-          });
+          edge.addClass('story-active');
+          edge.style('opacity', 1);
+          this.animateEdgeFlow(edge);
         }
-      }
-    }
-
-    // Highlight CURRENT step as active
-    const currentStepData = this.storySteps[stepIndex];
-    if (currentStepData.nodeId) {
-      const node = this.cy.getElementById(currentStepData.nodeId);
-      node.addClass('story-active');
-      node.style('opacity', 1);
-      
-      this.zoomToNode(node);
-      this.animateNodeGlow(node);
-    }
-
-    // Animate current edges
-    if (currentStepData.edges) {
-      for (const edgeSpec of currentStepData.edges) {
-        const edge = this.cy.edges().filter(e => 
-          e.source().id() === edgeSpec.from && e.target().id() === edgeSpec.to
-        );
-        edge.addClass('story-active');
-        edge.style('opacity', 1);
-        this.animateEdgeFlow(edge);
       }
     }
 
@@ -788,6 +860,7 @@ class StorytellingDiagram {
     
     // Play audio if enabled
     if (this.options.audioEnabled) {
+      this.playMusicBed();
       await this.narrateStep(currentStepData);
     }
   }
@@ -824,6 +897,7 @@ class StorytellingDiagram {
   }
 
   enterExploreMode() {
+    if (!this.cy) return;
     this.stop();
     this.animationMode = false;
     this.showAllFull();
@@ -918,7 +992,10 @@ class StorytellingDiagram {
     
     this.narrator.stop();
     this.clearEdgeAnimations();
-    this.showAllDimmed();
+    this.pauseMusicBed(true);
+    if (this.cy) {
+      this.showAllDimmed();
+    }
     this.currentStep = -1;
     this.updateStoryboardFrame(0);
     
@@ -949,10 +1026,11 @@ class StorytellingDiagram {
     this.isPlaying = false;
     this.isPaused = false;
     this.animationMode = false;
+    this.pauseMusicBed(true);
     this.updatePlayButtonUI();
     
     // Zoom out to show all
-    if (!this.shouldStop) {
+    if (!this.shouldStop && this.cy) {
       this.cy.animate({
         fit: { padding: 50 },
         duration: 800,
@@ -974,6 +1052,11 @@ class StorytellingDiagram {
   }
 
   async animateStepVisuals(step) {
+    if (!this.cy) {
+      await this.wait(250);
+      return;
+    }
+
     if (step.nodeId) {
       const node = this.cy.getElementById(step.nodeId);
       
@@ -1013,6 +1096,11 @@ class StorytellingDiagram {
   }
 
   cleanupStep(step) {
+    if (!this.cy) {
+      this.clearWordHighlights();
+      return;
+    }
+
     if (step.nodeId) {
       const node = this.cy.getElementById(step.nodeId);
       node.removeClass('story-active').addClass('story-complete');
@@ -1187,6 +1275,13 @@ class StorytellingDiagram {
 
   wait(ms) {
     return new Promise(resolve => setTimeout(resolve, ms));
+  }
+
+  hideGraphPresentation() {
+    const container = document.getElementById(this.containerId)?.closest('.diagram-container');
+    if (!container) return;
+
+    container.classList.add('storyboard-only');
   }
 
   async waitWithPauseCheck(ms) {

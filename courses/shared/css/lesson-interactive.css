@@ -1044,6 +1044,14 @@ pre {
   box-shadow: var(--shadow-md);
 }
 
+.diagram-container.storyboard-only .diagram-canvas {
+  display: none;
+}
+
+.diagram-container.storyboard-only .playback-right {
+  gap: 0;
+}
+
 .diagram-storyboard-frame {
   position: absolute;
   inset: 0;
@@ -1051,13 +1059,16 @@ pre {
   height: 100%;
   object-fit: cover;
   opacity: 0;
-  transform: scale(1.03);
+  transform: scale(1.03) translate3d(0, 0, 0);
   transition: opacity 0.35s ease, transform 0.6s ease;
+  will-change: transform, opacity;
 }
 
 .diagram-storyboard-frame.is-active {
   opacity: 1;
-  transform: scale(1);
+  transform: scale(1.02);
+  animation: diagramStoryboardPan var(--narration-pan-duration, 6.8s)
+    ease-in-out both;
 }
 
 .diagram-storyboard-captions {
@@ -1102,6 +1113,17 @@ pre {
   font-size: 0.78rem;
   font-weight: 700;
   line-height: 1.6;
+}
+
+@keyframes diagramStoryboardPan {
+  0% {
+    transform: scale(1.04)
+      translate3d(var(--pan-x-from, -1.2%), var(--pan-y-from, -0.8%), 0);
+  }
+  100% {
+    transform: scale(1.1)
+      translate3d(var(--pan-x-to, 1.2%), var(--pan-y-to, 0.8%), 0);
+  }
 }
 
 /* Word Highlighting (Karaoke Effect) */
