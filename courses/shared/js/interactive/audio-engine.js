@@ -134,6 +134,26 @@ class AudioNarrationEngine {
     return this.manifest[this.currentVoice]?.[storyId]?.[stepIndex] || null;
   }
 
+  getStoryData(storyId) {
+    if (!this.manifest || !this.currentVoice) return [];
+    return this.manifest[this.currentVoice]?.[storyId] || [];
+  }
+
+  getStoryCuePoints(storyId) {
+    const steps = this.getStoryData(storyId);
+    const total = steps.reduce((sum, step) => sum + (step.duration || 0), 0);
+    let elapsed = 0;
+    return steps.map((step) => {
+      const cue = total > 0 ? elapsed / total : 0;
+      elapsed += step.duration || 0;
+      return cue;
+    });
+  }
+
+  getStoryAudioPath(storyId) {
+    return `${this.audioBasePath}/${this.currentVoice}/${storyId}/full.mp3`;
+  }
+
   setMuted(muted) {
     this.isMuted = muted;
     if (muted && this.currentAudio) {
@@ -179,6 +199,122 @@ class AudioNarrationEngine {
 
   get paused() {
     return this.isPaused;
+  }
+
+  async playStory(storyId, options = {}) {
+    if (!this.manifestLoaded) {
+      await this.waitForManifest();
+    }
+
+    const steps = this.getStoryData(storyId);
+    if (!steps.length || this.isMuted) {
+      return { played: false, reason: this.isMuted ? "muted" : "missing-story" };
+    }
+
+    const cuePoints = this.getStoryCuePoints(storyId);
+    const audioPath = this.getStoryAudioPath(storyId);
+
+    return new Promise((resolve) => {
+      this.stop();
+      this.resolvePromise = resolve;
+
+      const audio = this.currentAudio;
+      audio.pause();
+      audio.currentTime = 0;
+      audio.src = "";
+      audio.src = audioPath;
+      audio.load();
+      audio.volume = this.isMuted ? 0 : 1;
+
+      let settled = false;
+      let lastStepIndex = -1;
+
+      const finish = (result) => {
+        if (settled) return;
+        settled = true;
+        this.resolvePromise = null;
+        resolve(result);
+      };
+
+      const updateStep = () => {
+        const duration = audio.duration || steps.reduce((sum, step) => sum + (step.duration || 0), 0);
+        const progress = duration > 0 ? audio.currentTime / duration : 0;
+        let activeIndex = 0;
+        cuePoints.forEach((cue, index) => {
+          if (progress >= cue) {
+            activeIndex = index;
+          }
+        });
+
+        if (activeIndex !== lastStepIndex) {
+          lastStepIndex = activeIndex;
+          options.onStepChange?.(activeIndex, steps[activeIndex]);
+        }
+      };
+
+      audio.onplay = () => {
+        this.isSpeaking = true;
+        this.isPaused = false;
+        this.onSpeakingChange?.(true);
+        updateStep();
+      };
+
+      audio.onpause = () => {
+        if (!audio.ended) {
+          this.isPaused = true;
+        }
+      };
+
+      audio.ontimeupdate = () => {
+        updateStep();
+        options.onTimeUpdate?.(audio.currentTime, audio.duration || 0);
+      };
+
+      audio.onloadedmetadata = () => {
+        updateStep();
+      };
+
+      audio.onended = () => {
+        this.isSpeaking = false;
+        this.isPaused = false;
+        this.onSpeakingChange?.(false);
+        finish({ played: true, duration: audio.duration || 0 });
+      };
+
+      audio.onerror = () => {
+        this.isSpeaking = false;
+        this.isPaused = false;
+        this.onSpeakingChange?.(false);
+        finish({ played: false, reason: "audio-error" });
+      };
+
+      audio.play().catch((e) => {
+        this.isSpeaking = false;
+        this.isPaused = false;
+        this.onSpeakingChange?.(false);
+        finish({ played: false, reason: e.name || "play-rejected" });
+      });
+    });
+  }
+
+  seekStoryToStep(storyId, stepIndex) {
+    const cuePoints = this.getStoryCuePoints(storyId);
+    const cue = cuePoints[stepIndex];
+    if (
+      !this.currentAudio ||
+      !this.currentAudio.src ||
+      !this.currentAudio.src.includes(`/${storyId}/full.mp3`) ||
+      cue == null ||
+      !this.currentAudio.duration
+    ) {
+      return false;
+    }
+
+    this.currentAudio.currentTime = Math.min(
+      Math.max(cue * this.currentAudio.duration, 0),
+      Math.max(this.currentAudio.duration - 0.05, 0)
+    );
+    return true;
   }
 
   /**

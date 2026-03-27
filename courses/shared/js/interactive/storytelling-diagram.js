@@ -796,6 +796,23 @@ class StorytellingDiagram {
   // ============================================
 
   async jumpToStep(stepIndex) {
+    if (this.options.storyboardOnly && this.options.audioEnabled) {
+      this.currentStep = stepIndex;
+      this.focusedNodeId = this.storySteps[stepIndex]?.nodeId || null;
+      const currentStepData = this.storySteps[stepIndex];
+      this.updateCaption(currentStepData);
+      this.updateProgressDots();
+      this.updatePlayButtonUI();
+
+      if (this.isPlaying && this.narrator.seekStoryToStep?.(this.options.storyId, stepIndex)) {
+        return;
+      }
+
+      if (!this.isPlaying) {
+        return;
+      }
+    }
+
     // Stop any ongoing playback but don't reset everything
     this.isPlaying = false;
     this.isPaused = false;
@@ -1012,6 +1029,38 @@ class StorytellingDiagram {
     this.updateStoryboardFrame(0);
     
     this.updatePlayButtonUI();
+
+    if (this.options.storyboardOnly && this.options.audioEnabled && this.narrator.playStory) {
+      const firstStep = this.storySteps[0];
+      if (firstStep) {
+        this.currentStep = 0;
+        this.updateCaption(firstStep);
+        this.updateProgressDots();
+      }
+
+      const result = await this.narrator.playStory(this.options.storyId, {
+        onStepChange: (index) => {
+          if (this.shouldStop) return;
+          const step = this.storySteps[index];
+          if (!step) return;
+          this.currentStep = index;
+          this.focusedNodeId = step.nodeId || null;
+          this.updateCaption(step);
+          this.updateProgressDots();
+        }
+      });
+
+      this.isPlaying = false;
+      this.isPaused = false;
+      this.animationMode = false;
+      this.pauseMusicBed(true);
+      this.updatePlayButtonUI();
+
+      if (!result?.played) {
+        this.shouldStop = true;
+      }
+      return;
+    }
 
     // Play each step
     for (let i = 0; i < this.storySteps.length; i++) {
