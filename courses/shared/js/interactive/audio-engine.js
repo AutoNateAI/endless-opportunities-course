@@ -127,6 +127,11 @@ class AudioNarrationEngine {
     return timestamps;
   }
 
+  getStepData(storyId, stepIndex) {
+    if (!this.manifest || !this.currentVoice) return null;
+    return this.manifest[this.currentVoice]?.[storyId]?.[stepIndex] || null;
+  }
+
   setMuted(muted) {
     this.isMuted = muted;
     if (muted && this.currentAudio) {
@@ -188,7 +193,8 @@ class AudioNarrationEngine {
     console.log("AudioEngine: Manifest ready");
 
     return new Promise((resolve) => {
-      const timestamps = this.getTimestamps(storyId, stepIndex);
+      const stepData = this.getStepData(storyId, stepIndex);
+      const timestamps = stepData || this.getTimestamps(storyId, stepIndex);
 
       if (!timestamps || this.isMuted) {
         console.log("AudioEngine: Audio skipped:", {
@@ -197,7 +203,7 @@ class AudioNarrationEngine {
           hasTimestamps: !!timestamps,
           isMuted: this.isMuted,
         });
-        resolve();
+        resolve({ played: false, reason: this.isMuted ? "muted" : "missing-timestamps" });
         return;
       }
 
@@ -209,10 +215,22 @@ class AudioNarrationEngine {
       this.currentTimestamps = timestamps;
 
       const audio = new Audio(audioPath);
+      audio.preload = "auto";
+      audio.playsInline = true;
       this.currentAudio = audio;
       audio.volume = this.isMuted ? 0 : 1;
 
       let lastHighlightedIndex = -1;
+      let settled = false;
+
+      const finish = (result) => {
+        if (settled) return;
+        settled = true;
+        this.currentAudio = null;
+        this.currentTimestamps = null;
+        this.resolvePromise = null;
+        resolve(result);
+      };
 
       // Word highlighting loop using requestAnimationFrame
       const highlightLoop = () => {
@@ -291,8 +309,7 @@ class AudioNarrationEngine {
           this.onWordHighlight(timestamps.words.length, null); // Signal completion
         }
 
-        this.resolvePromise = null;
-        resolve();
+        finish({ played: true, duration: stepData?.duration || audio.duration || 0 });
       };
 
       audio.onerror = (e) => {
@@ -307,14 +324,16 @@ class AudioNarrationEngine {
         this.isSpeaking = false;
         this.isPaused = false;
         if (this.onSpeakingChange) this.onSpeakingChange(false);
-        this.resolvePromise = null;
-        resolve();
+        finish({ played: false, reason: "audio-error" });
       };
 
       console.log("AudioEngine: Calling audio.play()");
       audio.play().catch((e) => {
         console.error("AudioEngine: audio.play() rejected:", e.name, e.message);
-        resolve();
+        this.isSpeaking = false;
+        this.isPaused = false;
+        if (this.onSpeakingChange) this.onSpeakingChange(false);
+        finish({ played: false, reason: e.name || "play-rejected" });
       });
     });
   }

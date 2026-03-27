@@ -544,8 +544,6 @@ class StorytellingDiagram {
         if (!this.options.audioEnabled) {
           this.narrator.stop();
           this.pauseMusicBed(true);
-        } else if ((this.isPlaying && !this.isPaused) || this.currentStep >= 0) {
-          this.playMusicBed();
         }
       });
     }
@@ -567,6 +565,11 @@ class StorytellingDiagram {
     this.narrator.onSpeakingChange = (speaking) => {
       if (this.audioToggle) {
         this.audioToggle.classList.toggle('speaking', speaking);
+      }
+      if (speaking) {
+        this.playMusicBed();
+      } else if (!this.isPaused) {
+        this.pauseMusicBed();
       }
     };
     
@@ -633,7 +636,7 @@ class StorytellingDiagram {
     this.musicBed = new Audio(this.options.musicBedSrc);
     this.musicBed.loop = true;
     this.musicBed.preload = 'auto';
-    this.musicBed.volume = 0.18;
+    this.musicBed.volume = 0.08;
   }
 
   playMusicBed() {
@@ -860,7 +863,6 @@ class StorytellingDiagram {
     
     // Play audio if enabled
     if (this.options.audioEnabled) {
-      this.playMusicBed();
       await this.narrateStep(currentStepData);
     }
   }
@@ -1259,14 +1261,18 @@ class StorytellingDiagram {
     };
     
     // Use storyId from options for audio lookup
-    await this.narrator.playStep(this.options.storyId, this.currentStep);
-    
+    const result = await this.narrator.playStep(this.options.storyId, this.currentStep);
+
     allWords.forEach(el => {
       el.classList.remove('current');
       el.classList.add('spoken');
     });
-    
+
     this.narrator.onWordHighlight = null;
+
+    if (!result?.played) {
+      this.pauseMusicBed(true);
+    }
   }
 
   // ============================================
