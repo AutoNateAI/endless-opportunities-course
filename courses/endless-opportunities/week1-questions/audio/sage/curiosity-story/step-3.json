@@ -1,0 +1,180 @@
+{
+  "storyId": "curiosity-story",
+  "stepId": "step-3",
+  "voice": "sage",
+  "voiceLabel": "Sage Story Guide",
+  "text": "The Curiosity Advantage. A curious person who asks great questions will always beat a 'smart' person who accepts surface-level answers. Intelligence isn't about knowing things—it's about knowing how to find things out.",
+  "duration": 16.31999969482422,
+  "words": [
+    {
+      "word": "The",
+      "start": 0,
+      "end": 0.3199999928474426
+    },
+    {
+      "word": "Curiosity",
+      "start": 0.3199999928474426,
+      "end": 1.2200000286102295
+    },
+    {
+      "word": "Advantage",
+      "start": 1.2200000286102295,
+      "end": 2.059999942779541
+    },
+    {
+      "word": "A",
+      "start": 2.4800000190734863,
+      "end": 3.2799999713897705
+    },
+    {
+      "word": "curious",
+      "start": 3.2799999713897705,
+      "end": 3.759999990463257
+    },
+    {
+      "word": "person",
+      "start": 3.759999990463257,
+      "end": 4.239999771118164
+    },
+    {
+      "word": "who",
+      "start": 4.239999771118164,
+      "end": 4.5
+    },
+    {
+      "word": "asks",
+      "start": 4.5,
+      "end": 4.840000152587891
+    },
+    {
+      "word": "great",
+      "start": 4.840000152587891,
+      "end": 5.360000133514404
+    },
+    {
+      "word": "questions",
+      "start": 5.360000133514404,
+      "end": 5.860000133514404
+    },
+    {
+      "word": "will",
+      "start": 5.860000133514404,
+      "end": 6.21999979019165
+    },
+    {
+      "word": "always",
+      "start": 6.21999979019165,
+      "end": 6.760000228881836
+    },
+    {
+      "word": "beat",
+      "start": 6.760000228881836,
+      "end": 7
+    },
+    {
+      "word": "a",
+      "start": 7,
+      "end": 7.300000190734863
+    },
+    {
+      "word": "smart",
+      "start": 7.300000190734863,
+      "end": 7.579999923706055
+    },
+    {
+      "word": "person",
+      "start": 7.579999923706055,
+      "end": 8.020000457763672
+    },
+    {
+      "word": "who",
+      "start": 8.020000457763672,
+      "end": 8.619999885559082
+    },
+    {
+      "word": "accepts",
+      "start": 8.619999885559082,
+      "end": 9.020000457763672
+    },
+    {
+      "word": "surface",
+      "start": 9.020000457763672,
+      "end": 9.539999961853027
+    },
+    {
+      "word": "level",
+      "start": 9.539999961853027,
+      "end": 9.920000076293945
+    },
+    {
+      "word": "answers",
+      "start": 9.920000076293945,
+      "end": 10.399999618530273
+    },
+    {
+      "word": "Intelligence",
+      "start": 11.399999618530273,
+      "end": 12.020000457763672
+    },
+    {
+      "word": "isn't",
+      "start": 12.020000457763672,
+      "end": 12.4399995803833
+    },
+    {
+      "word": "about",
+      "start": 12.4399995803833,
+      "end": 12.739999771118164
+    },
+    {
+      "word": "knowing",
+      "start": 12.739999771118164,
+      "end": 13.079999923706055
+    },
+    {
+      "word": "things",
+      "start": 13.079999923706055,
+      "end": 13.520000457763672
+    },
+    {
+      "word": "It's",
+      "start": 14.100000381469727,
+      "end": 14.260000228881836
+    },
+    {
+      "word": "about",
+      "start": 14.260000228881836,
+      "end": 14.539999961853027
+    },
+    {
+      "word": "knowing",
+      "start": 14.539999961853027,
+      "end": 14.800000190734863
+    },
+    {
+      "word": "how",
+      "start": 14.800000190734863,
+      "end": 14.979999542236328
+    },
+    {
+      "word": "to",
+      "start": 14.979999542236328,
+      "end": 15.4399995803833
+    },
+    {
+      "word": "find",
+      "start": 15.4399995803833,
+      "end": 15.5
+    },
+    {
+      "word": "things",
+      "start": 15.5,
+      "end": 15.84000015258789
+    },
+    {
+      "word": "out",
+      "start": 15.84000015258789,
+      "end": 16.15999984741211
+    }
+  ]
+}

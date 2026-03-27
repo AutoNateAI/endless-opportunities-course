@@ -7,10 +7,14 @@
     "echo": {
       "name": "echo",
       "label": "Storyteller (Male UK)"
+    },
+    "sage": {
+      "name": "sage",
+      "label": "Sage Story Guide"
     }
   },
-  "defaultVoice": "ballad",
-  "generatedAt": "2026-01-14T04:05:42.332Z",
+  "defaultVoice": "sage",
+  "generatedAt": "2026-03-27T20:33:27.779Z",
   "stories": [
     "curiosity-story",
     "six-levels-story",
@@ -6042,6 +6046,2669 @@
             "word": "superpower",
             "start": 15.5,
             "end": 16.020000457763672
+          }
+        ]
+      }
+    ]
+  },
+  "sage": {
+    "curiosity-story": [
+      {
+        "storyId": "curiosity-story",
+        "stepId": "step-0",
+        "voice": "sage",
+        "voiceLabel": "Sage Story Guide",
+        "text": "A Truth That Changes Everything. Here's a truth that will change how you see the world: the quality of your understanding depends entirely on the quality of your questions. Most people never realize this.",
+        "duration": 16.84000015258789,
+        "words": [
+          {
+            "word": "A",
+            "start": 0,
+            "end": 0.3799999952316284
+          },
+          {
+            "word": "truth",
+            "start": 0.3799999952316284,
+            "end": 0.8399999737739563
+          },
+          {
+            "word": "that",
+            "start": 0.8399999737739563,
+            "end": 1.440000057220459
+          },
+          {
+            "word": "changes",
+            "start": 1.440000057220459,
+            "end": 1.9600000381469727
+          },
+          {
+            "word": "everything",
+            "start": 1.9600000381469727,
+            "end": 2.7200000286102295
+          },
+          {
+            "word": "Here's",
+            "start": 3.7200000286102295,
+            "end": 3.799999952316284
+          },
+          {
+            "word": "a",
+            "start": 3.799999952316284,
+            "end": 4.320000171661377
+          },
+          {
+            "word": "truth",
+            "start": 4.320000171661377,
+            "end": 4.360000133514404
+          },
+          {
+            "word": "that",
+            "start": 4.360000133514404,
+            "end": 4.820000171661377
+          },
+          {
+            "word": "will",
+            "start": 4.820000171661377,
+            "end": 5.059999942779541
+          },
+          {
+            "word": "change",
+            "start": 5.059999942779541,
+            "end": 5.5
+          },
+          {
+            "word": "how",
+            "start": 5.5,
+            "end": 5.739999771118164
+          },
+          {
+            "word": "you",
+            "start": 5.739999771118164,
+            "end": 6.019999980926514
+          },
+          {
+            "word": "see",
+            "start": 6.019999980926514,
+            "end": 6.179999828338623
+          },
+          {
+            "word": "the",
+            "start": 6.179999828338623,
+            "end": 6.460000038146973
+          },
+          {
+            "word": "world",
+            "start": 6.460000038146973,
+            "end": 7
+          },
+          {
+            "word": "The",
+            "start": 7.539999961853027,
+            "end": 7.679999828338623
+          },
+          {
+            "word": "quality",
+            "start": 7.679999828338623,
+            "end": 8.180000305175781
+          },
+          {
+            "word": "of",
+            "start": 8.180000305175781,
+            "end": 8.5600004196167
+          },
+          {
+            "word": "your",
+            "start": 8.5600004196167,
+            "end": 8.880000114440918
+          },
+          {
+            "word": "understanding",
+            "start": 8.880000114440918,
+            "end": 9.539999961853027
+          },
+          {
+            "word": "depends",
+            "start": 9.539999961853027,
+            "end": 10.4399995803833
+          },
+          {
+            "word": "entirely",
+            "start": 10.4399995803833,
+            "end": 11.199999809265137
+          },
+          {
+            "word": "on",
+            "start": 11.199999809265137,
+            "end": 11.819999694824219
+          },
+          {
+            "word": "the",
+            "start": 11.819999694824219,
+            "end": 12.100000381469727
+          },
+          {
+            "word": "quality",
+            "start": 12.100000381469727,
+            "end": 12.399999618530273
+          },
+          {
+            "word": "of",
+            "start": 12.399999618530273,
+            "end": 12.779999732971191
+          },
+          {
+            "word": "your",
+            "start": 12.779999732971191,
+            "end": 13.020000457763672
+          },
+          {
+            "word": "questions",
+            "start": 13.020000457763672,
+            "end": 13.539999961853027
+          },
+          {
+            "word": "Most",
+            "start": 14.539999961853027,
+            "end": 14.84000015258789
+          },
+          {
+            "word": "people",
+            "start": 14.84000015258789,
+            "end": 15.239999771118164
+          },
+          {
+            "word": "never",
+            "start": 15.239999771118164,
+            "end": 15.680000305175781
+          },
+          {
+            "word": "realize",
+            "start": 15.680000305175781,
+            "end": 16.1200008392334
+          },
+          {
+            "word": "this",
+            "start": 16.1200008392334,
+            "end": 16.520000457763672
+          }
+        ]
+      },
+      {
+        "storyId": "curiosity-story",
+        "stepId": "step-1",
+        "voice": "sage",
+        "voiceLabel": "Sage Story Guide",
+        "text": "The Surface Thinker. Most people accept the first answer they get. They hear something, nod, and move on. Surface thinkers ask 'Why is climate change happening?' hear 'pollution,' and stop there.",
+        "duration": 15.720000267028809,
+        "words": [
+          {
+            "word": "The",
+            "start": 0,
+            "end": 0.46000000834465027
+          },
+          {
+            "word": "Surface",
+            "start": 0.46000000834465027,
+            "end": 0.8999999761581421
+          },
+          {
+            "word": "Thinker",
+            "start": 0.8999999761581421,
+            "end": 1.4800000190734863
+          },
+          {
+            "word": "Most",
+            "start": 2.5999999046325684,
+            "end": 2.5999999046325684
+          },
+          {
+            "word": "people",
+            "start": 2.5999999046325684,
+            "end": 2.9600000381469727
+          },
+          {
+            "word": "accept",
+            "start": 2.9600000381469727,
+            "end": 3.359999895095825
+          },
+          {
+            "word": "the",
+            "start": 3.359999895095825,
+            "end": 3.6600000858306885
+          },
+          {
+            "word": "first",
+            "start": 3.6600000858306885,
+            "end": 4.019999980926514
+          },
+          {
+            "word": "answer",
+            "start": 4.019999980926514,
+            "end": 4.260000228881836
+          },
+          {
+            "word": "they",
+            "start": 4.260000228881836,
+            "end": 4.519999980926514
+          },
+          {
+            "word": "get",
+            "start": 4.519999980926514,
+            "end": 4.78000020980835
+          },
+          {
+            "word": "They",
+            "start": 5.380000114440918,
+            "end": 5.480000019073486
+          },
+          {
+            "word": "hear",
+            "start": 5.480000019073486,
+            "end": 5.739999771118164
+          },
+          {
+            "word": "something",
+            "start": 5.739999771118164,
+            "end": 6.159999847412109
+          },
+          {
+            "word": "nod",
+            "start": 6.900000095367432,
+            "end": 6.900000095367432
+          },
+          {
+            "word": "and",
+            "start": 7.139999866485596,
+            "end": 7.559999942779541
+          },
+          {
+            "word": "move",
+            "start": 7.559999942779541,
+            "end": 7.699999809265137
+          },
+          {
+            "word": "on",
+            "start": 7.699999809265137,
+            "end": 8.279999732971191
+          },
+          {
+            "word": "Surface",
+            "start": 9.079999923706055,
+            "end": 9.34000015258789
+          },
+          {
+            "word": "thinkers",
+            "start": 9.34000015258789,
+            "end": 9.579999923706055
+          },
+          {
+            "word": "ask",
+            "start": 9.579999923706055,
+            "end": 10.039999961853027
+          },
+          {
+            "word": "why",
+            "start": 10.479999542236328,
+            "end": 10.680000305175781
+          },
+          {
+            "word": "is",
+            "start": 10.680000305175781,
+            "end": 10.9399995803833
+          },
+          {
+            "word": "climate",
+            "start": 10.9399995803833,
+            "end": 11.260000228881836
+          },
+          {
+            "word": "change",
+            "start": 11.260000228881836,
+            "end": 11.619999885559082
+          },
+          {
+            "word": "happening",
+            "start": 11.619999885559082,
+            "end": 11.960000038146973
+          },
+          {
+            "word": "Hear",
+            "start": 12.640000343322754,
+            "end": 12.9399995803833
+          },
+          {
+            "word": "pollution",
+            "start": 12.9399995803833,
+            "end": 13.420000076293945
+          },
+          {
+            "word": "and",
+            "start": 13.420000076293945,
+            "end": 14.34000015258789
+          },
+          {
+            "word": "stop",
+            "start": 14.34000015258789,
+            "end": 14.819999694824219
+          },
+          {
+            "word": "there",
+            "start": 14.819999694824219,
+            "end": 15.180000305175781
+          }
+        ]
+      },
+      {
+        "storyId": "curiosity-story",
+        "stepId": "step-2",
+        "voice": "sage",
+        "voiceLabel": "Sage Story Guide",
+        "text": "The Deep Thinker. Deep thinkers keep asking why. Why pollution? Why so much? What causes that? They go six levels deep and truly understand the whole system, not just the surface.",
+        "duration": 14.800000190734863,
+        "words": [
+          {
+            "word": "The",
+            "start": 0,
+            "end": 0.3799999952316284
+          },
+          {
+            "word": "Deep",
+            "start": 0.3799999952316284,
+            "end": 0.7400000095367432
+          },
+          {
+            "word": "Thinker",
+            "start": 0.7400000095367432,
+            "end": 1.4800000190734863
+          },
+          {
+            "word": "Deep",
+            "start": 1.899999976158142,
+            "end": 2.0399999618530273
+          },
+          {
+            "word": "thinkers",
+            "start": 2.0399999618530273,
+            "end": 2.4000000953674316
+          },
+          {
+            "word": "keep",
+            "start": 2.4000000953674316,
+            "end": 2.8399999141693115
+          },
+          {
+            "word": "asking",
+            "start": 2.8399999141693115,
+            "end": 3.299999952316284
+          },
+          {
+            "word": "why",
+            "start": 3.299999952316284,
+            "end": 3.740000009536743
+          },
+          {
+            "word": "Why",
+            "start": 4.599999904632568,
+            "end": 4.599999904632568
+          },
+          {
+            "word": "pollution",
+            "start": 4.599999904632568,
+            "end": 5.019999980926514
+          },
+          {
+            "word": "Why",
+            "start": 5.579999923706055,
+            "end": 5.800000190734863
+          },
+          {
+            "word": "so",
+            "start": 5.800000190734863,
+            "end": 6.21999979019165
+          },
+          {
+            "word": "much",
+            "start": 6.21999979019165,
+            "end": 6.440000057220459
+          },
+          {
+            "word": "What",
+            "start": 6.960000038146973,
+            "end": 7.179999828338623
+          },
+          {
+            "word": "causes",
+            "start": 7.179999828338623,
+            "end": 7.559999942779541
+          },
+          {
+            "word": "that",
+            "start": 7.559999942779541,
+            "end": 7.960000038146973
+          },
+          {
+            "word": "They",
+            "start": 8.319999694824219,
+            "end": 8.65999984741211
+          },
+          {
+            "word": "go",
+            "start": 8.65999984741211,
+            "end": 8.920000076293945
+          },
+          {
+            "word": "six",
+            "start": 8.920000076293945,
+            "end": 9.359999656677246
+          },
+          {
+            "word": "levels",
+            "start": 9.359999656677246,
+            "end": 9.619999885559082
+          },
+          {
+            "word": "deep",
+            "start": 9.619999885559082,
+            "end": 10
+          },
+          {
+            "word": "and",
+            "start": 10,
+            "end": 10.520000457763672
+          },
+          {
+            "word": "truly",
+            "start": 10.520000457763672,
+            "end": 11.020000457763672
+          },
+          {
+            "word": "understand",
+            "start": 11.020000457763672,
+            "end": 11.600000381469727
+          },
+          {
+            "word": "the",
+            "start": 11.600000381469727,
+            "end": 11.84000015258789
+          },
+          {
+            "word": "whole",
+            "start": 11.84000015258789,
+            "end": 12.300000190734863
+          },
+          {
+            "word": "system",
+            "start": 12.300000190734863,
+            "end": 12.65999984741211
+          },
+          {
+            "word": "not",
+            "start": 13.420000076293945,
+            "end": 13.479999542236328
+          },
+          {
+            "word": "just",
+            "start": 13.479999542236328,
+            "end": 13.859999656677246
+          },
+          {
+            "word": "a",
+            "start": 13.859999656677246,
+            "end": 14.399999618530273
+          },
+          {
+            "word": "surface",
+            "start": 14.399999618530273,
+            "end": 14.399999618530273
+          }
+        ]
+      },
+      {
+        "storyId": "curiosity-story",
+        "stepId": "step-3",
+        "voice": "sage",
+        "voiceLabel": "Sage Story Guide",
+        "text": "The Curiosity Advantage. A curious person who asks great questions will always beat a 'smart' person who accepts surface-level answers. Intelligence isn't about knowing things—it's about knowing how to find things out.",
+        "duration": 16.31999969482422,
+        "words": [
+          {
+            "word": "The",
+            "start": 0,
+            "end": 0.3199999928474426
+          },
+          {
+            "word": "Curiosity",
+            "start": 0.3199999928474426,
+            "end": 1.2200000286102295
+          },
+          {
+            "word": "Advantage",
+            "start": 1.2200000286102295,
+            "end": 2.059999942779541
+          },
+          {
+            "word": "A",
+            "start": 2.4800000190734863,
+            "end": 3.2799999713897705
+          },
+          {
+            "word": "curious",
+            "start": 3.2799999713897705,
+            "end": 3.759999990463257
+          },
+          {
+            "word": "person",
+            "start": 3.759999990463257,
+            "end": 4.239999771118164
+          },
+          {
+            "word": "who",
+            "start": 4.239999771118164,
+            "end": 4.5
+          },
+          {
+            "word": "asks",
+            "start": 4.5,
+            "end": 4.840000152587891
+          },
+          {
+            "word": "great",
+            "start": 4.840000152587891,
+            "end": 5.360000133514404
+          },
+          {
+            "word": "questions",
+            "start": 5.360000133514404,
+            "end": 5.860000133514404
+          },
+          {
+            "word": "will",
+            "start": 5.860000133514404,
+            "end": 6.21999979019165
+          },
+          {
+            "word": "always",
+            "start": 6.21999979019165,
+            "end": 6.760000228881836
+          },
+          {
+            "word": "beat",
+            "start": 6.760000228881836,
+            "end": 7
+          },
+          {
+            "word": "a",
+            "start": 7,
+            "end": 7.300000190734863
+          },
+          {
+            "word": "smart",
+            "start": 7.300000190734863,
+            "end": 7.579999923706055
+          },
+          {
+            "word": "person",
+            "start": 7.579999923706055,
+            "end": 8.020000457763672
+          },
+          {
+            "word": "who",
+            "start": 8.020000457763672,
+            "end": 8.619999885559082
+          },
+          {
+            "word": "accepts",
+            "start": 8.619999885559082,
+            "end": 9.020000457763672
+          },
+          {
+            "word": "surface",
+            "start": 9.020000457763672,
+            "end": 9.539999961853027
+          },
+          {
+            "word": "level",
+            "start": 9.539999961853027,
+            "end": 9.920000076293945
+          },
+          {
+            "word": "answers",
+            "start": 9.920000076293945,
+            "end": 10.399999618530273
+          },
+          {
+            "word": "Intelligence",
+            "start": 11.399999618530273,
+            "end": 12.020000457763672
+          },
+          {
+            "word": "isn't",
+            "start": 12.020000457763672,
+            "end": 12.4399995803833
+          },
+          {
+            "word": "about",
+            "start": 12.4399995803833,
+            "end": 12.739999771118164
+          },
+          {
+            "word": "knowing",
+            "start": 12.739999771118164,
+            "end": 13.079999923706055
+          },
+          {
+            "word": "things",
+            "start": 13.079999923706055,
+            "end": 13.520000457763672
+          },
+          {
+            "word": "It's",
+            "start": 14.100000381469727,
+            "end": 14.260000228881836
+          },
+          {
+            "word": "about",
+            "start": 14.260000228881836,
+            "end": 14.539999961853027
+          },
+          {
+            "word": "knowing",
+            "start": 14.539999961853027,
+            "end": 14.800000190734863
+          },
+          {
+            "word": "how",
+            "start": 14.800000190734863,
+            "end": 14.979999542236328
+          },
+          {
+            "word": "to",
+            "start": 14.979999542236328,
+            "end": 15.4399995803833
+          },
+          {
+            "word": "find",
+            "start": 15.4399995803833,
+            "end": 15.5
+          },
+          {
+            "word": "things",
+            "start": 15.5,
+            "end": 15.84000015258789
+          },
+          {
+            "word": "out",
+            "start": 15.84000015258789,
+            "end": 16.15999984741211
+          }
+        ]
+      },
+      {
+        "storyId": "curiosity-story",
+        "stepId": "step-4",
+        "voice": "sage",
+        "voiceLabel": "Sage Story Guide",
+        "text": "Your Choice. Every time you encounter something new, you have a choice: accept the first answer, or keep asking why. The people who change the world consistently choose to go deeper.",
+        "duration": 15.119999885559082,
+        "words": [
+          {
+            "word": "Your",
+            "start": 0,
+            "end": 0.5799999833106995
+          },
+          {
+            "word": "choice",
+            "start": 0.5799999833106995,
+            "end": 1.2999999523162842
+          },
+          {
+            "word": "Every",
+            "start": 2.4200000762939453,
+            "end": 2.440000057220459
+          },
+          {
+            "word": "time",
+            "start": 2.440000057220459,
+            "end": 2.759999990463257
+          },
+          {
+            "word": "you",
+            "start": 2.759999990463257,
+            "end": 3.0399999618530273
+          },
+          {
+            "word": "encounter",
+            "start": 3.0399999618530273,
+            "end": 3.4800000190734863
+          },
+          {
+            "word": "something",
+            "start": 3.4800000190734863,
+            "end": 4.019999980926514
+          },
+          {
+            "word": "new",
+            "start": 4.019999980926514,
+            "end": 4.360000133514404
+          },
+          {
+            "word": "you",
+            "start": 4.900000095367432,
+            "end": 4.960000038146973
+          },
+          {
+            "word": "have",
+            "start": 4.960000038146973,
+            "end": 5.139999866485596
+          },
+          {
+            "word": "a",
+            "start": 5.139999866485596,
+            "end": 5.360000133514404
+          },
+          {
+            "word": "choice",
+            "start": 5.360000133514404,
+            "end": 5.699999809265137
+          },
+          {
+            "word": "Accept",
+            "start": 6.920000076293945,
+            "end": 6.920000076293945
+          },
+          {
+            "word": "the",
+            "start": 6.920000076293945,
+            "end": 7.159999847412109
+          },
+          {
+            "word": "first",
+            "start": 7.159999847412109,
+            "end": 7.480000019073486
+          },
+          {
+            "word": "answer",
+            "start": 7.480000019073486,
+            "end": 7.840000152587891
+          },
+          {
+            "word": "or",
+            "start": 7.840000152587891,
+            "end": 8.579999923706055
+          },
+          {
+            "word": "keep",
+            "start": 8.579999923706055,
+            "end": 8.979999542236328
+          },
+          {
+            "word": "asking",
+            "start": 8.979999542236328,
+            "end": 9.420000076293945
+          },
+          {
+            "word": "why",
+            "start": 9.420000076293945,
+            "end": 10
+          },
+          {
+            "word": "The",
+            "start": 10.699999809265137,
+            "end": 10.899999618530273
+          },
+          {
+            "word": "people",
+            "start": 10.899999618530273,
+            "end": 11.180000305175781
+          },
+          {
+            "word": "who",
+            "start": 11.180000305175781,
+            "end": 11.479999542236328
+          },
+          {
+            "word": "change",
+            "start": 11.479999542236328,
+            "end": 11.819999694824219
+          },
+          {
+            "word": "the",
+            "start": 11.819999694824219,
+            "end": 12.520000457763672
+          },
+          {
+            "word": "world",
+            "start": 12.520000457763672,
+            "end": 12.520000457763672
+          },
+          {
+            "word": "consistently",
+            "start": 12.520000457763672,
+            "end": 13.319999694824219
+          },
+          {
+            "word": "choose",
+            "start": 13.319999694824219,
+            "end": 13.880000114440918
+          },
+          {
+            "word": "to",
+            "start": 13.880000114440918,
+            "end": 14.180000305175781
+          },
+          {
+            "word": "go",
+            "start": 14.180000305175781,
+            "end": 14.420000076293945
+          },
+          {
+            "word": "deeper",
+            "start": 14.420000076293945,
+            "end": 14.779999732971191
+          }
+        ]
+      }
+    ],
+    "six-levels-story": [
+      {
+        "storyId": "six-levels-story",
+        "stepId": "step-0",
+        "voice": "sage",
+        "voiceLabel": "Sage Story Guide",
+        "text": "The Framework. The framework is beautifully simple: when you want to understand something, ask 'why?' at least six times. Each answer reveals a new layer of truth.",
+        "duration": 12.600000381469727,
+        "words": [
+          {
+            "word": "The",
+            "start": 0,
+            "end": 0.6600000262260437
+          },
+          {
+            "word": "framework",
+            "start": 0.6600000262260437,
+            "end": 0.8799999952316284
+          },
+          {
+            "word": "The",
+            "start": 1.559999942779541,
+            "end": 1.7400000095367432
+          },
+          {
+            "word": "framework",
+            "start": 1.7400000095367432,
+            "end": 2
+          },
+          {
+            "word": "is",
+            "start": 2,
+            "end": 2.4600000381469727
+          },
+          {
+            "word": "beautifully",
+            "start": 2.4600000381469727,
+            "end": 2.9800000190734863
+          },
+          {
+            "word": "simple",
+            "start": 2.9800000190734863,
+            "end": 3.4600000381469727
+          },
+          {
+            "word": "When",
+            "start": 4.139999866485596,
+            "end": 4.139999866485596
+          },
+          {
+            "word": "you",
+            "start": 4.139999866485596,
+            "end": 4.360000133514404
+          },
+          {
+            "word": "want",
+            "start": 4.360000133514404,
+            "end": 4.599999904632568
+          },
+          {
+            "word": "to",
+            "start": 4.599999904632568,
+            "end": 5.360000133514404
+          },
+          {
+            "word": "understand",
+            "start": 5.360000133514404,
+            "end": 5.360000133514404
+          },
+          {
+            "word": "something",
+            "start": 5.360000133514404,
+            "end": 5.940000057220459
+          },
+          {
+            "word": "ask",
+            "start": 6.539999961853027,
+            "end": 6.639999866485596
+          },
+          {
+            "word": "why",
+            "start": 6.639999866485596,
+            "end": 7.260000228881836
+          },
+          {
+            "word": "at",
+            "start": 7.260000228881836,
+            "end": 7.679999828338623
+          },
+          {
+            "word": "least",
+            "start": 7.679999828338623,
+            "end": 7.960000038146973
+          },
+          {
+            "word": "six",
+            "start": 7.960000038146973,
+            "end": 8.279999732971191
+          },
+          {
+            "word": "times",
+            "start": 8.279999732971191,
+            "end": 8.739999771118164
+          },
+          {
+            "word": "Each",
+            "start": 9.399999618530273,
+            "end": 9.720000267028809
+          },
+          {
+            "word": "answer",
+            "start": 9.720000267028809,
+            "end": 10.15999984741211
+          },
+          {
+            "word": "reveals",
+            "start": 10.15999984741211,
+            "end": 10.579999923706055
+          },
+          {
+            "word": "a",
+            "start": 10.579999923706055,
+            "end": 10.899999618530273
+          },
+          {
+            "word": "new",
+            "start": 10.899999618530273,
+            "end": 11.220000267028809
+          },
+          {
+            "word": "layer",
+            "start": 11.220000267028809,
+            "end": 11.359999656677246
+          },
+          {
+            "word": "of",
+            "start": 11.359999656677246,
+            "end": 12
+          },
+          {
+            "word": "truth",
+            "start": 12,
+            "end": 12
+          }
+        ]
+      },
+      {
+        "storyId": "six-levels-story",
+        "stepId": "step-1",
+        "voice": "sage",
+        "voiceLabel": "Sage Story Guide",
+        "text": "Levels 1-2: Where Most Stop. Ninety percent of people stop at levels one and two. 'Why homework?' 'To practice.' 'Why practice?' 'So things stick.' They feel satisfied, but they've barely scratched the surface.",
+        "duration": 18.5,
+        "words": [
+          {
+            "word": "Levels",
+            "start": 0,
+            "end": 1.0800000429153442
+          },
+          {
+            "word": "1",
+            "start": 1.0800000429153442,
+            "end": 1.3600000143051147
+          },
+          {
+            "word": "through",
+            "start": 1.3600000143051147,
+            "end": 1.6200000047683716
+          },
+          {
+            "word": "2",
+            "start": 1.6200000047683716,
+            "end": 2.0999999046325684
+          },
+          {
+            "word": "where",
+            "start": 2.559999942779541,
+            "end": 2.680000066757202
+          },
+          {
+            "word": "most",
+            "start": 2.680000066757202,
+            "end": 3.0399999618530273
+          },
+          {
+            "word": "stop",
+            "start": 3.0399999618530273,
+            "end": 3.5199999809265137
+          },
+          {
+            "word": "90",
+            "start": 4.340000152587891,
+            "end": 4.679999828338623
+          },
+          {
+            "word": "",
+            "start": 4.679999828338623,
+            "end": 4.940000057220459
+          },
+          {
+            "word": "of",
+            "start": 4.940000057220459,
+            "end": 5.199999809265137
+          },
+          {
+            "word": "people",
+            "start": 5.199999809265137,
+            "end": 5.559999942779541
+          },
+          {
+            "word": "stop",
+            "start": 5.559999942779541,
+            "end": 5.960000038146973
+          },
+          {
+            "word": "at",
+            "start": 5.960000038146973,
+            "end": 6.239999771118164
+          },
+          {
+            "word": "levels",
+            "start": 6.239999771118164,
+            "end": 6.420000076293945
+          },
+          {
+            "word": "1",
+            "start": 6.420000076293945,
+            "end": 6.880000114440918
+          },
+          {
+            "word": "and",
+            "start": 6.880000114440918,
+            "end": 7.159999847412109
+          },
+          {
+            "word": "2",
+            "start": 7.159999847412109,
+            "end": 7.699999809265137
+          },
+          {
+            "word": "Why",
+            "start": 8.239999771118164,
+            "end": 8.319999694824219
+          },
+          {
+            "word": "homework",
+            "start": 8.319999694824219,
+            "end": 8.779999732971191
+          },
+          {
+            "word": "To",
+            "start": 9.180000305175781,
+            "end": 9.579999923706055
+          },
+          {
+            "word": "practice",
+            "start": 9.579999923706055,
+            "end": 10.0600004196167
+          },
+          {
+            "word": "Why",
+            "start": 10.720000267028809,
+            "end": 10.920000076293945
+          },
+          {
+            "word": "practice",
+            "start": 10.920000076293945,
+            "end": 11.420000076293945
+          },
+          {
+            "word": "So",
+            "start": 11.9399995803833,
+            "end": 12.239999771118164
+          },
+          {
+            "word": "things",
+            "start": 12.239999771118164,
+            "end": 12.720000267028809
+          },
+          {
+            "word": "stick",
+            "start": 12.720000267028809,
+            "end": 13.15999984741211
+          },
+          {
+            "word": "They",
+            "start": 13.779999732971191,
+            "end": 14.100000381469727
+          },
+          {
+            "word": "feel",
+            "start": 14.100000381469727,
+            "end": 14.460000038146973
+          },
+          {
+            "word": "satisfied",
+            "start": 14.460000038146973,
+            "end": 15.0600004196167
+          },
+          {
+            "word": "but",
+            "start": 15.600000381469727,
+            "end": 15.699999809265137
+          },
+          {
+            "word": "they've",
+            "start": 15.699999809265137,
+            "end": 16.520000457763672
+          },
+          {
+            "word": "barely",
+            "start": 16.520000457763672,
+            "end": 16.520000457763672
+          },
+          {
+            "word": "scratched",
+            "start": 16.520000457763672,
+            "end": 17
+          },
+          {
+            "word": "the",
+            "start": 17,
+            "end": 17.68000030517578
+          },
+          {
+            "word": "surface",
+            "start": 17.68000030517578,
+            "end": 17.68000030517578
+          }
+        ]
+      },
+      {
+        "storyId": "six-levels-story",
+        "stepId": "step-2",
+        "voice": "sage",
+        "voiceLabel": "Sage Story Guide",
+        "text": "Levels 3-4: Getting Interesting. At level three, things get interesting. 'Why does practice make things stick?' Your brain strengthens neural pathways when you repeat something. Now you're learning how your brain actually works!",
+        "duration": 17.65999984741211,
+        "words": [
+          {
+            "word": "Levels",
+            "start": 0,
+            "end": 1.0399999618530273
+          },
+          {
+            "word": "3",
+            "start": 1.0399999618530273,
+            "end": 1.2799999713897705
+          },
+          {
+            "word": "to",
+            "start": 1.2799999713897705,
+            "end": 1.5
+          },
+          {
+            "word": "4",
+            "start": 1.5,
+            "end": 1.8600000143051147
+          },
+          {
+            "word": "getting",
+            "start": 1.8600000143051147,
+            "end": 2.5399999618530273
+          },
+          {
+            "word": "interesting",
+            "start": 2.5399999618530273,
+            "end": 3.2200000286102295
+          },
+          {
+            "word": "At",
+            "start": 3.940000057220459,
+            "end": 4.059999942779541
+          },
+          {
+            "word": "level",
+            "start": 4.059999942779541,
+            "end": 4.28000020980835
+          },
+          {
+            "word": "3",
+            "start": 4.28000020980835,
+            "end": 4.820000171661377
+          },
+          {
+            "word": "things",
+            "start": 5.539999961853027,
+            "end": 5.539999961853027
+          },
+          {
+            "word": "get",
+            "start": 5.539999961853027,
+            "end": 5.900000095367432
+          },
+          {
+            "word": "interesting",
+            "start": 5.900000095367432,
+            "end": 6.5
+          },
+          {
+            "word": "Why",
+            "start": 7.320000171661377,
+            "end": 7.460000038146973
+          },
+          {
+            "word": "does",
+            "start": 7.460000038146973,
+            "end": 7.71999979019165
+          },
+          {
+            "word": "practice",
+            "start": 7.71999979019165,
+            "end": 8.220000267028809
+          },
+          {
+            "word": "make",
+            "start": 8.220000267028809,
+            "end": 8.600000381469727
+          },
+          {
+            "word": "things",
+            "start": 8.600000381469727,
+            "end": 8.920000076293945
+          },
+          {
+            "word": "stick",
+            "start": 8.920000076293945,
+            "end": 9.279999732971191
+          },
+          {
+            "word": "Your",
+            "start": 10.079999923706055,
+            "end": 10.380000114440918
+          },
+          {
+            "word": "brain",
+            "start": 10.380000114440918,
+            "end": 10.760000228881836
+          },
+          {
+            "word": "strengthens",
+            "start": 10.760000228881836,
+            "end": 11.5
+          },
+          {
+            "word": "neural",
+            "start": 11.5,
+            "end": 11.84000015258789
+          },
+          {
+            "word": "pathways",
+            "start": 11.84000015258789,
+            "end": 12.239999771118164
+          },
+          {
+            "word": "when",
+            "start": 12.239999771118164,
+            "end": 12.859999656677246
+          },
+          {
+            "word": "you",
+            "start": 12.859999656677246,
+            "end": 13.140000343322754
+          },
+          {
+            "word": "repeat",
+            "start": 13.140000343322754,
+            "end": 13.399999618530273
+          },
+          {
+            "word": "something",
+            "start": 13.399999618530273,
+            "end": 13.84000015258789
+          },
+          {
+            "word": "Now",
+            "start": 14.5,
+            "end": 14.739999771118164
+          },
+          {
+            "word": "you're",
+            "start": 14.739999771118164,
+            "end": 15
+          },
+          {
+            "word": "learning",
+            "start": 15,
+            "end": 15.279999732971191
+          },
+          {
+            "word": "how",
+            "start": 15.279999732971191,
+            "end": 15.5600004196167
+          },
+          {
+            "word": "your",
+            "start": 15.5600004196167,
+            "end": 15.819999694824219
+          },
+          {
+            "word": "brain",
+            "start": 15.819999694824219,
+            "end": 16.15999984741211
+          },
+          {
+            "word": "actually",
+            "start": 16.15999984741211,
+            "end": 16.860000610351562
+          },
+          {
+            "word": "works",
+            "start": 16.860000610351562,
+            "end": 17.239999771118164
+          }
+        ]
+      },
+      {
+        "storyId": "six-levels-story",
+        "stepId": "step-3",
+        "voice": "sage",
+        "voiceLabel": "Sage Story Guide",
+        "text": "Levels 5-6: Real Understanding. At levels five and six, you reach evolutionary neuroscience. Your brain prioritizes what to remember based on repetition because it was survival-critical for our ancestors. Mind. Blown.",
+        "duration": 17.709999084472656,
+        "words": [
+          {
+            "word": "Levels",
+            "start": 0,
+            "end": 0.8999999761581421
+          },
+          {
+            "word": "5",
+            "start": 0.8999999761581421,
+            "end": 1.2599999904632568
+          },
+          {
+            "word": "6",
+            "start": 1.2599999904632568,
+            "end": 1.840000033378601
+          },
+          {
+            "word": "Real",
+            "start": 2.5,
+            "end": 2.759999990463257
+          },
+          {
+            "word": "Understanding",
+            "start": 2.759999990463257,
+            "end": 3.380000114440918
+          },
+          {
+            "word": "At",
+            "start": 4.159999847412109,
+            "end": 4.21999979019165
+          },
+          {
+            "word": "levels",
+            "start": 4.21999979019165,
+            "end": 4.460000038146973
+          },
+          {
+            "word": "5",
+            "start": 4.460000038146973,
+            "end": 4.900000095367432
+          },
+          {
+            "word": "and",
+            "start": 4.900000095367432,
+            "end": 5.079999923706055
+          },
+          {
+            "word": "6",
+            "start": 5.079999923706055,
+            "end": 5.440000057220459
+          },
+          {
+            "word": "you",
+            "start": 5.920000076293945,
+            "end": 6.079999923706055
+          },
+          {
+            "word": "reach",
+            "start": 6.079999923706055,
+            "end": 6.360000133514404
+          },
+          {
+            "word": "evolutionary",
+            "start": 6.360000133514404,
+            "end": 7.199999809265137
+          },
+          {
+            "word": "neuroscience",
+            "start": 7.199999809265137,
+            "end": 7.960000038146973
+          },
+          {
+            "word": "Your",
+            "start": 8.65999984741211,
+            "end": 8.819999694824219
+          },
+          {
+            "word": "brain",
+            "start": 8.819999694824219,
+            "end": 9.15999984741211
+          },
+          {
+            "word": "prioritizes",
+            "start": 9.15999984741211,
+            "end": 10.079999923706055
+          },
+          {
+            "word": "what",
+            "start": 10.079999923706055,
+            "end": 10.359999656677246
+          },
+          {
+            "word": "to",
+            "start": 10.359999656677246,
+            "end": 10.9399995803833
+          },
+          {
+            "word": "remember",
+            "start": 10.9399995803833,
+            "end": 10.9399995803833
+          },
+          {
+            "word": "based",
+            "start": 10.9399995803833,
+            "end": 11.300000190734863
+          },
+          {
+            "word": "on",
+            "start": 11.300000190734863,
+            "end": 11.680000305175781
+          },
+          {
+            "word": "repetition",
+            "start": 11.680000305175781,
+            "end": 12
+          },
+          {
+            "word": "because",
+            "start": 12,
+            "end": 12.819999694824219
+          },
+          {
+            "word": "it",
+            "start": 12.819999694824219,
+            "end": 12.960000038146973
+          },
+          {
+            "word": "was",
+            "start": 12.960000038146973,
+            "end": 13.300000190734863
+          },
+          {
+            "word": "survival",
+            "start": 13.300000190734863,
+            "end": 13.760000228881836
+          },
+          {
+            "word": "critical",
+            "start": 13.760000228881836,
+            "end": 14.180000305175781
+          },
+          {
+            "word": "for",
+            "start": 14.180000305175781,
+            "end": 14.699999809265137
+          },
+          {
+            "word": "our",
+            "start": 14.699999809265137,
+            "end": 15.039999961853027
+          },
+          {
+            "word": "ancestors",
+            "start": 15.039999961853027,
+            "end": 15.4399995803833
+          },
+          {
+            "word": "Mind",
+            "start": 16.280000686645508,
+            "end": 16.719999313354492
+          },
+          {
+            "word": "blown",
+            "start": 16.719999313354492,
+            "end": 17.399999618530273
+          }
+        ]
+      },
+      {
+        "storyId": "six-levels-story",
+        "stepId": "step-4",
+        "voice": "sage",
+        "voiceLabel": "Sage Story Guide",
+        "text": "The Transformation. You went from 'why homework?' to understanding human evolution. Now you don't just do homework because you're told to—you understand how your brain actually works. That's the power of going deep!",
+        "duration": 14.899999618530273,
+        "words": [
+          {
+            "word": "The",
+            "start": 0,
+            "end": 0.3199999928474426
+          },
+          {
+            "word": "transformation",
+            "start": 0.3199999928474426,
+            "end": 1.2999999523162842
+          },
+          {
+            "word": "You",
+            "start": 2.359999895095825,
+            "end": 2.4600000381469727
+          },
+          {
+            "word": "went",
+            "start": 2.4600000381469727,
+            "end": 2.6600000858306885
+          },
+          {
+            "word": "from",
+            "start": 2.6600000858306885,
+            "end": 3.0199999809265137
+          },
+          {
+            "word": "why",
+            "start": 3.0199999809265137,
+            "end": 3.3399999141693115
+          },
+          {
+            "word": "homework",
+            "start": 3.3399999141693115,
+            "end": 3.680000066757202
+          },
+          {
+            "word": "to",
+            "start": 3.680000066757202,
+            "end": 4.039999961853027
+          },
+          {
+            "word": "understanding",
+            "start": 4.039999961853027,
+            "end": 4.599999904632568
+          },
+          {
+            "word": "human",
+            "start": 4.599999904632568,
+            "end": 5.099999904632568
+          },
+          {
+            "word": "evolution",
+            "start": 5.099999904632568,
+            "end": 5.5
+          },
+          {
+            "word": "Now",
+            "start": 6.28000020980835,
+            "end": 6.400000095367432
+          },
+          {
+            "word": "you",
+            "start": 6.400000095367432,
+            "end": 6.619999885559082
+          },
+          {
+            "word": "don't",
+            "start": 6.619999885559082,
+            "end": 6.880000114440918
+          },
+          {
+            "word": "just",
+            "start": 6.880000114440918,
+            "end": 7.28000020980835
+          },
+          {
+            "word": "do",
+            "start": 7.28000020980835,
+            "end": 7.579999923706055
+          },
+          {
+            "word": "homework",
+            "start": 7.579999923706055,
+            "end": 7.880000114440918
+          },
+          {
+            "word": "because",
+            "start": 7.880000114440918,
+            "end": 8.239999771118164
+          },
+          {
+            "word": "you're",
+            "start": 8.239999771118164,
+            "end": 8.619999885559082
+          },
+          {
+            "word": "told",
+            "start": 8.619999885559082,
+            "end": 8.65999984741211
+          },
+          {
+            "word": "to",
+            "start": 8.65999984741211,
+            "end": 9.020000457763672
+          },
+          {
+            "word": "You",
+            "start": 9.539999961853027,
+            "end": 9.680000305175781
+          },
+          {
+            "word": "understand",
+            "start": 9.680000305175781,
+            "end": 10.220000267028809
+          },
+          {
+            "word": "how",
+            "start": 10.220000267028809,
+            "end": 10.460000038146973
+          },
+          {
+            "word": "your",
+            "start": 10.460000038146973,
+            "end": 10.699999809265137
+          },
+          {
+            "word": "brain",
+            "start": 10.699999809265137,
+            "end": 11
+          },
+          {
+            "word": "actually",
+            "start": 11,
+            "end": 11.640000343322754
+          },
+          {
+            "word": "works",
+            "start": 11.640000343322754,
+            "end": 12.020000457763672
+          },
+          {
+            "word": "That's",
+            "start": 12.699999809265137,
+            "end": 12.979999542236328
+          },
+          {
+            "word": "the",
+            "start": 12.979999542236328,
+            "end": 13.180000305175781
+          },
+          {
+            "word": "power",
+            "start": 13.180000305175781,
+            "end": 13.520000457763672
+          },
+          {
+            "word": "of",
+            "start": 13.520000457763672,
+            "end": 14.020000457763672
+          },
+          {
+            "word": "going",
+            "start": 14.020000457763672,
+            "end": 14.34000015258789
+          },
+          {
+            "word": "deep",
+            "start": 14.34000015258789,
+            "end": 14.680000305175781
+          }
+        ]
+      }
+    ],
+    "comprehension-story": [
+      {
+        "storyId": "comprehension-story",
+        "stepId": "step-0",
+        "voice": "sage",
+        "voiceLabel": "Sage Story Guide",
+        "text": "Questions Are the Tool. Questions are the tool. Comprehension is the result. When you truly comprehend something, you can do four powerful things that prove you really understand.",
+        "duration": 16.700000762939453,
+        "words": [
+          {
+            "word": "Questions",
+            "start": 0,
+            "end": 0.7799999713897705
+          },
+          {
+            "word": "are",
+            "start": 0.7799999713897705,
+            "end": 1.2400000095367432
+          },
+          {
+            "word": "the",
+            "start": 1.2400000095367432,
+            "end": 1.9600000381469727
+          },
+          {
+            "word": "tool",
+            "start": 1.9600000381469727,
+            "end": 1.9600000381469727
+          },
+          {
+            "word": "Questions",
+            "start": 2.799999952316284,
+            "end": 3.2799999713897705
+          },
+          {
+            "word": "are",
+            "start": 3.2799999713897705,
+            "end": 3.700000047683716
+          },
+          {
+            "word": "the",
+            "start": 3.700000047683716,
+            "end": 4.260000228881836
+          },
+          {
+            "word": "tool",
+            "start": 4.260000228881836,
+            "end": 4.260000228881836
+          },
+          {
+            "word": "Comprehension",
+            "start": 5.5,
+            "end": 5.860000133514404
+          },
+          {
+            "word": "is",
+            "start": 5.860000133514404,
+            "end": 6.340000152587891
+          },
+          {
+            "word": "the",
+            "start": 6.340000152587891,
+            "end": 6.639999866485596
+          },
+          {
+            "word": "result",
+            "start": 6.639999866485596,
+            "end": 6.920000076293945
+          },
+          {
+            "word": "When",
+            "start": 7.960000038146973,
+            "end": 8.039999961853027
+          },
+          {
+            "word": "you",
+            "start": 8.039999961853027,
+            "end": 8.4399995803833
+          },
+          {
+            "word": "truly",
+            "start": 8.4399995803833,
+            "end": 9
+          },
+          {
+            "word": "comprehend",
+            "start": 9,
+            "end": 9.600000381469727
+          },
+          {
+            "word": "something",
+            "start": 9.600000381469727,
+            "end": 10.119999885559082
+          },
+          {
+            "word": "you",
+            "start": 10.65999984741211,
+            "end": 10.800000190734863
+          },
+          {
+            "word": "can",
+            "start": 10.800000190734863,
+            "end": 11.020000457763672
+          },
+          {
+            "word": "do",
+            "start": 11.020000457763672,
+            "end": 11.260000228881836
+          },
+          {
+            "word": "four",
+            "start": 11.260000228881836,
+            "end": 11.899999618530273
+          },
+          {
+            "word": "powerful",
+            "start": 11.899999618530273,
+            "end": 12.420000076293945
+          },
+          {
+            "word": "things",
+            "start": 12.420000076293945,
+            "end": 12.899999618530273
+          },
+          {
+            "word": "that",
+            "start": 12.899999618530273,
+            "end": 13.539999961853027
+          },
+          {
+            "word": "prove",
+            "start": 13.539999961853027,
+            "end": 14.020000457763672
+          },
+          {
+            "word": "you",
+            "start": 14.020000457763672,
+            "end": 14.579999923706055
+          },
+          {
+            "word": "really",
+            "start": 14.579999923706055,
+            "end": 15.140000343322754
+          },
+          {
+            "word": "understand",
+            "start": 15.140000343322754,
+            "end": 15.640000343322754
+          }
+        ]
+      },
+      {
+        "storyId": "comprehension-story",
+        "stepId": "step-1",
+        "voice": "sage",
+        "voiceLabel": "Sage Story Guide",
+        "text": "Explain It Simply. If you can't explain something simply, you don't really understand it. After going six levels deep, try explaining the concept to a younger kid. Can you do it without jargon?",
+        "duration": 14.899999618530273,
+        "words": [
+          {
+            "word": "Explain",
+            "start": 0,
+            "end": 0.9599999785423279
+          },
+          {
+            "word": "it",
+            "start": 0.9599999785423279,
+            "end": 1.2000000476837158
+          },
+          {
+            "word": "simply",
+            "start": 1.2000000476837158,
+            "end": 1.7599999904632568
+          },
+          {
+            "word": "If",
+            "start": 2.559999942779541,
+            "end": 2.619999885559082
+          },
+          {
+            "word": "you",
+            "start": 2.619999885559082,
+            "end": 2.819999933242798
+          },
+          {
+            "word": "can't",
+            "start": 2.819999933242798,
+            "end": 3.140000104904175
+          },
+          {
+            "word": "explain",
+            "start": 3.140000104904175,
+            "end": 3.5199999809265137
+          },
+          {
+            "word": "something",
+            "start": 3.5199999809265137,
+            "end": 3.9600000381469727
+          },
+          {
+            "word": "simply",
+            "start": 3.9600000381469727,
+            "end": 4.360000133514404
+          },
+          {
+            "word": "you",
+            "start": 4.980000019073486,
+            "end": 5.079999923706055
+          },
+          {
+            "word": "don't",
+            "start": 5.079999923706055,
+            "end": 5.5
+          },
+          {
+            "word": "really",
+            "start": 5.5,
+            "end": 5.960000038146973
+          },
+          {
+            "word": "understand",
+            "start": 5.960000038146973,
+            "end": 6.400000095367432
+          },
+          {
+            "word": "it",
+            "start": 6.400000095367432,
+            "end": 6.820000171661377
+          },
+          {
+            "word": "After",
+            "start": 7.460000038146973,
+            "end": 7.559999942779541
+          },
+          {
+            "word": "going",
+            "start": 7.559999942779541,
+            "end": 7.880000114440918
+          },
+          {
+            "word": "six",
+            "start": 7.880000114440918,
+            "end": 8.300000190734863
+          },
+          {
+            "word": "levels",
+            "start": 8.300000190734863,
+            "end": 8.539999961853027
+          },
+          {
+            "word": "deep",
+            "start": 8.539999961853027,
+            "end": 8.9399995803833
+          },
+          {
+            "word": "try",
+            "start": 9.579999923706055,
+            "end": 9.779999732971191
+          },
+          {
+            "word": "explaining",
+            "start": 9.779999732971191,
+            "end": 10.15999984741211
+          },
+          {
+            "word": "the",
+            "start": 10.15999984741211,
+            "end": 10.460000038146973
+          },
+          {
+            "word": "concept",
+            "start": 10.460000038146973,
+            "end": 10.880000114440918
+          },
+          {
+            "word": "to",
+            "start": 10.880000114440918,
+            "end": 11.34000015258789
+          },
+          {
+            "word": "a",
+            "start": 11.34000015258789,
+            "end": 11.760000228881836
+          },
+          {
+            "word": "younger",
+            "start": 11.760000228881836,
+            "end": 11.779999732971191
+          },
+          {
+            "word": "kid",
+            "start": 11.779999732971191,
+            "end": 12.140000343322754
+          },
+          {
+            "word": "Can",
+            "start": 12.9399995803833,
+            "end": 13.180000305175781
+          },
+          {
+            "word": "you",
+            "start": 13.180000305175781,
+            "end": 13.359999656677246
+          },
+          {
+            "word": "do",
+            "start": 13.359999656677246,
+            "end": 13.479999542236328
+          },
+          {
+            "word": "it",
+            "start": 13.479999542236328,
+            "end": 13.84000015258789
+          },
+          {
+            "word": "without",
+            "start": 13.84000015258789,
+            "end": 14.239999771118164
+          },
+          {
+            "word": "jargon",
+            "start": 14.239999771118164,
+            "end": 14.619999885559082
+          }
+        ]
+      },
+      {
+        "storyId": "comprehension-story",
+        "stepId": "step-2",
+        "voice": "sage",
+        "voiceLabel": "Sage Story Guide",
+        "text": "Find Connections. True understanding means seeing how things connect to other things you know. Ask: how does this relate to history? To science? To my own life? Connections deepen understanding.",
+        "duration": 16.31999969482422,
+        "words": [
+          {
+            "word": "Find",
+            "start": 0,
+            "end": 1.1399999856948853
+          },
+          {
+            "word": "connections",
+            "start": 1.1399999856948853,
+            "end": 2.0199999809265137
+          },
+          {
+            "word": "True",
+            "start": 3.200000047683716,
+            "end": 3.299999952316284
+          },
+          {
+            "word": "understanding",
+            "start": 3.299999952316284,
+            "end": 4.079999923706055
+          },
+          {
+            "word": "means",
+            "start": 4.079999923706055,
+            "end": 4.639999866485596
+          },
+          {
+            "word": "seeing",
+            "start": 4.639999866485596,
+            "end": 4.980000019073486
+          },
+          {
+            "word": "how",
+            "start": 4.980000019073486,
+            "end": 5.400000095367432
+          },
+          {
+            "word": "things",
+            "start": 5.400000095367432,
+            "end": 5.699999809265137
+          },
+          {
+            "word": "connect",
+            "start": 5.699999809265137,
+            "end": 6.159999847412109
+          },
+          {
+            "word": "to",
+            "start": 6.159999847412109,
+            "end": 6.639999866485596
+          },
+          {
+            "word": "other",
+            "start": 6.639999866485596,
+            "end": 6.900000095367432
+          },
+          {
+            "word": "things",
+            "start": 6.900000095367432,
+            "end": 7.179999828338623
+          },
+          {
+            "word": "you",
+            "start": 7.179999828338623,
+            "end": 7.440000057220459
+          },
+          {
+            "word": "know",
+            "start": 7.440000057220459,
+            "end": 7.659999847412109
+          },
+          {
+            "word": "Ask",
+            "start": 8.779999732971191,
+            "end": 8.84000015258789
+          },
+          {
+            "word": "how",
+            "start": 9.279999732971191,
+            "end": 9.420000076293945
+          },
+          {
+            "word": "does",
+            "start": 9.420000076293945,
+            "end": 9.640000343322754
+          },
+          {
+            "word": "this",
+            "start": 9.640000343322754,
+            "end": 9.9399995803833
+          },
+          {
+            "word": "relate",
+            "start": 9.9399995803833,
+            "end": 10.140000343322754
+          },
+          {
+            "word": "to",
+            "start": 10.140000343322754,
+            "end": 10.420000076293945
+          },
+          {
+            "word": "history",
+            "start": 10.420000076293945,
+            "end": 10.720000267028809
+          },
+          {
+            "word": "to",
+            "start": 11.0600004196167,
+            "end": 11.960000038146973
+          },
+          {
+            "word": "science",
+            "start": 11.960000038146973,
+            "end": 11.960000038146973
+          },
+          {
+            "word": "to",
+            "start": 12.399999618530273,
+            "end": 12.539999961853027
+          },
+          {
+            "word": "my",
+            "start": 12.539999961853027,
+            "end": 12.699999809265137
+          },
+          {
+            "word": "own",
+            "start": 12.699999809265137,
+            "end": 12.920000076293945
+          },
+          {
+            "word": "life",
+            "start": 12.920000076293945,
+            "end": 13.319999694824219
+          },
+          {
+            "word": "Connections",
+            "start": 14.239999771118164,
+            "end": 14.720000267028809
+          },
+          {
+            "word": "deepen",
+            "start": 14.720000267028809,
+            "end": 15.260000228881836
+          },
+          {
+            "word": "understanding",
+            "start": 15.260000228881836,
+            "end": 16.040000915527344
+          }
+        ]
+      },
+      {
+        "storyId": "comprehension-story",
+        "stepId": "step-3",
+        "voice": "sage",
+        "voiceLabel": "Sage Story Guide",
+        "text": "Predict Outcomes. When you deeply understand something, you can predict what will happen. 'If X happens, then Y will probably follow because...' Prediction proves comprehension.",
+        "duration": 14.109999656677246,
+        "words": [
+          {
+            "word": "Predict",
+            "start": 0,
+            "end": 0.699999988079071
+          },
+          {
+            "word": "outcomes",
+            "start": 0.699999988079071,
+            "end": 1.4199999570846558
+          },
+          {
+            "word": "When",
+            "start": 2.3399999141693115,
+            "end": 2.359999895095825
+          },
+          {
+            "word": "you",
+            "start": 2.359999895095825,
+            "end": 2.7200000286102295
+          },
+          {
+            "word": "deeply",
+            "start": 2.7200000286102295,
+            "end": 3.1600000858306885
+          },
+          {
+            "word": "understand",
+            "start": 3.1600000858306885,
+            "end": 3.740000009536743
+          },
+          {
+            "word": "something",
+            "start": 3.740000009536743,
+            "end": 4.239999771118164
+          },
+          {
+            "word": "you",
+            "start": 4.659999847412109,
+            "end": 4.960000038146973
+          },
+          {
+            "word": "can",
+            "start": 4.960000038146973,
+            "end": 5.239999771118164
+          },
+          {
+            "word": "predict",
+            "start": 5.239999771118164,
+            "end": 5.619999885559082
+          },
+          {
+            "word": "what",
+            "start": 5.619999885559082,
+            "end": 5.940000057220459
+          },
+          {
+            "word": "will",
+            "start": 5.940000057220459,
+            "end": 6.21999979019165
+          },
+          {
+            "word": "happen",
+            "start": 6.21999979019165,
+            "end": 6.5
+          },
+          {
+            "word": "If",
+            "start": 7.460000038146973,
+            "end": 7.579999923706055
+          },
+          {
+            "word": "X",
+            "start": 7.579999923706055,
+            "end": 8
+          },
+          {
+            "word": "happens",
+            "start": 8,
+            "end": 8.420000076293945
+          },
+          {
+            "word": "then",
+            "start": 8.680000305175781,
+            "end": 9.140000343322754
+          },
+          {
+            "word": "Y",
+            "start": 9.140000343322754,
+            "end": 9.420000076293945
+          },
+          {
+            "word": "will",
+            "start": 9.420000076293945,
+            "end": 9.619999885559082
+          },
+          {
+            "word": "probably",
+            "start": 9.619999885559082,
+            "end": 10.260000228881836
+          },
+          {
+            "word": "follow",
+            "start": 10.260000228881836,
+            "end": 10.4399995803833
+          },
+          {
+            "word": "because",
+            "start": 10.4399995803833,
+            "end": 11.100000381469727
+          },
+          {
+            "word": "Prediction",
+            "start": 12.300000190734863,
+            "end": 12.5
+          },
+          {
+            "word": "proves",
+            "start": 12.5,
+            "end": 13.100000381469727
+          },
+          {
+            "word": "comprehension",
+            "start": 13.100000381469727,
+            "end": 13.699999809265137
+          }
+        ]
+      },
+      {
+        "storyId": "comprehension-story",
+        "stepId": "step-4",
+        "voice": "sage",
+        "voiceLabel": "Sage Story Guide",
+        "text": "Apply to New Situations. Real comprehension lets you use knowledge in completely new contexts. Understanding isn't memorizing facts—it's having transferable insight that works everywhere.",
+        "duration": 14.4399995803833,
+        "words": [
+          {
+            "word": "Apply",
+            "start": 0,
+            "end": 0.699999988079071
+          },
+          {
+            "word": "to",
+            "start": 0.699999988079071,
+            "end": 1.1799999475479126
+          },
+          {
+            "word": "new",
+            "start": 1.1799999475479126,
+            "end": 1.600000023841858
+          },
+          {
+            "word": "situations",
+            "start": 1.600000023841858,
+            "end": 2.4600000381469727
+          },
+          {
+            "word": "Real",
+            "start": 3.619999885559082,
+            "end": 3.680000066757202
+          },
+          {
+            "word": "comprehension",
+            "start": 3.680000066757202,
+            "end": 4.320000171661377
+          },
+          {
+            "word": "lets",
+            "start": 4.320000171661377,
+            "end": 4.699999809265137
+          },
+          {
+            "word": "you",
+            "start": 4.699999809265137,
+            "end": 5
+          },
+          {
+            "word": "use",
+            "start": 5,
+            "end": 5.21999979019165
+          },
+          {
+            "word": "knowledge",
+            "start": 5.21999979019165,
+            "end": 5.639999866485596
+          },
+          {
+            "word": "in",
+            "start": 5.639999866485596,
+            "end": 5.940000057220459
+          },
+          {
+            "word": "completely",
+            "start": 5.940000057220459,
+            "end": 6.400000095367432
+          },
+          {
+            "word": "new",
+            "start": 6.400000095367432,
+            "end": 6.980000019073486
+          },
+          {
+            "word": "contexts",
+            "start": 6.980000019073486,
+            "end": 7.940000057220459
+          },
+          {
+            "word": "Understanding",
+            "start": 8.760000228881836,
+            "end": 9.079999923706055
+          },
+          {
+            "word": "isn't",
+            "start": 9.079999923706055,
+            "end": 9.5600004196167
+          },
+          {
+            "word": "memorizing",
+            "start": 9.5600004196167,
+            "end": 10.119999885559082
+          },
+          {
+            "word": "facts",
+            "start": 10.119999885559082,
+            "end": 10.640000343322754
+          },
+          {
+            "word": "It's",
+            "start": 11.079999923706055,
+            "end": 11.279999732971191
+          },
+          {
+            "word": "having",
+            "start": 11.279999732971191,
+            "end": 11.600000381469727
+          },
+          {
+            "word": "transferable",
+            "start": 11.600000381469727,
+            "end": 12.420000076293945
+          },
+          {
+            "word": "insight",
+            "start": 12.420000076293945,
+            "end": 12.800000190734863
+          },
+          {
+            "word": "that",
+            "start": 12.800000190734863,
+            "end": 13.180000305175781
+          },
+          {
+            "word": "works",
+            "start": 13.180000305175781,
+            "end": 13.4399995803833
+          },
+          {
+            "word": "everywhere",
+            "start": 13.4399995803833,
+            "end": 14.039999961853027
+          }
+        ]
+      },
+      {
+        "storyId": "comprehension-story",
+        "stepId": "step-5",
+        "voice": "sage",
+        "voiceLabel": "Sage Story Guide",
+        "text": "Become a Master Questioner. Practice these skills and you become a master questioner. You'll see the world differently. Problems become puzzles to solve. Confusion becomes curiosity. The art of questions is your superpower!",
+        "duration": 18.600000381469727,
+        "words": [
+          {
+            "word": "Become",
+            "start": 0,
+            "end": 1.3200000524520874
+          },
+          {
+            "word": "a",
+            "start": 1.3200000524520874,
+            "end": 2
+          },
+          {
+            "word": "Master",
+            "start": 2,
+            "end": 2.2799999713897705
+          },
+          {
+            "word": "Questioner",
+            "start": 2.2799999713897705,
+            "end": 2.940000057220459
+          },
+          {
+            "word": "Practice",
+            "start": 4.099999904632568,
+            "end": 4.099999904632568
+          },
+          {
+            "word": "these",
+            "start": 4.099999904632568,
+            "end": 4.519999980926514
+          },
+          {
+            "word": "skills",
+            "start": 4.519999980926514,
+            "end": 4.880000114440918
+          },
+          {
+            "word": "and",
+            "start": 4.880000114440918,
+            "end": 5.420000076293945
+          },
+          {
+            "word": "you",
+            "start": 5.420000076293945,
+            "end": 5.699999809265137
+          },
+          {
+            "word": "become",
+            "start": 5.699999809265137,
+            "end": 6.039999961853027
+          },
+          {
+            "word": "a",
+            "start": 6.039999961853027,
+            "end": 6.519999980926514
+          },
+          {
+            "word": "Master",
+            "start": 6.519999980926514,
+            "end": 6.699999809265137
+          },
+          {
+            "word": "Questioner",
+            "start": 6.699999809265137,
+            "end": 7.340000152587891
+          },
+          {
+            "word": "You'll",
+            "start": 8.239999771118164,
+            "end": 8.479999542236328
+          },
+          {
+            "word": "see",
+            "start": 8.479999542236328,
+            "end": 8.579999923706055
+          },
+          {
+            "word": "the",
+            "start": 8.579999923706055,
+            "end": 9.039999961853027
+          },
+          {
+            "word": "world",
+            "start": 9.039999961853027,
+            "end": 9.039999961853027
+          },
+          {
+            "word": "differently",
+            "start": 9.039999961853027,
+            "end": 9.539999961853027
+          },
+          {
+            "word": "Problems",
+            "start": 10.619999885559082,
+            "end": 10.920000076293945
+          },
+          {
+            "word": "become",
+            "start": 10.920000076293945,
+            "end": 11.239999771118164
+          },
+          {
+            "word": "puzzles",
+            "start": 11.239999771118164,
+            "end": 11.539999961853027
+          },
+          {
+            "word": "to",
+            "start": 11.539999961853027,
+            "end": 12.279999732971191
+          },
+          {
+            "word": "solve",
+            "start": 12.279999732971191,
+            "end": 12.279999732971191
+          },
+          {
+            "word": "Confusion",
+            "start": 13.140000343322754,
+            "end": 13.5
+          },
+          {
+            "word": "becomes",
+            "start": 13.5,
+            "end": 14.039999961853027
+          },
+          {
+            "word": "curiosity",
+            "start": 14.039999961853027,
+            "end": 14.720000267028809
+          },
+          {
+            "word": "The",
+            "start": 15.380000114440918,
+            "end": 15.65999984741211
+          },
+          {
+            "word": "art",
+            "start": 15.65999984741211,
+            "end": 15.760000228881836
+          },
+          {
+            "word": "of",
+            "start": 15.760000228881836,
+            "end": 16.200000762939453
+          },
+          {
+            "word": "questions",
+            "start": 16.200000762939453,
+            "end": 16.459999084472656
+          },
+          {
+            "word": "is",
+            "start": 16.459999084472656,
+            "end": 16.84000015258789
+          },
+          {
+            "word": "your",
+            "start": 16.84000015258789,
+            "end": 17.31999969482422
+          },
+          {
+            "word": "superpower",
+            "start": 17.31999969482422,
+            "end": 17.899999618530273
           }
         ]
       }
