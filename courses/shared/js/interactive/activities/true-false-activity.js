@@ -24,6 +24,7 @@
  *     statement: string,       // The statement to evaluate
  *     correct: boolean,        // True or false
  *     explanation: string,     // Explanation shown after answer
+ *     showReasoning: boolean,  // Whether to show a reasoning textarea
  *     requireReasoning: boolean, // Whether reasoning is required
  *     minReasoningWords: number, // Minimum words for reasoning (default: 5)
  *     points: number           // Points for correct answer
@@ -31,8 +32,8 @@
  * 
  * Scoring:
  *   - Correct answer: 70% of points
- *   - Good reasoning (meets word count): +30% of points
- *   - If requireReasoning is false, 100% for correct T/F answer
+ *   - Good reasoning (meets word count): +30% of points when required
+ *   - If reasoning is optional or hidden, 100% for correct T/F answer
  */
 
 class TrueFalseActivity extends BaseActivity {
@@ -46,7 +47,8 @@ class TrueFalseActivity extends BaseActivity {
     // Activity config
     this.statement = activityData.statement;
     this.correctAnswer = activityData.correct;
-    this.requireReasoning = activityData.requireReasoning ?? true;
+    this.requireReasoning = activityData.requireReasoning ?? false;
+    this.showReasoning = activityData.showReasoning ?? this.requireReasoning;
     this.minReasoningWords = activityData.minReasoningWords || 5;
   }
   
@@ -69,16 +71,19 @@ class TrueFalseActivity extends BaseActivity {
           </button>
         </div>
         
-        ${this.requireReasoning ? `
+        ${this.showReasoning ? `
           <div class="tf-reasoning">
-            <label class="reasoning-label">Explain your reasoning:</label>
+            <label class="reasoning-label">
+              ${this.requireReasoning ? 'Explain your reasoning:' : 'Optional: explain your reasoning'}
+            </label>
             <textarea 
               class="activity-textarea" 
-              placeholder="Why do you think this is true/false?"
+              placeholder="${this.requireReasoning ? 'Why do you think this is true/false?' : 'Add a quick explanation if you want to show your thinking.'}"
               rows="3"
             ></textarea>
             <div class="activity-word-count">
-              <span class="word-count-current">0</span> / ${this.minReasoningWords} words minimum
+              <span class="word-count-current">0</span>
+              ${this.requireReasoning ? `/ ${this.minReasoningWords} words minimum` : `words • ${this.minReasoningWords}+ recommended`}
             </div>
           </div>
         ` : ''}
@@ -233,6 +238,7 @@ class TrueFalseActivity extends BaseActivity {
       score,
       response: {
         selected: this.selectedAnswer,
+        selectedText: this.selectedAnswer === null ? null : (this.selectedAnswer ? 'True' : 'False'),
         correctAnswer: this.correctAnswer,
         reasoning: this.reasoning,
         reasoningWordCount: wordCount,
@@ -274,6 +280,23 @@ class TrueFalseActivity extends BaseActivity {
     
     // Call parent feedback method
     super.showFeedback(result);
+  }
+
+  /**
+   * Format boolean attempts more clearly in previous-attempt banners
+   */
+  formatPreviousAnswer(attempt) {
+    if (!attempt?.response) return '';
+
+    if (attempt.response.selectedText) {
+      return `"${attempt.response.selectedText}"`;
+    }
+
+    if (typeof attempt.response.selected === 'boolean') {
+      return `"${attempt.response.selected ? 'True' : 'False'}"`;
+    }
+
+    return super.formatPreviousAnswer(attempt);
   }
   
   /**

@@ -31,7 +31,7 @@ class AudioNarrationEngine {
     this.onWordHighlight = null; // Callback: (wordIndex, word) => void
     this.resolvePromise = null;
     this.manifest = null;
-    this.currentVoice = "ballad"; // Default voice
+    this.currentVoice = null;
     this.manifestLoaded = false;
     this.manifestPromise = null;
 
@@ -46,7 +46,11 @@ class AudioNarrationEngine {
       );
       const response = await fetch(`${this.audioBasePath}/manifest.json`);
       this.manifest = await response.json();
-      this.currentVoice = this.manifest.defaultVoice || "ballad";
+      const availableVoiceIds = Object.keys(this.manifest.voices || {});
+      this.currentVoice =
+        this.manifest.defaultVoice ||
+        availableVoiceIds[0] ||
+        "ballad";
       this.manifestLoaded = true;
       console.log("AudioEngine: Manifest loaded successfully");
       console.log(
@@ -82,7 +86,7 @@ class AudioNarrationEngine {
   }
 
   setVoice(voiceId) {
-    if (this.manifest && this.manifest[voiceId]) {
+    if (this.manifest && (this.manifest[voiceId] || this.manifest.voices?.[voiceId])) {
       this.currentVoice = voiceId;
       console.log("Voice changed to:", voiceId);
     }

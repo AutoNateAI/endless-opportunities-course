@@ -48,9 +48,31 @@
           </div>
         </div>
         <div class="voice-options">
-          <span class="voice-badge">👩‍🎤 Female Storyteller</span>
-          <span class="voice-badge">🎩 Male UK Storyteller</span>
+          <span class="voice-badge">🎧 Generated narration</span>
+          <span class="voice-badge">🗺️ Click nodes to traverse the map</span>
         </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <h2>🎬 Story Lens</h2>
+      <p>Week 1 now frames the lesson like a short transformation arc: a first answer looks convincing, better questions break it open, and the full structure becomes visible once you can trace how ideas connect.</p>
+      <div class="narrative-setup">
+        <article class="narrative-card">
+          <div class="narrative-card-step">01</div>
+          <h3>Surface Answer</h3>
+          <p>A problem appears, the first explanation sounds fine, and most people stop before they understand the system behind it.</p>
+        </article>
+        <article class="narrative-card">
+          <div class="narrative-card-step">02</div>
+          <h3>Question Pressure</h3>
+          <p>The lesson keeps pushing. Every “why” reveals another layer, and each node in the diagram becomes a clue instead of a dead end.</p>
+        </article>
+        <article class="narrative-card">
+          <div class="narrative-card-step">03</div>
+          <h3>System View</h3>
+          <p>By the end of the week, the student should be able to move through the concept map, explain what depends on what, and defend the reasoning out loud.</p>
+        </article>
       </div>
     </section>
 
@@ -534,7 +556,8 @@
             statement: 'According to the lesson, "intelligence" is really about knowing how to find things out, not about knowing things.',
             correct: true,
             explanation: 'The lesson explicitly states: "Intelligence isn\'t about knowing things—it\'s about knowing how to find things out." This reframes intelligence as a skill, not a fixed trait.',
-            requireReasoning: true,
+            showReasoning: true,
+            requireReasoning: false,
             minReasoningWords: 5,
             points: 15
           },
@@ -544,7 +567,8 @@
             statement: 'A "smart" person who accepts surface-level answers will always beat a curious person who asks great questions.',
             correct: false,
             explanation: 'The opposite is true: "A curious person who asks great questions will always beat a \'smart\' person who accepts surface-level answers." Curiosity beats raw intelligence.',
-            requireReasoning: true,
+            showReasoning: true,
+            requireReasoning: false,
             minReasoningWords: 5,
             points: 15
           },
@@ -872,7 +896,8 @@
             statement: 'According to the lesson, things start to get "interesting" at levels 3-4.',
             correct: true,
             explanation: '"At level three, things get interesting." This is where you move beyond obvious answers and start understanding how systems actually work.',
-            requireReasoning: true,
+            showReasoning: true,
+            requireReasoning: false,
             minReasoningWords: 5,
             points: 15
           },
@@ -882,7 +907,8 @@
             statement: 'The lesson promises that reaching levels 5-6 will always result in a "mind-blown" transformation.',
             correct: true,
             explanation: 'The lesson describes levels 5-6 as where you reach "real understanding" and the "transformation" - moving from surface acceptance to deep comprehension.',
-            requireReasoning: true,
+            showReasoning: true,
+            requireReasoning: false,
             minReasoningWords: 5,
             points: 15
           },
@@ -1214,7 +1240,8 @@
             statement: 'If you can\'t explain something simply, you probably don\'t really understand it.',
             correct: true,
             explanation: '"If you can\'t explain something simply, you don\'t really understand it." Jargon-free explanation requires genuine comprehension.',
-            requireReasoning: true,
+            showReasoning: true,
+            requireReasoning: false,
             minReasoningWords: 5,
             points: 15
           },
@@ -1224,7 +1251,8 @@
             statement: 'According to the lesson, understanding is the same as memorizing facts.',
             correct: false,
             explanation: '"Understanding isn\'t memorizing facts—it\'s having transferable insight that works everywhere." Memorizing ≠ comprehending.',
-            requireReasoning: true,
+            showReasoning: true,
+            requireReasoning: false,
             minReasoningWords: 5,
             points: 15
           },

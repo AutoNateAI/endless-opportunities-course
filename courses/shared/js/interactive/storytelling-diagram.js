@@ -44,6 +44,7 @@ class StorytellingDiagram {
     this.tooltip = null;
     this.tooltipNode = null;
     this.narrator = null;
+    this.focusedNodeId = null;
     
     this.init();
   }
@@ -63,6 +64,7 @@ class StorytellingDiagram {
     this.setupProgressDots();
     this.setupAudioControls();
     this.setupCustomInteractivity();
+    this.setupExplorer();
   }
 
   createCustomDiagram() {
@@ -198,6 +200,19 @@ class StorytellingDiagram {
       }
     });
 
+    // Allow direct node traversal when the user wants to explore
+    this.cy.on('tap', 'node', (e) => {
+      const node = e.target;
+      if (node.data('type') === 'group') return;
+
+      const stepIndex = this.storySteps.findIndex((step) => step.nodeId === node.id());
+      if (stepIndex >= 0) {
+        this.jumpToStep(stepIndex);
+      } else {
+        this.focusNode(node.id());
+      }
+    });
+
     // Double-tap to fit
     this.cy.on('dbltap', (e) => {
       if (e.target === this.cy) {
@@ -288,6 +303,20 @@ class StorytellingDiagram {
     // Fit button
     const fitBtn = container.querySelector('[data-action="fit"]');
     if (fitBtn) fitBtn.addEventListener('click', () => this.cy.fit(50));
+
+    if (!container.querySelector('[data-action="explore"]')) {
+      const playbackRight = container.querySelector('.playback-right');
+      if (playbackRight) {
+        const exploreBtn = document.createElement('button');
+        exploreBtn.className = 'diagram-btn small';
+        exploreBtn.type = 'button';
+        exploreBtn.dataset.action = 'explore';
+        exploreBtn.title = 'Reveal the full map and traverse it';
+        exploreBtn.textContent = 'Explore Map';
+        playbackRight.prepend(exploreBtn);
+        exploreBtn.addEventListener('click', () => this.enterExploreMode());
+      }
+    }
 
     // Reset button
     const resetBtn = container.querySelector('[data-action="reset"]');
@@ -428,7 +457,7 @@ class StorytellingDiagram {
       }
 
       this.voiceSelect.innerHTML = voices
-        .map((v, i) => `<option value="${v.id}" ${i === 0 ? 'selected' : ''}>${v.label}</option>`)
+        .map((v) => `<option value="${v.id}" ${v.id === this.narrator.currentVoice ? 'selected' : ''}>${v.label}</option>`)
         .join('');
     };
     
@@ -502,6 +531,7 @@ class StorytellingDiagram {
     }
     if (connection) connection.style.display = 'none';
     captionContainer.classList.remove('active');
+    this.updateExplorerForNode(this.storySteps[0]?.nodeId || null);
   }
 
   updateCaption(step) {
@@ -548,6 +578,8 @@ class StorytellingDiagram {
       setTimeout(() => connection?.classList.add('visible'), 250);
     }, 100);
 
+    this.focusedNodeId = step.nodeId || null;
+    this.updateExplorerForNode(this.focusedNodeId);
     this.updateProgressDots();
   }
 
@@ -581,6 +613,7 @@ class StorytellingDiagram {
 
     this.animationMode = true;
     this.currentStep = stepIndex;
+    this.focusedNodeId = this.storySteps[stepIndex]?.nodeId || null;
 
     // Reset all elements first
     this.cy.elements().removeClass('story-dimmed story-active story-complete');
@@ -646,6 +679,122 @@ class StorytellingDiagram {
     if (this.options.audioEnabled) {
       await this.narrateStep(currentStepData);
     }
+  }
+
+  setupExplorer() {
+    const captionContainer = document.getElementById(`${this.containerId}-caption`);
+    if (!captionContainer || captionContainer.querySelector('.story-explorer')) return;
+
+    const explorer = document.createElement('div');
+    explorer.className = 'story-explorer';
+    explorer.innerHTML = `
+      <div class="story-explorer-meta">
+        <span class="story-explorer-label">Traverse the map</span>
+        <span class="story-explorer-path">Pick a node to inspect its place in the hierarchy.</span>
+      </div>
+      <div class="story-explorer-groups">
+        <div class="story-explorer-group" data-group="parents">
+          <span class="story-explorer-group-label">Upstream</span>
+          <div class="story-explorer-chips"></div>
+        </div>
+        <div class="story-explorer-group" data-group="children">
+          <span class="story-explorer-group-label">Downstream</span>
+          <div class="story-explorer-chips"></div>
+        </div>
+        <div class="story-explorer-group" data-group="siblings">
+          <span class="story-explorer-group-label">Peer links</span>
+          <div class="story-explorer-chips"></div>
+        </div>
+      </div>
+    `;
+
+    captionContainer.appendChild(explorer);
+    this.explorer = explorer;
+  }
+
+  enterExploreMode() {
+    this.stop();
+    this.animationMode = false;
+    this.showAllFull();
+    this.cy.fit(50);
+    this.focusNode(this.focusedNodeId || this.storySteps[0]?.nodeId || null);
+  }
+
+  focusNode(nodeId) {
+    if (!nodeId || !this.cy) return;
+
+    const node = this.cy.getElementById(nodeId);
+    if (!node?.length) return;
+
+    this.focusedNodeId = nodeId;
+    this.updateExplorerForNode(nodeId);
+    this.zoomToNode(node);
+  }
+
+  updateExplorerForNode(nodeId) {
+    if (!this.explorer || !this.cy || !nodeId) return;
+
+    const node = this.cy.getElementById(nodeId);
+    if (!node?.length) return;
+
+    const parents = node.incomers('node').toArray();
+    const children = node.outgoers('node').toArray();
+    const siblingIds = new Set();
+
+    parents.forEach((parent) => {
+      parent.outgoers('node').forEach((sibling) => {
+        if (sibling.id() !== nodeId) {
+          siblingIds.add(sibling.id());
+        }
+      });
+    });
+
+    const siblings = Array.from(siblingIds).map((id) => this.cy.getElementById(id)).filter((el) => el?.length);
+
+    const currentStep = this.storySteps.find((step) => step.nodeId === nodeId);
+    const pathEl = this.explorer.querySelector('.story-explorer-path');
+    if (pathEl) {
+      const pathBits = [...parents.map((parent) => parent.data('label')), node.data('label')];
+      pathEl.textContent = currentStep?.connectsTo
+        ? `${currentStep.connectsTo} -> ${currentStep.title}`
+        : pathBits.join(' -> ');
+    }
+
+    this.renderExplorerGroup('parents', parents);
+    this.renderExplorerGroup('children', children);
+    this.renderExplorerGroup('siblings', siblings);
+  }
+
+  renderExplorerGroup(groupName, nodes) {
+    const group = this.explorer?.querySelector(`[data-group="${groupName}"]`);
+    const chipsContainer = group?.querySelector('.story-explorer-chips');
+    if (!group || !chipsContainer) return;
+
+    chipsContainer.innerHTML = '';
+
+    if (!nodes.length) {
+      const empty = document.createElement('span');
+      empty.className = 'story-explorer-empty';
+      empty.textContent = 'None';
+      chipsContainer.appendChild(empty);
+      return;
+    }
+
+    nodes.forEach((node) => {
+      const button = document.createElement('button');
+      button.type = 'button';
+      button.className = 'story-explorer-chip';
+      button.textContent = node.data('label');
+      button.addEventListener('click', () => {
+        const stepIndex = this.storySteps.findIndex((step) => step.nodeId === node.id());
+        if (stepIndex >= 0) {
+          this.jumpToStep(stepIndex);
+        } else {
+          this.focusNode(node.id());
+        }
+      });
+      chipsContainer.appendChild(button);
+    });
   }
 
   async play() {
