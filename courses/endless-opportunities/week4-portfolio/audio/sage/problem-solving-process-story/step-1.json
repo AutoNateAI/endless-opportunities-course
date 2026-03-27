@@ -1,0 +1,160 @@
+{
+  "storyId": "problem-solving-process-story",
+  "stepId": "step-1",
+  "voice": "sage",
+  "voiceLabel": "Sage Story Guide",
+  "text": "Start with Questions. Every solution starts with understanding. Nia pushes the crew to go six levels deep so they understand the real problem instead of jumping at the first answer.",
+  "duration": 14.25,
+  "words": [
+    {
+      "word": "Start",
+      "start": 0,
+      "end": 0.7200000286102295
+    },
+    {
+      "word": "with",
+      "start": 0.7200000286102295,
+      "end": 1.2000000476837158
+    },
+    {
+      "word": "questions",
+      "start": 1.2000000476837158,
+      "end": 1.9600000381469727
+    },
+    {
+      "word": "Every",
+      "start": 2.819999933242798,
+      "end": 2.9800000190734863
+    },
+    {
+      "word": "solution",
+      "start": 2.9800000190734863,
+      "end": 3.5399999618530273
+    },
+    {
+      "word": "starts",
+      "start": 3.5399999618530273,
+      "end": 4.019999980926514
+    },
+    {
+      "word": "with",
+      "start": 4.019999980926514,
+      "end": 4.579999923706055
+    },
+    {
+      "word": "understanding",
+      "start": 4.579999923706055,
+      "end": 5.199999809265137
+    },
+    {
+      "word": "Nia",
+      "start": 6.300000190734863,
+      "end": 6.300000190734863
+    },
+    {
+      "word": "pushes",
+      "start": 6.300000190734863,
+      "end": 6.699999809265137
+    },
+    {
+      "word": "the",
+      "start": 6.699999809265137,
+      "end": 6.960000038146973
+    },
+    {
+      "word": "crew",
+      "start": 6.960000038146973,
+      "end": 7.159999847412109
+    },
+    {
+      "word": "to",
+      "start": 7.159999847412109,
+      "end": 7.380000114440918
+    },
+    {
+      "word": "go",
+      "start": 7.380000114440918,
+      "end": 7.619999885559082
+    },
+    {
+      "word": "six",
+      "start": 7.619999885559082,
+      "end": 8.100000381469727
+    },
+    {
+      "word": "levels",
+      "start": 8.100000381469727,
+      "end": 8.420000076293945
+    },
+    {
+      "word": "deep",
+      "start": 8.420000076293945,
+      "end": 8.84000015258789
+    },
+    {
+      "word": "so",
+      "start": 8.84000015258789,
+      "end": 9.420000076293945
+    },
+    {
+      "word": "they",
+      "start": 9.420000076293945,
+      "end": 9.65999984741211
+    },
+    {
+      "word": "understand",
+      "start": 9.65999984741211,
+      "end": 10.279999732971191
+    },
+    {
+      "word": "the",
+      "start": 10.279999732971191,
+      "end": 10.5600004196167
+    },
+    {
+      "word": "real",
+      "start": 10.5600004196167,
+      "end": 10.9399995803833
+    },
+    {
+      "word": "problem",
+      "start": 10.9399995803833,
+      "end": 11.34000015258789
+    },
+    {
+      "word": "instead",
+      "start": 11.34000015258789,
+      "end": 12.0600004196167
+    },
+    {
+      "word": "of",
+      "start": 12.0600004196167,
+      "end": 12.579999923706055
+    },
+    {
+      "word": "jumping",
+      "start": 12.579999923706055,
+      "end": 12.600000381469727
+    },
+    {
+      "word": "at",
+      "start": 12.600000381469727,
+      "end": 12.880000114440918
+    },
+    {
+      "word": "the",
+      "start": 12.880000114440918,
+      "end": 13.079999923706055
+    },
+    {
+      "word": "first",
+      "start": 13.079999923706055,
+      "end": 13.420000076293945
+    },
+    {
+      "word": "answer",
+      "start": 13.420000076293945,
+      "end": 13.760000228881836
+    }
+  ]
+}

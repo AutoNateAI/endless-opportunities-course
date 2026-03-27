@@ -34,7 +34,7 @@
         <span>Week 2: Data is Everywhere</span>
       </div>
       <h1>📊 Data is Everywhere</h1>
-      <p>Learn to see the world as information waiting to be discovered. Every post, review, and comment is data — and data, when you know how to collect and analyze it, becomes <strong>insight</strong>.</p>
+      <p>Follow AJ, Nia, and Malik as Sage narrates how raw signals become insight, how search beats passive recommendation, and how data turns into action.</p>
     </div>
 
     <!-- Audio Info -->
@@ -48,9 +48,44 @@
           </div>
         </div>
         <div class="voice-options">
-          <span class="voice-badge">👩‍🎤 Female Storyteller</span>
-          <span class="voice-badge">🎩 Male UK Storyteller</span>
+          <span class="voice-badge">🎙️ Sage story guide</span>
+          <span class="voice-badge">🗺️ Click nodes to traverse the map</span>
         </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <h2>🎬 Story Lens</h2>
+      <p>
+        Week 2 turns data into a detective story: AJ spots the signal, Nia
+        checks the reasoning, and Malik traces the technical source while Sage
+        narrates the route from raw data to insight and action.
+      </p>
+      <div class="narrative-setup">
+        <article class="narrative-card">
+          <div class="narrative-card-step">01</div>
+          <h3>Signal Over Noise</h3>
+          <p>
+            The trio learns to treat posts, reviews, comments, and lists as
+            evidence instead of background clutter.
+          </p>
+        </article>
+        <article class="narrative-card">
+          <div class="narrative-card-step">02</div>
+          <h3>Search with Intent</h3>
+          <p>
+            AJ, Nia, and Malik separate search from recommendation so they can
+            stay in control of what they learn next.
+          </p>
+        </article>
+        <article class="narrative-card">
+          <div class="narrative-card-step">03</div>
+          <h3>Patterns to Action</h3>
+          <p>
+            Once the patterns are clear, the lesson pushes them toward useful
+            conclusions and concrete next moves.
+          </p>
+        </article>
       </div>
     </section>
 
@@ -122,7 +157,6 @@
         <div id="story1-application" class="carousel-container"></div>
         <div id="story1-synthesis" class="carousel-container"></div>
         <!-- Quiz carousel (knowledge check) after activities -->
-        <div id="story1-quiz" class="carousel-container"></div>
       </div>
     </section>
 
@@ -194,7 +228,6 @@
         <div id="story2-application" class="carousel-container"></div>
         <div id="story2-synthesis" class="carousel-container"></div>
         <!-- Quiz carousel (knowledge check) after activities -->
-        <div id="story2-quiz" class="carousel-container"></div>
       </div>
     </section>
 
@@ -266,7 +299,6 @@
         <div id="story3-application" class="carousel-container"></div>
         <div id="story3-synthesis" class="carousel-container"></div>
         <!-- Quiz carousel (knowledge check) after activities -->
-        <div id="story3-quiz" class="carousel-container"></div>
       </div>
     </section>
 
@@ -370,6 +402,8 @@
 
       // Create a shared audio engine pointing to the audio folder
       const audioEngine = new AudioNarrationEngine('audio');
+      await audioEngine.waitForManifest();
+      audioEngine.setVoice('sage');
 
       // ============================================
       // DIAGRAM ELEMENTS (Cytoscape data)
@@ -441,40 +475,8 @@
           story.id,
           elements,
           story.steps,
-          { audioEngine, storyId: story.id }
+          { audioEngine, storyId: story.id, forcedVoice: 'sage' }
         );
-      });
-
-      // ============================================
-      // INITIALIZE QUIZ CAROUSELS (using ActivityCarousel)
-      // ============================================
-
-      const storyToQuizContainer = {
-        'data-mindset-story': 'story1-quiz',
-        'algorithms-story': 'story2-quiz',
-        'analysis-story': 'story3-quiz'
-      };
-
-      pageData.quizzes.forEach(quiz => {
-        const containerId = storyToQuizContainer[quiz.storyId];
-        if (!containerId) return;
-        
-        // Transform quiz questions to ActivityCarousel format
-        const quizActivities = quiz.questions.map((q, i) => ({
-          type: 'quiz',
-          id: `${quiz.storyId}-quiz-${i + 1}`,
-          question: q.question,
-          options: q.options,
-          correct: q.correct,
-          explanation: q.explanation
-        }));
-        
-        new ActivityCarousel(containerId, {
-          type: 'knowledge-check',
-          sectionId: quiz.storyId,
-          title: '📝 Knowledge Check',
-          activities: quizActivities
-        });
       });
 
       // ============================================
@@ -521,7 +523,6 @@
             statement: 'Most people scroll past information without seeing the data it contains.',
             correct: true,
             explanation: 'The lesson explicitly states that "most people scroll past information without seeing it." Developing the data mindset means learning to see what others miss.',
-            requireReasoning: true,
             minReasoningWords: 5,
             points: 15
           },
@@ -531,7 +532,6 @@
             statement: 'Data and insight are the same thing.',
             correct: false,
             explanation: 'Data is raw information (numbers, comments, reviews). Insight is the UNDERSTANDING you gain when you analyze data. The progression is: Data → Analysis → Insight → Solutions.',
-            requireReasoning: true,
             minReasoningWords: 5,
             points: 15
           },
@@ -865,7 +865,6 @@
             statement: 'Recommendation algorithms are designed to keep you watching, not necessarily to help you.',
             correct: true,
             explanation: 'Recommendation algorithms optimize for engagement (keeping you on the platform) rather than for your benefit or learning goals.',
-            requireReasoning: true,
             minReasoningWords: 5,
             points: 15
           },
@@ -875,7 +874,6 @@
             statement: 'Problem solvers use recommendation algorithms more than search because they\'re more efficient.',
             correct: false,
             explanation: 'The opposite is true. "Problem solvers use search more than recommendation. They know what they\'re looking for and go get it."',
-            requireReasoning: true,
             minReasoningWords: 5,
             points: 15
           },
@@ -1207,7 +1205,6 @@
             statement: 'If ten reviews mention slow service, that\'s a pattern worth noting.',
             correct: true,
             explanation: 'Repeated mentions are patterns. "If ten reviews mention slow service, that\'s a pattern. Patterns reveal truth."',
-            requireReasoning: true,
             minReasoningWords: 5,
             points: 15
           },
@@ -1217,7 +1214,6 @@
             statement: 'Gaps in data (unmet needs) represent opportunities.',
             correct: false,
             explanation: 'Wait - this IS true! "Gaps equal opportunities. Every unmet need is a potential solution waiting to be built."',
-            requireReasoning: true,
             minReasoningWords: 5,
             points: 15
           },

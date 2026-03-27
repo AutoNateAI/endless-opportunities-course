@@ -1,0 +1,135 @@
+{
+  "storyId": "art-of-building-story",
+  "stepId": "step-4",
+  "voice": "sage",
+  "voiceLabel": "Sage Story Guide",
+  "text": "Keep Iterating. The crew keeps looping. Good builders do not chase perfection on round one. They use each round to get closer, cleaner, and sharper.",
+  "duration": 12.90999984741211,
+  "words": [
+    {
+      "word": "Keep",
+      "start": 0,
+      "end": 0.5600000023841858
+    },
+    {
+      "word": "iterating",
+      "start": 0.5600000023841858,
+      "end": 1.2200000286102295
+    },
+    {
+      "word": "The",
+      "start": 2,
+      "end": 2.180000066757202
+    },
+    {
+      "word": "crew",
+      "start": 2.180000066757202,
+      "end": 2.559999942779541
+    },
+    {
+      "word": "keeps",
+      "start": 2.559999942779541,
+      "end": 3.119999885559082
+    },
+    {
+      "word": "looping",
+      "start": 3.119999885559082,
+      "end": 3.8399999141693115
+    },
+    {
+      "word": "Good",
+      "start": 4.519999980926514,
+      "end": 4.639999866485596
+    },
+    {
+      "word": "builders",
+      "start": 4.639999866485596,
+      "end": 5.039999961853027
+    },
+    {
+      "word": "do",
+      "start": 5.039999961853027,
+      "end": 5.460000038146973
+    },
+    {
+      "word": "not",
+      "start": 5.460000038146973,
+      "end": 5.840000152587891
+    },
+    {
+      "word": "chase",
+      "start": 5.840000152587891,
+      "end": 6.119999885559082
+    },
+    {
+      "word": "perfection",
+      "start": 6.119999885559082,
+      "end": 6.659999847412109
+    },
+    {
+      "word": "on",
+      "start": 6.659999847412109,
+      "end": 7.239999771118164
+    },
+    {
+      "word": "round",
+      "start": 7.239999771118164,
+      "end": 7.380000114440918
+    },
+    {
+      "word": "one",
+      "start": 7.380000114440918,
+      "end": 7.699999809265137
+    },
+    {
+      "word": "They",
+      "start": 8.399999618530273,
+      "end": 8.619999885559082
+    },
+    {
+      "word": "use",
+      "start": 8.619999885559082,
+      "end": 9.020000457763672
+    },
+    {
+      "word": "each",
+      "start": 9.020000457763672,
+      "end": 9.460000038146973
+    },
+    {
+      "word": "round",
+      "start": 9.460000038146973,
+      "end": 9.819999694824219
+    },
+    {
+      "word": "to",
+      "start": 9.819999694824219,
+      "end": 10.260000228881836
+    },
+    {
+      "word": "get",
+      "start": 10.260000228881836,
+      "end": 10.479999542236328
+    },
+    {
+      "word": "closer",
+      "start": 10.479999542236328,
+      "end": 11
+    },
+    {
+      "word": "cleaner",
+      "start": 11.819999694824219,
+      "end": 11.819999694824219
+    },
+    {
+      "word": "and",
+      "start": 11.9399995803833,
+      "end": 12.699999809265137
+    },
+    {
+      "word": "sharper",
+      "start": 12.699999809265137,
+      "end": 12.699999809265137
+    }
+  ]
+}

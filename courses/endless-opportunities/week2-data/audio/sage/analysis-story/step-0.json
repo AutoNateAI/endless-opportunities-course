@@ -1,0 +1,180 @@
+{
+  "storyId": "analysis-story",
+  "stepId": "step-0",
+  "voice": "sage",
+  "voiceLabel": "Sage Story Guide",
+  "text": "Collection is Simple. Malik says data collection isn't complicated. It is just being intentional about gathering information instead of passively scrolling past it. You see data every day. You just need to capture it.",
+  "duration": 18,
+  "words": [
+    {
+      "word": "Collection",
+      "start": 0,
+      "end": 0.6800000071525574
+    },
+    {
+      "word": "is",
+      "start": 0.6800000071525574,
+      "end": 1.399999976158142
+    },
+    {
+      "word": "simple",
+      "start": 1.399999976158142,
+      "end": 1.840000033378601
+    },
+    {
+      "word": "Malik",
+      "start": 3.180000066757202,
+      "end": 3.180000066757202
+    },
+    {
+      "word": "says",
+      "start": 3.180000066757202,
+      "end": 3.6600000858306885
+    },
+    {
+      "word": "data",
+      "start": 3.6600000858306885,
+      "end": 4.139999866485596
+    },
+    {
+      "word": "collection",
+      "start": 4.139999866485596,
+      "end": 4.639999866485596
+    },
+    {
+      "word": "isn't",
+      "start": 4.639999866485596,
+      "end": 5.28000020980835
+    },
+    {
+      "word": "complicated",
+      "start": 5.28000020980835,
+      "end": 5.940000057220459
+    },
+    {
+      "word": "It",
+      "start": 6.539999961853027,
+      "end": 6.860000133514404
+    },
+    {
+      "word": "is",
+      "start": 6.860000133514404,
+      "end": 7.099999904632568
+    },
+    {
+      "word": "just",
+      "start": 7.099999904632568,
+      "end": 7.5
+    },
+    {
+      "word": "being",
+      "start": 7.5,
+      "end": 7.840000152587891
+    },
+    {
+      "word": "intentional",
+      "start": 7.840000152587891,
+      "end": 8.420000076293945
+    },
+    {
+      "word": "about",
+      "start": 8.420000076293945,
+      "end": 9.119999885559082
+    },
+    {
+      "word": "gathering",
+      "start": 9.119999885559082,
+      "end": 9.539999961853027
+    },
+    {
+      "word": "information",
+      "start": 9.539999961853027,
+      "end": 10.239999771118164
+    },
+    {
+      "word": "instead",
+      "start": 10.239999771118164,
+      "end": 10.9399995803833
+    },
+    {
+      "word": "of",
+      "start": 10.9399995803833,
+      "end": 11.319999694824219
+    },
+    {
+      "word": "passively",
+      "start": 11.319999694824219,
+      "end": 11.880000114440918
+    },
+    {
+      "word": "scrolling",
+      "start": 11.880000114440918,
+      "end": 12.380000114440918
+    },
+    {
+      "word": "past",
+      "start": 12.380000114440918,
+      "end": 12.800000190734863
+    },
+    {
+      "word": "it",
+      "start": 12.800000190734863,
+      "end": 13.220000267028809
+    },
+    {
+      "word": "You",
+      "start": 13.479999542236328,
+      "end": 14.119999885559082
+    },
+    {
+      "word": "see",
+      "start": 14.119999885559082,
+      "end": 14.380000114440918
+    },
+    {
+      "word": "data",
+      "start": 14.380000114440918,
+      "end": 14.699999809265137
+    },
+    {
+      "word": "every",
+      "start": 14.699999809265137,
+      "end": 15.260000228881836
+    },
+    {
+      "word": "day",
+      "start": 15.260000228881836,
+      "end": 15.479999542236328
+    },
+    {
+      "word": "You",
+      "start": 15.960000038146973,
+      "end": 16.31999969482422
+    },
+    {
+      "word": "just",
+      "start": 16.31999969482422,
+      "end": 16.799999237060547
+    },
+    {
+      "word": "need",
+      "start": 16.799999237060547,
+      "end": 16.959999084472656
+    },
+    {
+      "word": "to",
+      "start": 16.959999084472656,
+      "end": 17.459999084472656
+    },
+    {
+      "word": "capture",
+      "start": 17.459999084472656,
+      "end": 17.459999084472656
+    },
+    {
+      "word": "it",
+      "start": 17.459999084472656,
+      "end": 17.799999237060547
+    }
+  ]
+}

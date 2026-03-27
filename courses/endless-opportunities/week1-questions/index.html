@@ -56,22 +56,22 @@
 
     <section class="section">
       <h2>🎬 Story Lens</h2>
-      <p>Week 1 now frames the lesson like a short transformation arc: a first answer looks convincing, better questions break it open, and the full structure becomes visible once you can trace how ideas connect.</p>
+      <p>Week 1 now rides with AJ, Nia, and Malik: a smooth first answer sounds good for one second, the smartest friend in the room pushes deeper, and the whole concept map opens once the crew starts tracing what really connects.</p>
       <div class="narrative-setup">
         <article class="narrative-card">
           <div class="narrative-card-step">01</div>
-          <h3>Surface Answer</h3>
-          <p>A problem appears, the first explanation sounds fine, and most people stop before they understand the system behind it.</p>
+          <h3>AJ Hears The First Answer</h3>
+          <p>AJ can make a quick explanation sound complete, but that is exactly where weak understanding usually hides.</p>
         </article>
         <article class="narrative-card">
           <div class="narrative-card-step">02</div>
-          <h3>Question Pressure</h3>
-          <p>The lesson keeps pushing. Every “why” reveals another layer, and each node in the diagram becomes a clue instead of a dead end.</p>
+          <h3>Nia Applies Pressure</h3>
+          <p>Nia keeps pressing why until the easy answer breaks open. Every node in the graph becomes another clue instead of a stopping point.</p>
         </article>
         <article class="narrative-card">
           <div class="narrative-card-step">03</div>
-          <h3>System View</h3>
-          <p>By the end of the week, the student should be able to move through the concept map, explain what depends on what, and defend the reasoning out loud.</p>
+          <h3>Malik Sees The Pattern</h3>
+          <p>By the end of the week, Malik can move through the whole map, explain what depends on what, and prove the crew finally understands the system.</p>
         </article>
       </div>
     </section>
@@ -144,7 +144,6 @@
         <div id="story1-application" class="carousel-container"></div>
         <div id="story1-synthesis" class="carousel-container"></div>
         <!-- Quiz carousel (knowledge check) after activities -->
-        <div id="story1-quiz" class="carousel-container"></div>
       </div>
     </section>
 
@@ -216,7 +215,6 @@
         <div id="story2-application" class="carousel-container"></div>
         <div id="story2-synthesis" class="carousel-container"></div>
         <!-- Quiz carousel (knowledge check) after activities -->
-        <div id="story2-quiz" class="carousel-container"></div>
       </div>
     </section>
 
@@ -288,7 +286,6 @@
         <div id="story3-application" class="carousel-container"></div>
         <div id="story3-synthesis" class="carousel-container"></div>
         <!-- Quiz carousel (knowledge check) after activities -->
-        <div id="story3-quiz" class="carousel-container"></div>
       </div>
     </section>
 
@@ -481,38 +478,6 @@
           story.steps,
           { audioEngine, storyId: story.id, forcedVoice: 'sage' }
         );
-      });
-
-      // ============================================
-      // INITIALIZE QUIZ CAROUSELS (using ActivityCarousel)
-      // ============================================
-
-      const storyToQuizContainer = {
-        'curiosity-story': 'story1-quiz',
-        'six-levels-story': 'story2-quiz',
-        'comprehension-story': 'story3-quiz'
-      };
-
-      pageData.quizzes.forEach(quiz => {
-        const containerId = storyToQuizContainer[quiz.storyId];
-        if (!containerId) return;
-        
-        // Transform quiz questions to ActivityCarousel format
-        const quizActivities = quiz.questions.map((q, i) => ({
-          type: 'quiz',
-          id: `${quiz.storyId}-quiz-${i + 1}`,
-          question: q.question,
-          options: q.options,
-          correct: q.correct,
-          explanation: q.explanation
-        }));
-        
-        new ActivityCarousel(containerId, {
-          type: 'knowledge-check',
-          sectionId: quiz.storyId,
-          title: '📝 Knowledge Check',
-          activities: quizActivities
-        });
       });
 
       // ============================================

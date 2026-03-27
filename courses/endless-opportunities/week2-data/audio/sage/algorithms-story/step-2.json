@@ -1,0 +1,190 @@
+{
+  "storyId": "algorithms-story",
+  "stepId": "step-2",
+  "voice": "sage",
+  "voiceLabel": "Sage Story Guide",
+  "text": "Recommendation Algorithm. Recommendation means the platform decides what you see. Nia watches the feeds that keep people hooked. TikTok, YouTube homepage, Instagram Explore - they watch what you engage with and show you more of the same.",
+  "duration": 18.809999465942383,
+  "words": [
+    {
+      "word": "Recommendation",
+      "start": 0,
+      "end": 1.1399999856948853
+    },
+    {
+      "word": "Algorithm",
+      "start": 1.1399999856948853,
+      "end": 2.4000000953674316
+    },
+    {
+      "word": "Recommendation",
+      "start": 3.0999999046325684,
+      "end": 3.640000104904175
+    },
+    {
+      "word": "means",
+      "start": 3.640000104904175,
+      "end": 3.9000000953674316
+    },
+    {
+      "word": "the",
+      "start": 3.9000000953674316,
+      "end": 4.139999866485596
+    },
+    {
+      "word": "platform",
+      "start": 4.139999866485596,
+      "end": 4.679999828338623
+    },
+    {
+      "word": "decides",
+      "start": 4.679999828338623,
+      "end": 5.420000076293945
+    },
+    {
+      "word": "what",
+      "start": 5.420000076293945,
+      "end": 5.760000228881836
+    },
+    {
+      "word": "you",
+      "start": 5.760000228881836,
+      "end": 6.019999980926514
+    },
+    {
+      "word": "see",
+      "start": 6.019999980926514,
+      "end": 6.320000171661377
+    },
+    {
+      "word": "Nia",
+      "start": 7.559999942779541,
+      "end": 7.559999942779541
+    },
+    {
+      "word": "watches",
+      "start": 7.559999942779541,
+      "end": 8.0600004196167
+    },
+    {
+      "word": "the",
+      "start": 8.0600004196167,
+      "end": 8.579999923706055
+    },
+    {
+      "word": "feeds",
+      "start": 8.579999923706055,
+      "end": 8.680000305175781
+    },
+    {
+      "word": "that",
+      "start": 8.680000305175781,
+      "end": 8.960000038146973
+    },
+    {
+      "word": "keep",
+      "start": 8.960000038146973,
+      "end": 9.220000267028809
+    },
+    {
+      "word": "people",
+      "start": 9.220000267028809,
+      "end": 9.640000343322754
+    },
+    {
+      "word": "hooked",
+      "start": 9.640000343322754,
+      "end": 9.880000114440918
+    },
+    {
+      "word": "TikTok",
+      "start": 10.819999694824219,
+      "end": 11.140000343322754
+    },
+    {
+      "word": "YouTube",
+      "start": 11.699999809265137,
+      "end": 12
+    },
+    {
+      "word": "homepage",
+      "start": 12,
+      "end": 12.619999885559082
+    },
+    {
+      "word": "Instagram",
+      "start": 13.220000267028809,
+      "end": 13.479999542236328
+    },
+    {
+      "word": "Explore",
+      "start": 13.479999542236328,
+      "end": 14.020000457763672
+    },
+    {
+      "word": "They",
+      "start": 14.760000228881836,
+      "end": 14.920000076293945
+    },
+    {
+      "word": "watch",
+      "start": 14.920000076293945,
+      "end": 15.34000015258789
+    },
+    {
+      "word": "what",
+      "start": 15.34000015258789,
+      "end": 15.5600004196167
+    },
+    {
+      "word": "you",
+      "start": 15.5600004196167,
+      "end": 16.059999465942383
+    },
+    {
+      "word": "engage",
+      "start": 16.059999465942383,
+      "end": 16.1200008392334
+    },
+    {
+      "word": "with",
+      "start": 16.1200008392334,
+      "end": 16.440000534057617
+    },
+    {
+      "word": "and",
+      "start": 16.440000534057617,
+      "end": 17
+    },
+    {
+      "word": "show",
+      "start": 17,
+      "end": 17.260000228881836
+    },
+    {
+      "word": "you",
+      "start": 17.260000228881836,
+      "end": 17.579999923706055
+    },
+    {
+      "word": "more",
+      "start": 17.579999923706055,
+      "end": 17.760000228881836
+    },
+    {
+      "word": "of",
+      "start": 17.760000228881836,
+      "end": 18.040000915527344
+    },
+    {
+      "word": "the",
+      "start": 18.040000915527344,
+      "end": 18.1200008392334
+    },
+    {
+      "word": "same",
+      "start": 18.1200008392334,
+      "end": 18.360000610351562
+    }
+  ]
+}

@@ -16,7 +16,7 @@
           "nodeId": "world-problems",
           "icon": "🌍",
           "title": "Problems Everywhere",
-          "narration": "Here's something most people never realize: the world is full of problems waiting to be solved. Every single day, everywhere you look, there are problems. Some are small, some are huge.",
+          "narration": "AJ is moving through the day with Nia and Malik, and the first thing they notice is the same thing every sharp kid eventually notices: the world is full of problems waiting to be solved. AJ treats that like a map. Nia treats it like evidence. Malik treats it like a system. Some problems are small, some are huge.",
           "connectsTo": null
         },
         {
@@ -24,7 +24,7 @@
           "edges": [{ "from": "world-problems", "to": "secret" }],
           "icon": "🔑",
           "title": "The Secret",
-          "narration": "The people who make the most money, have the most impact, and live the most interesting lives are the ones who get really good at solving problems. That's the secret.",
+          "narration": "Nia spots the pattern first: the people who make the most money, have the most impact, and live the most interesting lives are the ones who get really good at solving problems. Malik nods because the pattern shows up everywhere once you know how to look. That's the secret.",
           "connectsTo": "Problems Everywhere"
         },
         {
@@ -32,7 +32,7 @@
           "edges": [{ "from": "secret", "to": "simple-problems" }],
           "icon": "🍔",
           "title": "Simple Problems",
-          "narration": "Someone's hungry? That's a problem. Make them food, problem solved. Small reward, but real value created. This is where everyone starts.",
+          "narration": "AJ sees the simple version first. Somebody's hungry? That's a problem. Make them food, problem solved. Small reward, but real value created. Nia calls it proof that useful work compounds.",
           "connectsTo": "The Secret"
         },
         {
@@ -40,7 +40,7 @@
           "edges": [{ "from": "simple-problems", "to": "medium-problems" }],
           "icon": "💻",
           "title": "Medium Problems",
-          "narration": "A business needs a website? That's a bigger problem. Build it, problem solved. Bigger reward, more value created. Now you're moving up.",
+          "narration": "Malik points to the next level up: a business needs a website. That's a bigger problem. Build it, problem solved. Bigger reward, more value created. Now AJ, Nia, and Malik are moving up.",
           "connectsTo": "Simple Problems"
         },
         {
@@ -48,7 +48,7 @@
           "edges": [{ "from": "medium-problems", "to": "hard-problems" }],
           "icon": "🏆",
           "title": "Hard Problems",
-          "narration": "A community needs better education? That's a hard problem. Solve it and you get massive reward, massive impact. The harder the problem you can solve, the bigger the reward. Simple as that.",
+          "narration": "By the time AJ, Nia, and Malik get to the hard problems, the stakes are clear. A community needs better education? That's a hard problem. Solve it and you get massive reward, massive impact. The harder the problem you can solve, the bigger the reward. Simple as that.",
           "connectsTo": "Medium Problems"
         }
       ]
@@ -62,7 +62,7 @@
           "nodeId": "old-way",
           "icon": "📜",
           "title": "The Old Way",
-          "narration": "Historically, solving hard problems required years of education, expensive degrees, and lucky opportunities. Only certain people got access. That was the old game, and the deck was stacked against most people.",
+          "narration": "AJ, Nia, and Malik can feel the weight of the old system: solving hard problems used to require years of education, expensive degrees, and lucky opportunities. Nia sees the gatekeeping immediately. Malik sees the wasted potential. That was the old game, and the deck was stacked against most people.",
           "connectsTo": null
         },
         {
@@ -70,7 +70,7 @@
           "edges": [{ "from": "old-way", "to": "old-years" }],
           "icon": "📚",
           "title": "Years of School",
-          "narration": "First you needed years of school. Then an expensive degree. Then you had to hope for a lucky opportunity. And maybe, just maybe, you could solve the problem. Most people never got that chance.",
+          "narration": "First you needed years of school. Then an expensive degree. Then you had to hope for a lucky opportunity. AJ sees why so many people got locked out before they ever got a chance to solve the problem.",
           "connectsTo": "The Old Way"
         },
         {
@@ -78,7 +78,7 @@
           "edges": [{ "from": "old-years", "to": "new-way" }],
           "icon": "⚡",
           "title": "The New Way",
-          "narration": "AI changes everything. Now the path is shorter. You see a problem, you ask questions, you use AI, you build a solution. No fancy degree required. No waiting years.",
+          "narration": "Then AJ catches the shift. AI changes everything. Now the path is shorter. You see a problem, you ask questions, you use AI, you build a solution. Nia likes that it rewards thinking. Malik likes that it lowers the technical barrier.",
           "connectsTo": "Years of School"
         },
         {
@@ -86,7 +86,7 @@
           "edges": [{ "from": "new-way", "to": "real-skill" }],
           "icon": "🧠",
           "title": "The Real Skill",
-          "narration": "AI is like having access to all the world's knowledge. But knowledge alone doesn't solve problems. The real skill is knowing what questions to ask. That's what separates problem solvers from everyone else.",
+          "narration": "AJ knows the real move is not just having answers. AI is like having access to all the world's knowledge. But knowledge alone doesn't solve problems. The real skill is knowing what questions to ask. Nia hears the weak reasoning before it finishes. That's what separates problem solvers from everyone else.",
           "connectsTo": "The New Way"
         },
         {
@@ -94,7 +94,7 @@
           "edges": [{ "from": "real-skill", "to": "patient-teacher" }],
           "icon": "🤖",
           "title": "Infinitely Patient Teacher",
-          "narration": "Here's something beautiful: AI never gets tired of your questions. It never gets irritated. Ask it a thousand questions in a row and it doesn't care. For the first time in history, you have access to an infinitely patient teacher.",
+          "narration": "AJ, Nia, and Malik realize the wild part: AI never gets tired of your questions. It never gets irritated. Ask it a thousand questions in a row and it doesn't care. For the first time in history, you have access to an infinitely patient teacher.",
           "connectsTo": "The Real Skill"
         },
         {
@@ -102,7 +102,7 @@
           "edges": [{ "from": "patient-teacher", "to": "your-power" }],
           "icon": "💪",
           "title": "Your New Superpower",
-          "narration": "This is revolutionary. You can learn things faster, understand problems deeper, and build real solutions. All you need is curiosity and the willingness to ask questions. That's your new superpower.",
+          "narration": "This is revolutionary. AJ uses it to move faster, Nia uses it to sharpen judgment, and Malik uses it to test ideas and build. All you need is curiosity and the willingness to ask questions. That's your new superpower.",
           "connectsTo": "Infinitely Patient Teacher"
         }
       ]
@@ -116,7 +116,7 @@
           "nodeId": "surface-level",
           "icon": "🏊",
           "title": "Most People Stop Here",
-          "narration": "Most people ask one or two questions about something and think they understand it. They don't. They're swimming at the surface while the real insights are deep below.",
+          "narration": "AJ watches people stop after one or two questions and act like the answer is enough. Nia rolls her eyes because she can already hear the gaps. Malik stays quiet and watches the structure underneath. They're swimming at the surface while the real insights are deep below.",
           "connectsTo": null
         },
         {
@@ -124,7 +124,7 @@
           "edges": [{ "from": "surface-level", "to": "level-1" }],
           "icon": "1️⃣",
           "title": "Level 1: Why?",
-          "narration": "Let's say a business is struggling. Level one: Why is the business struggling? Answer: because they don't have enough customers. Most people would stop here. Not you.",
+          "narration": "AJ starts the climb with a real example. A business is struggling. Level one: why is the business struggling? Answer: because they don't have enough customers. Nia says that's only the first door. Most people would stop here. Not AJ.",
           "connectsTo": "Most People Stop Here"
         },
         {
@@ -132,7 +132,7 @@
           "edges": [{ "from": "level-1", "to": "level-2" }],
           "icon": "2️⃣",
           "title": "Level 2: Why?",
-          "narration": "Level two: Why don't they have enough customers? Answer: because people don't know about them. We're going deeper. Keep asking.",
+          "narration": "AJ keeps going. Why don't they have enough customers? Answer: because people don't know about them. Malik sees the connection and keeps the graph moving. Keep asking.",
           "connectsTo": "Level 1"
         },
         {
@@ -140,7 +140,7 @@
           "edges": [{ "from": "level-2", "to": "level-3" }],
           "icon": "3️⃣",
           "title": "Level 3: Why?",
-          "narration": "Level three: Why don't people know about them? Answer: because they have no online presence. Now we're starting to see the real problem.",
+          "narration": "Level three: why don't people know about them? Answer: because they have no online presence. Nia spots the real shape of the problem now. AJ and Malik can finally see it too.",
           "connectsTo": "Level 2"
         },
         {
@@ -148,7 +148,7 @@
           "edges": [{ "from": "level-3", "to": "level-4-5" }],
           "icon": "4️⃣",
           "title": "Levels 4 & 5: Going Deeper",
-          "narration": "Levels four and five: Why no online presence? Because they don't know how to build one. Why not? Because it seems too technical and expensive. We're almost at the root.",
+          "narration": "Levels four and five hit the root. Why no online presence? Because they don't know how to build one. Why not? Because it seems too technical and expensive. Malik knows the hesitation is real, but the graph keeps pushing deeper.",
           "connectsTo": "Level 3"
         },
         {
@@ -156,7 +156,7 @@
           "edges": [{ "from": "level-4-5", "to": "level-6" }],
           "icon": "6️⃣",
           "title": "Level 6: The Real Problem",
-          "narration": "Level six: Why does it seem too technical and expensive? Because they don't know about AI tools that make it easy and free. Now we've found a problem we can actually solve!",
+          "narration": "Level six is the one that lands. Why does it seem too technical and expensive? Because they don't know about AI tools that make it easy and free. AJ sees the opening, Nia sees the logic, and Malik sees the toolchain. Now they have found a problem they can actually solve!",
           "connectsTo": "Levels 4 & 5"
         },
         {
@@ -164,7 +164,7 @@
           "edges": [{ "from": "level-6", "to": "key-insight" }],
           "icon": "🎯",
           "title": "The Key Insight",
-          "narration": "If you can get just two or three levels deeper than most people, you're already ahead of ninety-nine percent of the world. Most people accept surface-level answers. You won't.",
+          "narration": "AJ understands the takeaway now: if you can get just two or three levels deeper than most people, you're already ahead of ninety-nine percent of the world. Nia says that's where weak reasoning falls apart. Malik says that's where the real pattern shows up.",
           "connectsTo": "Level 6"
         }
       ]

@@ -16,7 +16,7 @@
           "nodeId": "old-way",
           "icon": "📚",
           "title": "The Old Way",
-          "narration": "You've learned to ask deep questions. You've learned to see data everywhere. But here's a secret most people don't know: You don't need years of coding to build websites and tools anymore.",
+          "narration": "AJ is leaning back with Nia and Malik after school, watching the old rule play out again: people act like building real things means years of coding, expensive courses, and waiting for permission. That old way kept the door narrow for too long.",
           "connectsTo": null
         },
         {
@@ -24,40 +24,40 @@
           "edges": [{ "from": "old-way", "to": "new-reality" }],
           "icon": "✨",
           "title": "The New Reality",
-          "narration": "With AI, everything changed. You describe what you want in plain English, and the AI builds it for you. No coding experience needed—just clear communication and creative ideas.",
-          "connectsTo": "Old Way"
+          "narration": "Then Nia spots the shift. With AI, the crew can describe an idea in plain English and get a real first build back fast. The lane opens, and AJ sees the door swing wider.",
+          "connectsTo": "AJ Sees the New Lane"
         },
         {
           "nodeId": "think-it",
           "edges": [{ "from": "new-reality", "to": "think-it" }],
           "icon": "💭",
           "title": "Step 1: Think It",
-          "narration": "Your superpower starts with imagination. What would be useful? What would be cool? What problem could you solve? The idea is the seed of everything.",
-          "connectsTo": "New Reality"
+          "narration": "AJ starts where every good build starts: what would actually help somebody? What problem is worth fixing, and who needs it most?",
+          "connectsTo": "The New Lane"
         },
         {
           "nodeId": "describe-it",
           "edges": [{ "from": "think-it", "to": "describe-it" }],
           "icon": "💬",
           "title": "Step 2: Describe It",
-          "narration": "Put your idea into words. The clearer and more specific you describe it, the better the AI understands. This is where your communication skills shine!",
-          "connectsTo": "Think It"
+          "narration": "Malik pushes AJ to say it clearly. If the idea is blurry, the build will be blurry. The words have to do real work before the code ever shows up.",
+          "connectsTo": "AJ Thinks It Through"
         },
         {
           "nodeId": "ai-builds",
           "edges": [{ "from": "describe-it", "to": "ai-builds" }],
           "icon": "🤖",
           "title": "Step 3: AI Builds It",
-          "narration": "The AI takes your description and generates working code. It handles all the technical details—you just focus on what you want it to do.",
-          "connectsTo": "Describe It"
+          "narration": "The model turns the crew's description into working code, and now the idea has a shape they can test. AJ sees the first version and knows the story just turned into something real.",
+          "connectsTo": "Clear Prompt"
         },
         {
           "nodeId": "its-live",
           "edges": [{ "from": "ai-builds", "to": "its-live" }],
           "icon": "🚀",
           "title": "Step 4: It's Live!",
-          "narration": "Your creation is real! Put it online, share the link, and say 'I made this.' You've gone from consumer to creator. Most people just use the internet—you build it!",
-          "connectsTo": "AI Builds"
+          "narration": "AJ puts it online and the crew reacts like they just crossed a line. They are not just using the internet anymore. They built something people can touch, share, and improve.",
+          "connectsTo": "First Build"
         }
       ]
     },
@@ -70,7 +70,7 @@
           "nodeId": "conversation",
           "icon": "💬",
           "title": "Building is a Conversation",
-          "narration": "Building with AI is like having a conversation with a super-smart helper. You describe what you want, it creates it, you give feedback, it improves. Iterate until it's perfect!",
+          "narration": "AJ learns that building with AI feels like trading notes with a sharp assistant. He talks, Nia reacts, Malik tests, and the next version gets better because the whole crew stays in the loop.",
           "connectsTo": null
         },
         {
@@ -78,32 +78,32 @@
           "edges": [{ "from": "conversation", "to": "describe-step" }],
           "icon": "📝",
           "title": "Describe What You Want",
-          "narration": "Start by describing your vision clearly. What is it? What should it do? How should it look? The more specific you are, the better the first attempt will be.",
-          "connectsTo": "Conversation"
+          "narration": "Nia keeps AJ honest: describe the thing with enough detail that the machine can see the shape of it and start moving with purpose.",
+          "connectsTo": "AJ, Nia, and Malik in Sync"
         },
         {
           "nodeId": "preview-step",
           "edges": [{ "from": "describe-step", "to": "preview-step" }],
           "icon": "👀",
           "title": "Preview the Result",
-          "narration": "Save the file, open it in your browser, and see what AI created. Does it match your vision? What works? What doesn't? This is your feedback moment.",
-          "connectsTo": "Describe"
+          "narration": "Malik opens the preview and looks for what landed and what missed. The first look tells the truth before anybody starts pretending it is finished.",
+          "connectsTo": "Clear Description"
         },
         {
           "nodeId": "refine-step",
           "edges": [{ "from": "preview-step", "to": "refine-step" }],
           "icon": "🔧",
           "title": "Ask for Changes",
-          "narration": "Don't like the colors? Want more features? Just ask! Tell the AI exactly what to change. It remembers your conversation and builds on previous work.",
-          "connectsTo": "Preview"
+          "narration": "AJ does not defend the first draft. He asks for changes, gets specific, and uses feedback to tighten the build until the team feels it.",
+          "connectsTo": "What Worked and What Missed"
         },
         {
           "nodeId": "iterate-step",
           "edges": [{ "from": "refine-step", "to": "iterate-step" }],
           "icon": "🔄",
           "title": "Keep Iterating",
-          "narration": "Great builders iterate. Each round gets you closer to your vision. Professional developers do this too—nobody gets it perfect on the first try!",
-          "connectsTo": "Refine"
+          "narration": "The crew keeps looping. Good builders do not chase perfection on round one. They use each round to get closer, cleaner, and sharper.",
+          "connectsTo": "AJ Refines the Build"
         }
       ]
     },
@@ -116,7 +116,7 @@
           "nodeId": "quality-matters",
           "icon": "⚡",
           "title": "Description Quality Matters",
-          "narration": "The quality of what AI builds depends entirely on how well you describe it. Vague descriptions get vague results. Clear descriptions get exactly what you want.",
+          "narration": "AJ learns that the quality of the build tracks directly with the quality of the prompt. When the words are loose, the result is loose. When the words are sharp, the build gets sharp right along with them.",
           "connectsTo": null
         },
         {
@@ -124,32 +124,32 @@
           "edges": [{ "from": "quality-matters", "to": "bad-example" }],
           "icon": "❌",
           "title": "Too Vague",
-          "narration": "Make me a website. That's too vague! What kind of website? What should it do? What should it look like? The AI has to guess—and it will probably guess wrong.",
-          "connectsTo": "Quality Matters"
+          "narration": "AJ says, 'make me a website,' and Nia laughs because that is not a prompt, that is a wish. The AI can only guess when the setup stays that vague.",
+          "connectsTo": "The Quality Rule"
         },
         {
           "nodeId": "good-what",
           "edges": [{ "from": "bad-example", "to": "good-what" }],
           "icon": "🎯",
           "title": "Say WHAT It Is",
-          "narration": "A quiz webpage about Grand Rapids history. Now the AI knows the type and topic. But we can be even more specific about features and style.",
-          "connectsTo": "Bad Example"
+          "narration": "So AJ names the thing: a quiz page about Grand Rapids history. Now the model knows the kind of build, the topic, and the lane it has to stay in.",
+          "connectsTo": "Too Vague"
         },
         {
           "nodeId": "good-features",
           "edges": [{ "from": "good-what", "to": "good-features" }],
           "icon": "📋",
           "title": "List the Features",
-          "narration": "Five multiple choice questions, show if answers are correct immediately, track the score, include a try-again button. Now AI knows exactly what functionality to build.",
-          "connectsTo": "What It Is"
+          "narration": "Malik adds the features: five multiple choice questions, instant feedback, a score, a try-again button. Now the build has a job and a clean finish line.",
+          "connectsTo": "Say What It Is"
         },
         {
           "nodeId": "good-style",
           "edges": [{ "from": "good-features", "to": "good-style" }],
           "icon": "🎨",
           "title": "Describe the Style",
-          "narration": "Modern look, blue color scheme, clean design. With the type, features, and style all specified, AI creates something that matches your vision on the first try!",
-          "connectsTo": "Features"
+          "narration": "Nia finishes the prompt with the style: modern, blue, clean, easy to move through. The result starts matching the vision instead of drifting away from it.",
+          "connectsTo": "The Feature List"
         }
       ]
     }

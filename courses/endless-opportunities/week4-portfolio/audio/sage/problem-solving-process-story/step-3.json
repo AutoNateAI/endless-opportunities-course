@@ -1,0 +1,185 @@
+{
+  "storyId": "problem-solving-process-story",
+  "stepId": "step-3",
+  "voice": "sage",
+  "voiceLabel": "Sage Story Guide",
+  "text": "Find Insights. Patterns in the data reveal opportunities, and AJ is the one who spots what the numbers and notes are really saying. What's missing? What could be better? Insight turns the pile into direction.",
+  "duration": 16.559999465942383,
+  "words": [
+    {
+      "word": "Find",
+      "start": 0,
+      "end": 0.699999988079071
+    },
+    {
+      "word": "insights",
+      "start": 0.699999988079071,
+      "end": 1.5
+    },
+    {
+      "word": "Patterns",
+      "start": 2.5199999809265137,
+      "end": 2.5199999809265137
+    },
+    {
+      "word": "in",
+      "start": 2.5199999809265137,
+      "end": 2.799999952316284
+    },
+    {
+      "word": "the",
+      "start": 2.799999952316284,
+      "end": 2.9000000953674316
+    },
+    {
+      "word": "data",
+      "start": 2.9000000953674316,
+      "end": 3.180000066757202
+    },
+    {
+      "word": "reveal",
+      "start": 3.180000066757202,
+      "end": 3.700000047683716
+    },
+    {
+      "word": "opportunities",
+      "start": 3.700000047683716,
+      "end": 4.599999904632568
+    },
+    {
+      "word": "and",
+      "start": 5.340000152587891,
+      "end": 5.539999961853027
+    },
+    {
+      "word": "AJ",
+      "start": 5.539999961853027,
+      "end": 6
+    },
+    {
+      "word": "is",
+      "start": 6,
+      "end": 6.300000190734863
+    },
+    {
+      "word": "the",
+      "start": 6.300000190734863,
+      "end": 6.5
+    },
+    {
+      "word": "one",
+      "start": 6.5,
+      "end": 6.699999809265137
+    },
+    {
+      "word": "who",
+      "start": 6.699999809265137,
+      "end": 7.380000114440918
+    },
+    {
+      "word": "spots",
+      "start": 7.380000114440918,
+      "end": 7.380000114440918
+    },
+    {
+      "word": "what",
+      "start": 7.380000114440918,
+      "end": 7.619999885559082
+    },
+    {
+      "word": "the",
+      "start": 7.619999885559082,
+      "end": 7.960000038146973
+    },
+    {
+      "word": "numbers",
+      "start": 7.960000038146973,
+      "end": 8.140000343322754
+    },
+    {
+      "word": "and",
+      "start": 8.140000343322754,
+      "end": 8.739999771118164
+    },
+    {
+      "word": "notes",
+      "start": 8.739999771118164,
+      "end": 8.739999771118164
+    },
+    {
+      "word": "are",
+      "start": 8.739999771118164,
+      "end": 9.15999984741211
+    },
+    {
+      "word": "really",
+      "start": 9.15999984741211,
+      "end": 9.619999885559082
+    },
+    {
+      "word": "saying",
+      "start": 9.619999885559082,
+      "end": 10
+    },
+    {
+      "word": "What's",
+      "start": 10.9399995803833,
+      "end": 11.34000015258789
+    },
+    {
+      "word": "missing",
+      "start": 11.34000015258789,
+      "end": 11.539999961853027
+    },
+    {
+      "word": "What",
+      "start": 12.380000114440918,
+      "end": 12.5600004196167
+    },
+    {
+      "word": "could",
+      "start": 12.5600004196167,
+      "end": 12.739999771118164
+    },
+    {
+      "word": "be",
+      "start": 12.739999771118164,
+      "end": 13.039999961853027
+    },
+    {
+      "word": "better",
+      "start": 13.039999961853027,
+      "end": 13.199999809265137
+    },
+    {
+      "word": "Insight",
+      "start": 14.359999656677246,
+      "end": 14.420000076293945
+    },
+    {
+      "word": "turns",
+      "start": 14.420000076293945,
+      "end": 14.800000190734863
+    },
+    {
+      "word": "the",
+      "start": 14.800000190734863,
+      "end": 15.359999656677246
+    },
+    {
+      "word": "pile",
+      "start": 15.359999656677246,
+      "end": 15.4399995803833
+    },
+    {
+      "word": "into",
+      "start": 15.4399995803833,
+      "end": 15.800000190734863
+    },
+    {
+      "word": "direction",
+      "start": 15.800000190734863,
+      "end": 16.299999237060547
+    }
+  ]
+}

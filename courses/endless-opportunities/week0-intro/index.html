@@ -47,8 +47,9 @@
         </div>
         <h1>🎮 The Game We Live In</h1>
         <p>
-          Learn the most powerful skill of the 21st century: how to identify
-          problems, ask the right questions, and use AI to build real solutions.
+          Follow AJ, Nia, and Malik as Sage narrates how problems become
+          opportunities, AI changes the rules, and deeper questions reveal the
+          path forward.
         </p>
       </div>
 
@@ -66,9 +67,44 @@
             </div>
           </div>
           <div class="voice-options">
-            <span class="voice-badge">👩‍🎤 Female Storyteller</span>
-            <span class="voice-badge">🎩 Male UK Storyteller</span>
+            <span class="voice-badge">🎙️ Sage story guide</span>
+            <span class="voice-badge">🗺️ Click nodes to traverse the map</span>
           </div>
+        </div>
+      </section>
+
+      <section class="section">
+        <h2>🎬 Story Lens</h2>
+        <p>
+          Week 0 frames the course like an origin episode: AJ sees the game,
+          Nia checks the logic, and Malik tracks the technical openings while
+          Sage keeps the narration focused on what each graph beat means.
+        </p>
+        <div class="narrative-setup">
+          <article class="narrative-card">
+            <div class="narrative-card-step">01</div>
+            <h3>Read the Game</h3>
+            <p>
+              AJ, Nia, and Malik notice that problems are not random noise.
+              They are the map, and the graph shows where the value lives.
+            </p>
+          </article>
+          <article class="narrative-card">
+            <div class="narrative-card-step">02</div>
+            <h3>Use AI as Leverage</h3>
+            <p>
+              The trio sees AI as a faster path to better solutions, not a way
+              to skip thinking. Sage keeps the story focused on leverage.
+            </p>
+          </article>
+          <article class="narrative-card">
+            <div class="narrative-card-step">03</div>
+            <h3>Follow the Connections</h3>
+            <p>
+              Each step in the diagram builds on the last one, so the lesson
+              becomes something they can traverse, explain, and apply.
+            </p>
+          </article>
         </div>
       </section>
 
@@ -170,7 +206,6 @@
           <div id="story1-application" class="carousel-container"></div>
           <div id="story1-synthesis" class="carousel-container"></div>
           <!-- Quiz carousel (knowledge check) after activities -->
-          <div id="story1-quiz" class="carousel-container"></div>
         </div>
       </section>
 
@@ -275,7 +310,6 @@
           <div id="story2-application" class="carousel-container"></div>
           <div id="story2-synthesis" class="carousel-container"></div>
           <!-- Quiz carousel (knowledge check) after activities -->
-          <div id="story2-quiz" class="carousel-container"></div>
         </div>
       </section>
 
@@ -371,7 +405,6 @@
           <div id="story3-application" class="carousel-container"></div>
           <div id="story3-synthesis" class="carousel-container"></div>
           <!-- Quiz carousel (knowledge check) after activities -->
-          <div id="story3-quiz" class="carousel-container"></div>
         </div>
       </section>
 
@@ -485,6 +518,8 @@
 
         // Create a shared audio engine pointing to the audio folder
         const audioEngine = new AudioNarrationEngine("audio");
+        await audioEngine.waitForManifest();
+        audioEngine.setVoice("sage");
 
         // ============================================
         // DIAGRAM ELEMENTS (Cytoscape data)
@@ -683,38 +718,7 @@
           new StorytellingDiagram(story.id, elements, story.steps, {
             audioEngine,
             storyId: story.id,
-          });
-        });
-
-        // ============================================
-        // INITIALIZE QUIZ CAROUSELS (using ActivityCarousel)
-        // ============================================
-
-        const storyToQuizContainer = {
-          'problem-game-story': 'story1-quiz',
-          'ai-revolution-story': 'story2-quiz',
-          'six-levels-story': 'story3-quiz'
-        };
-
-        pageData.quizzes.forEach(quiz => {
-          const containerId = storyToQuizContainer[quiz.storyId];
-          if (!containerId) return;
-          
-          // Transform quiz questions to ActivityCarousel format
-          const quizActivities = quiz.questions.map((q, i) => ({
-            type: 'quiz',
-            id: `${quiz.storyId}-quiz-${i + 1}`,
-            question: q.question,
-            options: q.options,
-            correct: q.correct,
-            explanation: q.explanation
-          }));
-          
-          new ActivityCarousel(containerId, {
-            type: 'knowledge-check',
-            sectionId: quiz.storyId,
-            title: '📝 Knowledge Check',
-            activities: quizActivities
+            forcedVoice: "sage",
           });
         });
 
@@ -762,7 +766,6 @@
               statement: 'Solving simple problems like making food for someone creates real value, even if the reward is small.',
               correct: true,
               explanation: 'Every problem solved creates value. Simple problems create small rewards, but they build the foundation for tackling bigger challenges.',
-              requireReasoning: true,
               minReasoningWords: 5,
               points: 15
             },
@@ -772,7 +775,6 @@
               statement: 'You should skip simple problems and only focus on hard problems to maximize your rewards.',
               correct: false,
               explanation: 'The lesson shows a progression - you build skills by solving simpler problems first, which prepares you for harder ones. Everyone starts somewhere.',
-              requireReasoning: true,
               minReasoningWords: 5,
               points: 15
             },
@@ -1100,7 +1102,6 @@
               statement: 'According to the lesson, the "real skill" is knowing how to code.',
               correct: false,
               explanation: 'The lesson says the real skill is "knowing what questions to ask." Coding is a tool, but asking the right questions is what separates problem-solvers from everyone else.',
-              requireReasoning: true,
               minReasoningWords: 5,
               points: 15
             },
@@ -1110,7 +1111,6 @@
               statement: 'AI is described as an "infinitely patient teacher" because it never gets tired of questions.',
               correct: true,
               explanation: 'This is a key insight - you can ask AI thousands of questions without it getting irritated, making it an unprecedented learning resource.',
-              requireReasoning: true,
               minReasoningWords: 5,
               points: 15
             },
@@ -1441,7 +1441,6 @@
               statement: 'Level 6 always reveals the "real" problem that can actually be solved.',
               correct: true,
               explanation: 'The lesson\'s example shows that Level 6 reveals the root cause - in the business example, discovering that AI tools could solve the underlying problem.',
-              requireReasoning: true,
               minReasoningWords: 5,
               points: 15
             },
@@ -1451,7 +1450,6 @@
               statement: 'You can reach Level 6 understanding in a single conversation if you ask quickly enough.',
               correct: false,
               explanation: 'Deep understanding requires genuine inquiry at each level. Rushing through "whys" without processing answers defeats the purpose.',
-              requireReasoning: true,
               minReasoningWords: 5,
               points: 15
             },

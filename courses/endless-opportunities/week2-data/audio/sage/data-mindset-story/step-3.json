@@ -1,0 +1,175 @@
+{
+  "storyId": "data-mindset-story",
+  "stepId": "step-3",
+  "voice": "sage",
+  "voiceLabel": "Sage Story Guide",
+  "text": "Data Becomes Insight. Nia makes the point clean: data, when you know how to collect and analyze it, becomes insight. Insight is understanding. Understanding leads to solutions. That is how problem solvers operate.",
+  "duration": 17.399999618530273,
+  "words": [
+    {
+      "word": "Data",
+      "start": 0,
+      "end": 0.5600000023841858
+    },
+    {
+      "word": "becomes",
+      "start": 0.5600000023841858,
+      "end": 1.2200000286102295
+    },
+    {
+      "word": "insight",
+      "start": 1.2200000286102295,
+      "end": 1.7999999523162842
+    },
+    {
+      "word": "NIA",
+      "start": 2.740000009536743,
+      "end": 2.740000009536743
+    },
+    {
+      "word": "makes",
+      "start": 2.740000009536743,
+      "end": 3.0799999237060547
+    },
+    {
+      "word": "the",
+      "start": 3.0799999237060547,
+      "end": 3.380000114440918
+    },
+    {
+      "word": "point",
+      "start": 3.380000114440918,
+      "end": 3.5799999237060547
+    },
+    {
+      "word": "clean",
+      "start": 3.5799999237060547,
+      "end": 4.099999904632568
+    },
+    {
+      "word": "Data",
+      "start": 4.980000019073486,
+      "end": 4.980000019073486
+    },
+    {
+      "word": "when",
+      "start": 5.179999828338623,
+      "end": 5.300000190734863
+    },
+    {
+      "word": "you",
+      "start": 5.300000190734863,
+      "end": 5.519999980926514
+    },
+    {
+      "word": "know",
+      "start": 5.519999980926514,
+      "end": 5.739999771118164
+    },
+    {
+      "word": "how",
+      "start": 5.739999771118164,
+      "end": 5.920000076293945
+    },
+    {
+      "word": "to",
+      "start": 5.920000076293945,
+      "end": 6.420000076293945
+    },
+    {
+      "word": "collect",
+      "start": 6.420000076293945,
+      "end": 6.420000076293945
+    },
+    {
+      "word": "and",
+      "start": 6.420000076293945,
+      "end": 7.159999847412109
+    },
+    {
+      "word": "analyze",
+      "start": 7.159999847412109,
+      "end": 7.159999847412109
+    },
+    {
+      "word": "it",
+      "start": 7.159999847412109,
+      "end": 7.440000057220459
+    },
+    {
+      "word": "becomes",
+      "start": 7.840000152587891,
+      "end": 8.239999771118164
+    },
+    {
+      "word": "insight",
+      "start": 8.239999771118164,
+      "end": 8.84000015258789
+    },
+    {
+      "word": "Insight",
+      "start": 9.899999618530273,
+      "end": 10.119999885559082
+    },
+    {
+      "word": "is",
+      "start": 10.119999885559082,
+      "end": 10.84000015258789
+    },
+    {
+      "word": "understanding",
+      "start": 10.84000015258789,
+      "end": 11.520000457763672
+    },
+    {
+      "word": "Understanding",
+      "start": 12.5,
+      "end": 13.0600004196167
+    },
+    {
+      "word": "leads",
+      "start": 13.0600004196167,
+      "end": 13.479999542236328
+    },
+    {
+      "word": "to",
+      "start": 13.479999542236328,
+      "end": 13.880000114440918
+    },
+    {
+      "word": "solutions",
+      "start": 13.880000114440918,
+      "end": 14.260000228881836
+    },
+    {
+      "word": "That",
+      "start": 15.140000343322754,
+      "end": 15.300000190734863
+    },
+    {
+      "word": "is",
+      "start": 15.300000190734863,
+      "end": 15.5
+    },
+    {
+      "word": "how",
+      "start": 15.5,
+      "end": 15.800000190734863
+    },
+    {
+      "word": "problem",
+      "start": 15.800000190734863,
+      "end": 16.139999389648438
+    },
+    {
+      "word": "solvers",
+      "start": 16.139999389648438,
+      "end": 16.520000457763672
+    },
+    {
+      "word": "operate",
+      "start": 16.520000457763672,
+      "end": 17.079999923706055
+    }
+  ]
+}

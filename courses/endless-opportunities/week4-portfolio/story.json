@@ -16,7 +16,7 @@
           "nodeId": "all-pieces",
           "icon": "🎯",
           "title": "You Have All the Pieces",
-          "narration": "You've learned to ask deep questions. You've learned to see and analyze data. You've learned to build real things. Now it's time to put it all together and solve a real problem.",
+          "narration": "AJ, Nia, and Malik step into the final week with the whole toolbox ready: deep questions, sharp data sense, and real building skills. Now they are putting it all together to solve a real problem.",
           "connectsTo": null
         },
         {
@@ -24,7 +24,7 @@
           "edges": [{ "from": "all-pieces", "to": "questions-step" }],
           "icon": "❓",
           "title": "Start with Questions",
-          "narration": "Every solution starts with understanding. Go six levels deep to truly understand the problem. Don't jump to solutions—understand the root causes first.",
+          "narration": "Every solution starts with understanding. Nia pushes the crew to go six levels deep so they understand the real problem instead of jumping at the first answer.",
           "connectsTo": "All the Pieces"
         },
         {
@@ -32,7 +32,7 @@
           "edges": [{ "from": "questions-step", "to": "data-step" }],
           "icon": "📊",
           "title": "Gather Data",
-          "narration": "Collect information about your problem. What resources exist? What do people say? What specific data would help? Organize what you find and look for patterns.",
+          "narration": "Malik goes hunting for useful information. What resources exist? What do people say? What specific data would help? The crew organizes what they find and starts looking for patterns.",
           "connectsTo": "Questions"
         },
         {
@@ -40,7 +40,7 @@
           "edges": [{ "from": "data-step", "to": "insight-step" }],
           "icon": "💡",
           "title": "Find Insights",
-          "narration": "Patterns in your data reveal opportunities. What's missing? What could be better? Your insights guide what to build. Data without insight is just noise.",
+          "narration": "Patterns in the data reveal opportunities, and AJ is the one who spots what the numbers and notes are really saying. What's missing? What could be better? Insight turns the pile into direction.",
           "connectsTo": "Data"
         },
         {
@@ -48,7 +48,7 @@
           "edges": [{ "from": "insight-step", "to": "build-step" }],
           "icon": "🛠️",
           "title": "Build the Solution",
-          "narration": "Now you build! Use Cursor and AI to create something that addresses the problem. Iterate—build a first version, test it, then improve. Real solutions evolve.",
+          "narration": "Now the crew builds. They use Cursor and AI to create something that addresses the problem, then they test it, improve it, and keep the solution moving like a living story.",
           "connectsTo": "Insights"
         }
       ]
@@ -62,7 +62,7 @@
           "nodeId": "choose-problem",
           "icon": "🎯",
           "title": "Choose Your Problem",
-          "narration": "Pick one problem to solve. It should be real—something you've actually observed. Specific—not too broad. And solvable—something you can actually address with a tool or resource.",
+          "narration": "AJ picks one problem to solve, and the rule stays the same: it has to be real, specific, and something the crew can actually address with a tool or resource.",
           "connectsTo": null
         },
         {
@@ -70,7 +70,7 @@
           "edges": [{ "from": "choose-problem", "to": "deep-understanding" }],
           "icon": "🔍",
           "title": "Deep Understanding",
-          "narration": "Use ChatGPT to go six levels deep. Keep asking why about each answer. Document all six levels. This helps you build a better solution because you truly understand the problem.",
+          "narration": "Nia keeps asking why about each answer until the crew reaches the root. They document all six levels because the deeper the understanding, the better the solution.",
           "connectsTo": "Choose Problem"
         },
         {
@@ -78,7 +78,7 @@
           "edges": [{ "from": "deep-understanding", "to": "gather-data" }],
           "icon": "📊",
           "title": "Gather Your Data",
-          "narration": "What resources or solutions already exist? What do people say about this problem? What specific data would help—locations, prices, reviews? Organize everything you find.",
+          "narration": "Malik gathers the data with a curious eye for detail. What resources or solutions already exist? What do people say? What specific data would help? Then the crew organizes everything they find.",
           "connectsTo": "Deep Understanding"
         },
         {
@@ -86,7 +86,7 @@
           "edges": [{ "from": "gather-data", "to": "build-with-ai" }],
           "icon": "🤖",
           "title": "Build with AI",
-          "narration": "Use Cursor to build your solution. Describe what you want, explain the problem, list the features. Make it professional and easy to use. Then iterate—improve based on what works.",
+          "narration": "AJ describes what he wants, explains the problem, and names the features. Cursor helps turn that direction into a polished solution, then the crew iterates based on what works.",
           "connectsTo": "Gather Data"
         },
         {
@@ -94,7 +94,7 @@
           "edges": [{ "from": "build-with-ai", "to": "deploy-test" }],
           "icon": "🚀",
           "title": "Deploy and Test",
-          "narration": "Put your solution on GitHub Pages so it's live on the internet. Share it with two or three people who might use it. Get their feedback, then make improvements. Real solutions need real users.",
+          "narration": "The crew puts the solution on GitHub Pages so it is live on the internet. They share it with a few real people, listen to the feedback, and make the next version stronger.",
           "connectsTo": "Build with AI"
         }
       ]
@@ -108,7 +108,7 @@
           "nodeId": "portfolio-showcase",
           "icon": "📁",
           "title": "Your Portfolio",
-          "narration": "Your portfolio showcases everything you've learned. It includes work from each week plus your capstone project. This is proof that you can solve real problems.",
+          "narration": "The portfolio is the crew's proof. It shows everything they learned across the weeks plus the capstone project, and it says they can solve real problems now.",
           "connectsTo": null
         },
         {
@@ -116,7 +116,7 @@
           "edges": [{ "from": "portfolio-showcase", "to": "present-work" }],
           "icon": "🎤",
           "title": "Present Your Work",
-          "narration": "You'll present your capstone to the group. Cover the problem, your research, the data you gathered, demo your solution, and share what you learned. Keep it short—three to five minutes.",
+          "narration": "AJ presents the capstone to the group while Nia keeps the story tight and Malik calls out the technical wins. They cover the problem, the research, the data, the demo, and what they learned in three to five minutes.",
           "connectsTo": "Portfolio"
         },
         {
@@ -124,7 +124,7 @@
           "edges": [{ "from": "present-work", "to": "show-dont-tell" }],
           "icon": "👀",
           "title": "Show, Don't Tell",
-          "narration": "Demo your actual project. Let them see it work. Quality over quantity. Be proud—you built something real. That's something most people never do.",
+          "narration": "They demo the actual project and let everybody see it work. Quality over quantity. The crew knows they built something real, and that is worth showing.",
           "connectsTo": "Present"
         },
         {
@@ -132,7 +132,7 @@
           "edges": [{ "from": "show-dont-tell", "to": "youre-a-builder" }],
           "icon": "🎓",
           "title": "You're a Builder Now",
-          "narration": "Congratulations! You've completed the academy. You're not just a consumer of technology anymore. You're a builder. You're a problem solver. The world needs more people like you.",
+          "narration": "Nia says it plain: the crew is not just consuming technology anymore. They are builders now, and they know how to solve problems on purpose.",
           "connectsTo": "Show Don't Tell"
         },
         {
@@ -140,7 +140,7 @@
           "edges": [{ "from": "youre-a-builder", "to": "keep-going" }],
           "icon": "🚀",
           "title": "Keep Going",
-          "narration": "This is just the beginning. Keep building, stay curious, help others, and level up. The best time to start solving problems was yesterday. The second best time is right now. You have the skills—now go use them!",
+          "narration": "This is just the beginning. AJ, Nia, and Malik keep building, stay curious, help others, and level up. They already have the skills, so now it is time to use them.",
           "connectsTo": "You're a Builder"
         }
       ]

@@ -16,7 +16,7 @@
           "nodeId": "truth",
           "icon": "💡",
           "title": "A Truth That Changes Everything",
-          "narration": "Here's a truth that will change how you see the world: the quality of your understanding depends entirely on the quality of your questions. Most people never realize this.",
+          "narration": "AJ is smooth enough to make a first answer sound complete, but Nia catches the gap instantly. The truth that changes the whole crew is this: the quality of your understanding depends on the quality of your questions. Most people never realize that.",
           "connectsTo": null
         },
         {
@@ -24,7 +24,7 @@
           "edges": [{ "from": "truth", "to": "surface-thinker" }],
           "icon": "😐",
           "title": "The Surface Thinker",
-          "narration": "Most people accept the first answer they get. They hear something, nod, and move on. Surface thinkers ask 'Why is climate change happening?' hear 'pollution,' and stop there.",
+          "narration": "Malik jokes that most people hear one clean answer, nod like they solved it, and keep it moving. That is the surface thinker mindset: ask why something is happening, hear one label, and stop before the real system shows up.",
           "connectsTo": "The Truth"
         },
         {
@@ -32,7 +32,7 @@
           "edges": [{ "from": "truth", "to": "deep-thinker" }],
           "icon": "🧠",
           "title": "The Deep Thinker",
-          "narration": "Deep thinkers keep asking why. Why pollution? Why so much? What causes that? They go six levels deep and truly understand the whole system, not just the surface.",
+          "narration": "Nia does the opposite. She keeps asking why, then why again, then what is underneath that. Deep thinkers go six levels down so they can understand the whole system, not just the surface version people repeat.",
           "connectsTo": "The Truth"
         },
         {
@@ -40,7 +40,7 @@
           "edges": [{ "from": "surface-thinker", "to": "curiosity-advantage" }, { "from": "deep-thinker", "to": "curiosity-advantage" }],
           "icon": "🏆",
           "title": "The Curiosity Advantage",
-          "narration": "A curious person who asks great questions will always beat a 'smart' person who accepts surface-level answers. Intelligence isn't about knowing things—it's about knowing how to find things out.",
+          "narration": "AJ sees the difference fast: the curious person asking sharp questions will beat the so-called smart person who settles for surface answers. Intelligence is not just knowing things. It is knowing how to find things out.",
           "connectsTo": "Both Paths"
         },
         {
@@ -48,7 +48,7 @@
           "edges": [{ "from": "curiosity-advantage", "to": "your-choice" }],
           "icon": "🎯",
           "title": "Your Choice",
-          "narration": "Every time you encounter something new, you have a choice: accept the first answer, or keep asking why. The people who change the world consistently choose to go deeper.",
+          "narration": "That becomes the crew's choice every time something confusing shows up: take the first answer or keep pressing deeper. The people who change their lives and their communities are usually the ones who choose to go deeper.",
           "connectsTo": "Curiosity Advantage"
         }
       ]
@@ -62,7 +62,7 @@
           "nodeId": "the-framework",
           "icon": "🎯",
           "title": "The Framework",
-          "narration": "The framework is beautifully simple: when you want to understand something, ask 'why?' at least six times. Each answer reveals a new layer of truth.",
+          "narration": "Nia turns the whole lesson into one clean move the crew can keep using: if you want to understand something, ask why at least six times. Each answer opens another layer of truth.",
           "connectsTo": null
         },
         {
@@ -70,7 +70,7 @@
           "edges": [{ "from": "the-framework", "to": "level-1-2" }],
           "icon": "1️⃣",
           "title": "Levels 1-2: Where Most Stop",
-          "narration": "Ninety percent of people stop at levels one and two. 'Why homework?' 'To practice.' 'Why practice?' 'So things stick.' They feel satisfied, but they've barely scratched the surface.",
+          "narration": "AJ realizes most people stop at levels one and two because the answer sounds neat enough. Why homework? To practice. Why practice? So things stick. It feels complete, but they have barely scratched the surface.",
           "connectsTo": "The Framework"
         },
         {
@@ -78,7 +78,7 @@
           "edges": [{ "from": "level-1-2", "to": "level-3-4" }],
           "icon": "3️⃣",
           "title": "Levels 3-4: Getting Interesting",
-          "narration": "At level three, things get interesting. 'Why does practice make things stick?' Your brain strengthens neural pathways when you repeat something. Now you're learning how your brain actually works!",
+          "narration": "Malik starts grinning at levels three and four because this is where the answer stops sounding basic and starts sounding real. Now you are learning how the brain actually works, not just what adults keep telling you to do.",
           "connectsTo": "Levels 1-2"
         },
         {
@@ -86,7 +86,7 @@
           "edges": [{ "from": "level-3-4", "to": "level-5-6" }],
           "icon": "6️⃣",
           "title": "Levels 5-6: Real Understanding",
-          "narration": "At levels five and six, you reach evolutionary neuroscience. Your brain prioritizes what to remember based on repetition because it was survival-critical for our ancestors. Mind. Blown.",
+          "narration": "By levels five and six, the crew is all the way inside the deeper logic. Your brain prioritizes repetition because memory once meant survival. That is real understanding, and it hits different when you can explain the chain.",
           "connectsTo": "Levels 3-4"
         },
         {
@@ -94,7 +94,7 @@
           "edges": [{ "from": "level-5-6", "to": "transformation" }],
           "icon": "✨",
           "title": "The Transformation",
-          "narration": "You went from 'why homework?' to understanding human evolution. Now you don't just do homework because you're told to—you understand how your brain actually works. That's the power of going deep!",
+          "narration": "The transformation is the jump from doing something because somebody told you to, to understanding the full reason underneath it. AJ, Nia, and Malik can now feel what going deep changes: the work has meaning because the system makes sense.",
           "connectsTo": "Levels 5-6"
         }
       ]
@@ -108,7 +108,7 @@
           "nodeId": "questions-tool",
           "icon": "🔧",
           "title": "Questions Are the Tool",
-          "narration": "Questions are the tool. Comprehension is the result. When you truly comprehend something, you can do four powerful things that prove you really understand.",
+          "narration": "By now the crew gets the formula: questions are the tool, comprehension is the result. When you really understand something, you can prove it in four powerful ways.",
           "connectsTo": null
         },
         {
@@ -116,7 +116,7 @@
           "edges": [{ "from": "questions-tool", "to": "explain-simply" }],
           "icon": "👶",
           "title": "Explain It Simply",
-          "narration": "If you can't explain something simply, you don't really understand it. After going six levels deep, try explaining the concept to a younger kid. Can you do it without jargon?",
+          "narration": "Nia says if AJ cannot explain it simply, he does not own it yet. After going six levels deep, can you explain the idea to a younger kid without hiding behind jargon?",
           "connectsTo": "Questions Tool"
         },
         {
@@ -124,7 +124,7 @@
           "edges": [{ "from": "questions-tool", "to": "find-connections" }],
           "icon": "🔗",
           "title": "Find Connections",
-          "narration": "True understanding means seeing how things connect to other things you know. Ask: how does this relate to history? To science? To my own life? Connections deepen understanding.",
+          "narration": "Malik keeps connecting everything. Real understanding means seeing how one idea links to other things you already know, from science to history to your own life. Connections deepen comprehension.",
           "connectsTo": "Questions Tool"
         },
         {
@@ -132,7 +132,7 @@
           "edges": [{ "from": "questions-tool", "to": "predict-outcomes" }],
           "icon": "🔮",
           "title": "Predict Outcomes",
-          "narration": "When you deeply understand something, you can predict what will happen. 'If X happens, then Y will probably follow because...' Prediction proves comprehension.",
+          "narration": "AJ starts seeing the next move before it happens. When you deeply understand something, you can say what will likely happen next and explain why. Prediction is proof of comprehension.",
           "connectsTo": "Questions Tool"
         },
         {
@@ -140,7 +140,7 @@
           "edges": [{ "from": "questions-tool", "to": "apply-new" }],
           "icon": "🚀",
           "title": "Apply to New Situations",
-          "narration": "Real comprehension lets you use knowledge in completely new contexts. Understanding isn't memorizing facts—it's having transferable insight that works everywhere.",
+          "narration": "The deepest flex is transfer. Real comprehension lets the crew take one insight and use it in a brand new situation. Understanding is not memorizing facts. It is carrying insight somewhere new and still making it work.",
           "connectsTo": "Questions Tool"
         },
         {
@@ -148,7 +148,7 @@
           "edges": [{ "from": "explain-simply", "to": "master-questioner" }, { "from": "find-connections", "to": "master-questioner" }, { "from": "predict-outcomes", "to": "master-questioner" }, { "from": "apply-new", "to": "master-questioner" }],
           "icon": "🏆",
           "title": "Become a Master Questioner",
-          "narration": "Practice these skills and you become a master questioner. You'll see the world differently. Problems become puzzles to solve. Confusion becomes curiosity. The art of questions is your superpower!",
+          "narration": "Practice these moves long enough and the whole way you see the world changes. Problems start looking like puzzles. Confusion turns into curiosity. That is how AJ and the crew become master questioners, and that is the superpower this week is building.",
           "connectsTo": "All Skills"
         }
       ]
