@@ -20,8 +20,9 @@ function ensure(value, message) {
   return value;
 }
 
-function buildStepText(step) {
-  return `${step.title}. ${step.narration}`.replace(/\s+/g, " ").trim();
+function buildStepText(step, { omitTitles = false } = {}) {
+  const parts = omitTitles ? [step.narration] : [step.title, step.narration];
+  return parts.filter(Boolean).join(". ").replace(/\s+/g, " ").trim();
 }
 
 async function createSpeech({ apiKey, text, voice, instructions }) {
@@ -77,6 +78,7 @@ async function main() {
   const voiceLabel = args.label || "Captivating Storyteller";
   const setDefault = args.default === "true";
   const clean = args.clean === "true";
+  const omitTitles = args["omit-titles"] === "true";
   const instructions =
     args.instructions ||
     "Speak like an authentic, well-educated, captivating storyteller with warm authority, emotional intelligence, and clear explanation. Sound grounded, articulate, and compelling. Do not sound robotic. Make each lesson feel alive and easy to follow.";
@@ -120,7 +122,7 @@ async function main() {
     voiceManifest[story.id] = [];
 
     for (const [index, step] of story.steps.entries()) {
-      const text = buildStepText(step);
+      const text = buildStepText(step, { omitTitles });
       const stepId = `step-${index}`;
       const mp3Buffer = await createSpeech({
         apiKey,
