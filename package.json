@@ -4,6 +4,7 @@
   "scripts": {
     "build": "node scripts/build-gh-pages.mjs",
     "audio:lesson": "node scripts/generate-lesson-audio.mjs",
+    "course:brief": "node scripts/scaffold-course-brief.mjs",
     "course:clone": "node scripts/clone-course-template.mjs",
     "storyboards:lesson": "node scripts/generate-storyboard-images.mjs",
     "dev": "firebase emulators:start --only hosting --project autonateai-learning-hub",

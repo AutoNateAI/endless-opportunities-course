@@ -35,26 +35,33 @@ Use this skill when the user wants a brand-new client course that should feel li
 2. Clone the baseline course shell.
    - Use:
    - `npm run course:clone -- --source-course=endless-opportunities --target-course=<new-course-slug>`
-3. Rewrite each week from the brief.
+3. Scaffold the structured brief package.
+   - Use:
+   - `npm run course:brief -- --course=<new-course-slug> --title='<Course Title>' --client='<Client Name>' --voice=<voice> --weeks=5`
+   - Fill in:
+   - `briefs/<new-course-slug>/course-brief.json`
+   - `briefs/<new-course-slug>/week-outline.json`
+   - `briefs/<new-course-slug>/activity-map.json`
+4. Rewrite each week from the brief.
    - update `story.json`
    - update `index.html`
    - align the questions and answers to the narrated story
-4. Keep the premium playback pattern.
+5. Keep the premium playback pattern.
    - storyboard-first
    - one top play button
    - progress dots
    - no voice dropdowns or extra playback clutter unless explicitly requested
-5. Regenerate narration for each lesson.
+6. Regenerate narration for each lesson.
    - Use:
    - `npm run audio:lesson -- --lesson=<lesson-path> --voice=<voice> --label='<voice label>' --default=true --clean=true --omit-titles=true`
-6. If the course uses recurring characters, create anchor portraits first, then generate storyboards from those anchors.
+7. If the course uses recurring characters, create anchor portraits first, then generate storyboards from those anchors.
    - use the same reference-image pattern as EO week 0
    - generate PNG frames, not placeholder SVGs
-7. Rebuild or replace activities so they teach the actual mental model from the brief.
+8. Rebuild or replace activities so they teach the actual mental model from the brief.
    - comprehension
    - application
    - synthesis or transfer
-8. Build with `npm run build`.
+9. Build with `npm run build`.
 
 ## Design rules
 
@@ -68,6 +75,7 @@ Use this skill when the user wants a brand-new client course that should feel li
 ## Deliverables
 
 - new course directory under `courses/<slug>`
+- structured brief package under `briefs/<slug>`
 - rewritten weekly stories and activities
 - regenerated narration
 - storyboard manifests and images
