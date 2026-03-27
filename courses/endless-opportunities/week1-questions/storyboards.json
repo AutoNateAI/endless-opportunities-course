@@ -1,0 +1,98 @@
+{
+  "curiosity-story": [
+    {
+      "src": "storyboards/generated/curiosity-story-step-0.png",
+      "alt": "The First Answer. AJ looks at the low turnout for the after-school AI workshop and says what sounds obvious: maybe students just do not care enough. It lands clean for a second because first answers usually do. Then Nia pauses the whole thing before that surface answer hardens into a story about the students.",
+      "title": "The First Answer",
+      "caption": "AJ looks at the low turnout for the after-school AI workshop and says what sounds obvious: maybe students just do not care enough"
+    },
+    {
+      "src": "storyboards/generated/curiosity-story-step-1.png",
+      "alt": "Nia Pushes Back. Nia asks the question AJ skipped. What makes us think they do not care? She points out that the same students watched the lunch demo, asked sharp questions, and said they wanted more. If the interest is real, the easy explanation is already breaking.",
+      "title": "Nia Pushes Back",
+      "caption": "Nia asks the question AJ skipped"
+    },
+    {
+      "src": "storyboards/generated/curiosity-story-step-2.png",
+      "alt": "Malik Maps the System. Malik starts tracing what happens after the last bell. Some students have one bus home. Some have to pick up younger siblings. Some share phones and data plans, so staying late or checking updates later is not simple. The problem is turning from opinion into a system map.",
+      "title": "Malik Maps the System",
+      "caption": "Malik starts tracing what happens after the last bell"
+    },
+    {
+      "src": "storyboards/generated/curiosity-story-step-3.png",
+      "alt": "The Real Friction. AJ sees it now. The shallow answer blamed motivation because motivation is the easiest thing to blame. The deeper answer is that the workshop collides with transportation, family responsibility, and access. The students were not the weak link. The design was.",
+      "title": "The Real Friction",
+      "caption": "AJ sees it now"
+    },
+    {
+      "src": "storyboards/generated/curiosity-story-step-4.png",
+      "alt": "From Opinion to Investigation. That shift matters. Week 1 is where AJ learns confidence is not the same as understanding, Nia keeps pressure on weak framing, and Malik turns the mess into something traceable. The crew is not hunting for fast answers anymore. They are investigating what is actually true.",
+      "title": "From Opinion to Investigation",
+      "caption": "That shift matters"
+    }
+  ],
+  "six-levels-story": [
+    {
+      "src": "storyboards/generated/six-levels-story-step-0.png",
+      "alt": "Start With Why. Nia takes the workshop problem and turns it into a real Week 1 drill. If turnout is low, do not stop at the first explanation. Ask why again and again until the frame changes. That is the whole point of six levels deep.",
+      "title": "Start With Why",
+      "caption": "Nia takes the workshop problem and turns it into a real Week 1 drill"
+    },
+    {
+      "src": "storyboards/generated/six-levels-story-step-1.png",
+      "alt": "Levels 1 and 2. Level one says turnout is low because students leave right after school. Level two asks why they leave, and the answer is simple but sharper: many of them have to catch the only bus they can take home. Already the lazy story is falling apart.",
+      "title": "Levels 1 and 2",
+      "caption": "Level one says turnout is low because students leave right after school"
+    },
+    {
+      "src": "storyboards/generated/six-levels-story-step-2.png",
+      "alt": "Levels 3 and 4. Malik keeps the chain moving. Why does missing that bus matter so much? Because getting home late means younger siblings wait, family schedules break, and some students lose the little margin they have. Now the crew is looking at dependency, not attitude.",
+      "title": "Levels 3 and 4",
+      "caption": "Malik keeps the chain moving"
+    },
+    {
+      "src": "storyboards/generated/six-levels-story-step-3.png",
+      "alt": "Levels 5 and 6. Nia goes deeper one more time. Why was the workshop built in a way that ignored all of that? Because the adults who planned it designed for their own convenience instead of the students' real constraints. The root problem is access and design, not effort.",
+      "title": "Levels 5 and 6",
+      "caption": "Nia goes deeper one more time"
+    },
+    {
+      "src": "storyboards/generated/six-levels-story-step-4.png",
+      "alt": "A Better Move. Once AJ, Nia, and Malik can name the real problem, the solution changes too. They talk about shorter lunch previews, bus-safe timing, and mobile follow-ups that do not punish students for their schedule. Better questions do not just sound smarter. They produce better builds.",
+      "title": "A Better Move",
+      "caption": "Once AJ, Nia, and Malik can name the real problem, the solution changes too"
+    }
+  ],
+  "comprehension-story": [
+    {
+      "src": "storyboards/generated/comprehension-story-step-0.png",
+      "alt": "Understanding Has Evidence. Sage makes the Week 1 lesson plain. Real understanding is not a vibe. It leaves evidence. If the crew truly understands the workshop problem, they should be able to explain it, connect it, predict what happens next, and use the insight somewhere new.",
+      "title": "Understanding Has Evidence",
+      "caption": "Sage makes the Week 1 lesson plain"
+    },
+    {
+      "src": "storyboards/generated/comprehension-story-step-1.png",
+      "alt": "Explain It Simply. AJ proves the first part by saying it in plain language. The workshop was not empty because students were lazy. It was empty because the plan ignored how students actually get home and take care of family. If you can say it simply, you probably understand it.",
+      "title": "Explain It Simply",
+      "caption": "AJ proves the first part by saying it in plain language"
+    },
+    {
+      "src": "storyboards/generated/comprehension-story-step-2.png",
+      "alt": "Connect the Pattern. Nia connects the same pattern to other systems. Clinics with long lines, school forms nobody finishes, and apps that assume constant Wi-Fi all fail the same way. Somebody designs from the top and ignores the reality underneath. That is a transferable pattern.",
+      "title": "Connect the Pattern",
+      "caption": "Nia connects the same pattern to other systems"
+    },
+    {
+      "src": "storyboards/generated/comprehension-story-step-3.png",
+      "alt": "Predict the Outcome. Malik takes the next step and makes a prediction. If the workshop moves to a bus-safe slot and sends short mobile challenges students can finish on their own time, attendance should rise and the questions should get better. Prediction is what comprehension sounds like in motion.",
+      "title": "Predict the Outcome",
+      "caption": "Malik takes the next step and makes a prediction"
+    },
+    {
+      "src": "storyboards/generated/comprehension-story-step-4.png",
+      "alt": "Apply It Somewhere New. The deepest proof is transfer. The crew can now walk into a different problem and ask who got blamed too fast, what constraints were ignored, and what the real dependency chain looks like. That is where Week 1 ends. Not with opinions, but with a method they can carry forward.",
+      "title": "Apply It Somewhere New",
+      "caption": "The deepest proof is transfer"
+    }
+  ]
+}

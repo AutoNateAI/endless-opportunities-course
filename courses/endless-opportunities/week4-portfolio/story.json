@@ -10,138 +10,138 @@
     {
       "id": "problem-solving-process-story",
       "diagramId": "problem-solving-process",
-      "title": "The Problem-Solving Process",
+      "title": "Choose the Story Worth Presenting",
       "steps": [
         {
-          "nodeId": "all-pieces",
+          "nodeId": "real-problem",
           "icon": "🎯",
-          "title": "You Have All the Pieces",
-          "narration": "AJ, Nia, and Malik step into the final week with the whole toolbox ready: deep questions, sharp data sense, and real building skills. Now they are putting it all together to solve a real problem.",
+          "title": "Pick the Real Problem",
+          "narration": "AJ starts the final week by choosing one problem that still feels real in his chest, not just one that sounds impressive on a slide. He wants the presentation to begin with a lived frustration people can recognize right away.",
           "connectsTo": null
         },
         {
-          "nodeId": "questions-step",
-          "edges": [{ "from": "all-pieces", "to": "questions-step" }],
-          "icon": "❓",
-          "title": "Start with Questions",
-          "narration": "Every solution starts with understanding. Nia pushes the crew to go six levels deep so they understand the real problem instead of jumping at the first answer.",
-          "connectsTo": "All the Pieces"
+          "nodeId": "honest-framing",
+          "edges": [{ "from": "real-problem", "to": "honest-framing" }],
+          "icon": "🧭",
+          "title": "Frame It Honestly",
+          "narration": "Nia cuts out every exaggerated claim and rewrites the setup so the crew names the actual user, the actual pain point, and the actual limit of what their solution can do. If the explanation is honest, the audience can trust the rest.",
+          "connectsTo": "Pick the Real Problem"
         },
         {
-          "nodeId": "data-step",
-          "edges": [{ "from": "questions-step", "to": "data-step" }],
+          "nodeId": "proof-trail",
+          "edges": [{ "from": "honest-framing", "to": "proof-trail" }],
           "icon": "📊",
-          "title": "Gather Data",
-          "narration": "Malik goes hunting for useful information. What resources exist? What do people say? What specific data would help? The crew organizes what they find and starts looking for patterns.",
-          "connectsTo": "Questions"
+          "title": "Show the Proof Trail",
+          "narration": "Malik lays out the evidence trail: the questions they asked, the comments and examples they collected, and the pattern that kept showing up. The point is not to drown people in data. The point is to show that the build came from proof, not guessing.",
+          "connectsTo": "Frame It Honestly"
         },
         {
-          "nodeId": "insight-step",
-          "edges": [{ "from": "data-step", "to": "insight-step" }],
-          "icon": "💡",
-          "title": "Find Insights",
-          "narration": "Patterns in the data reveal opportunities, and AJ is the one who spots what the numbers and notes are really saying. What's missing? What could be better? Insight turns the pile into direction.",
-          "connectsTo": "Data"
-        },
-        {
-          "nodeId": "build-step",
-          "edges": [{ "from": "insight-step", "to": "build-step" }],
+          "nodeId": "workflow",
+          "edges": [{ "from": "proof-trail", "to": "workflow" }],
           "icon": "🛠️",
-          "title": "Build the Solution",
-          "narration": "Now the crew builds. They use Cursor and AI to create something that addresses the problem, then they test it, improve it, and keep the solution moving like a living story.",
-          "connectsTo": "Insights"
+          "title": "Walk Through the Build",
+          "narration": "AJ and Malik turn the messy building process into a clean story: first prompt, rough prototype, broken version, feedback, and stronger revision. Now the audience can see the workflow instead of imagining magic.",
+          "connectsTo": "Show the Proof Trail"
+        },
+        {
+          "nodeId": "presentation-arc",
+          "edges": [{ "from": "workflow", "to": "presentation-arc" }],
+          "icon": "🎤",
+          "title": "Shape the Presentation Arc",
+          "narration": "With the facts in place, the crew shapes the final talk into one clear arc: here is the problem, here is what we learned, here is what we built, and here is why it matters. Week 4 is not about sounding polished. It is about making the learning visible.",
+          "connectsTo": "Walk Through the Build"
         }
       ]
     },
     {
       "id": "capstone-journey-story",
       "diagramId": "capstone-journey",
-      "title": "Building Your Capstone",
+      "title": "Test and Sharpen the Capstone",
       "steps": [
         {
-          "nodeId": "choose-problem",
-          "icon": "🎯",
-          "title": "Choose Your Problem",
-          "narration": "AJ picks one problem to solve, and the rule stays the same: it has to be real, specific, and something the crew can actually address with a tool or resource.",
+          "nodeId": "hook",
+          "icon": "🎬",
+          "title": "Open With the Hook",
+          "narration": "AJ practices opening with the exact moment the problem became impossible to ignore. That hook matters because it reminds the audience that the capstone began in real life, not in a random assignment prompt.",
           "connectsTo": null
         },
         {
-          "nodeId": "deep-understanding",
-          "edges": [{ "from": "choose-problem", "to": "deep-understanding" }],
-          "icon": "🔍",
-          "title": "Deep Understanding",
-          "narration": "Nia keeps asking why about each answer until the crew reaches the root. They document all six levels because the deeper the understanding, the better the solution.",
-          "connectsTo": "Choose Problem"
+          "nodeId": "claim-check",
+          "edges": [{ "from": "hook", "to": "claim-check" }],
+          "icon": "🔎",
+          "title": "Stress-Test Every Claim",
+          "narration": "Nia listens like a tough editor. Every time the crew says always, everyone, or best, she stops them and asks for proof. If they cannot defend a claim with evidence from the project, it does not make the final version.",
+          "connectsTo": "Open With the Hook"
         },
         {
-          "nodeId": "gather-data",
-          "edges": [{ "from": "deep-understanding", "to": "gather-data" }],
-          "icon": "📊",
-          "title": "Gather Your Data",
-          "narration": "Malik gathers the data with a curious eye for detail. What resources or solutions already exist? What do people say? What specific data would help? Then the crew organizes everything they find.",
-          "connectsTo": "Deep Understanding"
+          "nodeId": "demo-readiness",
+          "edges": [{ "from": "claim-check", "to": "demo-readiness" }],
+          "icon": "💻",
+          "title": "Make the Demo Safe",
+          "narration": "Malik gets the live demo ready by checking the flow, saving screenshots, and preparing a backup path in case the internet acts strange. A strong presentation is not only about confidence. It is about planning for reality.",
+          "connectsTo": "Stress-Test Every Claim"
         },
         {
-          "nodeId": "build-with-ai",
-          "edges": [{ "from": "gather-data", "to": "build-with-ai" }],
-          "icon": "🤖",
-          "title": "Build with AI",
-          "narration": "AJ describes what he wants, explains the problem, and names the features. Cursor helps turn that direction into a polished solution, then the crew iterates based on what works.",
-          "connectsTo": "Gather Data"
+          "nodeId": "practice-feedback",
+          "edges": [{ "from": "demo-readiness", "to": "practice-feedback" }],
+          "icon": "🗣️",
+          "title": "Practice in Front of People",
+          "narration": "The crew runs the talk for a small practice audience and listens for the moment people lean in, get confused, or ask follow-up questions. That reaction becomes feedback they can actually use before the final presentation.",
+          "connectsTo": "Make the Demo Safe"
         },
         {
-          "nodeId": "deploy-test",
-          "edges": [{ "from": "build-with-ai", "to": "deploy-test" }],
-          "icon": "🚀",
-          "title": "Deploy and Test",
-          "narration": "The crew puts the solution on GitHub Pages so it is live on the internet. They share it with a few real people, listen to the feedback, and make the next version stronger.",
-          "connectsTo": "Build with AI"
+          "nodeId": "revision",
+          "edges": [{ "from": "practice-feedback", "to": "revision" }],
+          "icon": "✨",
+          "title": "Revise for Clarity",
+          "narration": "AJ tightens the hook, Nia cleans the logic, and Malik sharpens the demo sequence. The final version is stronger because they tested it in public first. That is the Week 4 move: test, sharpen, present.",
+          "connectsTo": "Practice in Front of People"
         }
       ]
     },
     {
       "id": "portfolio-celebration-story",
       "diagramId": "portfolio-celebration",
-      "title": "Your Complete Portfolio",
+      "title": "Present the Portfolio With Proof",
       "steps": [
         {
-          "nodeId": "portfolio-showcase",
+          "nodeId": "portfolio-proof",
           "icon": "📁",
-          "title": "Your Portfolio",
-          "narration": "The portfolio is the crew's proof. It shows everything they learned across the weeks plus the capstone project, and it says they can solve real problems now.",
+          "title": "Lead With Evidence of Learning",
+          "narration": "When the portfolio comes together, Malik makes sure it leads with evidence: the problem statement, the research trail, the build decisions, and the finished capstone. The portfolio is not decoration. It is proof that the crew can solve real problems.",
           "connectsTo": null
         },
         {
-          "nodeId": "present-work",
-          "edges": [{ "from": "portfolio-showcase", "to": "present-work" }],
-          "icon": "🎤",
-          "title": "Present Your Work",
-          "narration": "AJ presents the capstone to the group while Nia keeps the story tight and Malik calls out the technical wins. They cover the problem, the research, the data, the demo, and what they learned in three to five minutes.",
-          "connectsTo": "Portfolio"
+          "nodeId": "confident-story",
+          "edges": [{ "from": "portfolio-proof", "to": "confident-story" }],
+          "icon": "🎙️",
+          "title": "Tell the Story With Confidence",
+          "narration": "AJ presents without apologizing for what is unfinished. He focuses on what the crew learned, what the tool does right now, and why the problem was worth solving. Confidence here means ownership, not pretending the work is perfect.",
+          "connectsTo": "Lead With Evidence of Learning"
         },
         {
-          "nodeId": "show-dont-tell",
-          "edges": [{ "from": "present-work", "to": "show-dont-tell" }],
-          "icon": "👀",
-          "title": "Show, Don't Tell",
-          "narration": "They demo the actual project and let everybody see it work. Quality over quantity. The crew knows they built something real, and that is worth showing.",
-          "connectsTo": "Present"
+          "nodeId": "honest-answers",
+          "edges": [{ "from": "confident-story", "to": "honest-answers" }],
+          "icon": "💬",
+          "title": "Answer Questions Honestly",
+          "narration": "Nia handles tough questions by staying grounded. If the answer is known, she gives it plainly. If the answer is not known yet, she says what the crew would test next. Honest answers make the presentation stronger than fake certainty ever could.",
+          "connectsTo": "Tell the Story With Confidence"
         },
         {
-          "nodeId": "youre-a-builder",
-          "edges": [{ "from": "show-dont-tell", "to": "youre-a-builder" }],
-          "icon": "🎓",
-          "title": "You're a Builder Now",
-          "narration": "Nia says it plain: the crew is not just consuming technology anymore. They are builders now, and they know how to solve problems on purpose.",
-          "connectsTo": "Show Don't Tell"
+          "nodeId": "show-workflow",
+          "edges": [{ "from": "honest-answers", "to": "show-workflow" }],
+          "icon": "🧰",
+          "title": "Show the Workflow",
+          "narration": "Malik opens the repo, the prompts, and the working demo to show the actual workflow behind the final product. The audience gets to see that this crew does not just talk about ideas. They can document, build, and iterate in public.",
+          "connectsTo": "Answer Questions Honestly"
         },
         {
-          "nodeId": "keep-going",
-          "edges": [{ "from": "youre-a-builder", "to": "keep-going" }],
+          "nodeId": "problem-solvers",
+          "edges": [{ "from": "show-workflow", "to": "problem-solvers" }],
           "icon": "🚀",
-          "title": "Keep Going",
-          "narration": "This is just the beginning. AJ, Nia, and Malik keep building, stay curious, help others, and level up. They already have the skills, so now it is time to use them.",
-          "connectsTo": "You're a Builder"
+          "title": "Leave as Problem Solvers",
+          "narration": "By the end, AJ, Nia, and Malik are not framed as kids who completed a course. They are framed as problem solvers who can notice a need, investigate it, build a response, and explain their thinking. That is the real graduation moment.",
+          "connectsTo": "Show the Workflow"
         }
       ]
     }
@@ -151,70 +151,37 @@
       "storyId": "problem-solving-process-story",
       "questions": [
         {
-          "question": "Why might jumping to solutions before deep questioning be more dangerous than having no solution at all?",
+          "question": "Why does AJ start the presentation with a real problem instead of the most impressive-sounding one?",
           "options": [
-            "Because it wastes time that could be spent researching better tools",
-            "Because solving the wrong problem well can make the real problem invisible and harder to address later",
-            "Because it shows you don't care about the process",
-            "Because teachers won't give you credit for skipping steps"
+            "Real problems are easier to explain and defend with evidence",
+            "Impressive problems are usually too easy",
+            "Teachers only like personal examples",
+            "Real problems require less research"
           ],
-          "correct": 1,
-          "explanation": "When you solve the wrong problem effectively, you create the illusion of progress. This makes the real problem harder to see and address because everyone thinks it's 'handled.' A well-executed solution to the wrong problem is more dangerous than no solution because it consumes resources, builds false confidence, and obscures the actual need. Understanding root causes through deep questioning prevents this trap."
+          "correct": 0,
+          "explanation": "A real problem gives the crew a concrete opening and stronger evidence. The audience can feel that the project came from lived experience rather than hype."
         },
         {
-          "question": "You're gathering data about a problem and find two contradictory patterns. What's the most valuable way to think about this contradiction?",
+          "question": "What is Nia protecting when she removes exaggerated claims from the presentation?",
           "options": [
-            "Discard one data source as unreliable and move forward with the other",
-            "The contradiction itself is the insight—it reveals a hidden complexity or multiple user needs",
-            "Average the two patterns to find a middle ground",
-            "Continue gathering more data until the contradiction resolves itself"
-          ],
-          "correct": 1,
-          "explanation": "Contradictions in data aren't problems to eliminate—they're insights waiting to be understood. When patterns conflict, it often reveals that different groups experience the problem differently, or that the problem has multiple facets you hadn't considered. This complexity is valuable information that can lead to more nuanced, effective solutions. The instinct to resolve contradictions by choosing one side or averaging loses this depth."
-        },
-        {
-          "question": "What's the relationship between the quality of your questions and the type of data you'll naturally gather?",
-          "options": [
-            "There's no relationship—data gathering is independent of your questions",
-            "Better questions lead to more data, and more data is always better",
-            "Deep questions cause you to notice relevant patterns and connections that shallow questions would miss entirely",
-            "Questions help you organize data after you've collected it"
+            "The runtime of the slideshow",
+            "The technical depth of the repo",
+            "The audience's trust in the story",
+            "AJ's confidence on stage"
           ],
           "correct": 2,
-          "explanation": "The questions you ask fundamentally shape what you can see. When you've gone six levels deep on a problem, you develop a framework for recognizing relevant patterns, connections, and gaps that someone with surface-level understanding would walk right past. It's not about gathering more data—it's about your questions making certain data meaningful and visible. Your question depth determines your pattern-recognition capacity."
+          "explanation": "Honest framing makes the rest of the project credible. If the opening claims are shaky, the audience doubts everything else."
         },
         {
-          "question": "A classmate has gathered extensive data but can't find insights. What's the most likely root cause of this block?",
+          "question": "Why does Malik show the proof trail instead of every piece of research the crew collected?",
           "options": [
-            "They haven't gathered enough data yet and need to collect more",
-            "They lack the technical skills to analyze data properly",
-            "They're looking for insights in the data itself rather than in the gaps, tensions, and absences the data reveals",
-            "Their data sources are too diverse and need to be more focused"
-          ],
-          "correct": 2,
-          "explanation": "Data doesn't contain insights—data reveals the edges where insights emerge. The most powerful insights often come from what's missing, what's contradictory, what people avoid talking about, or what everyone assumes but no one questions. If you're only looking at what the data says directly, you miss the deeper story. Insights live in the tension between what is and what could be, not in the data points themselves."
-        },
-        {
-          "question": "During the building phase, you realize your insights were partially wrong. What does this reveal about the problem-solving process?",
-          "options": [
-            "You failed at the earlier steps and need to start over completely",
-            "The process is iterative—building tests your understanding and refines your insights in ways thinking alone cannot",
-            "You should have spent more time in the data gathering phase",
-            "Your questions weren't deep enough initially"
+            "Because the audience only cares about the final tool",
+            "Because a selective evidence trail shows how the build came from proof rather than guessing",
+            "Because the crew forgot most of their research",
+            "Because screenshots are easier than data"
           ],
           "correct": 1,
-          "explanation": "Building is not just the final step—it's a form of inquiry. When you build, you're testing your understanding against reality in a way that reveals assumptions you didn't know you had. Discovering that your insights need refinement isn't failure; it's the process working correctly. The problem-solving cycle isn't linear—each phase informs the others. Building often reveals new questions, which lead to new data needs, which generate refined insights. This is growth, not failure."
-        },
-        {
-          "question": "Why does the process emphasize 'data without insight is just noise' rather than 'insight without data is just speculation'?",
-          "options": [
-            "Because data is more important than insight in problem-solving",
-            "Because most people over-collect data without developing the interpretive lens to make it meaningful",
-            "Because speculation is actually valuable in creative problem-solving",
-            "Because the course focuses on data skills more than thinking skills"
-          ],
-          "correct": 1,
-          "explanation": "While both statements are true, the emphasis reveals the more common failure mode: gathering extensive data while failing to develop the interpretive framework that transforms information into understanding. Many people hide behind data collection, treating it as productive work while avoiding the harder task of sense-making. Data is easier to gather than insights are to develop. The warning isn't that data is unimportant—it's that data without the cognitive work of interpretation is a comfortable form of procrastination disguised as progress."
+          "explanation": "The goal is to show the logic of the project, not flood people with raw data. The evidence trail shows how the team moved from problem to build."
         }
       ]
     },
@@ -222,70 +189,37 @@
       "storyId": "capstone-journey-story",
       "questions": [
         {
-          "question": "You're choosing between two problems: one you observed directly in your life, and one that sounds more impressive but you've only read about. What's the deeper trade-off you're actually making?",
+          "question": "What does Nia do when the crew uses big claims like 'everyone' or 'best' during practice?",
           "options": [
-            "Between appearing smart to others versus actually developing real problem-solving skills",
-            "Between an easy project and a challenging one",
-            "Between originality and copying existing solutions",
-            "Between finishing quickly and taking your time"
-          ],
-          "correct": 0,
-          "explanation": "This choice reveals whether you're optimizing for external validation or internal growth. The problem you've observed directly gives you tacit knowledge—you understand the context, the emotional weight, the real constraints in ways that reading about a problem never can. That lived understanding is your competitive advantage and your richest learning opportunity. Impressive-sounding problems you haven't experienced force you to build on shallow understanding, which teaches you to be confident without depth—the opposite of what this academy develops."
-        },
-        {
-          "question": "When going six levels deep, you reach level 4 and realize the problem you chose isn't actually what you thought it was. What's the most growth-oriented response?",
-          "options": [
-            "Continue with the original problem anyway since you've already invested time",
-            "Restart completely with a different problem from scratch",
-            "Recognize this reframing as valuable insight and adjust your problem statement based on your deeper understanding",
-            "Stop at level 4 since going deeper has led to confusion"
-          ],
-          "correct": 2,
-          "explanation": "Discovery that challenges your initial framing isn't a detour—it's exactly what deep questioning is designed to produce. Most people never reach the depth where their assumptions get challenged, so they solve surface problems elegantly. When level 4 reveals that your problem is actually something different, that's your understanding maturing in real-time. The best problem-solvers hold their problem statements loosely enough to let deeper inquiry reshape them. Rigidity protects your ego; flexibility develops your capacity."
-        },
-        {
-          "question": "You're gathering data and find that a solution similar to yours already exists. How should this shape your thinking?",
-          "options": [
-            "Abandon your project since there's no point in recreating something",
-            "Copy their solution exactly to save time",
-            "Study why existing solutions exist, what gaps they have, and what your unique insight adds—their existence validates the problem space",
-            "Ignore the existing solutions and pretend they don't exist"
-          ],
-          "correct": 2,
-          "explanation": "Existing solutions are data, not defeat. Their presence proves the problem is real and worth solving—validation, not invalidation. The deeper work is understanding: Why do existing solutions have the gaps they have? What constraints shaped them? What did they optimize for? Your unique perspective and understanding might address the problem from a different angle or for a different context. Most innovation isn't inventing entirely new problem spaces—it's bringing fresh insight to existing ones. The question isn't 'has this been done?' but 'what understanding can I add?'"
-        },
-        {
-          "question": "While building with AI, you keep getting results that technically work but don't feel right. What's likely happening?",
-          "options": [
-            "The AI isn't capable enough and you need better tools",
-            "You haven't articulated your actual intent clearly, often because you're still discovering what you really want through the building process",
-            "You're being too picky and should accept what works",
-            "Your problem wasn't specific enough at the start"
+            "She leaves them in to make the project sound stronger",
+            "She replaces them with proof-backed language or cuts them",
+            "She turns them into jokes",
+            "She moves them to the end of the talk"
           ],
           "correct": 1,
-          "explanation": "This feeling of 'not quite right' is your tacit knowledge speaking—you understand something about the problem that you haven't yet made explicit, even to yourself. Building is a dialogue between your explicit understanding (what you can articulate) and your implicit understanding (what you sense but can't yet name). When results feel off, it's usually because you're discovering new layers of your own understanding through the attempt to externalize it. This isn't a failure of tools or planning—it's taste developing in real-time. The solution is to slow down and interrogate that feeling: what specifically feels wrong? That articulation process often clarifies what you actually want."
+          "explanation": "Week 4 is about sharpening the story. Claims that cannot be defended with project evidence do not survive rehearsal."
         },
         {
-          "question": "You deploy your solution and your first user struggles with something you found obvious. What's the deepest lesson here?",
+          "question": "Why does Malik prepare screenshots and a backup path for the demo?",
           "options": [
-            "Users need better instructions or tutorials",
-            "You didn't test thoroughly enough before deploying",
-            "Your deep immersion in the problem has made you blind to the beginner's experience—expertise creates a knowledge gap you can't see from inside",
-            "The user isn't trying hard enough to understand your solution"
-          ],
-          "correct": 2,
-          "explanation": "This is the curse of knowledge manifesting. After going six levels deep and building the solution, you've developed sophisticated mental models that make certain things 'obvious' to you. But your user doesn't have those models—they're experiencing your solution with the confusion you had at level 0. This gap isn't a flaw in your user or your solution; it's an inevitable consequence of expertise. The deepest lesson is humility: what feels obvious to you required all your research and building to become obvious. Good builders remember and design for the perspective they've outgrown. This is why real user testing is irreplaceable—it shows you your own blind spots."
-        },
-        {
-          "question": "What's the real purpose of the 'iterate based on feedback' step—beyond just improving the product?",
-          "options": [
-            "To make users feel heard and involved in the process",
-            "To develop the emotional and cognitive capacity to separate your ego from your work and see criticism as data rather than attack",
-            "To find bugs and fix technical issues",
-            "To make sure the project meets teacher requirements"
+            "Because the final product is unfinished",
+            "Because planning for real conditions is part of a strong presentation",
+            "Because screenshots are more interesting than live demos",
+            "Because audiences prefer static slides"
           ],
           "correct": 1,
-          "explanation": "The technical improvements from iteration are valuable, but the deeper transformation is psychological. Learning to receive feedback without defensiveness, to see your work as separate from your worth, to get curious about criticism rather than wounded—these are the meta-skills that determine whether you'll grow as a builder or plateau. Most people can't iterate effectively because they can't emotionally handle their work being imperfect. When you build that capacity, you unlock exponential growth because every piece of feedback becomes fuel rather than threat. This emotional maturity is rarer and more valuable than technical skill."
+          "explanation": "A good presentation accounts for reality. Backup materials protect the story if live conditions go sideways."
+        },
+        {
+          "question": "What is the value of practicing in front of a small audience before the final presentation?",
+          "options": [
+            "It guarantees everyone will like the capstone",
+            "It creates usable feedback about confusion, interest, and pacing",
+            "It makes the final presentation unnecessary",
+            "It replaces testing the actual tool"
+          ],
+          "correct": 1,
+          "explanation": "Practice reveals where people lean in or get lost. That reaction helps the crew sharpen the final talk."
         }
       ]
     },
@@ -293,70 +227,37 @@
       "storyId": "portfolio-celebration-story",
       "questions": [
         {
-          "question": "When presenting your capstone, you have the urge to over-explain or apologize for what's 'not done yet.' What's driving this urge, and what does resisting it teach you?",
+          "question": "What should the portfolio lead with in Week 4?",
           "options": [
-            "It's just nervousness that everyone feels when presenting",
-            "The fear that your work won't be seen as enough, and resisting it teaches you to let your work speak and trust that 'done' is better than 'perfect'",
-            "You want to manage expectations so people won't judge you harshly",
-            "You're being thorough by acknowledging limitations"
+            "Decorative screenshots and polished colors",
+            "Evidence of learning, problem framing, and build decisions",
+            "A long biography of the presenter",
+            "Every file in the repository"
           ],
           "correct": 1,
-          "explanation": "The apology impulse reveals a deeper fear: that you and your work will be judged as insufficient. But here's the reality—you built something real and put it into the world, which most people never do. Over-explaining or apologizing doesn't protect you; it diminishes your work and trains you to hedge rather than own. Resisting this urge teaches you to trust that completion is valuable, that your work has worth independent of its perfection, and that confidence isn't arrogance—it's respecting your own effort. This is the psychological shift from student to builder."
+          "explanation": "The portfolio is proof, not decoration. It should show how the crew thought, researched, built, and learned."
         },
         {
-          "question": "During your presentation, someone asks a critical question you don't know the answer to. What's the most growth-oriented response?",
+          "question": "What makes Nia's approach to tough audience questions strong?",
           "options": [
-            "Deflect or give a vague answer to avoid looking unprepared",
-            "Say 'I don't know' and offer to investigate it—demonstrating that not-knowing is a starting point for inquiry, not a failure",
-            "Get defensive and explain why the question isn't fair",
-            "Pretend the question doesn't matter to your project"
+            "She answers every question with total certainty",
+            "She keeps answers honest and points to the next test when the crew does not know yet",
+            "She avoids questions that sound critical",
+            "She turns questions back on the audience"
           ],
           "correct": 1,
-          "explanation": "The instinct to hide gaps in knowledge is strong because we're trained that not-knowing signals inadequacy. But builders and researchers know differently: not-knowing is simply the boundary of your current understanding, and acknowledging it honestly is the first step toward expanding that boundary. When you say 'I don't know, but that's a great question and here's how I'd investigate it,' you demonstrate intellectual integrity and curiosity—both rarer and more valuable than having every answer. This response also models for your peers that inquiry doesn't end at presentation, and that questions are opportunities, not threats."
+          "explanation": "Honest answers build trust. Saying what you know and what you would test next is stronger than fake certainty."
         },
         {
-          "question": "What's the difference between 'showing' your project versus 'telling' about it that matters most for your growth?",
+          "question": "Why does Malik show the repo and workflow during the portfolio presentation?",
           "options": [
-            "Showing is more engaging for the audience than telling",
-            "Showing forces you to build something functional enough to demonstrate, which is a higher bar than something you can just describe",
-            "Telling takes too much time in a short presentation",
-            "Showing uses visual aids which are more memorable"
+            "To prove the crew can document, build, and iterate in public",
+            "To make the presentation longer",
+            "To hide weaknesses in the demo",
+            "To avoid explaining the problem"
           ],
-          "correct": 1,
-          "explanation": "The power of 'show, don't tell' isn't just presentation technique—it's a forcing function for quality. When you know you'll have to demo your work live, you can't hide behind descriptions or intentions. It has to work. This constraint pushes you to finish, to handle edge cases, to make it genuinely usable. Many people can describe impressive ideas; far fewer can show them working. The shift from 'I'm building something that would...' to 'Here, let me show you how it works' is the shift from aspiration to achievement. That gap—between what you can talk about and what you can demonstrate—is where real capability lives."
-        },
-        {
-          "question": "Your portfolio showcases projects from each week. What does this collection reveal that any single project cannot?",
-          "options": [
-            "It shows you completed all the assignments on time",
-            "It demonstrates your range and your capacity to apply a consistent problem-solving process across different domains",
-            "It makes your portfolio look more impressive with more projects",
-            "It gives you more things to talk about in your presentation"
-          ],
-          "correct": 1,
-          "explanation": "Any single project might be luck or passion for that specific topic. But a portfolio that applies deep questioning, data gathering, insight generation, and building across multiple problem spaces reveals something deeper: you have a transferable method. You're not just someone who solved one problem—you're someone who has a process for solving problems in general. This is the difference between a hobbyist and a practitioner. The collection demonstrates that your capability isn't domain-specific luck; it's a reproducible approach. That's what employers, collaborators, and educators are really looking for—not single achievements, but reliable capacity."
-        },
-        {
-          "question": "The course says 'you're not just a consumer of technology anymore—you're a builder.' What's the most profound shift this identity change enables?",
-          "options": [
-            "You can now put 'programmer' on your resume",
-            "You stop waiting for permission or perfect conditions and start creating solutions to problems you notice",
-            "You understand technology better than most people",
-            "You can help family and friends with their computer problems"
-          ],
-          "correct": 1,
-          "explanation": "The identity shift from consumer to builder changes your fundamental relationship with problems. Consumers wait for someone else to solve things. Builders see problems as opportunities they have agency to address. This isn't about technical skills—it's about locus of control. When you see yourself as a builder, every frustration becomes a potential project, every 'I wish this existed' becomes 'I could make this exist.' This shift from passive to active, from waiting to creating, from consuming to producing—this is the transformation that compounds over a lifetime. The technical skills are tools; the builder identity is the engine that drives everything else."
-        },
-        {
-          "question": "Why does the course end with 'the best time to start solving problems was yesterday, the second best time is right now'?",
-          "options": [
-            "It's motivational language to make you feel good about finishing",
-            "It emphasizes that waiting for 'perfect timing' or 'more preparation' is the resistance that stops most people from ever building anything",
-            "It's saying you should have started earlier in the course",
-            "It creates urgency so you'll continue paying for more courses"
-          ],
-          "correct": 1,
-          "explanation": "This isn't motivation—it's diagnosis of the primary obstacle most people face: the belief that they need one more skill, one more credential, one more tool, one more tutorial before they can start building. That belief is comforting because it lets you feel productive (by learning) without risking failure (by building). But builders know that starting imperfectly and iterating is the only path. You already have enough to start solving real problems. The course is telling you: the gap between your current capability and 'ready' is a myth designed to keep you comfortable. You've been ready since week 1. The question was never capability—it was courage to start without permission. Now you know you already have both."
+          "correct": 0,
+          "explanation": "Showing the workflow makes the learning visible. It proves the team can move from idea to documented build process."
         }
       ]
     }

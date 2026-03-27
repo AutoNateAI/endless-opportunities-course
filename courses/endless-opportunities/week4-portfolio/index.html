@@ -1,1491 +1,656 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Week 4: Problem Solver Portfolio | AI Problem Solving Academy</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=JetBrains+Mono&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="../../shared/css/lesson-interactive.css">
-  <link rel="stylesheet" href="../../shared/css/activity-carousel.css">
-</head>
-<body data-course="endless-opportunities" data-lesson="week4-portfolio">
-  <header class="header">
-    <div class="header-content">
-      <a href="../../index.html" class="logo">
-        <div class="logo-icon">🏆</div>
-        <span>Portfolio</span>
-      </a>
-      <nav class="nav-links">
-        <a href="../index.html">← Endless Opportunities</a>
-        <a href="../week3-building/">Week 3</a>
-        <a href="index.html" class="active">Week 4</a>
-      </nav>
-    </div>
-  </header>
-
-  <main class="container">
-    <div class="page-header">
-      <div class="breadcrumb">
-        <a href="../index.html">Endless Opportunities</a>
-        <span>/</span>
-        <span>Week 4: Problem Solver Portfolio</span>
-      </div>
-      <h1>🏆 Problem Solver Portfolio</h1>
-      <p>AJ, Nia, and Malik are bringing the whole run together: questions, data, building, and presentation. This capstone still teaches the same process, but now the page reads like the crew's final story arc.</p>
-    </div>
-
-    <!-- Audio Info -->
-    <section class="section audio-info-section">
-      <div class="info-box compact">
-        <div class="info-header">
-          <span class="info-icon">🎙️</span>
-          <div>
-            <h4>Interactive Learning Experience</h4>
-            <p>Watch diagrams come alive with AI narration • Click dots to jump • Test your understanding with quizzes</p>
-          </div>
-        </div>
-        <div class="voice-options">
-          <span class="voice-badge">🎙️ Sage story guide</span>
-          <span class="voice-badge">🗺️ Graph narration follows the crew's story beats</span>
-        </div>
-      </div>
-    </section>
-
-    <section class="section">
-      <h2>🎬 Story Lens</h2>
-      <p>Week 4 closes the arc with AJ, Nia, and Malik moving like a tight team: AJ drives the problem statement, Nia cuts through weak logic, and Malik keeps the technical story sharp from research to demo.</p>
-      <div class="narrative-setup">
-        <article class="narrative-card">
-          <div class="narrative-card-step">01</div>
-          <h3>AJ Chooses the Real Problem</h3>
-          <p>AJ starts with something he has actually seen, because the best capstones come from real life, not random ambition.</p>
-        </article>
-        <article class="narrative-card">
-          <div class="narrative-card-step">02</div>
-          <h3>Nia Goes Six Levels Deep</h3>
-          <p>Nia keeps asking why until the surface answer falls away and the crew finds the root cause worth solving.</p>
-        </article>
-        <article class="narrative-card">
-          <div class="narrative-card-step">03</div>
-          <h3>Malik Turns Research into Proof</h3>
-          <p>Malik helps translate the research, build, and demo into a portfolio story that shows the crew can think, make, and present with confidence.</p>
-        </article>
-      </div>
-    </section>
-
-    <!-- Story 1: The Problem-Solving Process -->
-    <section class="section" id="problem-solving-process-section">
-      <h2>The Problem-Solving Process</h2>
-      <p>You've learned all the pieces. Now see how questions, data, insights, and building come together into a complete problem-solving framework.</p>
-      
-      <div class="diagram-container" id="problem-solving-process-container">
-        <div class="diagram-header">
-          <span class="diagram-title">🔄 From Problem to Solution</span>
-        </div>
-        <div id="problem-solving-process-story" class="diagram-canvas storytelling"></div>
-        
-        <div class="diagram-story" id="problem-solving-process-story-caption">
-          <div class="story-step">
-            <div class="story-icon visible">🚀</div>
-            <div class="story-content">
-              <div class="story-title visible">Ready to Explore</div>
-              <div class="story-text visible">Click any progress dot below to jump to that step, or press Play to watch the full story unfold.</div>
-              <div class="story-connection" style="display: none;">
-                <span class="arrow">→</span>
-                <span class="connection-text"></span>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <div class="playback-controls">
-          <div class="playback-left">
-            <button class="diagram-btn play-btn" data-action="play">▶ Play</button>
-          </div>
-          <div class="playback-center">
-            <div class="story-progress" id="problem-solving-process-story-progress"></div>
-          </div>
-          <div class="playback-right">
-            <button class="diagram-btn small" data-action="fit" title="Fit to view">Fit</button>
-            <button class="diagram-btn small" data-action="reset" title="Reset view">Reset</button>
-          </div>
-        </div>
-
-        <div class="settings-bar">
-          <div class="control-group">
-            <label>⏱️</label>
-            <select id="problem-solving-process-speed-select">
-              <option value="1000">1s</option>
-              <option value="2000" selected>2s</option>
-              <option value="5000">5s</option>
-              <option value="10000">10s</option>
-            </select>
-          </div>
-          <div class="control-group">
-            <button class="audio-toggle" id="problem-solving-process-audio-toggle" title="Toggle audio narration">
-              <span class="audio-icon">🔊</span>
-            </button>
-          </div>
-          <div class="control-group">
-            <label>🎤</label>
-            <select id="problem-solving-process-voice-select" class="voice-select">
-              <option value="">Loading...</option>
-            </select>
-          </div>
-        </div>
-      </div>
-
-      <!-- Activity Carousels for Story 1: Problem-Solving Process -->
-      <div class="activity-carousels" data-story="problem-solving-process-story">
-        <div id="story1-comprehension" class="carousel-container"></div>
-        <div id="story1-application" class="carousel-container"></div>
-        <div id="story1-synthesis" class="carousel-container"></div>
-        <!-- Quiz carousel (knowledge check) after activities -->
-      </div>
-    </section>
-
-    <!-- Story 2: Building Your Capstone -->
-    <section class="section" id="capstone-journey-section">
-      <h2>Building Your Capstone</h2>
-      <p>Your capstone is a real solution to a real problem. Follow this journey from choosing a problem to deploying a working solution.</p>
-      
-      <div class="diagram-container" id="capstone-journey-container">
-        <div class="diagram-header">
-          <span class="diagram-title">🚀 Your Capstone Journey</span>
-        </div>
-        <div id="capstone-journey-story" class="diagram-canvas storytelling"></div>
-        
-        <div class="diagram-story" id="capstone-journey-story-caption">
-          <div class="story-step">
-            <div class="story-icon visible">🚀</div>
-            <div class="story-content">
-              <div class="story-title visible">Ready to Explore</div>
-              <div class="story-text visible">Click any progress dot below to jump to that step, or press Play to watch the full story unfold.</div>
-              <div class="story-connection" style="display: none;">
-                <span class="arrow">→</span>
-                <span class="connection-text"></span>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <div class="playback-controls">
-          <div class="playback-left">
-            <button class="diagram-btn play-btn" data-action="play">▶ Play</button>
-          </div>
-          <div class="playback-center">
-            <div class="story-progress" id="capstone-journey-story-progress"></div>
-          </div>
-          <div class="playback-right">
-            <button class="diagram-btn small" data-action="fit" title="Fit to view">Fit</button>
-            <button class="diagram-btn small" data-action="reset" title="Reset view">Reset</button>
-          </div>
-        </div>
-
-        <div class="settings-bar">
-          <div class="control-group">
-            <label>⏱️</label>
-            <select id="capstone-journey-speed-select">
-              <option value="1000">1s</option>
-              <option value="2000" selected>2s</option>
-              <option value="5000">5s</option>
-              <option value="10000">10s</option>
-            </select>
-          </div>
-          <div class="control-group">
-            <button class="audio-toggle" id="capstone-journey-audio-toggle" title="Toggle audio narration">
-              <span class="audio-icon">🔊</span>
-            </button>
-          </div>
-          <div class="control-group">
-            <label>🎤</label>
-            <select id="capstone-journey-voice-select" class="voice-select">
-              <option value="">Loading...</option>
-            </select>
-          </div>
-        </div>
-      </div>
-
-      <!-- Activity Carousels for Story 2: Capstone Journey -->
-      <div class="activity-carousels" data-story="capstone-journey-story">
-        <div id="story2-comprehension" class="carousel-container"></div>
-        <div id="story2-application" class="carousel-container"></div>
-        <div id="story2-synthesis" class="carousel-container"></div>
-        <!-- Quiz carousel (knowledge check) after activities -->
-      </div>
-    </section>
-
-    <!-- Story 3: Portfolio & Celebration -->
-    <section class="section" id="portfolio-celebration-section">
-      <h2>Your Complete Portfolio</h2>
-      <p>Your portfolio showcases everything you've learned. Present your work with pride—you've become a builder and problem solver.</p>
-      
-      <div class="diagram-container" id="portfolio-celebration-container">
-        <div class="diagram-header">
-          <span class="diagram-title">🎓 From Student to Builder</span>
-        </div>
-        <div id="portfolio-celebration-story" class="diagram-canvas storytelling"></div>
-        
-        <div class="diagram-story" id="portfolio-celebration-story-caption">
-          <div class="story-step">
-            <div class="story-icon visible">🚀</div>
-            <div class="story-content">
-              <div class="story-title visible">Ready to Explore</div>
-              <div class="story-text visible">Click any progress dot below to jump to that step, or press Play to watch the full story unfold.</div>
-              <div class="story-connection" style="display: none;">
-                <span class="arrow">→</span>
-                <span class="connection-text"></span>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <div class="playback-controls">
-          <div class="playback-left">
-            <button class="diagram-btn play-btn" data-action="play">▶ Play</button>
-          </div>
-          <div class="playback-center">
-            <div class="story-progress" id="portfolio-celebration-story-progress"></div>
-          </div>
-          <div class="playback-right">
-            <button class="diagram-btn small" data-action="fit" title="Fit to view">Fit</button>
-            <button class="diagram-btn small" data-action="reset" title="Reset view">Reset</button>
-          </div>
-        </div>
-
-        <div class="settings-bar">
-          <div class="control-group">
-            <label>⏱️</label>
-            <select id="portfolio-celebration-speed-select">
-              <option value="1000">1s</option>
-              <option value="2000" selected>2s</option>
-              <option value="5000">5s</option>
-              <option value="10000">10s</option>
-            </select>
-          </div>
-          <div class="control-group">
-            <button class="audio-toggle" id="portfolio-celebration-audio-toggle" title="Toggle audio narration">
-              <span class="audio-icon">🔊</span>
-            </button>
-          </div>
-          <div class="control-group">
-            <label>🎤</label>
-            <select id="portfolio-celebration-voice-select" class="voice-select">
-              <option value="">Loading...</option>
-            </select>
-          </div>
-        </div>
-      </div>
-
-      <!-- Activity Carousels for Story 3: Portfolio Celebration -->
-      <div class="activity-carousels" data-story="portfolio-celebration-story">
-        <div id="story3-comprehension" class="carousel-container"></div>
-        <div id="story3-application" class="carousel-container"></div>
-        <div id="story3-synthesis" class="carousel-container"></div>
-        <!-- Quiz carousel (knowledge check) after activities -->
-      </div>
-    </section>
-
-    <!-- Next Steps -->
-    <section class="section">
-      <h2>🎓 Congratulations, Problem Solver!</h2>
-      <p>You've completed the AI Problem Solving Academy! You now have skills that most adults don't have. Keep building, stay curious, help others, and level up. The world needs more builders like you.</p>
-      <div class="cards-grid" style="grid-template-columns: repeat(2, 1fr);">
-        <a href="../week3-building/" class="card">
-          <div class="card-icon">🛠️</div>
-          <h3>Week 3: Building</h3>
-          <p>Review what you learned about building real things with AI.</p>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Problem Solver Portfolio | Endless Opportunities</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=JetBrains+Mono&family=Space+Grotesk:wght@500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="../../shared/css/lesson-interactive.css" />
+    <link rel="stylesheet" href="../../shared/css/activity-carousel.css" />
+    <style>
+      :root {
+        --chapter-color: #ffb300;
+        --chapter-gradient: linear-gradient(135deg, #f57f17, #ffca28);
+      }
+    </style>
+  </head>
+  <body data-course="endless-opportunities" data-lesson="week4-portfolio">
+    <header class="header">
+      <div class="header-content">
+        <a href="../../index.html" class="logo">
+          <div class="logo-icon">🏆</div>
+          <span>Week 4</span>
         </a>
-        <a href="../index.html" class="card">
-          <div class="card-icon">📚</div>
-          <h3>Course Overview</h3>
-          <p>See all weeks in Endless Opportunities.</p>
-        </a>
+        <nav class="nav-links">
+          <a href="../index.html">← Endless Opportunities</a>
+          <a href="../week3-building/">Week 3: Building</a>
+          <a href="index.html" class="active">Week 4</a>
+        </nav>
       </div>
-    </section>
-  </main>
+    </header>
 
-  <nav class="page-nav">
-    <h4>On This Page</h4>
-    <ul>
-      <li><a href="#problem-solving-process-section">Problem-Solving Process</a></li>
-      <li><a href="#capstone-journey-section">Building Your Capstone</a></li>
-      <li><a href="#portfolio-celebration-section">Your Complete Portfolio</a></li>
-    </ul>
-  </nav>
+    <main class="container">
+      <div class="page-header">
+        <div class="breadcrumb">
+          <a href="../index.html">Endless Opportunities</a>
+          <span>/</span>
+          <span>Problem Solver Portfolio</span>
+        </div>
+        <h1>🏆 Problem Solver Portfolio</h1>
+        <p>
+          Sage walks AJ, Nia, and Malik through the last move of the arc:
+          choose the clearest story, test it in public, and present the
+          portfolio like real problem solvers.
+        </p>
+      </div>
 
-  <button class="back-to-top" title="Back to top">↑</button>
+      <section class="section audio-info-section">
+        <div class="info-box compact">
+          <div class="info-header">
+            <div>
+              <h4>Narrated Story Experience</h4>
+              <p>
+                Follow the week 4 storyboard sequences with Sage narration,
+                tap the dots to move through each deck, and complete the three
+                activity sets after every story.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
 
-  <!-- External Libraries -->
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.2/anime.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/cytoscape/3.28.1/cytoscape.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/dagre/0.8.5/dagre.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/cytoscape-dagre@2.5.0/cytoscape-dagre.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/cytoscape-cose-bilkent@4.1.0/cytoscape-cose-bilkent.min.js"></script>
-  
-  <!-- Interactive Engines -->
-  <script src="../../shared/js/interactive/diagram-utils.js"></script>
-  <script src="../../shared/js/interactive/audio-engine.js"></script>
-  <script src="../../shared/js/interactive/storytelling-diagram.js"></script>
+      <section class="section">
+        <h2>🎬 Story Lens</h2>
+        <p>
+          Week 4 is the presentation week. AJ chooses the story worth telling,
+          Nia keeps every explanation honest, and Malik makes the build process
+          visible so the portfolio reads like proof instead of hype.
+        </p>
+        <div class="narrative-setup">
+          <article class="narrative-card">
+            <div class="narrative-card-step">01</div>
+            <h3>Choose the Real Story</h3>
+            <p>
+              AJ leads with a real problem and a clear hook instead of trying
+              to impress people with empty scale.
+            </p>
+          </article>
+          <article class="narrative-card">
+            <div class="narrative-card-step">02</div>
+            <h3>Sharpen the Talk</h3>
+            <p>
+              Nia and Malik pressure-test the claims, the demo, and the pacing
+              until the presentation can survive real questions.
+            </p>
+          </article>
+          <article class="narrative-card">
+            <div class="narrative-card-step">03</div>
+            <h3>Present With Proof</h3>
+            <p>
+              The portfolio becomes evidence of learning: problem framing,
+              proof trail, workflow, and the finished capstone.
+            </p>
+          </article>
+        </div>
+      </section>
 
-  <!-- Activity Carousel System -->
-    <!-- Firebase & Activity Tracking -->
-  <script src="https://www.gstatic.com/firebasejs/10.7.1/firebase-app-compat.js"></script>
-  <script src="https://www.gstatic.com/firebasejs/10.7.1/firebase-auth-compat.js"></script>
-  <script src="https://www.gstatic.com/firebasejs/10.7.1/firebase-firestore-compat.js"></script>
-  <script src="../../shared/js/firebase-config.js"></script>
-  <script src="../../shared/js/auth.js"></script>
-  <script src="../../shared/js/rbac.js"></script>
-  <script src="../../shared/js/route-guard.js"></script>
-  <script src="../../shared/js/data-service.js"></script>
-  <script src="../../shared/js/activity-tracker.js"></script>
+      <section class="section" id="problem-solving-process-section">
+        <h2>Choose the Story Worth Presenting</h2>
+        <p>
+          The final presentation starts before anyone reaches the stage. The
+          crew has to decide which problem, proof, and build decisions matter
+          most.
+        </p>
 
-  <script src="../../shared/js/interactive/base-activity.js"></script>
-  <script src="../../shared/js/interactive/activities/quiz-activity.js"></script>
-  <script src="../../shared/js/interactive/activities/true-false-activity.js"></script>
-  <script src="../../shared/js/interactive/activities/fill-blank-activity.js"></script>
-  <script src="../../shared/js/interactive/activities/sequence-activity.js"></script>
-  <script src="../../shared/js/interactive/activities/drag-drop-activity.js"></script>
-  <script src="../../shared/js/interactive/activities/connect-edges-activity.js"></script>
-  <script src="../../shared/js/interactive/activities/scenario-activity.js"></script>
-  <script src="../../shared/js/interactive/activities/prediction-activity.js"></script>
-  <script src="../../shared/js/interactive/activities/reflection-activity.js"></script>
-  <script src="../../shared/js/interactive/activities/graph-builder-activity.js"></script>
-  <script src="../../shared/js/interactive/activity-carousel.js"></script>
-  
-  <script>
-    document.addEventListener('DOMContentLoaded', async () => {
-      // Initialize Firebase FIRST
-      if (window.FirebaseApp) {
-        window.FirebaseApp.init();
-        console.log('✅ Firebase initialized');
-      }
-      
-      // Initialize AuthService and wait for auth state
-      if (window.AuthService) {
-        window.AuthService.init();
-        await window.AuthService.waitForAuthState();
-        console.log('👤 Auth ready:', window.AuthService.getUser()?.email || 'not signed in');
-      }
-      
-      // Initialize ActivityTracker AFTER auth is ready
-      const courseId = document.body.dataset.course;
-      const lessonId = document.body.dataset.lesson;
-      if (courseId && lessonId && window.ActivityTracker) {
-        ActivityTracker.init(courseId, lessonId);
-        console.log('🎯 ActivityTracker initialized:', courseId, lessonId);
-      }
+        <div class="diagram-container" id="problem-solving-process-story-container">
+          <div class="diagram-header">
+            <span class="diagram-title">🎯 Build the Presentation Arc</span>
+          </div>
+          <div id="problem-solving-process-story" class="diagram-canvas storytelling"></div>
 
-      // Initialize page animations
-      DiagramUtils.initPageAnimations();
-      DiagramUtils.setupBackToTop();
+          <div class="diagram-story" id="problem-solving-process-story-caption">
+            <div class="story-step">
+              <div class="story-icon visible">🚀</div>
+              <div class="story-content">
+                <div class="story-title visible">Ready to Explore</div>
+                <div class="story-text visible">
+                  Click any progress dot below to jump to that step, or press
+                  Play to watch the full story unfold.
+                </div>
+                <div class="story-connection" style="display: none">
+                  <span class="arrow">→</span>
+                  <span class="connection-text"></span>
+                </div>
+              </div>
+            </div>
+          </div>
 
-      // Load story and quiz data from JSON
-      const response = await fetch('story.json');
-      const pageData = await response.json();
+          <div class="playback-controls">
+            <div class="playback-left">
+              <button class="diagram-btn play-btn" data-action="play">▶ Play</button>
+            </div>
+            <div class="playback-center">
+              <div class="story-progress" id="problem-solving-process-story-progress"></div>
+            </div>
+          </div>
+        </div>
 
-      // Create a shared audio engine pointing to the audio folder
-      const audioEngine = new AudioNarrationEngine('audio');
-      await audioEngine.waitForManifest();
-      audioEngine.setVoice('sage');
+        <div class="activity-carousels" data-story="problem-solving-process-story">
+          <div id="story1-comprehension" class="carousel-container"></div>
+          <div id="story1-application" class="carousel-container"></div>
+          <div id="story1-synthesis" class="carousel-container"></div>
+        </div>
+      </section>
 
-      // ============================================
-      // DIAGRAM ELEMENTS (Cytoscape data)
-      // ============================================
+      <section class="section" id="capstone-journey-section">
+        <h2>Test and Sharpen the Capstone</h2>
+        <p>
+          Before the final presentation, the crew rehearses in public, trims
+          every weak claim, and makes the demo reliable enough for real-world
+          conditions.
+        </p>
 
-      const diagramElements = {
-        'problem-solving-process': [
-          // Nodes
-          { data: { id: 'all-pieces', label: '🎯 All the Pieces\nYou\'re Ready', type: 'concept', description: 'Everything comes together' } },
-          { data: { id: 'questions-step', label: '❓ Questions\n6 Levels Deep', type: 'example', description: 'Understand first' } },
-          { data: { id: 'data-step', label: '📊 Data\nGather Info', type: 'data', description: 'Find patterns' } },
-          { data: { id: 'insight-step', label: '💡 Insights\nOpportunities', type: 'auth', description: 'What to build' } },
-          { data: { id: 'build-step', label: '🛠️ Build\nCreate Solution', type: 'page', description: 'Real solutions' } },
-          // Edges
-          { data: { source: 'all-pieces', target: 'questions-step' } },
-          { data: { source: 'questions-step', target: 'data-step' } },
-          { data: { source: 'data-step', target: 'insight-step' } },
-          { data: { source: 'insight-step', target: 'build-step' } }
-        ],
+        <div class="diagram-container" id="capstone-journey-story-container">
+          <div class="diagram-header">
+            <span class="diagram-title">✨ Rehearse, Test, Revise</span>
+          </div>
+          <div id="capstone-journey-story" class="diagram-canvas storytelling"></div>
 
-        'capstone-journey': [
-          // Nodes
-          { data: { id: 'choose-problem', label: '🎯 Choose\nYour Problem', type: 'concept', description: 'Real, specific, solvable' } },
-          { data: { id: 'deep-understanding', label: '🔍 Go Deep\n6 Levels', type: 'example', description: 'Root causes' } },
-          { data: { id: 'gather-data', label: '📊 Gather\nData', type: 'data', description: 'Research & organize' } },
-          { data: { id: 'build-with-ai', label: '🤖 Build\nwith AI', type: 'service', description: 'Cursor + iterate' } },
-          { data: { id: 'deploy-test', label: '🚀 Deploy\n& Test', type: 'page', description: 'Real users' } },
-          // Edges
-          { data: { source: 'choose-problem', target: 'deep-understanding' } },
-          { data: { source: 'deep-understanding', target: 'gather-data' } },
-          { data: { source: 'gather-data', target: 'build-with-ai' } },
-          { data: { source: 'build-with-ai', target: 'deploy-test' } }
-        ],
+          <div class="diagram-story" id="capstone-journey-story-caption">
+            <div class="story-step">
+              <div class="story-icon visible">🚀</div>
+              <div class="story-content">
+                <div class="story-title visible">Ready to Explore</div>
+                <div class="story-text visible">
+                  Click any progress dot below to jump to that step, or press
+                  Play to watch the full story unfold.
+                </div>
+                <div class="story-connection" style="display: none">
+                  <span class="arrow">→</span>
+                  <span class="connection-text"></span>
+                </div>
+              </div>
+            </div>
+          </div>
 
-        'portfolio-celebration': [
-          // Nodes
-          { data: { id: 'portfolio-showcase', label: '📁 Portfolio\nShowcase', type: 'concept', description: 'Your work' } },
-          { data: { id: 'present-work', label: '🎤 Present\nYour Work', type: 'example', description: '3-5 minutes' } },
-          { data: { id: 'show-dont-tell', label: '👀 Show\nDon\'t Tell', type: 'service', description: 'Demo it!' } },
-          { data: { id: 'youre-a-builder', label: '🎓 You\'re a\nBuilder', type: 'auth', description: 'Problem solver' } },
-          { data: { id: 'keep-going', label: '🚀 Keep\nGoing', type: 'page', description: 'This is just the start' } },
-          // Edges
-          { data: { source: 'portfolio-showcase', target: 'present-work' } },
-          { data: { source: 'present-work', target: 'show-dont-tell' } },
-          { data: { source: 'show-dont-tell', target: 'youre-a-builder' } },
-          { data: { source: 'youre-a-builder', target: 'keep-going' } }
-        ]
-      };
+          <div class="playback-controls">
+            <div class="playback-left">
+              <button class="diagram-btn play-btn" data-action="play">▶ Play</button>
+            </div>
+            <div class="playback-center">
+              <div class="story-progress" id="capstone-journey-story-progress"></div>
+            </div>
+          </div>
+        </div>
 
-      // ============================================
-      // INITIALIZE STORYTELLING DIAGRAMS
-      // ============================================
+        <div class="activity-carousels" data-story="capstone-journey-story">
+          <div id="story2-comprehension" class="carousel-container"></div>
+          <div id="story2-application" class="carousel-container"></div>
+          <div id="story2-synthesis" class="carousel-container"></div>
+        </div>
+      </section>
 
-      // Map story IDs to diagram element keys
-      const storyToDiagram = {
-        'problem-solving-process-story': 'problem-solving-process',
-        'capstone-journey-story': 'capstone-journey',
-        'portfolio-celebration-story': 'portfolio-celebration'
-      };
+      <section class="section" id="portfolio-celebration-section">
+        <h2>Present the Portfolio With Proof</h2>
+        <p>
+          The portfolio is the final receipt. It should show the problem, the
+          research, the workflow, and the build in a way that proves the crew
+          can solve real problems on purpose.
+        </p>
 
-      // Create storytelling diagrams for each story in the JSON
-      pageData.stories.forEach(story => {
-        const diagramKey = storyToDiagram[story.id];
-        if (!diagramKey) return;
+        <div class="diagram-container" id="portfolio-celebration-story-container">
+          <div class="diagram-header">
+            <span class="diagram-title">🚀 Show the Work</span>
+          </div>
+          <div id="portfolio-celebration-story" class="diagram-canvas storytelling"></div>
 
-        const elements = diagramElements[diagramKey];
-        if (!elements) return;
+          <div class="diagram-story" id="portfolio-celebration-story-caption">
+            <div class="story-step">
+              <div class="story-icon visible">🚀</div>
+              <div class="story-content">
+                <div class="story-title visible">Ready to Explore</div>
+                <div class="story-text visible">
+                  Click any progress dot below to jump to that step, or press
+                  Play to watch the full story unfold.
+                </div>
+                <div class="story-connection" style="display: none">
+                  <span class="arrow">→</span>
+                  <span class="connection-text"></span>
+                </div>
+              </div>
+            </div>
+          </div>
 
-        new StorytellingDiagram(
-          story.id,
-          elements,
-          story.steps,
-          { audioEngine, storyId: story.id, forcedVoice: 'sage' }
-        );
-      });
+          <div class="playback-controls">
+            <div class="playback-left">
+              <button class="diagram-btn play-btn" data-action="play">▶ Play</button>
+            </div>
+            <div class="playback-center">
+              <div class="story-progress" id="portfolio-celebration-story-progress"></div>
+            </div>
+          </div>
+        </div>
 
-      // ============================================
-      // ACTIVITY CAROUSELS
-      // ============================================
+        <div class="activity-carousels" data-story="portfolio-celebration-story">
+          <div id="story3-comprehension" class="carousel-container"></div>
+          <div id="story3-application" class="carousel-container"></div>
+          <div id="story3-synthesis" class="carousel-container"></div>
+        </div>
+      </section>
 
-      // Story 1: Problem-Solving Process - Comprehension
-      const story1Comprehension = new ActivityCarousel('story1-comprehension', {
-        type: 'comprehension',
-        sectionId: 'problem-solving-process',
-        title: 'Check Your Understanding',
-        activities: [
+      <section class="section">
+        <h2>🎓 Final Takeaway</h2>
+        <p>
+          Week 4 closes the course by proving the crew can explain what they
+          built, why they built it, and what they learned from testing it in
+          public. That is the shift from student to problem solver.
+        </p>
+        <div class="cards-grid" style="grid-template-columns: repeat(2, 1fr)">
+          <a href="../week3-building/" class="card">
+            <div class="card-icon">🛠️</div>
+            <h3>Review Week 3</h3>
+            <p>Go back to the building week and compare the rough version to the final presentation story.</p>
+          </a>
+          <a href="../index.html" class="card">
+            <div class="card-icon">📚</div>
+            <h3>Course Overview</h3>
+            <p>Revisit the full Endless Opportunities arc from week 0 through week 4.</p>
+          </a>
+        </div>
+      </section>
+    </main>
+
+    <nav class="page-nav">
+      <h4>On This Page</h4>
+      <ul>
+        <li><a href="#problem-solving-process-section">Choose the Story</a></li>
+        <li><a href="#capstone-journey-section">Sharpen the Capstone</a></li>
+        <li><a href="#portfolio-celebration-section">Present With Proof</a></li>
+      </ul>
+    </nav>
+
+    <button class="back-to-top" title="Back to top">↑</button>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.2/anime.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/cytoscape/3.28.1/cytoscape.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/dagre/0.8.5/dagre.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/cytoscape-dagre@2.5.0/cytoscape-dagre.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/cytoscape-cose-bilkent@4.1.0/cytoscape-cose-bilkent.min.js"></script>
+
+    <script src="../../shared/js/interactive/diagram-utils.js"></script>
+    <script src="../../shared/js/interactive/audio-engine.js"></script>
+    <script src="../../shared/js/interactive/storytelling-diagram.js"></script>
+
+    <script src="https://www.gstatic.com/firebasejs/10.7.1/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/10.7.1/firebase-auth-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/10.7.1/firebase-firestore-compat.js"></script>
+    <script src="../../shared/js/firebase-config.js"></script>
+    <script src="../../shared/js/auth.js"></script>
+    <script src="../../shared/js/rbac.js"></script>
+    <script src="../../shared/js/route-guard.js"></script>
+    <script src="../../shared/js/data-service.js"></script>
+    <script src="../../shared/js/activity-tracker.js"></script>
+
+    <script src="../../shared/js/interactive/base-activity.js"></script>
+    <script src="../../shared/js/interactive/activities/quiz-activity.js"></script>
+    <script src="../../shared/js/interactive/activities/true-false-activity.js"></script>
+    <script src="../../shared/js/interactive/activities/fill-blank-activity.js"></script>
+    <script src="../../shared/js/interactive/activities/sequence-activity.js"></script>
+    <script src="../../shared/js/interactive/activity-carousel.js"></script>
+
+    <script>
+      document.addEventListener("DOMContentLoaded", async () => {
+        if (window.FirebaseApp) {
+          window.FirebaseApp.init();
+        }
+
+        if (window.AuthService) {
+          window.AuthService.init();
+          await window.AuthService.waitForAuthState();
+        }
+
+        const courseId = document.body.dataset.course;
+        const lessonId = document.body.dataset.lesson;
+        if (courseId && lessonId && window.ActivityTracker) {
+          ActivityTracker.init(courseId, lessonId);
+        }
+
+        DiagramUtils.initPageAnimations();
+        DiagramUtils.setupBackToTop();
+
+        const [storyResponse, storyboardResponse] = await Promise.all([
+          fetch("story.json"),
+          fetch("storyboards.json"),
+        ]);
+        const pageData = await storyResponse.json();
+        const storyboardData = await storyboardResponse.json();
+
+        const audioEngine = new AudioNarrationEngine("audio");
+        await audioEngine.waitForManifest();
+        audioEngine.setVoice("sage");
+
+        const diagramElements = {
+          "problem-solving-process": [
+            { data: { id: "real-problem", label: "🎯 Real Problem", type: "concept", description: "Choose the problem that matters" } },
+            { data: { id: "honest-framing", label: "🧭 Honest Frame", type: "example", description: "Cut hype and name the real user" } },
+            { data: { id: "proof-trail", label: "📊 Proof Trail", type: "data", description: "Questions, evidence, patterns" } },
+            { data: { id: "workflow", label: "🛠️ Build Story", type: "service", description: "Prototype, break, revise" } },
+            { data: { id: "presentation-arc", label: "🎤 Final Arc", type: "auth", description: "Problem, learning, build, impact" } },
+            { data: { source: "real-problem", target: "honest-framing" } },
+            { data: { source: "honest-framing", target: "proof-trail" } },
+            { data: { source: "proof-trail", target: "workflow" } },
+            { data: { source: "workflow", target: "presentation-arc" } }
+          ],
+          "capstone-journey": [
+            { data: { id: "hook", label: "🎬 Hook", type: "concept", description: "Open from the real moment" } },
+            { data: { id: "claim-check", label: "🔎 Claim Check", type: "example", description: "Keep only provable lines" } },
+            { data: { id: "demo-readiness", label: "💻 Demo Safe", type: "service", description: "Backups and live flow" } },
+            { data: { id: "practice-feedback", label: "🗣️ Practice", type: "data", description: "Watch where people lean in or get lost" } },
+            { data: { id: "revision", label: "✨ Revision", type: "auth", description: "Tighten the final version" } },
+            { data: { source: "hook", target: "claim-check" } },
+            { data: { source: "claim-check", target: "demo-readiness" } },
+            { data: { source: "demo-readiness", target: "practice-feedback" } },
+            { data: { source: "practice-feedback", target: "revision" } }
+          ],
+          "portfolio-celebration": [
+            { data: { id: "portfolio-proof", label: "📁 Portfolio Proof", type: "concept", description: "Lead with evidence" } },
+            { data: { id: "confident-story", label: "🎙️ Own the Story", type: "example", description: "Present without apology" } },
+            { data: { id: "honest-answers", label: "💬 Honest Answers", type: "auth", description: "Say what you know and next tests" } },
+            { data: { id: "show-workflow", label: "🧰 Show Workflow", type: "service", description: "Open the repo and process" } },
+            { data: { id: "problem-solvers", label: "🚀 Problem Solvers", type: "page", description: "Leave with real identity change" } },
+            { data: { source: "portfolio-proof", target: "confident-story" } },
+            { data: { source: "confident-story", target: "honest-answers" } },
+            { data: { source: "honest-answers", target: "show-workflow" } },
+            { data: { source: "show-workflow", target: "problem-solvers" } }
+          ]
+        };
+
+        const storyToDiagram = {
+          "problem-solving-process-story": "problem-solving-process",
+          "capstone-journey-story": "capstone-journey",
+          "portfolio-celebration-story": "portfolio-celebration"
+        };
+
+        pageData.stories.forEach((story) => {
+          const diagramKey = storyToDiagram[story.id];
+          if (!diagramKey) return;
+
+          new StorytellingDiagram(story.id, diagramElements[diagramKey], story.steps, {
+            audioEngine,
+            storyId: story.id,
+            forcedVoice: "sage",
+            storyboardFrames: storyboardData[story.id] || [],
+            storyboardOnly: true
+          });
+        });
+
+        const initCarousel = (id, type, sectionId, title, activities) => {
+          const carousel = new ActivityCarousel(id, {
+            type,
+            sectionId,
+            title,
+            activities
+          });
+          carousel.init();
+        };
+
+        initCarousel("story1-comprehension", "comprehension", "problem-solving-process", "Check Your Understanding", [
           {
-            type: 'quiz',
-            id: 'psp-quiz-framework',
-            question: 'What is the correct order of the problem-solving process?',
+            type: "quiz",
+            id: "w4s1-comp-problem",
+            question: "What does AJ choose first when the crew starts shaping the presentation?",
             options: [
-              'Build → Questions → Data → Insights',
-              'Questions → Data → Insights → Build',
-              'Data → Questions → Build → Insights',
-              'Insights → Build → Questions → Data'
+              "The flashiest feature in the app",
+              "One real problem that people can recognize",
+              "The longest research note",
+              "The hardest technical bug"
             ],
             correct: 1,
-            explanation: 'The process flows: Questions (understand the problem) → Data (gather information) → Insights (find patterns and opportunities) → Build (create the solution).',
+            explanation: "The story starts with AJ choosing one real problem worth presenting, not the most impressive-sounding detail.",
             points: 10
           },
           {
-            type: 'quiz',
-            id: 'psp-quiz-first-step',
-            question: 'Why do we start with questions rather than jumping to building?',
-            options: [
-              'Because questions are easier than building',
-              'Because teachers require it',
-              'Because understanding root causes prevents solving the wrong problem',
-              'Because it takes less time'
-            ],
-            correct: 2,
-            explanation: 'Starting with deep questions ensures you understand what you\'re actually solving. Jumping to solutions often means solving surface symptoms rather than root causes.',
-            points: 10
-          },
-          {
-            type: 'true-false',
-            id: 'psp-tf-data-noise',
-            statement: 'The lesson says "data without insight is just noise."',
-            correct: true,
-            explanation: 'Data alone doesn\'t tell you what to build. You need to find patterns and meaning (insights) for data to become useful.',
-            minReasoningWords: 5,
-            points: 15
-          },
-          {
-            type: 'true-false',
-            id: 'psp-tf-iterate',
-            statement: 'According to the lesson, you should build a perfect solution on the first try.',
+            type: "true-false",
+            id: "w4s1-comp-honest",
+            statement: "Nia keeps exaggerated claims in the presentation because they make the project sound stronger.",
             correct: false,
-            explanation: 'The lesson emphasizes iteration: "build a first version, test it, then improve. Real solutions evolve."',
+            explanation: "Nia removes hype so the audience can trust the story from the first slide.",
             minReasoningWords: 5,
             points: 15
-          },
-          {
-            type: 'fill-blank',
-            id: 'psp-fill-levels',
-            statement: 'To truly understand a problem, go ___ levels deep with your questions.',
-            correctAnswers: ['six', '6', 'six levels', '6 levels'],
-            caseSensitive: false,
-            hints: ['Remember the framework from Week 1'],
-            explanation: 'The six levels deep framework helps you move past surface understanding to root causes.',
-            points: 10
-          },
-          {
-            type: 'fill-blank',
-            id: 'psp-fill-insights',
-            statement: 'Patterns in your data reveal ___ about what to build.',
-            correctAnswers: ['opportunities', 'insights', 'solutions', 'possibilities'],
-            caseSensitive: false,
-            hints: ['What do patterns show you?'],
-            explanation: 'Finding patterns and gaps in data reveals opportunities for solutions.',
-            points: 10
-          },
-          {
-            type: 'quiz',
-            id: 'psp-quiz-evolve',
-            question: 'The lesson says "Real solutions ___":',
-            options: [
-              'Are perfect from the start',
-              'Evolve through iteration',
-              'Don\'t need testing',
-              'Require years of development'
-            ],
-            correct: 1,
-            explanation: 'Real solutions evolve. You build, test, get feedback, and improve continuously.',
-            points: 10
           }
-        ]
-      });
-      story1Comprehension.init();
+        ]);
 
-      // Story 1: Problem-Solving Process - Application
-      const story1Application = new ActivityCarousel('story1-application', {
-        type: 'application',
-        sectionId: 'problem-solving-process',
-        title: 'Apply What You Learned',
-        activities: [
+        initCarousel("story1-application", "application", "problem-solving-process", "Apply What You Learned", [
           {
-            type: 'sequence',
-            id: 'psp-seq-process',
-            instruction: 'Put the problem-solving process in order:',
+            type: "sequence",
+            id: "w4s1-app-sequence",
+            instruction: "Order the crew's presentation-planning moves from first to last:",
             items: [
-              { id: 'p1', text: '❓ Ask deep questions (6 levels)' },
-              { id: 'p2', text: '📊 Gather data and look for patterns' },
-              { id: 'p3', text: '💡 Find insights and opportunities' },
-              { id: 'p4', text: '🛠️ Build and iterate on your solution' }
+              { id: "a", text: "Show the proof trail" },
+              { id: "b", text: "Shape the final presentation arc" },
+              { id: "c", text: "Pick the real problem" },
+              { id: "d", text: "Walk through the build" },
+              { id: "e", text: "Frame it honestly" }
             ],
-            correctOrder: ['p1', 'p2', 'p3', 'p4'],
+            correctOrder: ["c", "e", "a", "d", "b"],
             hints: {
-              partial: 'Understanding comes before building.',
-              wrong: 'Start with questions to understand the problem first.'
+              partial: "Start with the problem, then honesty, then proof, then workflow, then the final arc.",
+              wrong: "The story moves from problem selection to framing to proof to build story to the final arc."
             },
-            explanation: 'The process is linear: Questions → Data → Insights → Build. Each step informs the next.',
+            explanation: "That order mirrors the narrated week 4 setup.",
             points: 20
           },
           {
-            type: 'drag-drop',
-            id: 'psp-dd-step-outcomes',
-            instruction: 'Match each step to what it produces:',
-            items: [
-              { id: 's1', text: 'Deep questions (6 levels)' },
-              { id: 's2', text: 'Data gathering' },
-              { id: 's3', text: 'Pattern analysis' },
-              { id: 's4', text: 'Building with AI' }
-            ],
-            zones: [
-              { id: 'understanding', label: '🎯 Root Cause Understanding', correct: ['s1'] },
-              { id: 'information', label: '📋 Organized Information', correct: ['s2'] },
-              { id: 'insights', label: '💡 Actionable Insights', correct: ['s3'] },
-              { id: 'solution', label: '🚀 Working Solution', correct: ['s4'] }
-            ],
-            explanation: 'Each step produces a specific output that enables the next step.',
-            points: 25
-          },
+            type: "fill-blank",
+            id: "w4s1-app-proof",
+            statement: "Malik shows a proof ___ so the audience can see the build came from evidence.",
+            correctAnswers: ["trail", "path", "chain"],
+            caseSensitive: false,
+            hints: ["Think about the phrase used for research evidence in the story."],
+            explanation: "The story calls this the proof trail: the questions, examples, and patterns behind the build.",
+            points: 10
+          }
+        ]);
+
+        initCarousel("story1-synthesis", "synthesis", "problem-solving-process", "Make the Connection", [
           {
-            type: 'connect-edges',
-            id: 'psp-ce-week-skills',
-            instruction: 'Connect each skill to the week where you learned it:',
-            nodes: [
-              { id: 'w1', label: '❓ Week 1' },
-              { id: 'w2', label: '📊 Week 2' },
-              { id: 'w3', label: '🛠️ Week 3' },
-              { id: 'questions', label: '6 Levels Deep' },
-              { id: 'data', label: 'Data Mindset' },
-              { id: 'build', label: 'AI Building' }
-            ],
-            solution: {
-              edges: [
-                { source: 'w1', target: 'questions' },
-                { source: 'w2', target: 'data' },
-                { source: 'w3', target: 'build' }
-              ]
-            },
-            nodeDescriptions: {
-              'w1': 'Art of Questions',
-              'w2': 'Data is Everywhere',
-              'w3': 'Building Real Things',
-              'questions': 'Understanding root causes',
-              'data': 'Seeing and analyzing information',
-              'build': 'Creating with AI tools'
-            },
-            explanation: 'Your capstone combines all the skills from the entire course.',
-            points: 25
-          },
-          {
-            type: 'quiz',
-            id: 'psp-quiz-apply-order',
-            question: 'A friend wants to solve a problem but immediately starts coding. What\'s your advice?',
+            type: "quiz",
+            id: "w4s1-syn-trust",
+            question: "Why is honest framing so important before the crew shows the workflow?",
             options: [
-              'Great! Building fast is always best',
-              'Stop and ask: Have you gone 6 levels deep to understand the root cause first?',
-              'Coding will help you figure it out',
-              'Just finish it quickly'
+              "It makes the presentation shorter",
+              "It gives the audience a reason to trust the rest of the evidence",
+              "It hides the messy parts of the build",
+              "It replaces the need for a demo"
             ],
             correct: 1,
-            explanation: 'Building without understanding often solves the wrong problem. Questions first, then data, then insights, then build.',
-            points: 15
-          },
-          {
-            type: 'sequence',
-            id: 'psp-seq-insight-to-build',
-            instruction: 'Order these steps for going from insight to solution:',
-            items: [
-              { id: 'i1', text: 'Identify a gap or opportunity from your data' },
-              { id: 'i2', text: 'Describe what you want AI to build' },
-              { id: 'i3', text: 'Preview and test the result' },
-              { id: 'i4', text: 'Iterate based on what works and doesn\'t' }
-            ],
-            correctOrder: ['i1', 'i2', 'i3', 'i4'],
-            hints: {
-              partial: 'Insight comes before building.',
-              wrong: 'Start with what you learned from your data.'
-            },
-            explanation: 'Insights guide what to build. Then describe, preview, and iterate.',
-            points: 20
-          },
-          {
-            type: 'drag-drop',
-            id: 'psp-dd-process-benefits',
-            instruction: 'Match each process step to its key benefit:',
-            items: [
-              { id: 'b1', text: 'Prevents solving the wrong problem' },
-              { id: 'b2', text: 'Reveals patterns others miss' },
-              { id: 'b3', text: 'Shows what to build and why' },
-              { id: 'b4', text: 'Creates something real and usable' }
-            ],
-            zones: [
-              { id: 'questions', label: '❓ Questions Step', correct: ['b1'] },
-              { id: 'data', label: '📊 Data Step', correct: ['b2'] },
-              { id: 'insights', label: '💡 Insights Step', correct: ['b3'] },
-              { id: 'build', label: '🛠️ Build Step', correct: ['b4'] }
-            ],
-            explanation: 'Each step has a specific purpose in creating effective solutions.',
-            points: 20
-          }
-        ]
-      });
-      story1Application.init();
-
-      // Story 1: Problem-Solving Process - Synthesis
-      const story1Synthesis = new ActivityCarousel('story1-synthesis', {
-        type: 'synthesis',
-        sectionId: 'problem-solving-process',
-        title: 'Think Deeper',
-        activities: [
-          {
-            type: 'scenario',
-            id: 'psp-scenario-skip-steps',
-            scenario: 'A classmate says: "I have a great idea, so I\'m just going to start building. Questions and data take too long."',
-            question: 'Using what you\'ve learned, explain what risks they\'re taking and what they might miss.',
-            evaluation: {
-              keywords: ['root', 'cause', 'wrong problem', 'surface', 'understand', 'data', 'patterns', 'insights', 'iterate', 'assumptions'],
-              minWords: 40,
-              pointsPerKeyword: 3,
-              depthBonus: 12
-            },
-            modelAnswer: 'Risks: They might solve the wrong problem entirely (surface vs root cause). They\'ll miss data that could reveal better approaches. Without insights, they\'re building on assumptions, not evidence. They might spend weeks building something nobody actually needs. The process exists to prevent expensive mistakes.',
-            points: 25
-          },
-          {
-            type: 'prediction',
-            id: 'psp-predict-two-approaches',
-            setup: {
-              type: 'text',
-              content: 'Person A follows the full process: Questions → Data → Insights → Build. Person B has the same idea but skips straight to building.'
-            },
-            question: 'Whose solution will be more effective? Why?',
-            correctAnswer: 'Person A',
-            acceptableVariants: ['A', 'first person', 'process follower', 'the one who asked questions'],
-            explanation: 'Person A will likely build something that addresses the real problem because they understood root causes, gathered evidence, and found insights. Person B might build something impressive that solves the wrong problem or misses key user needs.',
-            commonMistakes: {
-              'B': 'Speed without understanding often means building the wrong thing faster.',
-              'both': 'Very different outcomes. Understanding compounds into better solutions.'
-            },
-            points: 15
-          },
-          {
-            type: 'reflection',
-            id: 'psp-reflect-your-process',
-            prompt: 'Think about a time you tried to solve a problem without fully understanding it first. What happened? How might following the Questions → Data → Insights → Build process have changed the outcome?',
-            thinkingPrompts: [
-              'What problem did you try to solve?',
-              'What assumptions did you make?',
-              'What would deeper questions have revealed?',
-              'How might data have changed your approach?'
-            ],
-            evaluation: {
-              minWords: 50,
-              depthIndicators: [
-                { pattern: 'I (tried|thought|assumed|jumped)', label: 'Personal experience', points: 5 },
-                { pattern: '(should have|could have|would have)', label: 'Alternative approach', points: 5 },
-                { pattern: '(question|ask|understand|root)', label: 'Process awareness', points: 4 },
-                { pattern: '(data|information|evidence)', label: 'Data awareness', points: 4 },
-                { pattern: '(next time|now I|learned)', label: 'Learning insight', points: 3 }
-              ],
-              maxScore: 21
-            },
-            points: 20
-          },
-          {
-            type: 'scenario',
-            id: 'psp-scenario-contradict',
-            scenario: 'You\'ve gathered data about a problem and found two contradictory patterns: some users love feature X, others hate it.',
-            question: 'How should you interpret this contradiction? What does it reveal about the problem?',
-            evaluation: {
-              keywords: ['different', 'users', 'groups', 'needs', 'contexts', 'segments', 'both', 'valid', 'complexity', 'opportunity'],
-              minWords: 40,
-              pointsPerKeyword: 3,
-              depthBonus: 12
-            },
-            modelAnswer: 'The contradiction reveals complexity: different user groups have different needs. This isn\'t a problem to eliminate - it\'s an insight. There might be two distinct user segments, or context matters (feature X is good in some situations, bad in others). The opportunity might be: make feature X optional, or build different versions for different users.',
-            points: 25
-          },
-          {
-            type: 'prediction',
-            id: 'psp-predict-iteration',
-            setup: {
-              type: 'text',
-              content: 'You build your first version and it doesn\'t work as expected. Your insights seem to be partially wrong.'
-            },
-            question: 'Is this failure or normal? What should you do?',
-            correctAnswer: 'normal',
-            acceptableVariants: ['iterate', 'expected', 'part of the process', 'learn', 'refine'],
-            explanation: 'This is normal and expected. Building tests your understanding and reveals assumptions you didn\'t know you had. The correct response: iterate. Use what you learned to refine your insights, then build again. The process is circular, not linear.',
-            commonMistakes: {
-              'failure': 'Discovering gaps in your understanding through building is the process working correctly.',
-              'start over': 'You don\'t need to start over - refine and iterate.'
-            },
-            points: 15
-          },
-          {
-            type: 'graph-builder',
-            id: 'psp-graph-process',
-            instruction: 'Build a diagram showing the problem-solving process for YOUR capstone idea: What questions would you ask? What data would you gather? What insights might emerge? What would you build?',
-            nodeTypes: [
-              { type: 'question', label: '❓ Question', color: '#ef5350' },
-              { type: 'data', label: '📊 Data', color: '#42a5f5' },
-              { type: 'insight', label: '💡 Insight', color: '#ffd54f' },
-              { type: 'build', label: '🛠️ Build', color: '#66bb6a' }
-            ],
-            validation: {
-              requiredNodes: ['question', 'data', 'insight', 'build'],
-              requiredEdges: [
-                { from: 'question', to: 'data' }
-              ],
-              optionalNodes: [],
-              minNodes: 4,
-              maxNodes: 8
-            },
-            hints: [
-              'Start with a deep question about your problem',
-              'What data would help you understand it?',
-              'What insight might that data reveal?',
-              'What would you build based on that insight?'
-            ],
-            points: 30
-          }
-        ]
-      });
-      story1Synthesis.init();
-
-      // Story 2: Capstone Journey - Comprehension
-      const story2Comprehension = new ActivityCarousel('story2-comprehension', {
-        type: 'comprehension',
-        sectionId: 'capstone-journey',
-        title: 'Check Your Understanding',
-        activities: [
-          {
-            type: 'quiz',
-            id: 'cj-quiz-problem-criteria',
-            question: 'What makes a good capstone problem? It should be:',
-            options: [
-              'As complex as possible to impress people',
-              'Real (observed), specific (not too broad), and solvable (addressable)',
-              'Something you read about online',
-              'Whatever is easiest to build'
-            ],
-            correct: 1,
-            explanation: 'Good problems are real (you\'ve seen them), specific (focused), and solvable (you can actually build something to address them).',
+            explanation: "If the framing is honest, the proof trail and build story feel credible instead of overstated.",
             points: 10
           },
           {
-            type: 'quiz',
-            id: 'cj-quiz-deep-why',
-            question: 'Why does the lesson recommend going 6 levels deep before building?',
-            options: [
-              'To fill time before the building phase',
-              'To truly understand root causes so you build a better solution',
-              'Because it\'s required for the grade',
-              'To avoid building anything'
-            ],
-            correct: 1,
-            explanation: 'Six levels deep helps you understand root causes, not just symptoms. This leads to solutions that address the real problem.',
-            points: 10
-          },
-          {
-            type: 'true-false',
-            id: 'cj-tf-live',
-            statement: 'You should put your solution on GitHub Pages so it\'s live on the internet.',
-            correct: true,
-            explanation: 'The lesson says to "Put your solution on GitHub Pages so it\'s live on the internet." Real solutions need to be shareable and testable.',
-            minReasoningWords: 5,
-            points: 15
-          },
-          {
-            type: 'true-false',
-            id: 'cj-tf-users',
-            statement: 'You should wait until your solution is perfect before sharing it with any users.',
+            type: "true-false",
+            id: "w4s1-syn-visible",
+            statement: "Week 4 is mainly about sounding polished, even if the learning stays hidden.",
             correct: false,
-            explanation: 'The lesson says to "Share it with two or three people who might use it. Get their feedback, then make improvements." Real feedback improves real solutions.',
+            explanation: "The story says Week 4 is about making the learning visible, not just sounding polished.",
             minReasoningWords: 5,
             points: 15
-          },
-          {
-            type: 'fill-blank',
-            id: 'cj-fill-chatgpt',
-            statement: 'Use ___ to go six levels deep on your problem.',
-            correctAnswers: ['ChatGPT', 'AI', 'Claude', 'an AI'],
-            caseSensitive: false,
-            hints: ['What tool helps you explore questions?'],
-            explanation: 'AI tools like ChatGPT help you explore each level of "why" systematically.',
-            points: 10
-          },
-          {
-            type: 'fill-blank',
-            id: 'cj-fill-cursor',
-            statement: 'Use ___ to build your solution with AI assistance.',
-            correctAnswers: ['Cursor', 'AI', 'Cursor AI'],
-            caseSensitive: false,
-            hints: ['What AI coding tool did you learn in Week 3?'],
-            explanation: 'Cursor is the AI-powered IDE that helps you build solutions by describing what you want.',
-            points: 10
-          },
-          {
-            type: 'quiz',
-            id: 'cj-quiz-feedback',
-            question: 'After deploying, you should:',
-            options: [
-              'Consider the project complete',
-              'Share with users, get feedback, and make improvements',
-              'Delete it and start over',
-              'Hide it until it\'s perfect'
-            ],
-            correct: 1,
-            explanation: '"Share it with two or three people who might use it. Get their feedback, then make improvements." Iteration continues after deployment.',
-            points: 10
           }
-        ]
-      });
-      story2Comprehension.init();
+        ]);
 
-      // Story 2: Capstone Journey - Application
-      const story2Application = new ActivityCarousel('story2-application', {
-        type: 'application',
-        sectionId: 'capstone-journey',
-        title: 'Apply What You Learned',
-        activities: [
+        initCarousel("story2-comprehension", "comprehension", "capstone-journey", "Check Your Understanding", [
           {
-            type: 'sequence',
-            id: 'cj-seq-journey',
-            instruction: 'Put the capstone journey steps in order:',
-            items: [
-              { id: 'j1', text: '🎯 Choose your problem (real, specific, solvable)' },
-              { id: 'j2', text: '🔍 Go 6 levels deep to understand root causes' },
-              { id: 'j3', text: '📊 Gather data about what exists and what\'s needed' },
-              { id: 'j4', text: '🤖 Build with AI (Cursor) and iterate' },
-              { id: 'j5', text: '🚀 Deploy, test with users, and improve' }
-            ],
-            correctOrder: ['j1', 'j2', 'j3', 'j4', 'j5'],
-            hints: {
-              partial: 'Understanding comes before building.',
-              wrong: 'Start with choosing your problem.'
-            },
-            explanation: 'The journey flows: Choose → Understand → Research → Build → Deploy.',
-            points: 25
-          },
-          {
-            type: 'drag-drop',
-            id: 'cj-dd-problem-quality',
-            instruction: 'Sort these problem statements by quality:',
-            items: [
-              { id: 'p1', text: '"Fix the world\'s problems"' },
-              { id: 'p2', text: '"Create a local restaurant finder for families with food allergies"' },
-              { id: 'p3', text: '"Make something cool"' },
-              { id: 'p4', text: '"Build a study timer that tracks breaks and focus sessions"' }
-            ],
-            zones: [
-              { id: 'good', label: '✅ Good Problems (Real, Specific, Solvable)', correct: ['p2', 'p4'] },
-              { id: 'bad', label: '❌ Bad Problems (Vague or Too Broad)', correct: ['p1', 'p3'] }
-            ],
-            explanation: 'Good problems are specific enough to solve and real enough that someone has the need.',
-            points: 25
-          },
-          {
-            type: 'connect-edges',
-            id: 'cj-ce-data-types',
-            instruction: 'Connect each data-gathering question to what it reveals:',
-            nodes: [
-              { id: 'q1', label: '"What solutions exist?"' },
-              { id: 'q2', label: '"What do people say about this?"' },
-              { id: 'q3', label: '"What specific data would help?"' },
-              { id: 'gap', label: '🕳️ Gaps in Current Solutions' },
-              { id: 'needs', label: '💬 Real User Needs' },
-              { id: 'features', label: '📋 Required Features' }
-            ],
-            solution: {
-              edges: [
-                { source: 'q1', target: 'gap' },
-                { source: 'q2', target: 'needs' },
-                { source: 'q3', target: 'features' }
-              ]
-            },
-            nodeDescriptions: {
-              'q1': 'Research existing tools',
-              'q2': 'Listen to real people',
-              'q3': 'Identify specifics',
-              'gap': 'What\'s missing?',
-              'needs': 'What do people want?',
-              'features': 'What should you build?'
-            },
-            explanation: 'Different questions reveal different aspects of the problem space.',
-            points: 25
-          },
-          {
-            type: 'quiz',
-            id: 'cj-quiz-existing',
-            question: 'You find that a solution similar to yours already exists. What should you do?',
+            type: "quiz",
+            id: "w4s2-comp-hook",
+            question: "Why does AJ open the talk with the real moment the problem became urgent?",
             options: [
-              'Abandon your project entirely',
-              'Copy their solution exactly',
-              'Study their gaps and what your unique insight adds',
-              'Ignore it and pretend it doesn\'t exist'
+              "It proves the project began in real life",
+              "It fills extra time",
+              "It hides the research section",
+              "It replaces the demo"
             ],
-            correct: 2,
-            explanation: 'Existing solutions validate the problem space. Study what they do well, find their gaps, and add your unique perspective.',
-            points: 15
-          },
-          {
-            type: 'sequence',
-            id: 'cj-seq-build-iterate',
-            instruction: 'Order the build-and-iterate steps:',
-            items: [
-              { id: 'b1', text: 'Describe what you want to AI' },
-              { id: 'b2', text: 'Preview the result' },
-              { id: 'b3', text: 'Identify what works and doesn\'t' },
-              { id: 'b4', text: 'Ask for specific changes' },
-              { id: 'b5', text: 'Deploy when it\'s working well' }
-            ],
-            correctOrder: ['b1', 'b2', 'b3', 'b4', 'b5'],
-            hints: {
-              partial: 'Start with describing to AI.',
-              wrong: 'You need to create something before you can evaluate it.'
-            },
-            explanation: 'The building loop: Describe → Preview → Evaluate → Refine → Deploy.',
-            points: 20
-          },
-          {
-            type: 'drag-drop',
-            id: 'cj-dd-feedback-use',
-            instruction: 'Sort these feedback responses into helpful vs unhelpful:',
-            items: [
-              { id: 'f1', text: 'Get defensive about your work' },
-              { id: 'f2', text: 'Listen for patterns across multiple users' },
-              { id: 'f3', text: 'Ignore all criticism' },
-              { id: 'f4', text: 'Make improvements based on common themes' },
-              { id: 'f5', text: 'Ask follow-up questions to understand the feedback' }
-            ],
-            zones: [
-              { id: 'helpful', label: '✅ Helpful Responses', correct: ['f2', 'f4', 'f5'] },
-              { id: 'unhelpful', label: '❌ Unhelpful Responses', correct: ['f1', 'f3'] }
-            ],
-            explanation: 'Feedback is data. Listen, understand, find patterns, and improve.',
-            points: 20
-          }
-        ]
-      });
-      story2Application.init();
-
-      // Story 2: Capstone Journey - Synthesis
-      const story2Synthesis = new ActivityCarousel('story2-synthesis', {
-        sectionId: 'capstone-journey',
-        title: 'Think Deeper',
-        activities: [
-          {
-            type: 'scenario',
-            id: 'cj-scenario-reframe',
-            scenario: 'At level 4 of your 6 levels deep exploration, you realize the problem you chose isn\'t actually what you thought it was. The real problem is different.',
-            question: 'Is this a problem or a breakthrough? What should you do?',
-            evaluation: {
-              keywords: ['breakthrough', 'insight', 'adjust', 'reframe', 'deeper', 'understanding', 'better', 'solution', 'growth', 'valuable'],
-              minWords: 40,
-              pointsPerKeyword: 3,
-              depthBonus: 12
-            },
-            modelAnswer: 'This is a breakthrough, not a problem. It means your questioning is working. You\'ve discovered something most people miss. Adjust your problem statement based on this deeper understanding. This will lead to a more effective solution because you\'re now solving the actual root cause, not surface symptoms.',
-            points: 25
-          },
-          {
-            type: 'prediction',
-            id: 'cj-predict-impressive-vs-real',
-            setup: {
-              type: 'text',
-              content: 'Student A chooses an impressive-sounding problem they read about but haven\'t experienced. Student B chooses a simpler problem they\'ve actually observed in their daily life.'
-            },
-            question: 'Who will likely build a better solution? Why?',
-            correctAnswer: 'Student B',
-            acceptableVariants: ['B', 'second student', 'real problem', 'observed problem'],
-            explanation: 'Student B has tacit knowledge from lived experience - they understand context, emotions, and real constraints. Student A builds on shallow understanding from reading. Real observation provides advantages that research alone cannot.',
-            commonMistakes: {
-              'A': 'Impressive-sounding problems without real understanding often lead to solutions nobody actually needs.',
-              'both': 'Very different starting points lead to different outcomes.'
-            },
-            points: 15
-          },
-          {
-            type: 'reflection',
-            id: 'cj-reflect-problem-choice',
-            prompt: 'Think about your capstone problem. Is it real (you\'ve observed it), specific (focused enough to solve), and solvable (you can build something)? If not, how might you adjust it?',
-            thinkingPrompts: [
-              'Have you actually seen this problem in real life?',
-              'Is it specific enough to build a single solution?',
-              'Can you actually create something to address it?',
-              'What would make it more real, specific, or solvable?'
-            ],
-            evaluation: {
-              minWords: 50,
-              depthIndicators: [
-                { pattern: '(observed|seen|noticed|experienced)', label: 'Real problem check', points: 5 },
-                { pattern: '(specific|focused|narrow|clear)', label: 'Specificity check', points: 5 },
-                { pattern: '(build|create|make|solve)', label: 'Solvability check', points: 4 },
-                { pattern: '(adjust|change|refine|improve)', label: 'Willingness to iterate', points: 4 },
-                { pattern: '(because|since|due to)', label: 'Reasoning depth', points: 3 }
-              ],
-              maxScore: 21
-            },
-            points: 25
-          },
-          {
-            type: 'scenario',
-            id: 'cj-scenario-user-struggle',
-            scenario: 'Your first user struggles with something you found obvious. They can\'t figure out how to use a feature you thought was simple.',
-            question: 'What does this reveal? How should you respond?',
-            evaluation: {
-              keywords: ['knowledge', 'gap', 'expertise', 'blind spot', 'beginner', 'user', 'perspective', 'simplify', 'improve', 'humble'],
-              minWords: 40,
-              pointsPerKeyword: 3,
-              depthBonus: 12
-            },
-            modelAnswer: 'This reveals the "curse of knowledge" - your deep immersion in the problem has made you blind to the beginner\'s experience. What\'s obvious to you required all your research to become obvious. Response: Thank the user, simplify the feature, add guidance, and remember to design for people who don\'t share your understanding.',
-            points: 25
-          },
-          {
-            type: 'prediction',
-            id: 'cj-predict-ego-work',
-            setup: {
-              type: 'text',
-              content: 'Person A takes feedback personally and gets defensive. Person B sees feedback as data and gets curious about what they can learn.'
-            },
-            question: 'Over multiple projects, who will grow faster as a builder? Why?',
-            correctAnswer: 'Person B',
-            acceptableVariants: ['B', 'curious one', 'second person', 'data person'],
-            explanation: 'Person B treats every piece of feedback as fuel for improvement. Person A\'s defensiveness blocks learning. The ability to separate ego from work is a meta-skill that enables continuous growth. Person B will compound their learning over time.',
-            commonMistakes: {
-              'A': 'Defensiveness feels protective but actually blocks the feedback needed to improve.',
-              'both': 'The growth curves diverge dramatically over time.'
-            },
-            points: 15
-          },
-          {
-            type: 'graph-builder',
-            id: 'cj-graph-capstone',
-            instruction: 'Build a diagram of YOUR capstone project: What problem are you solving? What did you discover at 6 levels deep? What data did you gather? What are you building?',
-            nodeTypes: [
-              { type: 'problem', label: '🎯 Problem', color: '#ef5350' },
-              { type: 'root', label: '🌱 Root Cause', color: '#ff7043' },
-              { type: 'data', label: '📊 Data Found', color: '#42a5f5' },
-              { type: 'insight', label: '💡 Insight', color: '#ffd54f' },
-              { type: 'solution', label: '🛠️ Solution', color: '#66bb6a' }
-            ],
-            validation: {
-              requiredNodes: ['problem', 'solution'],
-              requiredEdges: [],
-              optionalNodes: ['root', 'data', 'insight'],
-              minNodes: 2,
-              maxNodes: 7
-            },
-            hints: [
-              'Start with your specific problem',
-              'What root cause did 6 levels reveal?',
-              'What key data or insight guided your solution?',
-              'What are you building to address it?'
-            ],
-            points: 30
-          }
-        ]
-      });
-      story2Synthesis.init();
-
-      // Story 3: Portfolio Celebration - Comprehension
-      const story3Comprehension = new ActivityCarousel('story3-comprehension', {
-        type: 'comprehension',
-        sectionId: 'portfolio-celebration',
-        title: 'Check Your Understanding',
-        activities: [
-          {
-            type: 'quiz',
-            id: 'pc-quiz-portfolio',
-            question: 'What does your portfolio showcase?',
-            options: [
-              'Only your capstone project',
-              'Work from each week plus your capstone',
-              'Only what you\'re proud of',
-              'Just code without context'
-            ],
-            correct: 1,
-            explanation: 'Your portfolio includes "work from each week plus your capstone project" - it shows your complete learning journey.',
+            correct: 0,
+            explanation: "The hook reminds the audience that the project came from a real problem, not a random prompt.",
             points: 10
           },
           {
-            type: 'quiz',
-            id: 'pc-quiz-present-time',
-            question: 'How long should your capstone presentation be?',
-            options: [
-              'As long as needed',
-              '3-5 minutes',
-              '30 minutes',
-              '1 minute'
-            ],
-            correct: 1,
-            explanation: '"Keep it short—three to five minutes." Concise presentations that demo real work are more impactful than long explanations.',
-            points: 10
-          },
-          {
-            type: 'true-false',
-            id: 'pc-tf-show',
-            statement: 'The lesson advises "show, don\'t tell" when presenting your work.',
-            correct: true,
-            explanation: '"Demo your actual project. Let them see it work." Showing your project working is more powerful than just describing it.',
-            minReasoningWords: 5,
-            points: 15
-          },
-          {
-            type: 'true-false',
-            id: 'pc-tf-builder',
-            statement: 'After completing this course, you\'re still just a consumer of technology.',
+            type: "true-false",
+            id: "w4s2-comp-claims",
+            statement: "Nia leaves unsupported words like 'everyone' and 'best' in the script if they sound exciting.",
             correct: false,
-            explanation: '"You\'re not just a consumer of technology anymore. You\'re a builder. You\'re a problem solver."',
+            explanation: "She cuts any claim the crew cannot defend with evidence.",
             minReasoningWords: 5,
             points: 15
-          },
+          }
+        ]);
+
+        initCarousel("story2-application", "application", "capstone-journey", "Apply What You Learned", [
           {
-            type: 'fill-blank',
-            id: 'pc-fill-proof',
-            statement: 'Your portfolio is ___ that you can solve real problems.',
-            correctAnswers: ['proof', 'evidence', 'demonstration'],
-            caseSensitive: false,
-            hints: ['What does your portfolio demonstrate?'],
-            explanation: 'Your portfolio is proof of capability - concrete evidence that you can solve real problems.',
-            points: 10
-          },
-          {
-            type: 'fill-blank',
-            id: 'pc-fill-beginning',
-            statement: 'The course says "This is just the ___" - your journey continues.',
-            correctAnswers: ['beginning', 'start'],
-            caseSensitive: false,
-            hints: ['What phase are you at?'],
-            explanation: 'Completing the course is just the beginning. Keep building, stay curious, help others.',
-            points: 10
-          },
-          {
-            type: 'quiz',
-            id: 'pc-quiz-identity',
-            question: 'What identity shift does the course aim to create?',
+            type: "quiz",
+            id: "w4s2-app-demo",
+            question: "Which move best matches Malik's job in the rehearsal story?",
             options: [
-              'From student to teacher',
-              'From consumer to builder/problem solver',
-              'From beginner to expert',
-              'From learner to leader'
+              "Add more hype to the script",
+              "Prepare the live demo, screenshots, and a backup path",
+              "Pick a different problem to present",
+              "Skip testing so the final talk feels spontaneous"
             ],
             correct: 1,
-            explanation: 'The fundamental shift is from consuming technology to building it - from waiting for solutions to creating them.',
+            explanation: "Malik makes the demo safe under real conditions by preparing backups and a reliable flow.",
+            points: 10
+          },
+          {
+            type: "sequence",
+            id: "w4s2-app-order",
+            instruction: "Put the sharpening process in order:",
+            items: [
+              { id: "a", text: "Revise for clarity" },
+              { id: "b", text: "Practice in front of people" },
+              { id: "c", text: "Stress-test every claim" },
+              { id: "d", text: "Open with the hook" },
+              { id: "e", text: "Make the demo safe" }
+            ],
+            correctOrder: ["d", "c", "e", "b", "a"],
+            hints: {
+              partial: "The hook comes first, then claim-checking, then demo prep, then practice, then revision.",
+              wrong: "Follow the narrated rehearsal arc from opening through revision."
+            },
+            explanation: "The story shows how rehearsal gets stronger through testing and revision.",
+            points: 20
+          }
+        ]);
+
+        initCarousel("story2-synthesis", "synthesis", "capstone-journey", "Make the Connection", [
+          {
+            type: "fill-blank",
+            id: "w4s2-syn-feedback",
+            statement: "The practice audience gives the crew real ___ they can use before the final presentation.",
+            correctAnswers: ["feedback", "notes", "input"],
+            caseSensitive: false,
+            hints: ["Think about what the crew gathers from a rehearsal audience."],
+            explanation: "Week 4 treats audience reactions as usable feedback, not as noise.",
+            points: 10
+          },
+          {
+            type: "quiz",
+            id: "w4s2-syn-whytest",
+            question: "What larger week 4 principle does rehearsal teach?",
+            options: [
+              "The first version should stay untouched",
+              "Testing in public helps sharpen the final version",
+              "Only the technical demo matters",
+              "Good presenters never need feedback"
+            ],
+            correct: 1,
+            explanation: "The crew improves the final version because they test it in front of real people first.",
             points: 10
           }
-        ]
-      });
-      story3Comprehension.init();
+        ]);
 
-      // Story 3: Portfolio Celebration - Application
-      const story3Application = new ActivityCarousel('story3-application', {
-        type: 'application',
-        sectionId: 'portfolio-celebration',
-        title: 'Apply What You Learned',
-        activities: [
+        initCarousel("story3-comprehension", "comprehension", "portfolio-celebration", "Check Your Understanding", [
           {
-            type: 'sequence',
-            id: 'pc-seq-present',
-            instruction: 'Put the presentation components in order:',
-            items: [
-              { id: 'pr1', text: 'Introduce the problem you solved' },
-              { id: 'pr2', text: 'Explain your research (data gathered)' },
-              { id: 'pr3', text: 'Demo your actual solution' },
-              { id: 'pr4', text: 'Share what you learned' }
-            ],
-            correctOrder: ['pr1', 'pr2', 'pr3', 'pr4'],
-            hints: {
-              partial: 'Start with the problem.',
-              wrong: 'Context before demo - they need to understand what problem you solved.'
-            },
-            explanation: 'Presentation flow: Problem → Research → Demo → Learnings.',
-            points: 20
-          },
-          {
-            type: 'drag-drop',
-            id: 'pc-dd-show-vs-tell',
-            instruction: 'Sort these presentation approaches:',
-            items: [
-              { id: 'a1', text: 'Click through your live project' },
-              { id: 'a2', text: 'Read from slides describing what you built' },
-              { id: 'a3', text: 'Let them see a feature working' },
-              { id: 'a4', text: 'Talk about what you would have built if you had time' },
-              { id: 'a5', text: 'Show a user interacting with your solution' }
-            ],
-            zones: [
-              { id: 'show', label: '👀 Show', correct: ['a1', 'a3', 'a5'] },
-              { id: 'tell', label: '💬 Tell', correct: ['a2', 'a4'] }
-            ],
-            explanation: 'Showing working functionality is more powerful than describing intentions.',
-            points: 25
-          },
-          {
-            type: 'connect-edges',
-            id: 'pc-ce-portfolio-value',
-            instruction: 'Connect what your portfolio demonstrates to who cares:',
-            nodes: [
-              { id: 'process', label: '📋 Problem-Solving Process' },
-              { id: 'building', label: '🛠️ Building Capability' },
-              { id: 'range', label: '🎨 Range Across Domains' },
-              { id: 'employers', label: '💼 Employers' },
-              { id: 'collaborators', label: '🤝 Collaborators' },
-              { id: 'yourself', label: '🎯 Yourself' }
-            ],
-            solution: {
-              edges: [
-                { source: 'process', target: 'employers' },
-                { source: 'building', target: 'collaborators' },
-                { source: 'range', target: 'yourself' }
-              ]
-            },
-            nodeDescriptions: {
-              'process': 'Questions → Data → Insights → Build',
-              'building': 'You can create real things',
-              'range': 'You can apply skills anywhere',
-              'employers': 'Want reliable problem-solvers',
-              'collaborators': 'Want capable teammates',
-              'yourself': 'Proof of what you can do'
-            },
-            explanation: 'Your portfolio proves different things to different audiences.',
-            points: 25
-          },
-          {
-            type: 'quiz',
-            id: 'pc-quiz-dont-know',
-            question: 'Someone asks a question about your project that you don\'t know the answer to. What\'s the best response?',
+            type: "quiz",
+            id: "w4s3-comp-portfolio",
+            question: "What should the portfolio lead with in the final week?",
             options: [
-              'Make something up so you don\'t look unprepared',
-              'Get defensive and say the question isn\'t fair',
-              'Say "I don\'t know, but here\'s how I\'d investigate it"',
-              'Ignore the question and move on'
+              "Decorative visuals only",
+              "Evidence of learning, research, and build choices",
+              "A list of favorite tools",
+              "A long autobiography"
             ],
-            correct: 2,
-            explanation: 'Honesty about gaps shows intellectual integrity. Not-knowing is a starting point for inquiry, not a failure.',
+            correct: 1,
+            explanation: "The portfolio leads with proof that the crew can frame a problem, gather evidence, and build a response.",
+            points: 10
+          },
+          {
+            type: "true-false",
+            id: "w4s3-comp-apology",
+            statement: "AJ presents by apologizing first for everything that is still unfinished.",
+            correct: false,
+            explanation: "AJ presents with ownership and confidence, not apology.",
+            minReasoningWords: 5,
             points: 15
-          },
-          {
-            type: 'sequence',
-            id: 'pc-seq-after-course',
-            instruction: 'Order the advice for after the course:',
-            items: [
-              { id: 'k1', text: 'Keep building' },
-              { id: 'k2', text: 'Stay curious' },
-              { id: 'k3', text: 'Help others' },
-              { id: 'k4', text: 'Level up' }
-            ],
-            correctOrder: ['k1', 'k2', 'k3', 'k4'],
-            hints: {
-              partial: 'Building comes first.',
-              wrong: 'Practice before teaching.'
-            },
-            explanation: 'The path forward: Build → Stay curious → Help others → Continue growing.',
-            points: 20
-          },
-          {
-            type: 'drag-drop',
-            id: 'pc-dd-mindset-actions',
-            instruction: 'Sort these into "Builder Mindset" vs "Consumer Mindset":',
-            items: [
-              { id: 'm1', text: 'See a problem and think "I could build something"' },
-              { id: 'm2', text: 'Wait for someone else to solve things' },
-              { id: 'm3', text: 'Think "I wish this existed" and then create it' },
-              { id: 'm4', text: 'Scroll past problems without noticing' },
-              { id: 'm5', text: 'View frustrations as potential projects' }
-            ],
-            zones: [
-              { id: 'builder', label: '🛠️ Builder Mindset', correct: ['m1', 'm3', 'm5'] },
-              { id: 'consumer', label: '📱 Consumer Mindset', correct: ['m2', 'm4'] }
-            ],
-            explanation: 'Builders see opportunities where consumers see frustrations.',
-            points: 20
           }
-        ]
-      });
-      story3Application.init();
+        ]);
 
-      // Story 3: Portfolio Celebration - Synthesis
-      const story3Synthesis = new ActivityCarousel('story3-synthesis', {
-        type: 'synthesis',
-        sectionId: 'portfolio-celebration',
-        title: 'Think Deeper',
-        activities: [
+        initCarousel("story3-application", "application", "portfolio-celebration", "Apply What You Learned", [
           {
-            type: 'scenario',
-            id: 'pc-scenario-apologize',
-            scenario: 'During your presentation, you feel the urge to apologize for what\'s "not done yet" or explain why it\'s not perfect.',
-            question: 'What\'s driving this urge? What does resisting it teach you?',
-            evaluation: {
-              keywords: ['fear', 'enough', 'perfect', 'done', 'confidence', 'own', 'work', 'value', 'trust', 'builder'],
-              minWords: 40,
-              pointsPerKeyword: 3,
-              depthBonus: 12
-            },
-            modelAnswer: 'The urge comes from fear that your work won\'t be seen as enough. But resisting it teaches you to let your work speak for itself. "Done" is better than "perfect." You built something real - that\'s more than most people ever do. Owning your work without apology is the psychological shift from student to builder.',
-            points: 25
-          },
-          {
-            type: 'prediction',
-            id: 'pc-predict-single-vs-collection',
-            setup: {
-              type: 'text',
-              content: 'Person A shows one impressive project. Person B shows a collection of projects applying the same process across different problem spaces.'
-            },
-            question: 'Whose portfolio is more convincing? Why?',
-            correctAnswer: 'Person B',
-            acceptableVariants: ['B', 'collection', 'second person', 'multiple projects'],
-            explanation: 'Person A might have gotten lucky with one topic. Person B demonstrates a transferable process - reliable capability across domains. The collection proves that their skill isn\'t luck; it\'s a reproducible approach. That\'s what employers and collaborators really want.',
-            commonMistakes: {
-              'A': 'One project could be passion or luck. A collection proves systematic capability.',
-              'both': 'Range across domains is more valuable than depth in one area.'
-            },
-            points: 15
-          },
-          {
-            type: 'reflection',
-            id: 'pc-reflect-identity',
-            prompt: 'How has your relationship with technology and problems changed since starting this course? Do you feel more like a builder now? What does that mean for your future?',
-            thinkingPrompts: [
-              'How did you see problems before vs now?',
-              'Do you feel capable of building solutions?',
-              'What might you create in the next year?',
-              'How will you keep growing as a builder?'
+            type: "quiz",
+            id: "w4s3-app-questions",
+            question: "How does Nia handle a tough audience question she cannot fully answer yet?",
+            options: [
+              "She pretends the question does not matter",
+              "She says what the crew knows and what they would test next",
+              "She changes the subject immediately",
+              "She promises features that are not built"
             ],
-            evaluation: {
-              minWords: 60,
-              depthIndicators: [
-                { pattern: '(before|used to|previously)', label: 'Past perspective', points: 5 },
-                { pattern: '(now|can|able|capable)', label: 'Current confidence', points: 5 },
-                { pattern: '(build|create|solve|make)', label: 'Builder identity', points: 5 },
-                { pattern: '(future|will|going to|plan)', label: 'Forward thinking', points: 4 },
-                { pattern: '(grow|learn|continue|keep)', label: 'Growth mindset', points: 3 }
-              ],
-              maxScore: 22
-            },
-            points: 25
+            correct: 1,
+            explanation: "Honest answers and next-step thinking keep the presentation credible.",
+            points: 10
           },
           {
-            type: 'scenario',
-            id: 'pc-scenario-permission',
-            scenario: 'A friend says "I\'d love to build things but I\'m not technical enough yet. I need to learn more first before I can start."',
-            question: 'Based on what you\'ve learned, how would you respond?',
-            evaluation: {
-              keywords: ['start', 'now', 'don\'t need', 'learn by', 'doing', 'AI', 'questions', 'describe', 'iterate', 'permission'],
-              minWords: 40,
-              pointsPerKeyword: 3,
-              depthBonus: 12
-            },
-            modelAnswer: 'You don\'t need permission or more preparation - you can start now. I learned to build with AI without coding experience. The real skill is asking good questions and describing what you want. You learn by doing, not by waiting until you\'re "ready." Start with a small problem you\'ve observed and build something. Perfect timing doesn\'t exist.',
-            points: 25
-          },
-          {
-            type: 'prediction',
-            id: 'pc-predict-one-year',
-            setup: {
-              type: 'text',
-              content: 'You keep building things for the next year - one small project per month, applying the Questions → Data → Insights → Build process each time.'
-            },
-            question: 'How will you be different after 12 projects? What will you be able to do?',
-            correctAnswer: 'confident',
-            acceptableVariants: ['skilled', 'experienced', 'capable', 'better', 'faster', 'portfolio', 'proven'],
-            explanation: 'After 12 projects, you\'ll have: refined process skills, a substantial portfolio, confidence from repeated success, the ability to tackle larger problems, and proof of consistent capability. You\'ll see problems as opportunities, not obstacles. Building will feel natural.',
-            commonMistakes: {
-              'same': '12 projects fundamentally changes capability and confidence.',
-              'expert': 'Not expert - but confident and capable with a proven track record.'
-            },
-            points: 15
-          },
-          {
-            type: 'graph-builder',
-            id: 'pc-graph-future',
-            instruction: 'Build a diagram of YOUR future as a builder: What problems might you tackle? What skills will you develop? What impact could you have?',
-            nodeTypes: [
-              { type: 'you', label: '👤 You (Now)', color: '#42a5f5' },
-              { type: 'project', label: '🛠️ Future Project', color: '#66bb6a' },
-              { type: 'skill', label: '📚 Skill to Develop', color: '#ffd54f' },
-              { type: 'impact', label: '🌟 Impact', color: '#ab47bc' },
-              { type: 'future', label: '🚀 Future You', color: '#ef5350' }
-            ],
-            validation: {
-              requiredNodes: ['you', 'future'],
-              requiredEdges: [],
-              optionalNodes: ['project', 'skill', 'impact'],
-              minNodes: 2,
-              maxNodes: 8
-            },
-            hints: [
-              'Start with where you are now',
-              'What problems interest you for future projects?',
-              'What skills would help you build more?',
-              'What impact do you want to have?'
-            ],
-            points: 30
+            type: "fill-blank",
+            id: "w4s3-app-workflow",
+            statement: "Malik opens the repo and prompts to show the actual ___ behind the final product.",
+            correctAnswers: ["workflow", "process", "build process"],
+            caseSensitive: false,
+            hints: ["The story says he makes the building path visible."],
+            explanation: "Showing the workflow proves the team can document and iterate, not just talk about ideas.",
+            points: 10
           }
-        ]
-      });
-      story3Synthesis.init();
+        ]);
 
-      console.log('🏆 Week 4 activity carousels initialized!');
-    });
-  </script>
-</body>
+        initCarousel("story3-synthesis", "synthesis", "portfolio-celebration", "Make the Connection", [
+          {
+            type: "quiz",
+            id: "w4s3-syn-identity",
+            question: "What identity shift lands at the end of the week 4 story?",
+            options: [
+              "From student to perfect expert",
+              "From course taker to problem solver",
+              "From researcher to influencer",
+              "From teammate to solo founder"
+            ],
+            correct: 1,
+            explanation: "The story ends by reframing the crew as problem solvers who can notice, investigate, build, and explain.",
+            points: 10
+          },
+          {
+            type: "true-false",
+            id: "w4s3-syn-proof",
+            statement: "The portfolio is mostly decoration, while the real proof stays hidden in the crew's heads.",
+            correct: false,
+            explanation: "The portfolio is the receipt. It should make the team's learning and workflow visible.",
+            minReasoningWords: 5,
+            points: 15
+          }
+        ]);
+      });
+    </script>
+  </body>
 </html>

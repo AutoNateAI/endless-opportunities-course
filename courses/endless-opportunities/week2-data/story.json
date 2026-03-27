@@ -2,146 +2,146 @@
   "pageId": "week2-data",
   "courseId": "endless-opportunities",
   "chapterMeta": {
-    "title": "Data is Everywhere",
+    "title": "Data Makes the Case",
     "icon": "📊",
-    "themeColor": "purple"
+    "themeColor": "blue"
   },
   "stories": [
     {
       "id": "data-mindset-story",
       "diagramId": "data-mindset",
-      "title": "The Data Mindset",
+      "title": "Signals Hiding in Plain Sight",
       "steps": [
         {
-          "nodeId": "superpower",
-          "icon": "👁️",
-          "title": "The Superpower",
-          "narration": "AJ, Nia, and Malik are walking the feed like detectives. The superpower is not magic. It's the ability to see data everywhere. Right now, they're surrounded by information. Every post, every review, every comment is data waiting to be discovered.",
+          "nodeId": "signal-scroll",
+          "icon": "📱",
+          "title": "Signals in the Scroll",
+          "narration": "AJ keeps catching the same complaint while he scrolls after school. Students are saying there is nowhere nearby with strong Wi-Fi, enough outlets, and enough calm to lock in. What looked random yesterday starts feeling repeated today. Sage frames it clean: the signal is not one post. The signal is the same frustration showing up again and again.",
           "connectsTo": null
         },
         {
-          "nodeId": "phone-book",
-          "edges": [{ "from": "superpower", "to": "phone-book" }],
-          "icon": "📱",
-          "title": "Social Media as Phone Book",
-          "narration": "Nia compares social media to a phone book of data. It's not just people posting selfies. It's millions of people telling you what they think, what they want, and what problems they have. Malik likes that the raw material is already out there.",
-          "connectsTo": "The Superpower"
+          "nodeId": "claim-check",
+          "edges": [{ "from": "signal-scroll", "to": "claim-check" }],
+          "icon": "🧪",
+          "title": "Claims Versus Behavior",
+          "narration": "Nia refuses to call it proof yet. She wants to compare what places claim with what students actually do and say. If a cafe calls itself study-friendly but the comments say the music is loud, the outlets are dead, and people leave after fifteen minutes, that contradiction matters. She is not chasing vibes. She is testing reality.",
+          "connectsTo": "Signals in the Scroll"
         },
         {
-          "nodeId": "data-sources",
-          "edges": [{ "from": "phone-book", "to": "data-sources" }],
-          "icon": "🌐",
-          "title": "Data Sources Everywhere",
-          "narration": "AJ and Malik keep listing the sources: social media shows opinions and trends. Reviews reveal what people love and hate. Comments show real reactions. Local listings, news, public stats. Data is literally everywhere once you learn to see it.",
-          "connectsTo": "Phone Book"
+          "nodeId": "evidence-board",
+          "edges": [{ "from": "claim-check", "to": "evidence-board" }],
+          "icon": "📌",
+          "title": "Build the Evidence Board",
+          "narration": "Malik starts pinning the clues together. Screenshots from comments, map listings, review snippets, student DMs, even posted photos of crowded tables and dead laptop batteries all land in one place. Suddenly the story is easier to see. The issue is not just that students are complaining. It is that the same need is appearing across different sources.",
+          "connectsTo": "Claims Versus Behavior"
         },
         {
-          "nodeId": "data-to-insight",
-          "edges": [{ "from": "data-sources", "to": "data-to-insight" }],
-          "icon": "💡",
-          "title": "Data Becomes Insight",
-          "narration": "Nia makes the point clean: data, when you know how to collect and analyze it, becomes insight. Insight is understanding. Understanding leads to solutions. That is how problem solvers operate.",
-          "connectsTo": "Data Sources"
+          "nodeId": "proof-shift",
+          "edges": [{ "from": "evidence-board", "to": "proof-shift" }],
+          "icon": "✅",
+          "title": "From Hunch to Proof",
+          "narration": "By the end of the first pass, AJ can feel the shift. At the start, he had a hunch. Now the crew has evidence. Nia trusts it more because it survived comparison. Malik trusts it more because the pattern repeats. That is the week two move: intuition starts the search, but proof earns the next step.",
+          "connectsTo": "Build the Evidence Board"
         }
       ]
     },
     {
       "id": "algorithms-story",
       "diagramId": "algorithms",
-      "title": "Two Algorithms That Rule Your Life",
+      "title": "Search Beats the Feed",
       "steps": [
         {
-          "nodeId": "two-algorithms",
-          "icon": "🔍",
-          "title": "Two Algorithms",
-          "narration": "AJ sets the frame: there are two algorithms you need to understand because they control most of how you find and receive information. One puts you in control. The other puts the platform in control. Nia is already side-eyeing the second one.",
+          "nodeId": "feed-guessing",
+          "icon": "📲",
+          "title": "The Feed Is Guessing",
+          "narration": "AJ notices how easy it would be to let the feed tell the whole story. One study tips clip becomes ten more. One cafe review turns into random productivity content. Nia shuts that down fast. Recommendation feeds are built to keep attention moving, not to answer the exact question the crew is trying to solve.",
           "connectsTo": null
         },
         {
-          "nodeId": "search-algorithm",
-          "edges": [{ "from": "two-algorithms", "to": "search-algorithm" }],
+          "nodeId": "intentional-search",
+          "edges": [{ "from": "feed-guessing", "to": "intentional-search" }],
+          "icon": "🔎",
+          "title": "AJ Switches to Search",
+          "narration": "So AJ gets specific. He searches for late study spots near school, quiet coffee shops with outlets, student-friendly spaces, and after-school work areas. The energy changes immediately because search forces a target. Instead of waiting to be shown something interesting, he is asking for something useful.",
+          "connectsTo": "The Feed Is Guessing"
+        },
+        {
+          "nodeId": "cross-checking",
+          "edges": [{ "from": "intentional-search", "to": "cross-checking" }],
+          "icon": "🧭",
+          "title": "Nia Cross-Checks the Trail",
+          "narration": "Nia takes the search results and cross-checks them. A place might look perfect on its homepage, but what do the reviews say about the Wi-Fi, the noise level, and the closing time. Do the photos match the promise. Do the comments line up with the rating. She keeps asking the same week one question underneath the data: what is actually true here.",
+          "connectsTo": "AJ Switches to Search"
+        },
+        {
+          "nodeId": "source-stack",
+          "edges": [{ "from": "cross-checking", "to": "source-stack" }],
+          "icon": "🗂️",
+          "title": "Malik Stacks Sources",
+          "narration": "Malik loves this part because it becomes a system. Search results, maps, photos, review text, and local threads each add a layer. No single source has to carry the whole argument. Together they create a stronger picture than a feed ever could. The point is not more content. The point is cleaner evidence.",
+          "connectsTo": "Nia Cross-Checks the Trail"
+        },
+        {
+          "nodeId": "search-proof",
+          "edges": [{ "from": "source-stack", "to": "search-proof" }],
           "icon": "🎯",
-          "title": "Search Algorithm",
-          "narration": "Search means you have a goal and you go find it. When AJ searches Google or YouTube, he decides what he wants and the algorithm tries to match it. Malik loves that better search terms mean better results. This is a skill.",
-          "connectsTo": "Two Algorithms"
-        },
-        {
-          "nodeId": "recommendation-algorithm",
-          "edges": [{ "from": "two-algorithms", "to": "recommendation-algorithm" }],
-          "icon": "📲",
-          "title": "Recommendation Algorithm",
-          "narration": "Recommendation means the platform decides what you see. Nia watches the feeds that keep people hooked. TikTok, YouTube homepage, Instagram Explore - they watch what you engage with and show you more of the same.",
-          "connectsTo": "Two Algorithms"
-        },
-        {
-          "nodeId": "the-difference",
-          "edges": [{ "from": "search-algorithm", "to": "the-difference" }, { "from": "recommendation-algorithm", "to": "the-difference" }],
-          "icon": "⚖️",
-          "title": "The Critical Difference",
-          "narration": "AJ makes the difference obvious: search means you're in control and you choose what to find. Recommendation means the algorithm chooses what you see. Problem solvers use search more than recommendation. They know what they're looking for and go get it.",
-          "connectsTo": "Both Algorithms"
-        },
-        {
-          "nodeId": "be-intentional",
-          "edges": [{ "from": "the-difference", "to": "be-intentional" }],
-          "icon": "🧠",
-          "title": "Be Intentional",
-          "narration": "Malik keeps it practical: don't let algorithms choose your information for you. Be intentional about what you engage with. When you need to learn something, search for it. Don't wait for it to be recommended.",
-          "connectsTo": "The Difference"
+          "title": "Intentional Search Creates Proof",
+          "narration": "Now AJ can answer the question that matters: how do you know. He knows because the team searched on purpose, checked what people claimed against what they reported, and stacked sources that pointed in the same direction. Search did more than find information. It made the evidence defendable.",
+          "connectsTo": "Malik Stacks Sources"
         }
       ]
     },
     {
       "id": "analysis-story",
       "diagramId": "analysis",
-      "title": "Collecting and Analyzing Data",
+      "title": "Patterns Become Proof",
       "steps": [
         {
-          "nodeId": "collection-simple",
-          "icon": "📥",
-          "title": "Collection is Simple",
-          "narration": "Malik says data collection isn't complicated. It is just being intentional about gathering information instead of passively scrolling past it. You see data every day. You just need to capture it.",
+          "nodeId": "question-frame",
+          "icon": "❓",
+          "title": "Start with the Question",
+          "narration": "Malik says the team needs one clean question before they go any further. What are students actually missing after school. Not what looks cool. Not what might go viral. What need keeps showing up when the evidence is lined up. Once the question is tight, the data gets easier to sort.",
           "connectsTo": null
         },
         {
-          "nodeId": "the-pattern",
-          "edges": [{ "from": "collection-simple", "to": "the-pattern" }],
-          "icon": "🔄",
-          "title": "The Collection Pattern",
-          "narration": "AJ gives the pattern: define what you want to know, identify where the data lives, collect it systematically, then look for patterns. Nia says it is simple when you line it up like that.",
-          "connectsTo": "Collection Simple"
+          "nodeId": "pattern-tags",
+          "edges": [{ "from": "question-frame", "to": "pattern-tags" }],
+          "icon": "🏷️",
+          "title": "Tag the Patterns",
+          "narration": "The trio starts tagging the evidence. Wi-Fi problems. Not enough outlets. Places too loud to focus. Spaces closing too early. Prices that push students out. AJ sees how repeated complaints stop feeling random when they are grouped this way. Patterns are the first sign that the problem has structure.",
+          "connectsTo": "Start with the Question"
         },
         {
-          "nodeId": "look-for-patterns",
-          "edges": [{ "from": "the-pattern", "to": "look-for-patterns" }],
-          "icon": "🔬",
-          "title": "Look for Patterns",
-          "narration": "Raw data is just numbers and words. Malik spots the first pattern in the noise. Insights come from patterns. If ten reviews mention slow service, that's a pattern. If everyone praises the vibe, that's a pattern.",
-          "connectsTo": "Collection Pattern"
+          "nodeId": "contradictions",
+          "edges": [{ "from": "pattern-tags", "to": "contradictions" }],
+          "icon": "⚖️",
+          "title": "Notice the Contradictions",
+          "narration": "Nia looks for the tension points. A place markets itself as a calm workspace, but students say they cannot hear themselves think. Another boasts free Wi-Fi, but reviews keep mentioning dropped connections. Those contradictions matter because they reveal where the offer breaks. Weak promises create useful openings.",
+          "connectsTo": "Tag the Patterns"
         },
         {
-          "nodeId": "ask-why",
-          "edges": [{ "from": "look-for-patterns", "to": "ask-why" }],
-          "icon": "❓",
-          "title": "Ask Why",
-          "narration": "Once you see patterns, AJ asks why. Why do people complain about this? Why do they love that? Go deeper than the surface. Use your six levels deep skills to understand root causes.",
-          "connectsTo": "Patterns"
+          "nodeId": "repeat-counts",
+          "edges": [{ "from": "contradictions", "to": "repeat-counts" }],
+          "icon": "🔁",
+          "title": "Count the Repeats",
+          "narration": "Malik counts what keeps coming back. Not to worship numbers for their own sake, but to see which pain points carry the most weight. If bad Wi-Fi appears once, that is a detail. If it appears across maps, comments, and reviews, that becomes a priority. Repetition tells the team where to pay attention.",
+          "connectsTo": "Notice the Contradictions"
         },
         {
-          "nodeId": "find-gaps",
-          "edges": [{ "from": "ask-why", "to": "find-gaps" }],
+          "nodeId": "gap-spot",
+          "edges": [{ "from": "repeat-counts", "to": "gap-spot" }],
           "icon": "🕳️",
-          "title": "Find the Gaps",
-          "narration": "Nia wants to know what is missing. What are people asking for that does not exist? Gaps equal opportunities. Every unmet need is a potential solution waiting to be built. Data reveals where to focus.",
-          "connectsTo": "Ask Why"
+          "title": "Spot the Gap",
+          "narration": "AJ finally says the quiet part out loud. The real gap is not just one bad cafe. The gap is that students nearby do not have a place built around their actual after-school workflow. They need affordable time, reliable Wi-Fi, power, and focus. The market keeps offering pieces of that, but not the full thing.",
+          "connectsTo": "Count the Repeats"
         },
         {
-          "nodeId": "draw-conclusions",
-          "edges": [{ "from": "find-gaps", "to": "draw-conclusions" }],
-          "icon": "📝",
-          "title": "Draw Conclusions",
-          "narration": "AJ closes the loop: based on the patterns, what can you conclude? What would you recommend? This is where data becomes useful, when it informs action. Nia calls it the difference between analysis and noise.",
-          "connectsTo": "Find Gaps"
+          "nodeId": "opportunity-call",
+          "edges": [{ "from": "gap-spot", "to": "opportunity-call" }],
+          "icon": "🚀",
+          "title": "Call the Opportunity",
+          "narration": "That is the moment intuition becomes direction. Nia is satisfied because the claim is rooted in evidence. Malik is satisfied because the pattern is clear enough to design around. AJ is energized because the crew is no longer just naming a problem. They can now move into week three with a real opportunity worth building for.",
+          "connectsTo": "Spot the Gap"
         }
       ]
     }
@@ -151,37 +151,37 @@
       "storyId": "data-mindset-story",
       "questions": [
         {
-          "question": "What's the 'superpower' described in the Data Mindset?",
+          "question": "What turns AJ's first hunch into something the crew can trust more?",
           "options": [
-            "Being good at math",
-            "The ability to see data everywhere",
-            "Having lots of social media followers",
-            "Memorizing statistics"
+            "A single viral post",
+            "Repeated signals across different sources",
+            "A recommendation algorithm",
+            "One perfect review"
           ],
           "correct": 1,
-          "explanation": "The superpower is seeing data everywhere — recognizing that every review, comment, post, and interaction contains information that can be collected and analyzed for insights."
+          "explanation": "The story treats proof as repeated signals across more than one source, not one loud example."
         },
         {
-          "question": "What does 'social media as a phone book' mean?",
+          "question": "Why does Nia compare what places promise with what students actually say and do?",
           "options": [
-            "You can find phone numbers on social media",
-            "It's millions of people sharing their thoughts, problems, and wants — free data",
-            "Social media is outdated like phone books",
-            "You should call people instead of messaging"
+            "To make the story longer",
+            "To test whether the claims match reality",
+            "To avoid reading reviews",
+            "To prove every place is bad"
           ],
           "correct": 1,
-          "explanation": "Social media is like a phone book of data — millions of people freely sharing what they think, want, and struggle with. It's a massive source of insights if you know how to look."
+          "explanation": "Nia uses contradictions to test what is actually true instead of trusting the marketing."
         },
         {
-          "question": "What's the relationship between data and insight?",
+          "question": "What is Malik doing when he starts pinning screenshots, reviews, and map notes together?",
           "options": [
-            "They're the same thing",
-            "Data is raw information; insight is understanding that comes from analyzing it",
-            "Insight comes before data",
-            "Data is more valuable than insight"
+            "Building an evidence board",
+            "Creating a recommendation feed",
+            "Picking the solution already",
+            "Ignoring the data"
           ],
-          "correct": 1,
-          "explanation": "Data is raw information (numbers, comments, reviews). Insight is the understanding you gain when you analyze data for patterns. Data → Analysis → Insight → Solutions."
+          "correct": 0,
+          "explanation": "Malik organizes multiple clues in one place so the pattern is easier to see."
         }
       ]
     },
@@ -189,37 +189,37 @@
       "storyId": "algorithms-story",
       "questions": [
         {
-          "question": "What's the key difference between search and recommendation algorithms?",
+          "question": "What is the main advantage of search in the second story?",
           "options": [
-            "Search is faster",
-            "Search: you're in control; Recommendation: the algorithm chooses for you",
-            "Recommendation is more accurate",
-            "There's no real difference"
+            "It automatically knows the truth",
+            "It forces the crew to be intentional about what they want to learn",
+            "It removes the need to compare sources",
+            "It always gives the cheapest option"
           ],
           "correct": 1,
-          "explanation": "With search, YOU decide what to find. With recommendations, the ALGORITHM decides what you see. Problem solvers prefer search because they stay in control of their information diet."
+          "explanation": "Search is useful because it starts with a deliberate question instead of passive recommendation."
         },
         {
-          "question": "Why do problem solvers use search more than recommendations?",
+          "question": "Why is recommendation content weaker evidence for the crew's investigation?",
           "options": [
-            "Search is free, recommendations cost money",
-            "They know what they're looking for and go get it intentionally",
-            "Recommendations are always wrong",
-            "Search engines pay them"
+            "Because it only exists on phones",
+            "Because it is chosen to keep attention moving, not to answer the exact question",
+            "Because reviews never appear there",
+            "Because search has no bias"
           ],
           "correct": 1,
-          "explanation": "Problem solvers are intentional. They know what information they need and actively search for it rather than passively consuming whatever an algorithm serves them."
+          "explanation": "Recommendation systems are optimized for engagement, not for building a defendable evidence trail."
         },
         {
-          "question": "What's the danger of relying too heavily on recommendation algorithms?",
+          "question": "How does Malik strengthen the investigation once AJ starts searching?",
           "options": [
-            "They cost too much",
-            "They're designed to keep you watching, not necessarily to help you",
-            "They only work on mobile",
-            "They require an account"
+            "He stops collecting sources",
+            "He stacks maps, reviews, photos, and local threads together",
+            "He waits for more recommended videos",
+            "He only trusts the first result"
           ],
           "correct": 1,
-          "explanation": "Recommendation algorithms are optimized for engagement (keeping you watching) not for your benefit. They can trap you in filter bubbles and distract you from intentional learning."
+          "explanation": "Malik makes the evidence stronger by combining deliberate sources instead of leaning on one result."
         }
       ]
     },
@@ -227,37 +227,37 @@
       "storyId": "analysis-story",
       "questions": [
         {
-          "question": "What's the data collection pattern?",
+          "question": "Why does Malik start the last story by tightening the question?",
           "options": [
-            "Collect everything, sort later",
-            "Define what you want → Find where data lives → Collect systematically → Look for patterns",
-            "Let AI collect everything automatically",
-            "Only collect data from official sources"
+            "Because data gets easier to sort when the target is clear",
+            "Because questions are less important than patterns",
+            "Because he wants fewer sources",
+            "Because counting comes first"
           ],
-          "correct": 1,
-          "explanation": "The pattern is: (1) Define what you want to know, (2) Identify where that data exists, (3) Collect it systematically, (4) Analyze for patterns. Simple and effective."
+          "correct": 0,
+          "explanation": "A clear question makes it easier to group the evidence and decide what matters."
         },
         {
-          "question": "What turns raw data into insights?",
+          "question": "What do contradictions reveal in the story?",
           "options": [
-            "Having more data",
-            "Looking for patterns and asking 'why'",
-            "Expensive software",
-            "Hiring a data scientist"
+            "That all reviews are fake",
+            "Where promises break against real experience",
+            "That numbers are unnecessary",
+            "Which post is the most popular"
           ],
           "correct": 1,
-          "explanation": "Insights come from finding patterns in data and asking why those patterns exist. Ten reviews mentioning 'slow service' is a pattern; understanding WHY service is slow is insight."
+          "explanation": "Contradictions expose the gap between what a place claims and what students actually experience."
         },
         {
-          "question": "Why are 'gaps' important when analyzing data?",
+          "question": "What is AJ able to name by the end of the final story?",
           "options": [
-            "Gaps indicate errors in your data",
-            "Gaps (unmet needs) represent opportunities for solutions",
-            "Gaps mean you need more data",
-            "Gaps should be ignored"
+            "A random complaint",
+            "A clear gap and opportunity worth building for",
+            "A better recommendation feed",
+            "A final finished product"
           ],
           "correct": 1,
-          "explanation": "Gaps are opportunities! When people ask for something that doesn't exist, that's an unmet need. Every gap is a potential solution waiting to be built."
+          "explanation": "The end state of week 2 is moving from scattered complaints to a clear opportunity supported by proof."
         }
       ]
     }

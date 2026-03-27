@@ -4,6 +4,7 @@
   "scripts": {
     "build": "node scripts/build-gh-pages.mjs",
     "audio:lesson": "node scripts/generate-lesson-audio.mjs",
+    "storyboards:lesson": "node scripts/generate-storyboard-images.mjs",
     "dev": "firebase emulators:start --only hosting --project autonateai-learning-hub",
     "dev:full": "firebase emulators:start --only hosting,functions --project autonateai-learning-hub",
     "setup:functions": "npm --prefix firebase-functions install && npm --prefix functions install",

@@ -44,19 +44,28 @@ Do not preserve old controls just because they existed before.
    - Use:
    - `npm run audio:lesson -- --lesson=<lesson-path> --voice=sage --label='Sage Story Guide' --default=true --clean=true --omit-titles=true`
 5. If the lesson uses storyboard mode, regenerate continuous `full.mp3` tracks from the step MP3s.
-6. Keep the student-facing UI minimal:
+6. Storyboard images must reuse the week 0 anchor characters.
+   - Use the week 0 anchor refs:
+   - `courses/endless-opportunities/week0-intro/storyboards/anchors/aj-anchor.png`
+   - `courses/endless-opportunities/week0-intro/storyboards/anchors/nia-anchor.png`
+   - `courses/endless-opportunities/week0-intro/storyboards/anchors/malik-anchor.png`
+   - Generate PNG storyboards, not placeholder SVGs.
+   - Use:
+   - `npm run storyboards:lesson -- --lesson=<lesson-path>`
+   - Then render the generated batch config in `tmp/storyboard-batches/<lesson>.json` with the portal batch image script so every frame keeps AJ/Nia/Malik continuity.
+7. Keep the student-facing UI minimal:
    - storyboard stage
    - progress dots
    - one play button
    - activities
-7. Remove:
+8. Remove:
    - voice dropdowns
    - mute/sound toggles
    - microphone labels/icons
    - decorative background music unless explicitly requested
    - spoken section titles
-8. Rework activities so comprehension, application, and synthesis questions all match the updated narration.
-9. Build with `npm run build`.
+9. Rework activities so comprehension, application, and synthesis questions all match the updated narration.
+10. Build with `npm run build`.
 
 ## Parallelization rules
 
@@ -72,7 +81,7 @@ When multiple agents split weeks:
 
 - `story.json` rewritten to fit the arc
 - narration regenerated with Sage and no title reads
-- storyboard images wired cleanly
+- storyboard images generated from week 0 AJ/Nia/Malik anchors and wired cleanly
 - page controls simplified to the week 0 pattern
 - activities updated to reflect the actual story
 
