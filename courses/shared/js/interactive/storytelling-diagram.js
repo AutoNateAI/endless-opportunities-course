@@ -6,7 +6,7 @@
  *   - Step-by-step node/edge reveals
  *   - Glowing node animations
  *   - Photon/particle edge effects
- *   - AI narration with word highlighting
+ *   - AI narration synced to storyboard frames
  *   - Play/Pause/Resume controls
  *   - Progress dots for navigation
  *   - Zoom effects
@@ -317,7 +317,9 @@ class StorytellingDiagram {
     strip.innerHTML = `
       <div class="diagram-storyboard-topline">
         <span class="diagram-storyboard-label">Narrated story frames</span>
-        <div class="diagram-storyboard-dots" aria-label="Story frames"></div>
+        <div class="diagram-storyboard-toolbar">
+          <div class="diagram-storyboard-dots" aria-label="Story frames"></div>
+        </div>
       </div>
       <div class="diagram-storyboard-stage"></div>
       <div class="diagram-storyboard-captions"></div>
@@ -405,6 +407,11 @@ class StorytellingDiagram {
     this.playBtn = container.querySelector('[data-action="play"]');
     if (this.playBtn) {
       this.playBtn.addEventListener('click', () => this.togglePlayPause());
+      const toolbar = this.storyboardStrip?.querySelector('.diagram-storyboard-toolbar');
+      if (toolbar && this.options.storyboardOnly) {
+        this.playBtn.classList.add('diagram-storyboard-play');
+        toolbar.prepend(this.playBtn);
+      }
     }
 
     // Speed select - store reference for audio-based visibility
@@ -676,6 +683,10 @@ class StorytellingDiagram {
         this.jumpToStep(stepIndex);
       });
     });
+
+    if (this.options.storyboardOnly) {
+      progressContainer.style.display = 'none';
+    }
   }
 
   updateProgressDots() {
@@ -735,11 +746,11 @@ class StorytellingDiagram {
       
       // Wrap words in spans for highlighting
       if (title) {
-        title.innerHTML = this.wrapWordsInSpans(step.title);
+        title.textContent = step.title;
       }
       
       if (text) {
-        text.innerHTML = this.wrapWordsInSpans(step.narration);
+        text.textContent = step.narration;
       }
       
       if (step.connectsTo && connection && connectionText) {
@@ -765,20 +776,8 @@ class StorytellingDiagram {
     this.updateProgressDots();
   }
 
-  wrapWordsInSpans(text) {
-    const words = text.split(/\s+/).filter(w => w.length > 0);
-    return words.map((w, i) => 
-      `<span class="word" data-index="${i}">${w}</span>`
-    ).join(' ');
-  }
-
   clearWordHighlights() {
-    const captionContainer = document.getElementById(`${this.containerId}-caption`);
-    if (!captionContainer) return;
-    
-    captionContainer.querySelectorAll('.word').forEach(el => {
-      el.classList.remove('current', 'spoken');
-    });
+    return;
   }
 
   // ============================================
@@ -1231,44 +1230,8 @@ class StorytellingDiagram {
   // ============================================
 
   async narrateStep(step) {
-    await this.wait(200);
-    
-    const captionContainer = document.getElementById(`${this.containerId}-caption`);
-    if (!captionContainer) return;
-    
-    const titleEl = captionContainer.querySelector('.story-title');
-    const textEl = captionContainer.querySelector('.story-text');
-    const titleWords = titleEl ? titleEl.querySelectorAll('.word') : [];
-    const textWords = textEl ? textEl.querySelectorAll('.word') : [];
-    const allWords = [...titleWords, ...textWords];
-    
-    this.narrator.onWordHighlight = (wordIndex, word) => {
-      allWords.forEach((el, i) => {
-        el.classList.remove('current');
-        if (i < wordIndex) {
-          el.classList.add('spoken');
-        }
-      });
-      
-      if (wordIndex < allWords.length) {
-        allWords[wordIndex].classList.add('current');
-      } else {
-        allWords.forEach(el => {
-          el.classList.remove('current');
-          el.classList.add('spoken');
-        });
-      }
-    };
-    
     // Use storyId from options for audio lookup
     const result = await this.narrator.playStep(this.options.storyId, this.currentStep);
-
-    allWords.forEach(el => {
-      el.classList.remove('current');
-      el.classList.add('spoken');
-    });
-
-    this.narrator.onWordHighlight = null;
 
     if (!result?.played) {
       this.pauseMusicBed(true);

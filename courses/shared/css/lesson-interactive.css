@@ -1011,10 +1011,21 @@ pre {
   text-transform: uppercase;
 }
 
+.diagram-storyboard-toolbar {
+  display: flex;
+  align-items: center;
+  gap: 0.7rem;
+  flex-wrap: wrap;
+}
+
 .diagram-storyboard-dots {
   display: flex;
   gap: 0.45rem;
   flex-wrap: wrap;
+}
+
+.diagram-storyboard-play {
+  min-width: 108px;
 }
 
 .diagram-storyboard-dot {
@@ -1045,6 +1056,10 @@ pre {
 }
 
 .diagram-container.storyboard-only .diagram-canvas {
+  display: none;
+}
+
+.diagram-container.storyboard-only .playback-controls {
   display: none;
 }
 
@@ -1124,37 +1139,6 @@ pre {
     transform: scale(1.1)
       translate3d(var(--pan-x-to, 1.2%), var(--pan-y-to, 0.8%), 0);
   }
-}
-
-/* Word Highlighting (Karaoke Effect) */
-span.word {
-  display: inline-block;
-  transition: all 0.15s ease-out;
-  padding: 2px 4px;
-  margin: 1px;
-  border-radius: 4px;
-  background: transparent;
-}
-
-span.word.spoken {
-  color: #ffffff;
-  background-color: rgba(77, 182, 172, 0.4);
-  border-bottom: 2px solid rgba(77, 182, 172, 0.6);
-}
-
-span.word.current {
-  color: #000000;
-  background-color: #4db6ac;
-  font-weight: 700;
-  transform: scale(1.08);
-  box-shadow: 0 0 15px rgba(77, 182, 172, 0.6);
-  animation: wordPulse 0.2s ease-out;
-}
-
-@keyframes wordPulse {
-  0% { transform: scale(1); }
-  50% { transform: scale(1.12); }
-  100% { transform: scale(1.08); }
 }
 
 /* Progress Dots */
