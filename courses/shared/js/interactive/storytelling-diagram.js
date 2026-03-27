@@ -540,6 +540,7 @@ class StorytellingDiagram {
   setupAudioControls() {
     const container = document.getElementById(this.containerId).closest('.diagram-container');
     if (!container) return;
+    const toolbar = this.storyboardStrip?.querySelector('.diagram-storyboard-toolbar');
     
     this.audioToggle = container.querySelector('.audio-toggle');
     if (this.audioToggle) {
@@ -553,6 +554,11 @@ class StorytellingDiagram {
           this.pauseMusicBed(true);
         }
       });
+
+      const audioGroup = this.audioToggle.closest('.control-group');
+      if (audioGroup && toolbar && this.options.storyboardOnly) {
+        toolbar.append(audioGroup);
+      }
     }
 
     // Voice select
@@ -566,6 +572,11 @@ class StorytellingDiagram {
         this.voiceSelect.addEventListener('change', (e) => {
           this.narrator.setVoice(e.target.value);
         });
+      }
+
+      const voiceGroup = this.voiceSelect.closest('.control-group');
+      if (voiceGroup && toolbar && this.options.storyboardOnly) {
+        toolbar.append(voiceGroup);
       }
     }
 
@@ -593,7 +604,7 @@ class StorytellingDiagram {
       this.options.stepDuration = 500;
     } else {
       // Audio OFF (muted): show speed control, use 2s default
-      this.speedControlGroup.style.display = '';
+      this.speedControlGroup.style.display = this.options.storyboardOnly ? 'none' : '';
       if (this.speedSelect) {
         this.speedSelect.value = '2000';
         this.options.stepDuration = 2000;

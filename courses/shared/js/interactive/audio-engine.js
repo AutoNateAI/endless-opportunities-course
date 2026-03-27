@@ -24,7 +24,9 @@ class AudioNarrationEngine {
     this.isMuted = false;
     this.isSpeaking = false;
     this.isPaused = false;
-    this.currentAudio = null;
+    this.currentAudio = new Audio();
+    this.currentAudio.preload = "auto";
+    this.currentAudio.playsInline = true;
     this.currentTimestamps = null;
     this.highlightInterval = null;
     this.onSpeakingChange = null;
@@ -145,7 +147,7 @@ class AudioNarrationEngine {
     if (this.currentAudio) {
       this.currentAudio.pause();
       this.currentAudio.currentTime = 0;
-      this.currentAudio = null;
+      this.currentAudio.src = "";
     }
     if (this.highlightInterval) {
       cancelAnimationFrame(this.highlightInterval);
@@ -189,7 +191,9 @@ class AudioNarrationEngine {
     console.log("AudioEngine.playStep called:", { storyId, stepIndex });
 
     // Wait for manifest to load first
-    await this.waitForManifest();
+    if (!this.manifestLoaded) {
+      await this.waitForManifest();
+    }
     console.log("AudioEngine: Manifest ready");
 
     return new Promise((resolve) => {
@@ -214,10 +218,12 @@ class AudioNarrationEngine {
       this.resolvePromise = resolve;
       this.currentTimestamps = timestamps;
 
-      const audio = new Audio(audioPath);
-      audio.preload = "auto";
-      audio.playsInline = true;
-      this.currentAudio = audio;
+      const audio = this.currentAudio;
+      audio.pause();
+      audio.currentTime = 0;
+      audio.src = "";
+      audio.src = audioPath;
+      audio.load();
       audio.volume = this.isMuted ? 0 : 1;
 
       let lastHighlightedIndex = -1;
@@ -226,7 +232,6 @@ class AudioNarrationEngine {
       const finish = (result) => {
         if (settled) return;
         settled = true;
-        this.currentAudio = null;
         this.currentTimestamps = null;
         this.resolvePromise = null;
         resolve(result);
