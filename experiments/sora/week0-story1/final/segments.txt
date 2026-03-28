@@ -1,0 +1,5 @@
+file '../shots/step-0-segment.mp4'
+file '../shots/step-1-segment.mp4'
+file '../shots/step-2-segment.mp4'
+file '../shots/step-3-segment.mp4'
+file '../shots/step-4-segment.mp4'

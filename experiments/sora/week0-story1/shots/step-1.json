@@ -1,0 +1,20 @@
+{
+  "stepId": "step-1",
+  "title": "The Secret",
+  "prompt": "Cinematic coming-of-age educational short film. Three recurring Black teenage characters: AJ, Nia, and Malik. Keep all three characters consistent with the opening frame reference image in clothing, age, facial features, hairstyle, and overall vibe. Naturalistic acting, expressive faces, grounded body language, premium live-action look, no captions, no text, no logos, no watermarks. Story beat 2 of 5: The Secret. Narrative context: Nia spots the pattern first: the people who make the most money, have the most impact, and live the most interesting lives are the ones who get really good at solving problems. Malik nods because the pattern shows up everywhere once you know how to look. That's the secret. Show the characters physically acting out the idea in a clear, visually readable way for an educational story sequence. Maintain coherent geography and believable motion. Avoid surreal transformations or extra characters dominating the frame.",
+  "requestedSeconds": 12,
+  "audioSeconds": 18.36,
+  "sourceImage": "../../../courses/endless-opportunities/week0-intro/storyboards/generated/problem-game-story-step-1.png",
+  "resizedReference": "refs/step-1-ref.png",
+  "rawVideo": "shots/step-1-raw.mp4",
+  "timedVideo": "shots/step-1-timed.mp4",
+  "segmentVideo": "shots/step-1-segment.mp4",
+  "sourceAudio": "audio/step-1.mp3",
+  "referenceFileId": "file-WqVnoQYT5LhSxehGGRnJbC",
+  "videoId": "video_69c7bf86d4f48198b7bfeeaa8156fbe703bf6790882bef46",
+  "model": "sora-2",
+  "size": "1280x720",
+  "status": "completed",
+  "progress": 100,
+  "createdAt": 1774698374
+}

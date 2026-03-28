@@ -1,0 +1,20 @@
+{
+  "stepId": "step-4",
+  "title": "Hard Problems",
+  "prompt": "Cinematic coming-of-age educational short film. Three recurring Black teenage characters: AJ, Nia, and Malik. Keep all three characters consistent with the opening frame reference image in clothing, age, facial features, hairstyle, and overall vibe. Naturalistic acting, expressive faces, grounded body language, premium live-action look, no captions, no text, no logos, no watermarks. Story beat 5 of 5: Hard Problems. Narrative context: By the time AJ, Nia, and Malik get to the hard problems, the stakes are clear. A community needs better education? That's a hard problem. Solve it and you get massive reward, massive impact. The harder the problem you can solve, the bigger the reward. Simple as that. Show the characters physically acting out the idea in a clear, visually readable way for an educational story sequence. Maintain coherent geography and believable motion. Avoid surreal transformations or extra characters dominating the frame.",
+  "requestedSeconds": 12,
+  "audioSeconds": 21.16,
+  "sourceImage": "../../../courses/endless-opportunities/week0-intro/storyboards/generated/problem-game-story-step-4.png",
+  "resizedReference": "refs/step-4-ref.png",
+  "rawVideo": "shots/step-4-raw.mp4",
+  "timedVideo": "shots/step-4-timed.mp4",
+  "segmentVideo": "shots/step-4-segment.mp4",
+  "sourceAudio": "audio/step-4.mp3",
+  "referenceFileId": "file-BGXP93L7LWxJz8yzKb5AtL",
+  "videoId": "video_69c7c0b7b27081938ea387e8badef4e909689e43c1285a75",
+  "model": "sora-2",
+  "size": "1280x720",
+  "status": "completed",
+  "progress": 100,
+  "createdAt": 1774698680
+}

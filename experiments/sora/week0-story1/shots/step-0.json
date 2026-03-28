@@ -1,0 +1,20 @@
+{
+  "stepId": "step-0",
+  "title": "Problems Everywhere",
+  "prompt": "Cinematic coming-of-age educational short film. Three recurring Black teenage characters: AJ, Nia, and Malik. Keep all three characters consistent with the opening frame reference image in clothing, age, facial features, hairstyle, and overall vibe. Naturalistic acting, expressive faces, grounded body language, premium live-action look, no captions, no text, no logos, no watermarks. Story beat 1 of 5: Problems Everywhere. Narrative context: AJ is moving through the day with Nia and Malik, and the first thing they notice is the same thing every sharp kid eventually notices: the world is full of problems waiting to be solved. AJ treats that like a map. Nia treats it like evidence. Malik treats it like a system. Some problems are small, some are huge. Show the characters physically acting out the idea in a clear, visually readable way for an educational story sequence. Maintain coherent geography and believable motion. Avoid surreal transformations or extra characters dominating the frame.",
+  "requestedSeconds": 12,
+  "audioSeconds": 25.96,
+  "sourceImage": "../../../courses/endless-opportunities/week0-intro/storyboards/generated/problem-game-story-step-0.png",
+  "resizedReference": "refs/step-0-ref.png",
+  "rawVideo": "shots/step-0-raw.mp4",
+  "timedVideo": "shots/step-0-timed.mp4",
+  "segmentVideo": "shots/step-0-segment.mp4",
+  "sourceAudio": "audio/step-0.mp3",
+  "referenceFileId": "file-3BjbxuLSKMCVcfQUmCCC28",
+  "videoId": "video_69c7bf855acc81939f4f68368a8cca300388cea583c15848",
+  "model": "sora-2",
+  "size": "1280x720",
+  "status": "completed",
+  "progress": 100,
+  "createdAt": 1774698373
+}

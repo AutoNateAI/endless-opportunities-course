@@ -1,0 +1,20 @@
+{
+  "stepId": "step-3",
+  "title": "Medium Problems",
+  "prompt": "Cinematic coming-of-age educational short film. Three recurring Black teenage characters: AJ, Nia, and Malik. Keep all three characters consistent with the opening frame reference image in clothing, age, facial features, hairstyle, and overall vibe. Naturalistic acting, expressive faces, grounded body language, premium live-action look, no captions, no text, no logos, no watermarks. Story beat 4 of 5: Medium Problems. Narrative context: Malik points to the next level up: a business needs a website. That's a bigger problem. Build it, problem solved. Bigger reward, more value created. Now AJ, Nia, and Malik are moving up. Show the characters physically acting out the idea in a clear, visually readable way for an educational story sequence. Maintain coherent geography and believable motion. Avoid surreal transformations or extra characters dominating the frame.",
+  "requestedSeconds": 12,
+  "audioSeconds": 15.26,
+  "sourceImage": "../../../courses/endless-opportunities/week0-intro/storyboards/generated/problem-game-story-step-3.png",
+  "resizedReference": "refs/step-3-ref.png",
+  "rawVideo": "shots/step-3-raw.mp4",
+  "timedVideo": "shots/step-3-timed.mp4",
+  "segmentVideo": "shots/step-3-segment.mp4",
+  "sourceAudio": "audio/step-3.mp3",
+  "referenceFileId": "file-YGaFgeAxuFsgua6iz6CJu6",
+  "videoId": "video_69c7c0b6bc588190813d87e444e7caf707d12ce21fe02f66",
+  "model": "sora-2",
+  "size": "1280x720",
+  "status": "completed",
+  "progress": 100,
+  "createdAt": 1774698678
+}
