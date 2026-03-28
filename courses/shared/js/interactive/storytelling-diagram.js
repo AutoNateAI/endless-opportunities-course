@@ -50,6 +50,7 @@ class StorytellingDiagram {
     this.narrator = null;
     this.focusedNodeId = null;
     this.musicBed = null;
+    this.storyboardGesture = null;
     
     this.init();
   }
@@ -366,7 +367,123 @@ class StorytellingDiagram {
 
     canvas.before(strip);
     this.storyboardStrip = strip;
+    this.setupStoryboardSwipe(stage);
     this.updateStoryboardFrame(0);
+  }
+
+  setupStoryboardSwipe(stage) {
+    if (!stage) return;
+
+    const beginGesture = (clientX, clientY, pointerId = null) => {
+      this.storyboardGesture = {
+        active: true,
+        pointerId,
+        startX: clientX,
+        startY: clientY,
+        deltaX: 0,
+        deltaY: 0,
+        triggered: false
+      };
+      stage.classList.add('is-dragging');
+    };
+
+    const clearGesture = () => {
+      this.storyboardGesture = null;
+      stage.classList.remove('is-dragging');
+    };
+
+    const maybeAdvanceGesture = (clientX, clientY) => {
+      if (!this.storyboardGesture?.active || this.storyboardGesture.triggered) return;
+
+      const deltaX = clientX - this.storyboardGesture.startX;
+      const deltaY = clientY - this.storyboardGesture.startY;
+      this.storyboardGesture.deltaX = deltaX;
+      this.storyboardGesture.deltaY = deltaY;
+
+      const absX = Math.abs(deltaX);
+      const absY = Math.abs(deltaY);
+      if (absX < 52 || absX <= absY * 1.2) return;
+
+      const activeIndex = Math.max(this.currentStep, 0);
+      const targetIndex = deltaX < 0
+        ? Math.min(activeIndex + 1, this.storySteps.length - 1)
+        : Math.max(activeIndex - 1, 0);
+
+      this.storyboardGesture.triggered = true;
+      if (targetIndex !== activeIndex) {
+        this.jumpToStep(targetIndex);
+      }
+    };
+
+    if (window.PointerEvent) {
+      stage.addEventListener('pointerdown', (event) => {
+        if (event.pointerType === 'mouse' && event.button !== 0) return;
+        beginGesture(event.clientX, event.clientY, event.pointerId);
+        stage.setPointerCapture?.(event.pointerId);
+      });
+
+      stage.addEventListener('pointermove', (event) => {
+        if (!this.storyboardGesture?.active) return;
+        if (this.storyboardGesture.pointerId !== null && event.pointerId !== this.storyboardGesture.pointerId) return;
+        maybeAdvanceGesture(event.clientX, event.clientY);
+      });
+
+      const endPointerGesture = (event) => {
+        if (!this.storyboardGesture?.active) return;
+        if (this.storyboardGesture.pointerId !== null && event.pointerId !== this.storyboardGesture.pointerId) return;
+        clearGesture();
+      };
+
+      stage.addEventListener('pointerup', endPointerGesture);
+      stage.addEventListener('pointercancel', endPointerGesture);
+      stage.addEventListener('lostpointercapture', () => {
+        if (this.storyboardGesture?.active) {
+          clearGesture();
+        }
+      });
+    } else {
+      stage.addEventListener('mousedown', (event) => {
+        if (event.button !== 0) return;
+        beginGesture(event.clientX, event.clientY);
+      });
+
+      stage.addEventListener('mousemove', (event) => {
+        if (!this.storyboardGesture?.active) return;
+        maybeAdvanceGesture(event.clientX, event.clientY);
+      });
+
+      ['mouseup', 'mouseleave'].forEach((eventName) => {
+        stage.addEventListener(eventName, () => {
+          if (this.storyboardGesture?.active) {
+            clearGesture();
+          }
+        });
+      });
+
+      stage.addEventListener('touchstart', (event) => {
+        const touch = event.touches[0];
+        if (!touch) return;
+        beginGesture(touch.clientX, touch.clientY);
+      }, { passive: true });
+
+      stage.addEventListener('touchmove', (event) => {
+        const touch = event.touches[0];
+        if (!touch) return;
+        maybeAdvanceGesture(touch.clientX, touch.clientY);
+      }, { passive: true });
+
+      ['touchend', 'touchcancel'].forEach((eventName) => {
+        stage.addEventListener(eventName, () => {
+          if (this.storyboardGesture?.active) {
+            clearGesture();
+          }
+        }, { passive: true });
+      });
+    }
+
+    stage.querySelectorAll('img').forEach((image) => {
+      image.draggable = false;
+    });
   }
 
   updateStoryboardFrame(index) {

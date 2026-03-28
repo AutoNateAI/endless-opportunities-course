@@ -25,6 +25,7 @@ Turn a lesson from the old graph-heavy interactive format into the current EO fo
 - Sage narration
 - storyboard-first visual experience
 - one top play button plus slide dots
+- swipe/drag navigation on the storyboard image itself
 - no student-facing voice or mute controls
 - no spoken section titles
 - three activity sets that match the story precisely
@@ -58,6 +59,7 @@ Do not preserve old controls just because they existed before.
    - progress dots
    - one play button
    - activities
+   - swipe/drag on the storyboard stage for desktop and touch devices
 8. Remove:
    - voice dropdowns
    - mute/sound toggles
@@ -90,4 +92,5 @@ When multiple agents split weeks:
 - Check the lesson locally on desktop and mobile width.
 - Confirm narration starts from the top play button.
 - Confirm the slide deck advances with the narration instead of racing ahead.
+- Confirm learners can swipe on touch and drag on desktop to move between storyboard frames.
 - Confirm no hidden fallback voice UI remains.
