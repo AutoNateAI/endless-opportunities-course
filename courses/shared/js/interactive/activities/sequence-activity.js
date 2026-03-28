@@ -237,11 +237,25 @@ class SequenceActivity extends BaseActivity {
     const { correctPositions, total } = this.calculateScore();
     const score = total > 0 ? correctPositions / total : 0;
     const correct = score === 1.0;
+    const placements = this.currentOrder.map((id, index) => {
+      const currentItem = this.originalItems.find(item => item.id === id);
+      const expectedId = this.correctOrder[index];
+      const expectedItem = this.originalItems.find(item => item.id === expectedId);
+
+      return {
+        position: index + 1,
+        itemId: id,
+        itemText: currentItem?.text || id,
+        expectedId,
+        expectedText: expectedItem?.text || expectedId,
+        isCorrectPosition: id === expectedId
+      };
+    });
     
     // Determine message based on score
     let message;
     if (correct) {
-      message = 'Perfect order!';
+      message = 'Perfect order! Every step is in the right place.';
     } else if (score >= 0.5 && this.hints.partial) {
       message = this.hints.partial;
     } else if (score < 0.5 && this.hints.wrong) {
@@ -257,7 +271,8 @@ class SequenceActivity extends BaseActivity {
         userOrder: [...this.currentOrder],
         correctOrder: [...this.correctOrder],
         correctPositions,
-        totalPositions: total
+        totalPositions: total,
+        placements
       },
       message
     };
@@ -307,8 +322,34 @@ class SequenceActivity extends BaseActivity {
       }
     }
     
-    // Call parent feedback method
-    super.showFeedback(result);
+    const feedbackEl = this.container.querySelector('.activity-feedback');
+    if (!feedbackEl) return;
+
+    const summaryClass = result.correct ? 'correct' : (result.score >= 0.5 ? 'partial' : 'incorrect');
+    const summaryIcon = result.correct ? '🎉' : (result.score >= 0.5 ? '👍' : '💡');
+    const breakdownHtml = (result.response.placements || []).map((placement) => `
+      <div class="sequence-feedback-row ${placement.isCorrectPosition ? 'correct' : 'incorrect'}">
+        <span class="sequence-feedback-position">${placement.position}.</span>
+        <span class="sequence-feedback-mark">${placement.isCorrectPosition ? '✓' : '✗'}</span>
+        <span class="sequence-feedback-copy">${
+          placement.isCorrectPosition
+            ? `"${placement.itemText}" is in the right spot.`
+            : `"${placement.itemText}" does not belong in spot ${placement.position}.`
+        }</span>
+      </div>
+    `).join('');
+
+    const explanation = this.activityData.explanation || '';
+    feedbackEl.innerHTML = `
+      <div class="feedback-content ${summaryClass}">
+        <span class="feedback-icon">${summaryIcon}</span>
+        <span class="feedback-message">${result.message}</span>
+        <span class="feedback-points">${result.response.correctPositions}/${result.response.totalPositions} positions correct</span>
+      </div>
+      <div class="sequence-feedback-breakdown">${breakdownHtml}</div>
+      ${explanation ? `<div class="feedback-explanation">${explanation}</div>` : ''}
+    `;
+    feedbackEl.classList.add('visible', summaryClass);
   }
   
   /**

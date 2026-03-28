@@ -350,6 +350,38 @@
   line-height: 1.5;
 }
 
+.sequence-feedback-breakdown {
+  margin-top: 0.75rem;
+  display: grid;
+  gap: 0.45rem;
+}
+
+.sequence-feedback-row {
+  display: grid;
+  grid-template-columns: auto auto 1fr;
+  gap: 0.5rem;
+  align-items: start;
+  padding: 0.6rem 0.75rem;
+  border-radius: 12px;
+  font-size: 0.94rem;
+  line-height: 1.4;
+}
+
+.sequence-feedback-row.correct {
+  background: rgba(102, 187, 106, 0.12);
+  color: #d9f5de;
+}
+
+.sequence-feedback-row.incorrect {
+  background: rgba(239, 83, 80, 0.12);
+  color: #ffd9d8;
+}
+
+.sequence-feedback-position,
+.sequence-feedback-mark {
+  font-weight: 700;
+}
+
 /* ============================================
    ACTIVITY SUBMIT BUTTON
    ============================================ */

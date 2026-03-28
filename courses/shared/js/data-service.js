@@ -35,6 +35,14 @@ const DataService = {
     const db = window.FirebaseApp.getDb();
     const progressRef = db.collection('users').doc(user.uid)
                          .collection('courseProgress').doc(courseId);
+
+    let wasCompleted = false;
+    try {
+      const existing = await progressRef.get();
+      wasCompleted = !!existing.data()?.lessons?.[lessonId]?.completed;
+    } catch (error) {
+      console.warn('Unable to inspect existing lesson progress before update:', error);
+    }
     
     const updateData = {
       [`lessons.${lessonId}`]: {
@@ -46,6 +54,21 @@ const DataService = {
     
     try {
       await progressRef.set(updateData, { merge: true });
+
+      if (data.completed && !wasCompleted) {
+        await this.recalculateCourseProgress(courseId);
+
+        const meta = this.getLessonMeta(courseId, lessonId);
+        await this.createNotification({
+          type: 'lesson_complete',
+          title: 'Lesson complete',
+          body: `${meta?.name || lessonId} is now complete.`,
+          source: 'progress',
+          relatedId: lessonId,
+          link: meta?.link || `../${courseId}/${lessonId}/`
+        });
+      }
+
       return { success: true };
     } catch (error) {
       console.error('Error updating lesson progress:', error);

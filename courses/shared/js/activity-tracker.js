@@ -10,12 +10,12 @@ const ActivityTracker = {
   lessonId: null,
   activities: [],              // Legacy discovered activities
   registeredActivities: {},    // BaseActivity instances by ID
-  completedActivities: {},     // Track completed activity IDs
+  completedActivities: {},     // Track attempted activity IDs
   activityTimers: {},
   correctAnswers: {},          // Cached from Firestore
   attemptCounts: {},
   isInitialized: false,
-  lessonProgressThreshold: 0.9, // 90% to mark lesson complete
+  lessonProgressThreshold: 1.0, // 100% of activities attempted to mark lesson complete
 
   // Attempt tracking (populated by loadAttemptCounts)
   allAttempts: [],             // All attempts from Firestore
@@ -159,6 +159,8 @@ const ActivityTracker = {
       await window.DataService.updateLessonProgress(this.courseId, this.lessonId, {
         activitiesCompleted: progress.completed,
         activitiesTotal: progress.total,
+        completed: progress.isComplete,
+        progressPercent: Math.round(progress.percent * 100),
         percentComplete: progress.percent,
         completedAt: progress.isComplete ? new Date().toISOString() : null,
         lastActivityAt: new Date().toISOString()
@@ -2015,4 +2017,3 @@ const ActivityTracker = {
 
 // Make available globally
 window.ActivityTracker = ActivityTracker;
-

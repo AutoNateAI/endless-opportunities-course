@@ -124,6 +124,7 @@ class ActivityCarousel {
       if (bestAttempt) {
         // Update activity completion state
         activity.attemptNumber = window.ActivityTracker.getAttemptCount(activity.id);
+        activity.hasAttempted = true;
 
         if (bestAttempt.correct || bestAttempt.score >= 1.0) {
           activity.isComplete = true;
@@ -406,7 +407,7 @@ class ActivityCarousel {
    */
   updateProgress() {
     // Count completed activities
-    this.completedCount = this.activityInstances.filter(a => a?.isComplete).length;
+    this.completedCount = this.activityInstances.filter(a => a?.hasAttempted || a?.isComplete).length;
     
     // Update progress text
     const completedEl = this.container.querySelector('.progress-completed');

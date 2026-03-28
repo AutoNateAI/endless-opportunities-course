@@ -417,9 +417,10 @@
       container.innerHTML = lessons.map((lesson) => {
         const lessonData = courseProgress?.lessons?.[lesson.id] || {};
         const isComplete = lessonData.completed || lessonData.progressPercent >= 100;
+        const hasStarted = (lessonData.activitiesCompleted || 0) > 0 || (lessonData.progressPercent || 0) > 0;
         const isActive = nextLesson?.lessonId === lesson.id && !isComplete;
-        const statusClass = isComplete ? 'complete' : (isActive ? 'active' : 'locked');
-        const statusText = isComplete ? 'Complete' : (isActive ? 'Next up' : 'In progress');
+        const statusClass = isComplete ? 'complete' : ((hasStarted || isActive) ? 'active' : 'locked');
+        const statusText = isComplete ? 'Complete' : (hasStarted ? 'In progress' : (isActive ? 'Next up' : 'Not started'));
 
         return `
           <div class="lesson-row">

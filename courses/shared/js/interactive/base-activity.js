@@ -40,6 +40,7 @@ class BaseActivity {
     this.endTime = null;
     this.result = null;
     this.isComplete = false;
+    this.hasAttempted = false;
     this.attemptNumber = 0;
     
     // Context (from options or extracted from page)
@@ -159,6 +160,7 @@ class BaseActivity {
     this.attemptNumber++;
     
     // Add timing data
+    this.result.activityType = this.result.activityType || this.type;
     this.result.timeSpentMs = this.endTime - (this.startTime || this.endTime);
     this.result.attemptNumber = this.attemptNumber;
     
@@ -174,6 +176,7 @@ class BaseActivity {
     }
     
     // Mark complete and show feedback
+    this.hasAttempted = true;
     this.isComplete = this.result.correct || this.result.score >= 1.0;
     this.showFeedback(this.result);
     
@@ -197,6 +200,7 @@ class BaseActivity {
     this.endTime = null;
     this.result = null;
     this.isComplete = false;
+    this.hasAttempted = false;
 
     this.container.classList.remove(
       'activity-started',
@@ -363,6 +367,7 @@ class BaseActivity {
     const attemptCount = window.ActivityTracker.getAttemptCount(this.id);
     if (attemptCount > 0) {
       this.attemptNumber = attemptCount;
+      this.hasAttempted = true;
 
       // Get best and most recent attempts
       const bestAttempt = window.ActivityTracker.getBestAttempt?.(this.id);
