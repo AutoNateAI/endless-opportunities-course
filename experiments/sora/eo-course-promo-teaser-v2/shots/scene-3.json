@@ -1,0 +1,21 @@
+{
+  "id": "scene-3",
+  "title": "Go Deeper",
+  "seconds": 8,
+  "voiceover": "They went deeper, thought sharper, and started building what actually matters.",
+  "prompt": "Third promo shot for Endless Opportunities featuring the exact same AJ, Nia, and Malik from the reference image, with strong continuity. Stylized animated feature-film look, premium graphic-novel animation, emotionally clear body language, no text, no subtitles, no logos, no overlays, not live action. Vertical 9:16 composition with dramatic depth and decisive central framing. Show the trio in the middle of a deep-thinking breakthrough: layered notes, branching diagrams, physical movement between ideas, clear collaboration, and a visible sense that they are cutting through surface-level noise. AJ should feel like the leader spotting the opening. Nia should feel like the one slicing through weak reasoning with confidence. Malik should feel like the builder seeing the practical toolchain and implementation path. The environment should imply real-world stakes: a struggling business, a community challenge, or a project that matters, without turning into generic corporate imagery. Use richer camera movement than a still tableau: arc around the trio, show one or two decisive gestures, make the moment feel like insight becoming action. The emotional target is intensity, intelligence, and the rush of finally finding the real problem underneath the obvious one. Keep the imagery fully animated and stylized. Avoid realistic human skin, live-action lighting behavior, or documentary texture.",
+  "model": "sora-2",
+  "size": "720x1280",
+  "referenceFileId": "file-9RebUY4UCFwaHcmU9UA6vW",
+  "videoId": "video_69c7cdb07bdc8191a734c0d1b90f6b5c089a010b80ffc8e0",
+  "sourceImage": "../../../courses/endless-opportunities/week0-intro/storyboards/generated/six-levels-story-step-5.png",
+  "resizedReference": "refs/scene-3-ref.png",
+  "voiceRaw": "voice/scene-3-raw.mp3",
+  "voiceFinal": "voice/scene-3.mp3",
+  "rawVideo": "shots/scene-3-raw.mp4",
+  "normalizedVideo": "shots/scene-3.mp4",
+  "voiceFit": {
+    "actualDuration": 8.16,
+    "targetSeconds": 8
+  }
+}

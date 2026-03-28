@@ -7,20 +7,13 @@ const execFile = promisify(execFileCallback);
 
 const rootDir = path.resolve(path.dirname(new URL(import.meta.url).pathname), "..");
 const lessonDir = path.join(rootDir, "courses", "endless-opportunities", "week0-intro");
-const outputDir = path.join(rootDir, "experiments", "sora", "eo-course-promo-teaser-v1");
+const experimentId = "eo-course-promo-teaser-v2";
+const outputDir = path.join(rootDir, "experiments", "sora", experimentId);
 const refsDir = path.join(outputDir, "refs");
 const voiceDir = path.join(outputDir, "voice");
 const shotsDir = path.join(outputDir, "shots");
 const audioDir = path.join(outputDir, "audio");
 const finalDir = path.join(outputDir, "final");
-const sourceMusicPath = path.resolve(
-  rootDir,
-  "..",
-  "remotion-ai-engine",
-  "public",
-  "music",
-  "autonateai-portal-bed.mp3"
-);
 const ffmpegBin = process.env.FFMPEG_BIN || "ffmpeg";
 const ffprobeBin = process.env.FFPROBE_BIN || "ffprobe";
 
@@ -31,16 +24,17 @@ const sceneDefs = [
     seconds: 4,
     src: "storyboards/generated/problem-game-story-step-0.png",
     voiceover:
-      "Three students see what most people miss. The world is full of problems.",
+      "Three students saw the game hiding in plain sight.",
     prompt: [
-      "Attention-grabbing opening shot for an Endless Opportunities promo teaser.",
+      "Attention-grabbing opening shot for a vertical Endless Opportunities promo teaser.",
       "Use the reference image only as the visual anchor for AJ, Nia, and Malik and preserve their identity, age, wardrobe, facial traits, hair, and vibe.",
       "AJ is a smooth cool Black teenage boy and natural leader. Nia is a brilliant stylish Black teenage girl with precise judgment. Malik is a clever observant Black teenage boy with technical curiosity.",
-      "Cinematic live-action family-film realism, dramatic lensing, premium contrast, no text, no subtitles, no logos, no watermarks.",
-      "The trio stands in a charged urban environment where everyday problems feel physically present around them: flickering storefronts, overloaded community bulletin boards, stressed faces in the background, movement everywhere.",
-      "Start with a fast push-in and subtle handheld urgency. AJ scans the scene like a strategist, Nia clocks the pattern with sharp focus, Malik notices the systems underneath the chaos.",
+      "Stylized animated film look, premium graphic-novel animation, polished 3D family-film aesthetic, richly illustrated textures, expressive animated faces, no photorealistic skin, not live action, not documentary realism.",
+      "Vertical 9:16 composition designed for mobile, clear center framing, strong silhouette readability, no text, no subtitles, no logos, no watermarks.",
+      "The trio stands in a charged city-school environment where everyday problems feel physically present around them: flickering storefronts, overloaded boards, stressed motion in the background, energy everywhere.",
+      "Start with a dramatic push-in and animated cinematic urgency. AJ scans the scene like a strategist, Nia clocks the pattern with sharp focus, Malik notices the systems underneath the chaos.",
       "The feeling should be: this world is intense, full of pressure, and these three are about to read it differently than everyone else.",
-      "Strong emotional eye lines, readable body language, natural movement, dramatic anticipation, premium trailer energy.",
+      "Keep the image stylized and animated the whole time. Avoid realistic human-film skin rendering or uncanny live-action drift.",
     ].join(" "),
   },
   {
@@ -49,15 +43,17 @@ const sceneDefs = [
     seconds: 8,
     src: "storyboards/generated/ai-revolution-story-step-2.png",
     voiceover:
-      "AJ, Nia, and Malik catch the shift fast. With AI, curiosity becomes leverage, and problems turn into real opportunities.",
+      "AJ, Nia, and Malik turned AI into leverage, and pressure into possibility.",
     prompt: [
-      "Second promo shot for Endless Opportunities, directly continuing the same three recurring characters from the reference image.",
+      "Second promo shot for Endless Opportunities, directly continuing the same three recurring animated characters from the reference image.",
       "Preserve strict character continuity for AJ, Nia, and Malik: same clothing family, same facial structure, same hair, same age, same emotional chemistry.",
-      "Cinematic live-action realism with polished trailer lighting, dynamic but believable camera movement, no text, no user interface labels, no watermarks.",
+      "Stylized animated film look, premium illustrated animation, cinematic family-film energy, expressive surfaces, not photorealistic, not live action, no text, no user interface labels, no watermarks.",
+      "Vertical 9:16 composition designed for mobile viewing with layered depth and strong central action.",
       "Set the trio inside a vivid problem-solving environment where AI feels like an invisible force multiplier rather than a gimmick: glowing screens, rapid idea testing, sketches, notes, and prototypes coming to life around them.",
       "AJ should look energized and ready to move. Nia should look intellectually locked in, recognizing the leverage immediately. Malik should look fascinated by the build process and toolchain opening up in front of him.",
       "Camera movement should feel confident and escalating, with a sense that the old limits are collapsing and a faster path is opening.",
       "The emotion is revelation, momentum, and the feeling that the future suddenly became reachable.",
+      "Keep the visuals firmly animated and graphic-novel styled. Avoid realistic human-film rendering.",
     ].join(" "),
   },
   {
@@ -66,15 +62,17 @@ const sceneDefs = [
     seconds: 8,
     src: "storyboards/generated/six-levels-story-step-5.png",
     voiceover:
-      "They ask better questions, go deeper than everyone else, and start building solutions that actually matter.",
+      "They went deeper, thought sharper, and started building what actually matters.",
     prompt: [
       "Third promo shot for Endless Opportunities featuring the exact same AJ, Nia, and Malik from the reference image, with strong continuity.",
-      "Cinematic live-action realism, prestige coming-of-age drama tone, no text, no subtitles, no logos, no graphic overlays.",
+      "Stylized animated feature-film look, premium graphic-novel animation, emotionally clear body language, no text, no subtitles, no logos, no overlays, not live action.",
+      "Vertical 9:16 composition with dramatic depth and decisive central framing.",
       "Show the trio in the middle of a deep-thinking breakthrough: layered notes, branching diagrams, physical movement between ideas, clear collaboration, and a visible sense that they are cutting through surface-level noise.",
       "AJ should feel like the leader spotting the opening. Nia should feel like the one slicing through weak reasoning with confidence. Malik should feel like the builder seeing the practical toolchain and implementation path.",
       "The environment should imply real-world stakes: a struggling business, a community challenge, or a project that matters, without turning into generic corporate imagery.",
       "Use richer camera movement than a still tableau: arc around the trio, show one or two decisive gestures, make the moment feel like insight becoming action.",
       "The emotional target is intensity, intelligence, and the rush of finally finding the real problem underneath the obvious one.",
+      "Keep the imagery fully animated and stylized. Avoid realistic human skin, live-action lighting behavior, or documentary texture.",
     ].join(" "),
   },
   {
@@ -83,14 +81,16 @@ const sceneDefs = [
     seconds: 4,
     src: "storyboards/generated/six-levels-story-step-6.png",
     voiceover:
-      "Do not miss their journey. Endless Opportunities. Start now.",
+      "Endless Opportunities. Join the journey now.",
     prompt: [
       "Final hero shot for an Endless Opportunities promo teaser, using the reference image to preserve exact continuity for AJ, Nia, and Malik.",
-      "Cinematic live-action realism with bold hero framing, no text, no subtitle cards, no logos, no watermarks.",
+      "Stylized animated hero shot with premium family-film finish, bold illustrated framing, no text, no subtitle cards, no logos, no watermarks, not live action.",
+      "Vertical 9:16 mobile-first composition with bold central framing and clean top-to-bottom readability.",
       "The trio should feel transformed by the journey: composed, confident, and moving forward together with purpose.",
       "Use a clean, dramatic final composition with strong forward motion, noble posture, premium lighting, and a sense that a bigger future just opened in front of them.",
       "AJ should feel decisive, Nia should feel sharp and unstoppable, Malik should feel energized and ready to build.",
       "Make the final moment emotionally persuasive and trailer-ready, as if the audience is being invited into something powerful that they should not wait to join.",
+      "Keep the result visibly animated and stylized to match the course art direction. Avoid realistic human-film drift.",
     ].join(" "),
   },
 ];
@@ -98,7 +98,7 @@ const sceneDefs = [
 function parseArgs(argv) {
   const args = {
     model: "sora-2",
-    size: "1280x720",
+    size: "720x1280",
     concurrency: 4,
     voice: "sage",
   };
@@ -309,9 +309,10 @@ function buildAtempoChain(ratio) {
 
 async function fitAudioToDuration(inputPath, outputPath, targetSeconds) {
   const actualDuration = await probeDuration(inputPath);
-  const ratio = actualDuration / targetSeconds;
-  const atempoChain = buildAtempoChain(ratio);
-  const filter = `${atempoChain},apad=pad_dur=${targetSeconds},atrim=0:${targetSeconds}`;
+  const filter =
+    actualDuration <= targetSeconds
+      ? `apad=pad_dur=${targetSeconds},atrim=0:${targetSeconds}`
+      : `${buildAtempoChain(actualDuration / targetSeconds)},apad=pad_dur=${targetSeconds},atrim=0:${targetSeconds}`;
 
   await execFile(ffmpegBin, [
     "-y",
@@ -328,6 +329,44 @@ async function fitAudioToDuration(inputPath, outputPath, targetSeconds) {
     actualDuration,
     targetSeconds,
   };
+}
+
+async function generateDetroitWestBeat(outputPath, totalSeconds) {
+  const beatSeconds = Math.max(24, Math.ceil(totalSeconds));
+  await execFile(ffmpegBin, [
+    "-y",
+    "-f",
+    "lavfi",
+    "-i",
+    `aevalsrc=if(lt(mod(t\\,0.5)\\,0.09)\\,0.95*sin(2*PI*48*t)*exp(-32*mod(t\\,0.5))\\,0)+if(lt(mod(t\\,1.0)\\,0.14)\\,0.38*sin(2*PI*96*t)*exp(-22*mod(t\\,1.0))\\,0):s=48000:d=${beatSeconds}`,
+    "-f",
+    "lavfi",
+    "-i",
+    `aevalsrc=(0.28*sin(2*PI*(if(lt(mod(t\\,4)\\,1)\\,46\\,if(lt(mod(t\\,4)\\,2)\\,58\\,if(lt(mod(t\\,4)\\,3)\\,52\\,65))))*t))+(0.12*sin(2*PI*(if(lt(mod(t\\,4)\\,1)\\,23\\,if(lt(mod(t\\,4)\\,2)\\,29\\,if(lt(mod(t\\,4)\\,3)\\,26\\,32))))*t)):s=48000:d=${beatSeconds}`,
+    "-f",
+    "lavfi",
+    "-i",
+    `anoisesrc=color=white:amplitude=0.22:d=${beatSeconds}:r=48000`,
+    "-f",
+    "lavfi",
+    "-i",
+    `aevalsrc=if(lt(mod(t+0.125\\,0.25)\\,0.018)\\,0.22*sin(2*PI*8200*t)*exp(-120*mod(t+0.125\\,0.25))\\,0)+if(between(mod(t\\,1.0)\\,0.5\\,0.53)\\,0.17*sin(2*PI*2200*t)*exp(-55*(mod(t\\,1.0)-0.5))\\,0):s=48000:d=${beatSeconds}`,
+    "-filter_complex",
+    [
+      "[0:a]lowpass=f=150,acompressor=threshold=0.12:ratio=3.5:attack=5:release=80[kick]",
+      "[1:a]lowpass=f=240,highpass=f=28,chorus=0.5:0.7:40:0.3:0.25:1.8,volume=1.1[bass]",
+      "[2:a]highpass=f=6500,lowpass=f=11000,volume='if(lt(mod(t,0.25),0.02),0.22,0.035)',aecho=0.8:0.88:18:0.18[hats]",
+      "[3:a]highpass=f=1400,lowpass=f=4200,volume=0.8[perc]",
+      "[kick][bass][hats][perc]amix=inputs=4:normalize=0,alimiter=limit=0.9,loudnorm=I=-17:LRA=7:TP=-1.2[out]",
+    ].join(";"),
+    "-map",
+    "[out]",
+    "-t",
+    String(beatSeconds),
+    "-ar",
+    "48000",
+    outputPath,
+  ]);
 }
 
 async function normalizeSceneVideo(inputPath, outputPath, durationSeconds, size) {
@@ -394,7 +433,7 @@ async function mixNarrationAndMusic({ narrationPath, musicPath, outputPath, tota
     "-i",
     musicPath,
     "-filter_complex",
-    `[1:a]atrim=start=6:end=${6 + totalSeconds},volume=0.16,afade=t=in:st=0:d=1.2,afade=t=out:st=${fadeOutStart}:d=2,aresample=24000[music];[music][0:a]sidechaincompress=threshold=0.02:ratio=18:attack=8:release=320[ducked];[ducked][0:a]amix=inputs=2:normalize=0,alimiter=limit=0.9[aout]`,
+    `[1:a]atrim=start=0:end=${totalSeconds},volume=0.20,afade=t=in:st=0:d=0.9,afade=t=out:st=${fadeOutStart}:d=2,aresample=24000[music];[music][0:a]sidechaincompress=threshold=0.018:ratio=20:attack=8:release=320[ducked];[ducked][0:a]amix=inputs=2:normalize=0,alimiter=limit=0.9[aout]`,
     "-map",
     "[aout]",
     "-t",
@@ -448,7 +487,7 @@ async function main() {
   await ensureDir(finalDir);
 
   const instructions =
-    "Deliver this like a dramatic cinematic trailer narrator with warmth, urgency, and rising anticipation. Sound confident, emotionally intelligent, and persuasive. Make the listener feel they do not want to miss what is unfolding.";
+    "Deliver this like a dramatic cinematic trailer narrator with warmth, control, and rising anticipation. Speak in a measured, deliberate pace with clean pauses between phrases. Sound persuasive and emotionally intelligent, but never rushed.";
 
   const scenePlan = [];
 
@@ -541,12 +580,12 @@ async function main() {
   const videoConcatPath = path.join(finalDir, "video-scenes.txt");
   const narrationPath = path.join(audioDir, "narration.mp3");
   const mixedAudioPath = path.join(audioDir, "final-audio.wav");
-  const copiedMusicPath = path.join(audioDir, "autonateai-portal-bed.mp3");
-  const videoOnlyPath = path.join(finalDir, "eo-course-promo-teaser-v1-video.mp4");
-  const finalVideoPath = path.join(finalDir, "eo-course-promo-teaser-v1.mp4");
+  const generatedMusicPath = path.join(audioDir, "detroit-west-promo-bed.mp3");
+  const videoOnlyPath = path.join(finalDir, `${experimentId}-video.mp4`);
+  const finalVideoPath = path.join(finalDir, `${experimentId}.mp4`);
   const totalSeconds = sceneDefs.reduce((sum, scene) => sum + scene.seconds, 0);
 
-  await fs.copyFile(sourceMusicPath, copiedMusicPath);
+  await generateDetroitWestBeat(generatedMusicPath, totalSeconds);
 
   await writeConcatFile(
     scenePlan.map((scene) => path.relative(audioDir, scene.voiceFitPath)),
@@ -556,7 +595,7 @@ async function main() {
 
   await mixNarrationAndMusic({
     narrationPath,
-    musicPath: copiedMusicPath,
+    musicPath: generatedMusicPath,
     outputPath: mixedAudioPath,
     totalSeconds,
   });
@@ -569,13 +608,13 @@ async function main() {
   await muxVideoAndAudio(videoOnlyPath, mixedAudioPath, finalVideoPath);
 
   await writeJson(path.join(outputDir, "manifest.json"), {
-    experiment: "eo-course-promo-teaser-v1",
+    experiment: experimentId,
     generatedAt: new Date().toISOString(),
     totalSeconds,
     voice: args.voice,
     model: args.model,
     size: args.size,
-    sourceMusic: path.relative(outputDir, copiedMusicPath),
+    sourceMusic: path.relative(outputDir, generatedMusicPath),
     finalAudio: path.relative(outputDir, mixedAudioPath),
     finalVideo: path.relative(outputDir, finalVideoPath),
     scenes: renderedScenes,

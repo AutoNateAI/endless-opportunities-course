@@ -1,0 +1,21 @@
+{
+  "id": "scene-4",
+  "title": "Hero Wrap",
+  "seconds": 4,
+  "voiceover": "Endless Opportunities. Join the journey now.",
+  "prompt": "Final hero shot for an Endless Opportunities promo teaser, using the reference image to preserve exact continuity for AJ, Nia, and Malik. Stylized animated hero shot with premium family-film finish, bold illustrated framing, no text, no subtitle cards, no logos, no watermarks, not live action. Vertical 9:16 mobile-first composition with bold central framing and clean top-to-bottom readability. The trio should feel transformed by the journey: composed, confident, and moving forward together with purpose. Use a clean, dramatic final composition with strong forward motion, noble posture, premium lighting, and a sense that a bigger future just opened in front of them. AJ should feel decisive, Nia should feel sharp and unstoppable, Malik should feel energized and ready to build. Make the final moment emotionally persuasive and trailer-ready, as if the audience is being invited into something powerful that they should not wait to join. Keep the result visibly animated and stylized to match the course art direction. Avoid realistic human-film drift.",
+  "model": "sora-2",
+  "size": "720x1280",
+  "referenceFileId": "file-8NZRF1tgHv1cYawogoEZom",
+  "videoId": "video_69c7cdafb6ec8198965d7174738d431109c1bcf419863027",
+  "sourceImage": "../../../courses/endless-opportunities/week0-intro/storyboards/generated/six-levels-story-step-6.png",
+  "resizedReference": "refs/scene-4-ref.png",
+  "voiceRaw": "voice/scene-4-raw.mp3",
+  "voiceFinal": "voice/scene-4.mp3",
+  "rawVideo": "shots/scene-4-raw.mp4",
+  "normalizedVideo": "shots/scene-4.mp4",
+  "voiceFit": {
+    "actualDuration": 6.264,
+    "targetSeconds": 4
+  }
+}

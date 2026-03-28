@@ -1,0 +1,21 @@
+{
+  "id": "scene-1",
+  "title": "Attention Grabber",
+  "seconds": 4,
+  "voiceover": "Three students saw the game hiding in plain sight.",
+  "prompt": "Attention-grabbing opening shot for a vertical Endless Opportunities promo teaser. Use the reference image only as the visual anchor for AJ, Nia, and Malik and preserve their identity, age, wardrobe, facial traits, hair, and vibe. AJ is a smooth cool Black teenage boy and natural leader. Nia is a brilliant stylish Black teenage girl with precise judgment. Malik is a clever observant Black teenage boy with technical curiosity. Stylized animated film look, premium graphic-novel animation, polished 3D family-film aesthetic, richly illustrated textures, expressive animated faces, no photorealistic skin, not live action, not documentary realism. Vertical 9:16 composition designed for mobile, clear center framing, strong silhouette readability, no text, no subtitles, no logos, no watermarks. The trio stands in a charged city-school environment where everyday problems feel physically present around them: flickering storefronts, overloaded boards, stressed motion in the background, energy everywhere. Start with a dramatic push-in and animated cinematic urgency. AJ scans the scene like a strategist, Nia clocks the pattern with sharp focus, Malik notices the systems underneath the chaos. The feeling should be: this world is intense, full of pressure, and these three are about to read it differently than everyone else. Keep the image stylized and animated the whole time. Avoid realistic human-film skin rendering or uncanny live-action drift.",
+  "model": "sora-2",
+  "size": "720x1280",
+  "referenceFileId": "file-JSnFEMx67x5gGuHcdumix1",
+  "videoId": "video_69c7cdaf69f081919459c643d14ae4a60b75d124ac7e6d38",
+  "sourceImage": "../../../courses/endless-opportunities/week0-intro/storyboards/generated/problem-game-story-step-0.png",
+  "resizedReference": "refs/scene-1-ref.png",
+  "voiceRaw": "voice/scene-1-raw.mp3",
+  "voiceFinal": "voice/scene-1.mp3",
+  "rawVideo": "shots/scene-1-raw.mp4",
+  "normalizedVideo": "shots/scene-1.mp4",
+  "voiceFit": {
+    "actualDuration": 5.112,
+    "targetSeconds": 4
+  }
+}

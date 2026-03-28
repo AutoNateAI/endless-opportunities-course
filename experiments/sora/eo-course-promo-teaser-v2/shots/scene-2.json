@@ -1,0 +1,21 @@
+{
+  "id": "scene-2",
+  "title": "AI Changes The Path",
+  "seconds": 8,
+  "voiceover": "AJ, Nia, and Malik turned AI into leverage, and pressure into possibility.",
+  "prompt": "Second promo shot for Endless Opportunities, directly continuing the same three recurring animated characters from the reference image. Preserve strict character continuity for AJ, Nia, and Malik: same clothing family, same facial structure, same hair, same age, same emotional chemistry. Stylized animated film look, premium illustrated animation, cinematic family-film energy, expressive surfaces, not photorealistic, not live action, no text, no user interface labels, no watermarks. Vertical 9:16 composition designed for mobile viewing with layered depth and strong central action. Set the trio inside a vivid problem-solving environment where AI feels like an invisible force multiplier rather than a gimmick: glowing screens, rapid idea testing, sketches, notes, and prototypes coming to life around them. AJ should look energized and ready to move. Nia should look intellectually locked in, recognizing the leverage immediately. Malik should look fascinated by the build process and toolchain opening up in front of him. Camera movement should feel confident and escalating, with a sense that the old limits are collapsing and a faster path is opening. The emotion is revelation, momentum, and the feeling that the future suddenly became reachable. Keep the visuals firmly animated and graphic-novel styled. Avoid realistic human-film rendering.",
+  "model": "sora-2",
+  "size": "720x1280",
+  "referenceFileId": "file-9DQiEtRv16n11UfotirnP7",
+  "videoId": "video_69c7cdafbf348191b49063f6a00fb0a60e40fce5e415651c",
+  "sourceImage": "../../../courses/endless-opportunities/week0-intro/storyboards/generated/ai-revolution-story-step-2.png",
+  "resizedReference": "refs/scene-2-ref.png",
+  "voiceRaw": "voice/scene-2-raw.mp3",
+  "voiceFinal": "voice/scene-2.mp3",
+  "rawVideo": "shots/scene-2-raw.mp4",
+  "normalizedVideo": "shots/scene-2.mp4",
+  "voiceFit": {
+    "actualDuration": 6.72,
+    "targetSeconds": 8
+  }
+}
