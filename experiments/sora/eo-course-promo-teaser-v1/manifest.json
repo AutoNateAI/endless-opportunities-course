@@ -1,0 +1,97 @@
+{
+  "experiment": "eo-course-promo-teaser-v1",
+  "generatedAt": "2026-03-28T12:32:48.896Z",
+  "totalSeconds": 24,
+  "voice": "sage",
+  "model": "sora-2",
+  "size": "1280x720",
+  "sourceMusic": "audio/autonateai-portal-bed.mp3",
+  "finalAudio": "audio/final-audio.wav",
+  "finalVideo": "final/eo-course-promo-teaser-v1.mp4",
+  "scenes": [
+    {
+      "id": "scene-1",
+      "title": "Attention Grabber",
+      "seconds": 4,
+      "voiceover": "Three students see what most people miss. The world is full of problems.",
+      "prompt": "Attention-grabbing opening shot for an Endless Opportunities promo teaser. Use the reference image only as the visual anchor for AJ, Nia, and Malik and preserve their identity, age, wardrobe, facial traits, hair, and vibe. AJ is a smooth cool Black teenage boy and natural leader. Nia is a brilliant stylish Black teenage girl with precise judgment. Malik is a clever observant Black teenage boy with technical curiosity. Cinematic live-action family-film realism, dramatic lensing, premium contrast, no text, no subtitles, no logos, no watermarks. The trio stands in a charged urban environment where everyday problems feel physically present around them: flickering storefronts, overloaded community bulletin boards, stressed faces in the background, movement everywhere. Start with a fast push-in and subtle handheld urgency. AJ scans the scene like a strategist, Nia clocks the pattern with sharp focus, Malik notices the systems underneath the chaos. The feeling should be: this world is intense, full of pressure, and these three are about to read it differently than everyone else. Strong emotional eye lines, readable body language, natural movement, dramatic anticipation, premium trailer energy.",
+      "model": "sora-2",
+      "size": "1280x720",
+      "referenceFileId": "file-HV5mByZS88KRjkiD9aeb2y",
+      "videoId": "video_69c7c9655e3081988d8f3498fe4ec55003d2ba12f9f15b0b",
+      "sourceImage": "../../../courses/endless-opportunities/week0-intro/storyboards/generated/problem-game-story-step-0.png",
+      "resizedReference": "refs/scene-1-ref.png",
+      "voiceRaw": "voice/scene-1-raw.mp3",
+      "voiceFinal": "voice/scene-1.mp3",
+      "rawVideo": "shots/scene-1-raw.mp4",
+      "normalizedVideo": "shots/scene-1.mp4",
+      "voiceFit": {
+        "actualDuration": 6.048,
+        "targetSeconds": 4
+      }
+    },
+    {
+      "id": "scene-2",
+      "title": "AI Changes The Path",
+      "seconds": 8,
+      "voiceover": "AJ, Nia, and Malik catch the shift fast. With AI, curiosity becomes leverage, and problems turn into real opportunities.",
+      "prompt": "Second promo shot for Endless Opportunities, directly continuing the same three recurring characters from the reference image. Preserve strict character continuity for AJ, Nia, and Malik: same clothing family, same facial structure, same hair, same age, same emotional chemistry. Cinematic live-action realism with polished trailer lighting, dynamic but believable camera movement, no text, no user interface labels, no watermarks. Set the trio inside a vivid problem-solving environment where AI feels like an invisible force multiplier rather than a gimmick: glowing screens, rapid idea testing, sketches, notes, and prototypes coming to life around them. AJ should look energized and ready to move. Nia should look intellectually locked in, recognizing the leverage immediately. Malik should look fascinated by the build process and toolchain opening up in front of him. Camera movement should feel confident and escalating, with a sense that the old limits are collapsing and a faster path is opening. The emotion is revelation, momentum, and the feeling that the future suddenly became reachable.",
+      "model": "sora-2",
+      "size": "1280x720",
+      "referenceFileId": "file-5LfpGqGLoPEjESxQzBaJN5",
+      "videoId": "video_69c7c964527c81909bd145af9f4a6dde08e42df571206895",
+      "sourceImage": "../../../courses/endless-opportunities/week0-intro/storyboards/generated/ai-revolution-story-step-2.png",
+      "resizedReference": "refs/scene-2-ref.png",
+      "voiceRaw": "voice/scene-2-raw.mp3",
+      "voiceFinal": "voice/scene-2.mp3",
+      "rawVideo": "shots/scene-2-raw.mp4",
+      "normalizedVideo": "shots/scene-2.mp4",
+      "voiceFit": {
+        "actualDuration": 12.648,
+        "targetSeconds": 8
+      }
+    },
+    {
+      "id": "scene-3",
+      "title": "Go Deeper",
+      "seconds": 8,
+      "voiceover": "They ask better questions, go deeper than everyone else, and start building solutions that actually matter.",
+      "prompt": "Third promo shot for Endless Opportunities featuring the exact same AJ, Nia, and Malik from the reference image, with strong continuity. Cinematic live-action realism, prestige coming-of-age drama tone, no text, no subtitles, no logos, no graphic overlays. Show the trio in the middle of a deep-thinking breakthrough: layered notes, branching diagrams, physical movement between ideas, clear collaboration, and a visible sense that they are cutting through surface-level noise. AJ should feel like the leader spotting the opening. Nia should feel like the one slicing through weak reasoning with confidence. Malik should feel like the builder seeing the practical toolchain and implementation path. The environment should imply real-world stakes: a struggling business, a community challenge, or a project that matters, without turning into generic corporate imagery. Use richer camera movement than a still tableau: arc around the trio, show one or two decisive gestures, make the moment feel like insight becoming action. The emotional target is intensity, intelligence, and the rush of finally finding the real problem underneath the obvious one.",
+      "model": "sora-2",
+      "size": "1280x720",
+      "referenceFileId": "file-S3mCzpAfaaRLikfAtysDUa",
+      "videoId": "video_69c7c964720481909c05363e4837d3f708e7427d4303a706",
+      "sourceImage": "../../../courses/endless-opportunities/week0-intro/storyboards/generated/six-levels-story-step-5.png",
+      "resizedReference": "refs/scene-3-ref.png",
+      "voiceRaw": "voice/scene-3-raw.mp3",
+      "voiceFinal": "voice/scene-3.mp3",
+      "rawVideo": "shots/scene-3-raw.mp4",
+      "normalizedVideo": "shots/scene-3.mp4",
+      "voiceFit": {
+        "actualDuration": 8.304,
+        "targetSeconds": 8
+      }
+    },
+    {
+      "id": "scene-4",
+      "title": "Hero Wrap",
+      "seconds": 4,
+      "voiceover": "Do not miss their journey. Endless Opportunities. Start now.",
+      "prompt": "Final hero shot for an Endless Opportunities promo teaser, using the reference image to preserve exact continuity for AJ, Nia, and Malik. Cinematic live-action realism with bold hero framing, no text, no subtitle cards, no logos, no watermarks. The trio should feel transformed by the journey: composed, confident, and moving forward together with purpose. Use a clean, dramatic final composition with strong forward motion, noble posture, premium lighting, and a sense that a bigger future just opened in front of them. AJ should feel decisive, Nia should feel sharp and unstoppable, Malik should feel energized and ready to build. Make the final moment emotionally persuasive and trailer-ready, as if the audience is being invited into something powerful that they should not wait to join.",
+      "model": "sora-2",
+      "size": "1280x720",
+      "referenceFileId": "file-QTEfWQ93EyNChtErjsi974",
+      "videoId": "video_69c7c965b6688193a9fee3efa91a6d6e0c9052a45033010f",
+      "sourceImage": "../../../courses/endless-opportunities/week0-intro/storyboards/generated/six-levels-story-step-6.png",
+      "resizedReference": "refs/scene-4-ref.png",
+      "voiceRaw": "voice/scene-4-raw.mp3",
+      "voiceFinal": "voice/scene-4.mp3",
+      "rawVideo": "shots/scene-4-raw.mp4",
+      "normalizedVideo": "shots/scene-4.mp4",
+      "voiceFit": {
+        "actualDuration": 6.72,
+        "targetSeconds": 4
+      }
+    }
+  ]
+}

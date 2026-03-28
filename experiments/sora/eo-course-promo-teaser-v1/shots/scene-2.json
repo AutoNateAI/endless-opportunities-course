@@ -1,0 +1,21 @@
+{
+  "id": "scene-2",
+  "title": "AI Changes The Path",
+  "seconds": 8,
+  "voiceover": "AJ, Nia, and Malik catch the shift fast. With AI, curiosity becomes leverage, and problems turn into real opportunities.",
+  "prompt": "Second promo shot for Endless Opportunities, directly continuing the same three recurring characters from the reference image. Preserve strict character continuity for AJ, Nia, and Malik: same clothing family, same facial structure, same hair, same age, same emotional chemistry. Cinematic live-action realism with polished trailer lighting, dynamic but believable camera movement, no text, no user interface labels, no watermarks. Set the trio inside a vivid problem-solving environment where AI feels like an invisible force multiplier rather than a gimmick: glowing screens, rapid idea testing, sketches, notes, and prototypes coming to life around them. AJ should look energized and ready to move. Nia should look intellectually locked in, recognizing the leverage immediately. Malik should look fascinated by the build process and toolchain opening up in front of him. Camera movement should feel confident and escalating, with a sense that the old limits are collapsing and a faster path is opening. The emotion is revelation, momentum, and the feeling that the future suddenly became reachable.",
+  "model": "sora-2",
+  "size": "1280x720",
+  "referenceFileId": "file-5LfpGqGLoPEjESxQzBaJN5",
+  "videoId": "video_69c7c964527c81909bd145af9f4a6dde08e42df571206895",
+  "sourceImage": "../../../courses/endless-opportunities/week0-intro/storyboards/generated/ai-revolution-story-step-2.png",
+  "resizedReference": "refs/scene-2-ref.png",
+  "voiceRaw": "voice/scene-2-raw.mp3",
+  "voiceFinal": "voice/scene-2.mp3",
+  "rawVideo": "shots/scene-2-raw.mp4",
+  "normalizedVideo": "shots/scene-2.mp4",
+  "voiceFit": {
+    "actualDuration": 12.648,
+    "targetSeconds": 8
+  }
+}

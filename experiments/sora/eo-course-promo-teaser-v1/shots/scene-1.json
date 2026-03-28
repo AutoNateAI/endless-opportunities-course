@@ -1,0 +1,21 @@
+{
+  "id": "scene-1",
+  "title": "Attention Grabber",
+  "seconds": 4,
+  "voiceover": "Three students see what most people miss. The world is full of problems.",
+  "prompt": "Attention-grabbing opening shot for an Endless Opportunities promo teaser. Use the reference image only as the visual anchor for AJ, Nia, and Malik and preserve their identity, age, wardrobe, facial traits, hair, and vibe. AJ is a smooth cool Black teenage boy and natural leader. Nia is a brilliant stylish Black teenage girl with precise judgment. Malik is a clever observant Black teenage boy with technical curiosity. Cinematic live-action family-film realism, dramatic lensing, premium contrast, no text, no subtitles, no logos, no watermarks. The trio stands in a charged urban environment where everyday problems feel physically present around them: flickering storefronts, overloaded community bulletin boards, stressed faces in the background, movement everywhere. Start with a fast push-in and subtle handheld urgency. AJ scans the scene like a strategist, Nia clocks the pattern with sharp focus, Malik notices the systems underneath the chaos. The feeling should be: this world is intense, full of pressure, and these three are about to read it differently than everyone else. Strong emotional eye lines, readable body language, natural movement, dramatic anticipation, premium trailer energy.",
+  "model": "sora-2",
+  "size": "1280x720",
+  "referenceFileId": "file-HV5mByZS88KRjkiD9aeb2y",
+  "videoId": "video_69c7c9655e3081988d8f3498fe4ec55003d2ba12f9f15b0b",
+  "sourceImage": "../../../courses/endless-opportunities/week0-intro/storyboards/generated/problem-game-story-step-0.png",
+  "resizedReference": "refs/scene-1-ref.png",
+  "voiceRaw": "voice/scene-1-raw.mp3",
+  "voiceFinal": "voice/scene-1.mp3",
+  "rawVideo": "shots/scene-1-raw.mp4",
+  "normalizedVideo": "shots/scene-1.mp4",
+  "voiceFit": {
+    "actualDuration": 6.048,
+    "targetSeconds": 4
+  }
+}

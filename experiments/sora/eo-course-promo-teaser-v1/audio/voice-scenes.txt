@@ -1,0 +1,4 @@
+file '../voice/scene-1.mp3'
+file '../voice/scene-2.mp3'
+file '../voice/scene-3.mp3'
+file '../voice/scene-4.mp3'
