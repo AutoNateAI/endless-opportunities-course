@@ -245,7 +245,9 @@
     }
 
     function formatTimestamp(value) {
-      const date = value?.toDate?.() || (value?._seconds ? new Date(value._seconds * 1000) : null);
+      const date = value?.toDate?.()
+        || (value?._seconds ? new Date(value._seconds * 1000) : null)
+        || (value ? new Date(value) : null);
       if (!date) return 'No timestamp';
       return date.toLocaleString(undefined, { month: 'short', day: 'numeric' });
     }
@@ -262,7 +264,7 @@
         return `
           <div class="bar-item">
             <div class="bar-item__head">
-              <span>${window.UserAnalyticsService.formatTopic(item.topic)}</span>
+              <span>${item.displayTitle || window.UserAnalyticsService.formatTopic(item.topic)}</span>
               <span>${score}%</span>
             </div>
             <div class="bar-item__track">
@@ -291,17 +293,13 @@
 
       await window.AuthService.ensureDefaultCourseAccess(user);
 
-      const [analytics, insights, attempts, courseProgress] = await Promise.all([
-        window.UserAnalyticsService.getCurrentUserAnalytics(),
-        window.UserAnalyticsService.getLearningInsights(user.uid),
-        window.DataService.getActivityAttempts({ courseId: COURSE_ID, limit: 8 }),
-        window.DataService.getCourseProgress(COURSE_ID)
-      ]);
+      const snapshot = await window.UserAnalyticsService.getStudentSnapshot(user.uid, COURSE_ID, { recentLimit: 8 });
+      const { analytics, insights, courseProgress } = snapshot;
 
       document.getElementById('user-name').textContent = user.displayName || user.email || 'Student';
       document.getElementById('user-avatar').textContent = (user.displayName || user.email || 'S').trim().charAt(0).toUpperCase();
-      document.getElementById('user-streak').textContent = insights.engagement?.currentStreak
-        ? `🔥 ${insights.engagement.currentStreak}-day streak`
+      document.getElementById('user-streak').textContent = analytics?.engagementPatterns?.currentStreak
+        ? `🔥 ${analytics.engagementPatterns.currentStreak}-day streak`
         : 'No active streak yet';
 
       const completedLessons = window.DataService.getCompletedLessonsCount(courseProgress, COURSE_ID);
@@ -309,11 +307,12 @@
       const progressPercent = courseProgress?.progressPercent ?? Math.round((completedLessons / totalLessons) * 100);
       const accuracy = analytics?.persistenceMetrics?.overallAccuracy ? Math.round(analytics.persistenceMetrics.overallAccuracy * 100) : 0;
       const avgScore = analytics?.summaryStats?.averageScore ? Math.round(analytics.summaryStats.averageScore * 100) : 0;
+      const retryRate = analytics?.persistenceMetrics?.retryAfterFailure ? Math.round(analytics.persistenceMetrics.retryAfterFailure * 100) : 0;
+      const primaryGrowthTitle = insights.primaryGrowth?.title || `${window.UserAnalyticsService.formatLearningStyle(analytics?.learningStyle?.primary).icon} ${window.UserAnalyticsService.formatLearningStyle(analytics?.learningStyle?.primary).name}`;
+      const primaryGrowthCopy = insights.primaryGrowth?.description || 'These metrics are computed from lesson completions and activity attempts.';
 
-      document.getElementById('hero-title').textContent = `${window.UserAnalyticsService.formatLearningStyle(analytics?.learningStyle?.primary).icon} ${window.UserAnalyticsService.formatLearningStyle(analytics?.learningStyle?.primary).name} learner`;
-      document.getElementById('hero-copy').textContent = analytics
-        ? 'These metrics are computed from your lesson completions and activity attempts through the Firebase analytics functions.'
-        : 'You need a bit more activity before the analytics model has enough signal. Keep moving through the course.';
+      document.getElementById('hero-title').textContent = primaryGrowthTitle;
+      document.getElementById('hero-copy').textContent = primaryGrowthCopy;
 
       document.getElementById('metric-grid').innerHTML = `
         <div class="metric-tile">
@@ -339,31 +338,35 @@
 
       document.getElementById('engagement-grid').innerHTML = `
         <div class="metric-tile">
-          <div class="metric-tile__value">${insights.engagement?.currentStreak || 0}</div>
+          <div class="metric-tile__value">${analytics?.engagementPatterns?.currentStreak || 0}</div>
           <div class="metric-tile__label">Current streak</div>
         </div>
         <div class="metric-tile">
-          <div class="metric-tile__value">${insights.engagement?.streakRecord || 0}</div>
+          <div class="metric-tile__value">${analytics?.engagementPatterns?.streakRecord || 0}</div>
           <div class="metric-tile__label">Best streak</div>
         </div>
         <div class="metric-tile">
-          <div class="metric-tile__value">${insights.engagement?.avgSessionLength || 0}m</div>
+          <div class="metric-tile__value">${analytics?.engagementPatterns?.avgSessionLength || 0}m</div>
           <div class="metric-tile__label">Average session</div>
         </div>
         <div class="metric-tile">
           <div class="metric-tile__value">${analytics?.summaryStats?.activitiesCompleted || 0}</div>
           <div class="metric-tile__label">Activities completed</div>
         </div>
+        <div class="metric-tile">
+          <div class="metric-tile__value">${retryRate}%</div>
+          <div class="metric-tile__label">Retry after failure</div>
+        </div>
       `;
 
       const timeline = document.getElementById('timeline-list');
-      if (!attempts.length) {
+      if (!snapshot.recentActivity.length) {
         timeline.innerHTML = '<div class="empty-state">No recent attempts yet. Once you work through a lesson, your timeline will show up here.</div>';
       } else {
-        timeline.innerHTML = attempts.map((attempt) => `
+        timeline.innerHTML = snapshot.recentActivity.map((attempt) => `
           <div class="timeline-item">
-            <div>${attempt.correct ? '✅' : '📝'} ${attempt.lessonId || attempt.activityId}</div>
-            <div class="timeline-item__meta">${attempt.activityType || 'activity'} · ${formatTimestamp(attempt.createdAt)}</div>
+            <div>${attempt.correct ? '✅' : '📝'} ${attempt.activityLabel}</div>
+            <div class="timeline-item__meta">${attempt.lessonName} · ${attempt.cognitiveLabel}${attempt.carouselLabel ? ` · ${attempt.carouselLabel}` : ''} · ${formatTimestamp(attempt.createdAt || attempt.completedAt)}</div>
           </div>
         `).join('');
       }

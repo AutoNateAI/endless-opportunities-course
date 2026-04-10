@@ -507,8 +507,24 @@ class StorytellingDiagram {
       const isActive = Number(caption.dataset.storyboardCaption) === index;
       caption.classList.toggle('is-active', isActive);
       if (isActive) {
-        caption.scrollIntoView({ block: 'nearest', inline: 'center', behavior: 'smooth' });
+        this.scrollStoryboardCaptionIntoView(caption);
       }
+    });
+  }
+
+  scrollStoryboardCaptionIntoView(caption) {
+    const container = this.storyboardStrip?.querySelector('.diagram-storyboard-captions');
+    if (!container || !caption) return;
+
+    const containerRect = container.getBoundingClientRect();
+    const captionRect = caption.getBoundingClientRect();
+    const currentLeft = container.scrollLeft;
+    const offsetLeft = captionRect.left - containerRect.left;
+    const targetLeft = currentLeft + offsetLeft - ((containerRect.width - captionRect.width) / 2);
+
+    container.scrollTo({
+      left: Math.max(0, targetLeft),
+      behavior: 'smooth'
     });
   }
 

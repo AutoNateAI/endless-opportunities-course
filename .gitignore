@@ -3,3 +3,6 @@ node_modules/
 .firebaserc
 firebase-debug.log
 *.log
+dist/
+.ccgram-uploads/
+tmp/

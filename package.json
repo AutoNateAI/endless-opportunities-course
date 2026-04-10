@@ -3,6 +3,7 @@
   "private": true,
   "scripts": {
     "build": "node scripts/build-gh-pages.mjs",
+    "validate:activities": "node scripts/validate-eo-activities.mjs",
     "audio:lesson": "node scripts/generate-lesson-audio.mjs",
     "course:brief": "node scripts/scaffold-course-brief.mjs",
     "course:clone": "node scripts/clone-course-template.mjs",

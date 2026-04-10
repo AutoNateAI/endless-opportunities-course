@@ -31,11 +31,79 @@ const MIN_ATTEMPTS_FOR_GROWTH = 2;
 const ACTIVITY_TYPE_LEARNING_STYLE = {
   'drag-drop': 'visual',
   'matching': 'visual',
+  'connect-edges': 'visual',
+  'graph-builder': 'visual',
   'code-completion': 'kinesthetic',
+  'sequence': 'kinesthetic',
+  'scenario': 'kinesthetic',
+  'prediction': 'kinesthetic',
+  'challenge': 'kinesthetic',
+  'demo': 'kinesthetic',
   'free-response': 'kinesthetic',
   'multiple-choice': 'reading',
+  'quiz': 'reading',
+  'true-false': 'reading',
   'fill-blank': 'reading',
+  'reflection': 'reading',
   'audio': 'auditory',
+};
+
+const EO_TOPIC_MAP = {
+  'week0-intro': {
+    defaultTopic: 'problem-framing',
+    sections: {
+      'problem-game': 'problem-framing',
+      'problem-game-story': 'problem-framing',
+      'ai-revolution': 'ai-leverage',
+      'ai-revolution-story': 'ai-leverage',
+      'six-levels': 'root-cause-thinking',
+      'six-levels-story': 'root-cause-thinking'
+    }
+  },
+  'week1-questions': {
+    defaultTopic: 'deeper-questioning',
+    sections: {
+      curiosity: 'investigative-curiosity',
+      'curiosity-story': 'investigative-curiosity',
+      'six-levels': 'causal-reasoning',
+      'six-levels-story': 'causal-reasoning',
+      comprehension: 'transfer-of-understanding',
+      'comprehension-story': 'transfer-of-understanding'
+    }
+  },
+  'week2-data': {
+    defaultTopic: 'evidence-based-reasoning',
+    sections: {
+      'data-mindset': 'signal-detection',
+      'data-mindset-story': 'signal-detection',
+      algorithms: 'pattern-recognition',
+      'algorithms-story': 'pattern-recognition',
+      analysis: 'claim-checking',
+      'analysis-story': 'claim-checking'
+    }
+  },
+  'week3-building': {
+    defaultTopic: 'solution-design',
+    sections: {
+      'builder-mindset': 'builder-mindset',
+      'builder-mindset-story': 'builder-mindset',
+      'art-of-building': 'prototyping',
+      'art-of-building-story': 'prototyping',
+      'clear-prompts': 'prompt-design',
+      'clear-prompts-story': 'prompt-design'
+    }
+  },
+  'week4-portfolio': {
+    defaultTopic: 'reflection-and-communication',
+    sections: {
+      'problem-solving-process': 'process-thinking',
+      'problem-solving-process-story': 'process-thinking',
+      'capstone-journey': 'project-execution',
+      'capstone-journey-story': 'project-execution',
+      'portfolio-celebration': 'portfolio-communication',
+      'portfolio-celebration-story': 'portfolio-communication'
+    }
+  }
 };
 
 /**
@@ -546,28 +614,37 @@ function computeSummaryStats(attempts, periodStart, periodEnd) {
  */
 function normalizeActivityType(type) {
   if (!type) return null;
-  return type.toLowerCase().replace(/[_\s]/g, '-');
+  const normalized = type.toLowerCase().replace(/[_\s]/g, '-');
+  if (normalized === 'multiplechoice') return 'multiple-choice';
+  return normalized;
 }
 
 /**
  * Extract topic from attempt (uses lessonId as proxy)
  */
 function extractTopic(attempt) {
-  // Try to get a meaningful topic identifier
-  return attempt.lessonId || attempt.topic || attempt.activityId?.split('-')[0];
+  if (attempt.courseId === 'endless-opportunities') {
+    const lessonConfig = EO_TOPIC_MAP[attempt.lessonId];
+    if (lessonConfig) {
+      if (attempt.sectionId && lessonConfig.sections?.[attempt.sectionId]) {
+        return lessonConfig.sections[attempt.sectionId];
+      }
+      return lessonConfig.defaultTopic;
+    }
+  }
+
+  return attempt.sectionId || attempt.lessonId || attempt.topic || attempt.activityId?.split('-')[0];
 }
 
 /**
  * Generate suggested resources for a growth area topic
  */
 function generateSuggestedResources(topic) {
-  // In a real implementation, this would query available resources
-  // For now, return placeholder structure
   return [
     {
       type: 'lesson',
       id: `${topic}-basics`,
-      title: `${formatTopicName(topic)} Fundamentals`,
+      title: `${formatTopicName(topic)} Focus`,
     },
   ];
 }

@@ -31,7 +31,7 @@ class DragDropActivity extends BaseActivity {
     // Drag-drop specific state
     this.items = this.shuffleArray([...activityData.items]);
     this.zones = activityData.zones || [];
-    this.placements = {}; // { zoneId: itemId }
+    this.placements = {}; // { zoneId: itemId[] }
     this.draggedItemId = null;
     this.touchDragging = false;
     this.touchClone = null;
@@ -52,7 +52,7 @@ class DragDropActivity extends BaseActivity {
     const zonesHtml = this.zones.map(zone => `
       <div class="dragdrop-zone" data-zone="${zone.id}">
         <span class="zone-label">${zone.label}</span>
-        <div class="activity-dropzone" data-zone="${zone.id}"></div>
+        <div class="activity-dropzone ${this.getZoneCapacity(zone) > 1 ? 'multi-dropzone' : ''}" data-zone="${zone.id}"></div>
       </div>
     `).join('');
     
@@ -307,24 +307,33 @@ class DragDropActivity extends BaseActivity {
     if (!item) return;
     
     // Remove from previous zone if it was placed
-    Object.keys(this.placements).forEach(z => {
-      if (this.placements[z] === itemId) {
-        delete this.placements[z];
-        // Zone is now empty
+    Object.keys(this.placements).forEach((z) => {
+      const items = this.placements[z] || [];
+      if (items.includes(itemId)) {
+        this.placements[z] = items.filter((placedId) => placedId !== itemId);
+        if (this.placements[z].length === 0) {
+          delete this.placements[z];
+        }
+
         const prevZone = this.container.querySelector(`.activity-dropzone[data-zone="${z}"]`);
-        if (prevZone) {
+        if (prevZone && (!this.placements[z] || this.placements[z].length === 0)) {
           prevZone.classList.remove('filled');
         }
       }
     });
-    
-    // If zone already has an item, return that item to source
-    if (this.placements[zoneId]) {
-      this.returnItemToSource(this.placements[zoneId]);
+
+    const zoneConfig = this.zones.find((zone) => zone.id === zoneId);
+    const zoneCapacity = this.getZoneCapacity(zoneConfig);
+    const existingItems = this.placements[zoneId] ? [...this.placements[zoneId]] : [];
+
+    if (zoneCapacity === 1 && existingItems.length >= 1) {
+      this.returnItemToSource(existingItems[0]);
     }
-    
-    // Place item in zone
-    this.placements[zoneId] = itemId;
+
+    this.placements[zoneId] = this.placements[zoneId] || [];
+    if (!this.placements[zoneId].includes(itemId)) {
+      this.placements[zoneId].push(itemId);
+    }
     
     // Move item element to zone
     const zone = this.container.querySelector(`.activity-dropzone[data-zone="${zoneId}"]`);
@@ -352,12 +361,16 @@ class DragDropActivity extends BaseActivity {
       sourceContainer.appendChild(item);
       
       // Remove from placements
-      Object.keys(this.placements).forEach(z => {
-        if (this.placements[z] === itemId) {
-          delete this.placements[z];
+      Object.keys(this.placements).forEach((z) => {
+        const items = this.placements[z] || [];
+        if (items.includes(itemId)) {
+          this.placements[z] = items.filter((placedId) => placedId !== itemId);
           const zone = this.container.querySelector(`.activity-dropzone[data-zone="${z}"]`);
-          if (zone) {
-            zone.classList.remove('filled');
+          if (!this.placements[z].length) {
+            delete this.placements[z];
+            if (zone) {
+              zone.classList.remove('filled');
+            }
           }
         }
       });
@@ -409,22 +422,27 @@ class DragDropActivity extends BaseActivity {
   calculateScore() {
     let correctCount = 0;
     const details = [];
-    
-    this.zones.forEach(zone => {
-      const placed = this.placements[zone.id];
-      const isCorrect = placed === zone.correct;
-      if (isCorrect) correctCount++;
+
+    this.zones.forEach((zone) => {
+      const placed = this.placements[zone.id] || [];
+      const expected = this.normalizeCorrectList(zone.correct);
+      const correctPlaced = placed.filter((itemId) => expected.includes(itemId));
+      const incorrectPlaced = placed.filter((itemId) => !expected.includes(itemId));
+      correctCount += correctPlaced.length;
+
       details.push({
         zone: zone.id,
         placed,
-        expected: zone.correct,
-        correct: isCorrect
+        expected,
+        correctPlaced,
+        incorrectPlaced,
+        correct: correctPlaced.length === expected.length && incorrectPlaced.length === 0
       });
     });
-    
+
     return {
       correctCount,
-      total: this.zones.length,
+      total: this.items.length,
       details
     };
   }
@@ -434,15 +452,15 @@ class DragDropActivity extends BaseActivity {
    * Requires all zones to have an item
    */
   validate() {
-    return Object.keys(this.placements).length === this.zones.length;
+    return this.getPlacedItemCount() === this.items.length;
   }
   
   /**
    * Get validation message
    */
   getValidationMessage() {
-    const placed = Object.keys(this.placements).length;
-    const total = this.zones.length;
+    const placed = this.getPlacedItemCount();
+    const total = this.items.length;
     return `Please place all items (${placed}/${total} placed)`;
   }
   
@@ -477,22 +495,23 @@ class DragDropActivity extends BaseActivity {
     
     details.forEach(d => {
       const zone = this.container.querySelector(`.activity-dropzone[data-zone="${d.zone}"]`);
-      const item = this.container.querySelector(`.activity-draggable[data-id="${d.placed}"]`);
       
       if (zone) {
         zone.classList.remove('correct', 'incorrect');
         zone.classList.add(d.correct ? 'correct' : 'incorrect');
       }
-      if (item) {
+      d.placed.forEach((itemId) => {
+        const item = this.container.querySelector(`.activity-draggable[data-id="${itemId}"]`);
+        if (!item) return;
         item.classList.remove('correct', 'incorrect');
-        item.classList.add(d.correct ? 'correct' : 'incorrect');
-        
+        item.classList.add(d.correctPlaced.includes(itemId) ? 'correct' : 'incorrect');
+
         // Disable dragging on correct items
         if (result.correct) {
           item.setAttribute('draggable', 'false');
           item.style.cursor = 'default';
         }
-      }
+      });
     });
     
     // Update submit button
@@ -532,6 +551,20 @@ class DragDropActivity extends BaseActivity {
     this.draggedItemId = null;
     
     super.reset();
+  }
+
+  getZoneCapacity(zone) {
+    return this.normalizeCorrectList(zone?.correct).length || 1;
+  }
+
+  normalizeCorrectList(correct) {
+    if (Array.isArray(correct)) return correct;
+    if (correct === undefined || correct === null) return [];
+    return [correct];
+  }
+
+  getPlacedItemCount() {
+    return Object.values(this.placements).reduce((sum, items) => sum + (items?.length || 0), 0);
   }
 }
 

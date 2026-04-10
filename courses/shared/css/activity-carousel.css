@@ -1095,6 +1095,13 @@
   justify-content: center;
 }
 
+.dragdrop-zone .activity-dropzone.multi-dropzone {
+  align-items: stretch;
+  justify-content: flex-start;
+  flex-direction: column;
+  gap: 0.65rem;
+}
+
 .dragdrop-zone .activity-dropzone .activity-draggable {
   margin: 0;
   width: 100%;

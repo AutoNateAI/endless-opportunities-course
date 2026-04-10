@@ -203,13 +203,18 @@ const ActivityTracker = {
     }
     
     const timer = this.activityTimers[activityId];
+    const registration = this.registeredActivities[activityId];
+    const activityInstance = registration?.instance || null;
     const timeSpentMs = result.timeSpentMs || (timer ? Date.now() - timer.startTime : 0);
     
     const attemptData = {
       activityId,
       activityType: result.activityType || 'activity',
+      activityLabel: result.activityLabel || activityInstance?.getActivityLabel?.() || activityId,
       courseId: this.courseId,
       lessonId: this.lessonId,
+      sectionId: result.sectionId || activityInstance?.sectionId || null,
+      carouselType: result.carouselType || activityInstance?.carouselType || null,
       attemptNumber: (this.attemptCounts[activityId] || 0) + 1,
       correct: result.correct || false,
       score: result.score || 0,

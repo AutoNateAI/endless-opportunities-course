@@ -161,6 +161,9 @@ class BaseActivity {
     
     // Add timing data
     this.result.activityType = this.result.activityType || this.type;
+    this.result.activityLabel = this.result.activityLabel || this.getActivityLabel();
+    this.result.sectionId = this.result.sectionId || this.sectionId || null;
+    this.result.carouselType = this.result.carouselType || this.carouselType || null;
     this.result.timeSpentMs = this.endTime - (this.startTime || this.endTime);
     this.result.attemptNumber = this.attemptNumber;
     
@@ -587,6 +590,31 @@ class BaseActivity {
     
     const pathMatch = window.location.pathname.match(/\/([^\/]+)\/index\.html/);
     return pathMatch ? pathMatch[1] : 'unknown';
+  }
+
+  /**
+   * Derive a short human-readable label for analytics surfaces.
+   */
+  getActivityLabel() {
+    const candidates = [
+      this.activityData.title,
+      this.activityData.question,
+      this.activityData.statement,
+      this.activityData.instruction,
+      this.activityData.prompt,
+      this.activityData.label,
+      this.activityData.description
+    ];
+
+    const rawLabel = candidates.find((value) => typeof value === 'string' && value.trim());
+    if (!rawLabel) {
+      return this.id
+        ? this.id.replace(/[-_]/g, ' ').replace(/\b\w/g, (char) => char.toUpperCase())
+        : 'Activity';
+    }
+
+    const compact = rawLabel.replace(/\s+/g, ' ').trim();
+    return compact.length > 88 ? `${compact.slice(0, 85).trimEnd()}...` : compact;
   }
   
   /**

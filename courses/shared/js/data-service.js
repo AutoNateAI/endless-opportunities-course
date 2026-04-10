@@ -1122,11 +1122,17 @@ const DataService = {
       }
       
       // Sort by creation time (newest first)
-      results.sort((a, b) => {
-        const aTime = a.createdAt?._seconds || 0;
-        const bTime = b.createdAt?._seconds || 0;
-        return bTime - aTime;
-      });
+      const getAttemptTime = (attempt) => {
+        if (attempt?.createdAt?._seconds) return attempt.createdAt._seconds * 1000;
+        if (attempt?.createdAt?.toDate) return attempt.createdAt.toDate().getTime();
+        if (attempt?.completedAt) {
+          const completedAt = new Date(attempt.completedAt).getTime();
+          if (!Number.isNaN(completedAt)) return completedAt;
+        }
+        return 0;
+      };
+
+      results.sort((a, b) => getAttemptTime(b) - getAttemptTime(a));
       
       // Apply limit
       if (filters.limit) {
@@ -1282,45 +1288,34 @@ const DataService = {
     const lessonLabel = isEndlessOpportunities ? 'Week' : 'Chapter';
     let nextIndex = 0;
     let allComplete = false;
-    
+
     console.log('📊 getNextLesson for:', courseId);
-    
-    if (courseProgress?.lessons) {
-      // Find the highest-index completed lesson, then return the one after it
-      let highestCompletedIndex = -1;
-      
-      for (let i = 0; i < lessons.length; i++) {
-        const lessonId = lessons[i].id;
-        const lessonData = courseProgress.lessons[lessonId];
-        
-        // Check if this lesson is complete
-        const isComplete = lessonData?.completed || 
-                          lessonData?.progressPercent >= 100 ||
-                          (lessonData?.viewedSections && lessonData?.totalSections && 
-                           lessonData.viewedSections >= lessonData.totalSections);
-        
-        if (isComplete) {
-          highestCompletedIndex = i;
-          console.log(`📊 Found completed: ${lessonId} (index ${i})`);
-        }
-      }
-      
-      if (highestCompletedIndex === -1) {
-        // No lessons complete, start at the beginning
-        nextIndex = 0;
-        console.log('📊 No lessons complete, starting at index 0');
-      } else if (highestCompletedIndex >= lessons.length - 1) {
-        // All lessons complete (or at least the last one is)
-        nextIndex = lessons.length - 1;
-        allComplete = true;
-        console.log('📊 All lessons complete!');
-      } else {
-        // Next lesson is the one after the highest completed
-        nextIndex = highestCompletedIndex + 1;
-        console.log(`📊 Next lesson: index ${nextIndex} (after highest completed: ${highestCompletedIndex})`);
-      }
+
+    const lessonStates = lessons.map((lesson, index) => {
+      const lessonData = courseProgress?.lessons?.[lesson.id];
+      const isComplete = !!(
+        lessonData?.completed ||
+        lessonData?.progressPercent >= 100 ||
+        (lessonData?.viewedSections && lessonData?.totalSections &&
+          lessonData.viewedSections >= lessonData.totalSections)
+      );
+
+      return {
+        index,
+        lessonId: lesson.id,
+        isComplete
+      };
+    });
+
+    const firstIncomplete = lessonStates.find((lesson) => !lesson.isComplete);
+
+    if (!firstIncomplete) {
+      nextIndex = lessons.length - 1;
+      allComplete = true;
+      console.log('📊 All lessons complete!');
     } else {
-      console.log('📊 No lessons data in courseProgress');
+      nextIndex = firstIncomplete.index;
+      console.log(`📊 First incomplete lesson: ${firstIncomplete.lessonId} (index ${nextIndex})`);
     }
     
     const nextLesson = lessons[nextIndex];
@@ -1421,8 +1416,45 @@ const DataService = {
     return {
       id: lesson.id,
       name: lesson.name,
+      icon: lesson.icon,
+      desc: lesson.desc,
       link: `../${courseId}/${lessonId}/`
     };
+  },
+
+  /**
+   * Determine ordered lesson state for dashboards.
+   * A lesson is only "active" if it is the first incomplete lesson.
+   */
+  getOrderedLessonStates(courseProgress, courseId) {
+    const { lessons } = this.getLessonsStructure(courseId);
+    const nextLesson = this.getNextLesson(courseProgress, courseId);
+
+    return lessons.map((lesson, index) => {
+      const lessonData = courseProgress?.lessons?.[lesson.id] || {};
+      const isComplete = !!(
+        lessonData.completed ||
+        lessonData.progressPercent >= 100 ||
+        (lessonData.viewedSections && lessonData.totalSections &&
+          lessonData.viewedSections >= lessonData.totalSections)
+      );
+
+      const isCurrent = !nextLesson?.allComplete && nextLesson?.lessonId === lesson.id;
+      const isLocked = !isComplete && !isCurrent && index > (nextLesson?.lessonIndex ?? 0);
+      const hasProgress = !isComplete && !isLocked && (
+        (lessonData.activitiesCompleted || 0) > 0 ||
+        (lessonData.progressPercent || 0) > 0
+      );
+
+      return {
+        ...lesson,
+        data: lessonData,
+        isComplete,
+        isCurrent,
+        isLocked,
+        hasProgress
+      };
+    });
   },
 
   // ═══════════════════════════════════════════════════════════════════════════

@@ -361,9 +361,9 @@
 
           <div style="display:grid; gap: var(--space-lg);">
             <article class="panel-card">
-              <h2>Learning profile</h2>
+              <h2>Cognitive growth</h2>
               <div class="learning-style">
-                <div class="learning-style__label">Learning style</div>
+                <div class="learning-style__label">Current growth signal</div>
                 <div class="learning-style__title" id="learning-style-title">Still emerging</div>
                 <div id="learning-style-copy" class="stat-label">Complete a few more activities to unlock a clearer pattern.</div>
               </div>
@@ -393,7 +393,9 @@
     const COURSE_ID = 'endless-opportunities';
 
     function formatTimestamp(value) {
-      const date = value?.toDate?.() || (value?._seconds ? new Date(value._seconds * 1000) : null);
+      const date = value?.toDate?.()
+        || (value?._seconds ? new Date(value._seconds * 1000) : null)
+        || (value ? new Date(value) : null);
       if (!date) return 'No timestamp yet';
       return date.toLocaleDateString(undefined, { month: 'short', day: 'numeric' });
     }
@@ -411,16 +413,15 @@
 
     function renderLessonList(courseProgress) {
       const container = document.getElementById('lesson-list');
-      const lessons = window.DataService.getLessonsStructure(COURSE_ID).lessons;
-      const nextLesson = window.DataService.getNextLesson(courseProgress, COURSE_ID);
+      const lessons = window.DataService.getOrderedLessonStates(courseProgress, COURSE_ID);
 
       container.innerHTML = lessons.map((lesson) => {
-        const lessonData = courseProgress?.lessons?.[lesson.id] || {};
-        const isComplete = lessonData.completed || lessonData.progressPercent >= 100;
-        const hasStarted = (lessonData.activitiesCompleted || 0) > 0 || (lessonData.progressPercent || 0) > 0;
-        const isActive = nextLesson?.lessonId === lesson.id && !isComplete;
-        const statusClass = isComplete ? 'complete' : ((hasStarted || isActive) ? 'active' : 'locked');
-        const statusText = isComplete ? 'Complete' : (hasStarted ? 'In progress' : (isActive ? 'Next up' : 'Not started'));
+        const statusClass = lesson.isComplete ? 'complete' : ((lesson.isCurrent || lesson.hasProgress) ? 'active' : 'locked');
+        const statusText = lesson.isComplete
+          ? 'Complete'
+          : (lesson.isCurrent
+              ? (lesson.hasProgress ? 'In progress' : 'Next up')
+              : (lesson.hasProgress ? 'In progress' : 'Locked'));
 
         return `
           <div class="lesson-row">
@@ -458,9 +459,9 @@
 
       container.innerHTML = attempts.map((attempt) => `
         <div class="activity-item">
-          <div class="activity-item__title">${attempt.correct ? '✅' : '📝'} ${attempt.lessonId || attempt.activityId}</div>
+          <div class="activity-item__title">${attempt.correct ? '✅' : '📝'} ${attempt.activityLabel}</div>
           <div class="activity-item__meta">
-            ${attempt.activityType || 'activity'} · ${attempt.correct ? 'Correct' : 'Needs another try'} · ${formatTimestamp(attempt.createdAt)}
+            ${attempt.lessonName} · ${attempt.cognitiveLabel}${attempt.carouselLabel ? ` · ${attempt.carouselLabel}` : ''} · ${formatTimestamp(attempt.createdAt || attempt.completedAt)}
           </div>
         </div>
       `).join('');
@@ -484,21 +485,20 @@
 
       await window.AuthService.ensureDefaultCourseAccess(user);
 
-      const [courseProgress, insights, recommendations, attempts] = await Promise.all([
-        window.DataService.getCourseProgress(COURSE_ID),
-        window.UserAnalyticsService.getLearningInsights(user.uid),
-        window.UserAnalyticsService.getRecommendations(user.uid),
-        window.DataService.getActivityAttempts({ courseId: COURSE_ID, limit: 6 })
-      ]);
+      const snapshot = await window.UserAnalyticsService.getStudentSnapshot(user.uid, COURSE_ID, { recentLimit: 6 });
+      const { analytics, courseProgress, insights, recommendations } = snapshot;
 
       const completedLessons = window.DataService.getCompletedLessonsCount(courseProgress, COURSE_ID);
       const totalLessons = window.DataService.getLessonsStructure(COURSE_ID).totalLessons;
       const progressPercent = courseProgress?.progressPercent ?? Math.round((completedLessons / totalLessons) * 100);
       const nextLesson = window.DataService.getNextLesson(courseProgress, COURSE_ID);
-      const accuracy = insights.analytics?.persistenceMetrics?.overallAccuracy
-        ? Math.round(insights.analytics.persistenceMetrics.overallAccuracy * 100)
+      const accuracy = analytics?.persistenceMetrics?.overallAccuracy
+        ? Math.round(analytics.persistenceMetrics.overallAccuracy * 100)
         : 0;
-      const streak = insights.engagement?.currentStreak || 0;
+      const streak = analytics?.engagementPatterns?.currentStreak || 0;
+      const primaryGrowthTitle = insights.primaryGrowth?.title || 'Cognitive growth is still emerging';
+      const primaryGrowthDescription = insights.primaryGrowth?.description || 'Complete a few more activities to unlock a clearer pattern.';
+      const heroGrowthLead = insights.growthAreas?.[0]?.displayTitle || primaryGrowthTitle;
 
       document.getElementById('user-name').textContent = user.displayName || user.email || 'Student';
       document.getElementById('user-avatar').textContent = (user.displayName || user.email || 'S').trim().charAt(0).toUpperCase();
@@ -506,12 +506,12 @@
 
       document.getElementById('hero-title').textContent = `Welcome back, ${(user.displayName || 'student').split(' ')[0]}`;
       document.getElementById('hero-copy').textContent = nextLesson?.allComplete
-        ? 'You have completed every EO week. Review your progress details and keep sharpening your strongest skills.'
-        : `Your next best move is ${nextLesson.lessonName}. Keep building your momentum one week at a time.`;
+        ? 'You have completed every EO week. Review the strongest growth signals and keep sharpening them.'
+        : `Your next best move is ${nextLesson.lessonName}. The clearest current growth area is ${heroGrowthLead}.`;
       document.getElementById('continue-link').href = nextLesson?.link || '../endless-opportunities/week0-intro/';
       document.getElementById('continue-link').textContent = nextLesson?.allComplete
         ? 'Review Progress'
-        : `Continue ${nextLesson.lessonLabel || 'Week'} ${nextLesson?.lessonIndex + 1}`;
+        : `Continue ${nextLesson?.lessonName || 'Learning'}`;
 
       document.getElementById('stat-progress').textContent = `${progressPercent}%`;
       document.getElementById('stat-lessons').textContent = `${completedLessons} / ${totalLessons}`;
@@ -520,12 +520,12 @@
       document.getElementById('progress-fill').style.width = `${progressPercent}%`;
       document.getElementById('progress-summary').textContent = `${completedLessons} of ${totalLessons} weeks complete`;
 
-      document.getElementById('learning-style-title').textContent = `${insights.learningStyle.icon} ${insights.learningStyle.name}`;
-      document.getElementById('learning-style-copy').textContent = insights.learningStyle.description;
+      document.getElementById('learning-style-title').textContent = primaryGrowthTitle;
+      document.getElementById('learning-style-copy').textContent = primaryGrowthDescription;
 
       renderLessonList(courseProgress || {});
       renderRecommendations(recommendations);
-      renderActivity(attempts);
+      renderActivity(snapshot.recentActivity);
 
       document.getElementById('logout-link').addEventListener('click', async (event) => {
         event.preventDefault();
