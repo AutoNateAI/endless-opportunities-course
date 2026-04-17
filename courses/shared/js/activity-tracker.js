@@ -16,6 +16,7 @@ const ActivityTracker = {
   attemptCounts: {},
   isInitialized: false,
   lessonProgressThreshold: 1.0, // 100% of activities attempted to mark lesson complete
+  registrationSettleTimer: null,
 
   // Attempt tracking (populated by loadAttemptCounts)
   allAttempts: [],             // All attempts from Firestore
@@ -36,8 +37,11 @@ const ActivityTracker = {
     this.courseId = courseId;
     this.lessonId = lessonId;
     this.activities = [];
+    this.registeredActivities = {};
+    this.completedActivities = {};
     this.activityTimers = {};
     this.attemptCounts = {};
+    this.registrationSettleTimer = null;
 
     // Reset attempt tracking state
     this.allAttempts = [];
@@ -101,6 +105,8 @@ const ActivityTracker = {
     }
     
     console.log('🎯 Activity registered:', activity.id, `(${Object.keys(this.registeredActivities).length} total)`);
+    this.emitProgressUpdate();
+    this.scheduleProgressReconciliation('register');
   },
   
   /**
@@ -118,6 +124,7 @@ const ActivityTracker = {
     }
     
     // Check lesson progress
+    this.emitProgressUpdate();
     this.checkLessonProgress();
   },
   
@@ -133,12 +140,37 @@ const ActivityTracker = {
     
     return { completed, total, percent, isComplete };
   },
+
+  emitProgressUpdate() {
+    const progress = this.getProgress();
+    window.dispatchEvent(new CustomEvent('activityTrackerProgressUpdated', {
+      detail: {
+        courseId: this.courseId,
+        lessonId: this.lessonId,
+        ...progress
+      }
+    }));
+  },
+
+  scheduleProgressReconciliation(reason = 'unknown') {
+    if (this.registrationSettleTimer) {
+      clearTimeout(this.registrationSettleTimer);
+    }
+
+    this.registrationSettleTimer = setTimeout(() => {
+      this.registrationSettleTimer = null;
+      console.log('🎯 Reconciling lesson progress after registration settle:', reason);
+      this.emitProgressUpdate();
+      this.checkLessonProgress();
+    }, 500);
+  },
   
   /**
    * Check if lesson should be marked complete and update Firestore
    */
   async checkLessonProgress() {
     const progress = this.getProgress();
+    if (progress.total === 0) return;
     
     console.log('🎯 Lesson progress:', `${progress.completed}/${progress.total}`, `(${Math.round(progress.percent * 100)}%)`);
     
@@ -1682,6 +1714,15 @@ const ActivityTracker = {
       this.bestAttempts = bestAttempts;
       this.mostRecentAttempts = mostRecentAttempts;
 
+      Object.entries(this.registeredActivities).forEach(([activityId, registration]) => {
+        if ((this.attemptCounts[activityId] || 0) > 0) {
+          registration.completed = true;
+          registration.attempts = this.attemptCounts[activityId];
+          registration.bestScore = Math.max(registration.bestScore || 0, bestAttempts[activityId]?.score || 0);
+          this.completedActivities[activityId] = true;
+        }
+      });
+
       console.log('🎯 Loaded attempt counts:', this.attemptCounts);
       console.log('🎯 Best attempts to restore:', Object.keys(bestAttempts));
 
@@ -1691,6 +1732,8 @@ const ActivityTracker = {
       // Mark data as loaded and notify listeners
       this._dataLoaded = true;
       this.emitDataLoaded();
+      this.emitProgressUpdate();
+      this.scheduleProgressReconciliation('attempt-load');
 
     } catch (error) {
       console.error('🎯 Error loading attempt counts:', error);

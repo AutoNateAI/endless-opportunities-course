@@ -56,11 +56,22 @@ class GraphBuilderActivity extends BaseActivity {
       </button>
     `).join('');
     
-    const checklistHtml = this.validation.requiredNodes?.map(type => {
+    const requiredNodesHtml = this.validation.requiredNodes?.map(type => {
       const nodeType = this.nodeTypes.find(n => n.type === type);
       return `
-        <div class="checklist-item" data-req="${type}">
+        <div class="checklist-item" data-node-req="${type}">
           <span class="check">○</span> ${nodeType?.label || type}
+        </div>
+      `;
+    }).join('') || '';
+
+    const requiredEdgesHtml = this.validation.requiredEdges?.map(edge => {
+      const fromType = this.nodeTypes.find(n => n.type === edge.from);
+      const toType = this.nodeTypes.find(n => n.type === edge.to);
+      const edgeKey = `${edge.from}->${edge.to}`;
+      return `
+        <div class="checklist-item checklist-edge-item" data-edge-req="${edgeKey}">
+          <span class="check">○</span> ${(fromType?.label || edge.from)} → ${(toType?.label || edge.to)}
         </div>
       `;
     }).join('') || '';
@@ -68,6 +79,9 @@ class GraphBuilderActivity extends BaseActivity {
     this.container.innerHTML = `
       <div class="graph-builder-activity">
         <div class="activity-instruction">${this.activityData.instruction}</div>
+        <div class="activity-helper">
+          Add nodes first, then switch to <strong>🔗</strong> to connect them. You can still submit an incomplete diagram after placing at least one node.
+        </div>
         
         <div class="builder-toolbox">
           <div class="toolbox-section">
@@ -97,11 +111,12 @@ class GraphBuilderActivity extends BaseActivity {
           ` : ''}
         </div>
         
-        ${checklistHtml ? `
+        ${(requiredNodesHtml || requiredEdgesHtml) ? `
           <div class="builder-checklist">
             <div class="checklist-label">Requirements:</div>
             <div class="checklist-items">
-              ${checklistHtml}
+              ${requiredNodesHtml}
+              ${requiredEdgesHtml}
             </div>
           </div>
         ` : ''}
@@ -392,6 +407,17 @@ class GraphBuilderActivity extends BaseActivity {
       .checklist-item.complete {
         color: var(--accent-success, #4db6ac);
       }
+
+      .activity-helper {
+        margin-bottom: 0.9rem;
+        padding: 0.75rem 1rem;
+        background: rgba(66, 165, 245, 0.12);
+        border: 1px solid rgba(66, 165, 245, 0.3);
+        border-radius: 8px;
+        color: var(--text-secondary, #b8b8c8);
+        font-size: 0.9rem;
+        line-height: 1.45;
+      }
       
       .checklist-item .check {
         margin-right: 0.25rem;
@@ -649,15 +675,28 @@ class GraphBuilderActivity extends BaseActivity {
     if (!this.cy) return;
     
     const nodes = this.cy.nodes();
-    const edges = this.cy.edges();
+    const edges = this.cy.edges().map(e => ({
+      from: e.source().data('nodeType'),
+      to: e.target().data('nodeType')
+    }));
     
     // Update node checks
     this.validation.requiredNodes?.forEach(type => {
-      const item = this.container.querySelector(`.checklist-item[data-req="${type}"]`);
+      const item = this.container.querySelector(`.checklist-item[data-node-req="${type}"]`);
       if (item) {
         const hasNode = nodes.some(n => n.data('nodeType') === type);
         item.querySelector('.check').textContent = hasNode ? '✓' : '○';
         item.classList.toggle('complete', hasNode);
+      }
+    });
+
+    this.validation.requiredEdges?.forEach(req => {
+      const edgeKey = `${req.from}->${req.to}`;
+      const item = this.container.querySelector(`.checklist-item[data-edge-req="${edgeKey}"]`);
+      if (item) {
+        const hasEdge = edges.some(e => e.from === req.from && e.to === req.to);
+        item.querySelector('.check').textContent = hasEdge ? '✓' : '○';
+        item.classList.toggle('complete', hasEdge);
       }
     });
   }
@@ -741,10 +780,10 @@ class GraphBuilderActivity extends BaseActivity {
     if (!this.cy) return false;
     
     const nodeCount = this.cy.nodes().length;
-    const edgeCount = this.cy.edges().length;
-    const minNodes = this.validation.minNodes || 2;
     
-    return nodeCount >= minNodes && edgeCount > 0;
+    // Allow learners to submit an incomplete attempt once they have
+    // actually started sketching a diagram.
+    return nodeCount > 0;
   }
   
   /**
@@ -754,16 +793,11 @@ class GraphBuilderActivity extends BaseActivity {
     if (!this.cy) return 'Graph not initialized';
     
     const nodeCount = this.cy.nodes().length;
-    const edgeCount = this.cy.edges().length;
-    const minNodes = this.validation.minNodes || 2;
     
-    if (nodeCount < minNodes) {
-      return `Add at least ${minNodes - nodeCount} more node${minNodes - nodeCount !== 1 ? 's' : ''}.`;
+    if (nodeCount === 0) {
+      return 'Add at least one node to start your diagram.';
     }
-    if (edgeCount === 0) {
-      return 'Connect your nodes with at least one edge.';
-    }
-    return 'Complete the diagram to submit.';
+    return 'Add any missing nodes or connections, or submit this attempt now.';
   }
   
   /**
@@ -886,6 +920,19 @@ class GraphBuilderActivity extends BaseActivity {
     }
     
     super.reset();
+  }
+
+  /**
+   * Resize and re-fit the graph after the slide becomes visible.
+   */
+  resize() {
+    if (!this.cy) return;
+
+    this.cy.resize();
+    if (this.cy.nodes().length > 0) {
+      this.cy.fit(undefined, 30);
+      this.cy.center();
+    }
   }
   
   /**

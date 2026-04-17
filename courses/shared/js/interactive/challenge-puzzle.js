@@ -34,6 +34,8 @@ class ChallengePuzzle {
       return;
     }
     
+    this.ensureStyles();
+
     // Build the challenge UI
     this.container.innerHTML = this.buildUI();
     
@@ -69,6 +71,106 @@ class ChallengePuzzle {
       </div>
       <div class="puzzle-feedback"></div>
     `;
+  }
+
+  ensureStyles() {
+    if (document.getElementById('challenge-puzzle-styles')) return;
+
+    const style = document.createElement('style');
+    style.id = 'challenge-puzzle-styles';
+    style.textContent = `
+      .puzzle-header {
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+        gap: 0.75rem;
+        margin-bottom: 0.75rem;
+        flex-wrap: wrap;
+      }
+
+      .puzzle-instruction {
+        color: var(--text-primary, #e8e8f0);
+        font-size: 0.95rem;
+        line-height: 1.45;
+      }
+
+      .puzzle-progress {
+        color: var(--text-secondary, #a8a8b8);
+        font-size: 0.85rem;
+        white-space: nowrap;
+      }
+
+      .puzzle-canvas {
+        width: 100%;
+        min-height: 320px;
+        height: 320px;
+        background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+        border: 2px solid var(--border-color, #333355);
+        border-radius: 8px;
+        overflow: hidden;
+      }
+
+      .puzzle-controls {
+        display: flex;
+        gap: 0.5rem;
+        flex-wrap: wrap;
+        margin-top: 0.75rem;
+      }
+
+      .puzzle-btn {
+        background: var(--bg-card, #1a1a2e);
+        border: 1px solid var(--border-color, #333355);
+        color: var(--text-secondary, #b8b8c8);
+        padding: 0.5rem 0.75rem;
+        border-radius: 999px;
+        cursor: pointer;
+        font-size: 0.85rem;
+        transition: all 0.2s ease;
+      }
+
+      .puzzle-btn:hover {
+        background: var(--bg-tertiary, rgba(30, 30, 50, 0.8));
+        color: var(--text-primary, #e8e8f0);
+      }
+
+      .puzzle-feedback {
+        min-height: 1.5rem;
+        margin-top: 0.75rem;
+      }
+
+      .feedback-result {
+        padding: 0.75rem 1rem;
+        border-radius: 8px;
+        font-size: 0.9rem;
+      }
+
+      .feedback-result.success {
+        background: rgba(77, 182, 172, 0.15);
+        border: 1px solid rgba(77, 182, 172, 0.3);
+        color: #c8fff7;
+      }
+
+      .feedback-result.partial {
+        background: rgba(255, 183, 77, 0.15);
+        border: 1px solid rgba(255, 183, 77, 0.3);
+        color: #ffe7b5;
+      }
+
+      .feedback-result.error {
+        background: rgba(239, 83, 80, 0.15);
+        border: 1px solid rgba(239, 83, 80, 0.3);
+        color: #ffd0cf;
+      }
+
+      @media (max-width: 768px) {
+        .puzzle-canvas {
+          min-height: 280px;
+          height: 280px;
+        }
+      }
+    `;
+
+    document.head.appendChild(style);
   }
   
   createTooltip() {
@@ -170,14 +272,7 @@ class ChallengePuzzle {
       container: canvas,
       elements: elements,
       style: this.getEdgeChallengeStyles(),
-      layout: {
-        name: 'grid',
-        rows: 2,
-        cols: Math.ceil(this.challengeData.nodes.length / 2),
-        padding: 40,
-        avoidOverlap: true,
-        condense: false
-      },
+      layout: this.getEdgeLayoutOptions(),
       userZoomingEnabled: true,
       userPanningEnabled: true,
       boxSelectionEnabled: false,
@@ -230,6 +325,18 @@ class ChallengePuzzle {
       this.cy.center();
     });
     this.container.querySelector('.puzzle-check')?.addEventListener('click', () => this.checkAnswer());
+  }
+
+  getEdgeLayoutOptions() {
+    return {
+      name: 'grid',
+      rows: 2,
+      cols: Math.ceil(this.challengeData.nodes.length / 2),
+      padding: 40,
+      avoidOverlap: true,
+      condense: false,
+      fit: true
+    };
   }
   
   handleNodeTap(e) {
@@ -594,8 +701,12 @@ class ChallengePuzzle {
   resize() {
     if (this.cy) {
       this.cy.resize();
-      this.cy.fit(undefined, 30);
-      this.cy.center();
+      if (this.challengeData.type === 'connect-edges') {
+        this.cy.layout(this.getEdgeLayoutOptions()).run();
+      } else {
+        this.cy.fit(undefined, 30);
+        this.cy.center();
+      }
     }
   }
   

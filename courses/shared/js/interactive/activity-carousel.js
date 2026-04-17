@@ -329,6 +329,14 @@ class ActivityCarousel {
     
     if (prevBtn) prevBtn.disabled = index === 0;
     if (nextBtn) nextBtn.disabled = index >= this.activityConfigs.length - 1;
+
+    // Cytoscape-based activities need a resize after becoming visible.
+    const activeActivity = this.activityInstances[index];
+    if (activeActivity?.resize) {
+      requestAnimationFrame(() => {
+        activeActivity.resize();
+      });
+    }
     
     // Animate slide transition
     if (typeof anime !== 'undefined') {

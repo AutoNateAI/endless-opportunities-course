@@ -490,7 +490,8 @@
 
       const completedLessons = window.DataService.getCompletedLessonsCount(courseProgress, COURSE_ID);
       const totalLessons = window.DataService.getLessonsStructure(COURSE_ID).totalLessons;
-      const progressPercent = courseProgress?.progressPercent ?? Math.round((completedLessons / totalLessons) * 100);
+      const recalculatedProgressPercent = totalLessons ? Math.round((completedLessons / totalLessons) * 100) : 0;
+      const progressPercent = Math.max(courseProgress?.progressPercent || 0, recalculatedProgressPercent);
       const nextLesson = window.DataService.getNextLesson(courseProgress, COURSE_ID);
       const accuracy = analytics?.persistenceMetrics?.overallAccuracy
         ? Math.round(analytics.persistenceMetrics.overallAccuracy * 100)

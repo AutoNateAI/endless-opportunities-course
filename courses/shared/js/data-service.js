@@ -18,7 +18,27 @@ const DataService = {
     
     try {
       const doc = await progressRef.get();
-      return doc.exists ? doc.data() : null;
+      const progressData = doc.exists ? doc.data() : null;
+
+      // Fallback: hydrate lesson state from the lessonProgress subcollection
+      // when the parent summary document is missing or stale.
+      const lessonProgressSnapshot = await progressRef.collection('lessonProgress').get();
+      if (!lessonProgressSnapshot.empty) {
+        const hydratedLessons = { ...(progressData?.lessons || {}) };
+        lessonProgressSnapshot.forEach((lessonDoc) => {
+          hydratedLessons[lessonDoc.id] = {
+            ...(hydratedLessons[lessonDoc.id] || {}),
+            ...lessonDoc.data()
+          };
+        });
+
+        return {
+          ...(progressData || {}),
+          lessons: hydratedLessons
+        };
+      }
+
+      return progressData;
     } catch (error) {
       console.error('Error getting course progress:', error);
       return null;
@@ -37,23 +57,38 @@ const DataService = {
                          .collection('courseProgress').doc(courseId);
 
     let wasCompleted = false;
+    let existingData = null;
     try {
       const existing = await progressRef.get();
+      existingData = existing.exists ? existing.data() : null;
       wasCompleted = !!existing.data()?.lessons?.[lessonId]?.completed;
     } catch (error) {
       console.warn('Unable to inspect existing lesson progress before update:', error);
     }
-    
+
+    const lessonData = {
+      ...(existingData?.lessons?.[lessonId] || {}),
+      ...data,
+      lastUpdated: firebase.firestore.FieldValue.serverTimestamp()
+    };
+
     const updateData = {
-      [`lessons.${lessonId}`]: {
-        ...data,
-        lastUpdated: firebase.firestore.FieldValue.serverTimestamp()
+      lessons: {
+        ...(existingData?.lessons || {}),
+        [lessonId]: lessonData
       },
       lastActivity: firebase.firestore.FieldValue.serverTimestamp()
     };
     
     try {
       await progressRef.set(updateData, { merge: true });
+      await progressRef.collection('lessonProgress').doc(lessonId).set({
+        ...lessonData,
+        userId: user.uid,
+        lessonId,
+        courseId,
+        updatedAt: firebase.firestore.FieldValue.serverTimestamp()
+      }, { merge: true });
 
       if (data.completed && !wasCompleted) {
         await this.recalculateCourseProgress(courseId);
@@ -140,6 +175,8 @@ const DataService = {
       Object.entries(lessons).forEach(([lessonId, lesson]) => {
         const isComplete = lesson.completed || 
                           lesson.progressPercent >= 100 ||
+                          (lesson.activitiesCompleted && lesson.activitiesTotal &&
+                           lesson.activitiesCompleted >= lesson.activitiesTotal) ||
                           (lesson.viewedSections && lesson.totalSections && 
                            lesson.viewedSections >= lesson.totalSections);
         if (isComplete) {
@@ -746,16 +783,22 @@ const DataService = {
         totalSections: progressData.totalSections
       });
       
-      // Build the update data using Firestore dot notation for nested field updates
-      const fieldPath = `lessons.${lessonId}`;
+      const existingCourseProgress = await courseRef.get();
+      const existingCourseData = existingCourseProgress.exists ? existingCourseProgress.data() : {};
       const updateData = {
         lastActivity: firebase.firestore.FieldValue.serverTimestamp(),
         lastLesson: lessonId,
         lastLessonProgress: progressData.progressPercent,
-        [fieldPath]: lessonData
+        lessons: {
+          ...(existingCourseData.lessons || {}),
+          [lessonId]: {
+            ...(existingCourseData.lessons?.[lessonId] || {}),
+            ...lessonData
+          }
+        }
       };
       
-      console.log('📊 Updating course document with field path:', fieldPath);
+      console.log('📊 Updating course document with merged lessons object for:', lessonId);
       console.log('📊 Lesson data being saved:', lessonData);
       
       try {
@@ -1384,6 +1427,8 @@ const DataService = {
         const lessonData = courseProgress.lessons[lesson.id];
         const isComplete = lessonData?.completed || 
                           lessonData?.progressPercent >= 100 ||
+                          (lessonData?.activitiesCompleted && lessonData?.activitiesTotal &&
+                           lessonData.activitiesCompleted >= lessonData.activitiesTotal) ||
                           (lessonData?.viewedSections && lessonData?.totalSections && 
                            lessonData.viewedSections >= lessonData.totalSections);
         
@@ -1435,6 +1480,8 @@ const DataService = {
       const isComplete = !!(
         lessonData.completed ||
         lessonData.progressPercent >= 100 ||
+        (lessonData.activitiesCompleted && lessonData.activitiesTotal &&
+          lessonData.activitiesCompleted >= lessonData.activitiesTotal) ||
         (lessonData.viewedSections && lessonData.totalSections &&
           lessonData.viewedSections >= lessonData.totalSections)
       );

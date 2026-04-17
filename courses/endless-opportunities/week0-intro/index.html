@@ -400,6 +400,7 @@
     <script src="../../shared/js/interactive/activities/reflection-activity.js"></script>
     <script src="../../shared/js/interactive/activities/graph-builder-activity.js"></script>
     <script src="../../shared/js/interactive/activity-carousel.js"></script>
+    <script src="../../shared/js/interactive/lesson-complete-banner.js"></script>
 
     <script>
       document.addEventListener("DOMContentLoaded", async () => {
@@ -422,6 +423,9 @@
       if (courseId && lessonId && window.ActivityTracker) {
         ActivityTracker.init(courseId, lessonId);
         console.log('🎯 ActivityTracker initialized:', courseId, lessonId);
+      }
+      if (window.LessonCompleteBanner) {
+        window.LessonCompleteBanner.init();
       }
 
         // Initialize page animations

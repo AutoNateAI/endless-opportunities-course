@@ -302,6 +302,7 @@
     <script src="../../shared/js/interactive/activities/fill-blank-activity.js"></script>
     <script src="../../shared/js/interactive/activities/sequence-activity.js"></script>
     <script src="../../shared/js/interactive/activity-carousel.js"></script>
+    <script src="../../shared/js/interactive/lesson-complete-banner.js"></script>
 
     <script>
       document.addEventListener("DOMContentLoaded", async () => {
@@ -318,6 +319,9 @@
         const lessonId = document.body.dataset.lesson;
         if (courseId && lessonId && window.ActivityTracker) {
           ActivityTracker.init(courseId, lessonId);
+        }
+        if (window.LessonCompleteBanner) {
+          window.LessonCompleteBanner.init();
         }
 
         DiagramUtils.initPageAnimations();
