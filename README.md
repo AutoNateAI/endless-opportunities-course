@@ -30,6 +30,8 @@ This starts Firebase hosting and functions emulators together.
 
 ## GitHub Pages
 
+Production URL: `https://eo.autonateai.com`
+
 Deploy the static site to the `gh-pages` branch with:
 
 ```bash
@@ -41,6 +43,7 @@ For GitHub Pages settings, use:
 - Source: `Deploy from a branch`
 - Branch: `gh-pages`
 - Folder: `/ (root)`
+- Custom domain: `eo.autonateai.com`
 
 ## Important
 
