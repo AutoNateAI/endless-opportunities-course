@@ -64,6 +64,9 @@ const EOAnalytics = (() => {
       const correctCount = attempts.filter(a => a.correct).length;
       const accuracy = totalAttempts > 0 ? correctCount / totalAttempts : 0;
       const lessonsWithAttempts = new Set(attempts.map(a => a.lessonId)).size;
+      const completedLessons = getCompletedLessonsCount(progress);
+      const startedLessons = getStartedLessonsCount(progress, attempts);
+      const hasStarted = totalAttempts > 0 || startedLessons > 0 || (progress?.progressPercent || 0) > 0;
 
       // Find last activity timestamp
       let lastActive = null;
@@ -72,6 +75,11 @@ const EOAnalytics = (() => {
         if (t && (!lastActive || t > lastActive)) lastActive = t;
       });
 
+      const progressLastActivity = toDate(progress?.lastActivity);
+      if (progressLastActivity && (!lastActive || progressLastActivity > lastActive)) {
+        lastActive = progressLastActivity;
+      }
+
       studentRows.push({
         name: user.displayName || 'No name',
         email: user.email || '',
@@ -79,7 +87,9 @@ const EOAnalytics = (() => {
         totalAttempts,
         correctCount,
         accuracy,
-        lessonsStarted: lessonsWithAttempts,
+        lessonsStarted: Math.max(lessonsWithAttempts, startedLessons),
+        completedLessons,
+        hasStarted,
         lastActive,
         progressPercent: progress?.progressPercent || 0,
       });
@@ -87,7 +97,7 @@ const EOAnalytics = (() => {
 
     // Summary stats
     const totalStudents = userData.length;
-    const activeStudents = studentRows.filter(s => s.totalAttempts > 0).length;
+    const activeStudents = studentRows.filter(s => s.hasStarted).length;
     const totalAttempts = allAttempts.length;
     const totalCorrect = allAttempts.filter(a => a.correct).length;
     const avgAccuracy = totalAttempts > 0 ? totalCorrect / totalAttempts : 0;
@@ -174,8 +184,54 @@ const EOAnalytics = (() => {
       activityTimeline,
       activityTypes: typeCounts,
       strugglingActivities,
-      studentRows: studentRows.sort((a, b) => b.totalAttempts - a.totalAttempts),
+      studentRows: studentRows
+        .filter(s => s.hasStarted)
+        .sort((a, b) => b.completedLessons - a.completedLessons || b.totalAttempts - a.totalAttempts),
     };
+  }
+
+  function toDate(value) {
+    return value?.toDate?.() || (value?.seconds ? new Date(value.seconds * 1000) : null);
+  }
+
+  function isLessonComplete(lessonData) {
+    return !!(
+      lessonData?.completed ||
+      lessonData?.progressPercent >= 100 ||
+      (lessonData?.activitiesCompleted && lessonData?.activitiesTotal &&
+        lessonData.activitiesCompleted >= lessonData.activitiesTotal) ||
+      (lessonData?.viewedSections && lessonData?.totalSections &&
+        lessonData.viewedSections >= lessonData.totalSections)
+    );
+  }
+
+  function getCompletedLessonsCount(progress) {
+    if (!progress?.lessons) return progress?.completedLessons || 0;
+    const completedFromLessons = WEEKS.reduce((count, week) => (
+      count + (isLessonComplete(progress.lessons[week.id]) ? 1 : 0)
+    ), 0);
+    return Math.max(progress.completedLessons || 0, completedFromLessons);
+  }
+
+  function getStartedLessonsCount(progress, attempts) {
+    const started = new Set(attempts.map(a => a.lessonId).filter(Boolean));
+    if (progress?.lessons) {
+      WEEKS.forEach(week => {
+        const lesson = progress.lessons[week.id];
+        if (
+          lesson &&
+          (lesson.completed ||
+            (lesson.progressPercent || 0) > 0 ||
+            (lesson.activitiesCompleted || 0) > 0 ||
+            (lesson.viewedSections || 0) > 0 ||
+            lesson.startedAt ||
+            lesson.lastActivity)
+        ) {
+          started.add(week.id);
+        }
+      });
+    }
+    return started.size;
   }
 
   // ─── Render All ───────────────────────────────────────────
@@ -519,7 +575,7 @@ const EOAnalytics = (() => {
 
   // ─── Student Engagement Table ─────────────────────────────
 
-  let currentSort = { field: 'totalAttempts', dir: 'desc' };
+  let currentSort = { field: 'completedLessons', dir: 'desc' };
   let cachedStudentRows = [];
 
   function renderStudentTable(rows) {
@@ -558,9 +614,10 @@ const EOAnalytics = (() => {
             <tr>
               <th class="sortable" data-sort="name">Student${arrow('name')}</th>
               <th class="sortable" data-sort="email">Email${arrow('email')}</th>
+              <th class="sortable" data-sort="completedLessons">Completed${arrow('completedLessons')}</th>
+              <th class="sortable" data-sort="lessonsStarted">Started${arrow('lessonsStarted')}</th>
               <th class="sortable" data-sort="totalAttempts">Attempts${arrow('totalAttempts')}</th>
               <th class="sortable" data-sort="accuracy">Accuracy${arrow('accuracy')}</th>
-              <th class="sortable" data-sort="lessonsStarted">Lessons${arrow('lessonsStarted')}</th>
               <th class="sortable" data-sort="lastActive">Last Active${arrow('lastActive')}</th>
             </tr>
           </thead>
@@ -573,7 +630,7 @@ const EOAnalytics = (() => {
       rows.forEach(s => {
         const pct = (s.accuracy * 100).toFixed(0);
         const accColor = pct >= 70 ? '#22c55e' : pct >= 40 ? '#f59e0b' : '#ef4444';
-        const atRisk = s.totalAttempts === 0 || s.accuracy < 0.4;
+        const atRisk = s.completedLessons === 0 || (s.totalAttempts > 0 && s.accuracy < 0.4);
         const lastActiveStr = s.lastActive
           ? s.lastActive.toLocaleDateString('en-US', { month: 'short', day: 'numeric', hour: 'numeric', minute: '2-digit' })
           : 'Never';
@@ -589,9 +646,10 @@ const EOAnalytics = (() => {
               </div>
             </td>
             <td style="font-size: 0.85rem; color: var(--text-muted);">${escapeHtml(s.email)}</td>
+            <td style="font-weight: 700;">${s.completedLessons} / 5</td>
+            <td>${s.lessonsStarted} / 5</td>
             <td style="font-weight: 600;">${s.totalAttempts}</td>
             <td><span style="color: ${accColor}; font-weight: 600;">${s.totalAttempts > 0 ? pct + '%' : '—'}</span></td>
-            <td>${s.lessonsStarted} / 5</td>
             <td style="font-size: 0.85rem; color: var(--text-muted);">${lastActiveStr}</td>
           </tr>
         `;
@@ -599,7 +657,7 @@ const EOAnalytics = (() => {
     }
 
     html += `</tbody></table></div>`;
-    html += `<p style="font-size: 11px; color: var(--text-muted); margin-top: 8px;">Students with low accuracy or no attempts are highlighted. Click column headers to sort.</p>`;
+    html += `<p style="font-size: 11px; color: var(--text-muted); margin-top: 8px;">Only students who have started EO are shown. Completed counts full EO weeks. Click column headers to sort.</p>`;
 
     container.innerHTML = html;
 
