@@ -583,6 +583,7 @@ const EOAnalytics = (() => {
     if (!container) return;
 
     cachedStudentRows = rows;
+    container.classList.remove('chart-loading');
     renderSortedTable(container);
   }
 
@@ -608,7 +609,7 @@ const EOAnalytics = (() => {
     };
 
     let html = `
-      <div style="overflow-x: auto;">
+      <div style="width: 100%; overflow-x: auto;">
         <table class="data-table" id="student-engagement-table">
           <thead>
             <tr>
