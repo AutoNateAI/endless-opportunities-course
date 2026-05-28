@@ -1,0 +1,1037 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Week 2: Data Makes the Case | Endless Opportunities</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=JetBrains+Mono&family=Space+Grotesk:wght@500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="../../shared/css/lesson-interactive.css" />
+    <link rel="stylesheet" href="../../shared/css/activity-carousel.css" />
+    <style>
+      :root {
+        --chapter-color: #5b6cff;
+        --chapter-gradient: linear-gradient(135deg, #3346d3, #5b6cff);
+      }
+    </style>
+  </head>
+  <body data-course="endless-opportunities" data-lesson="week2-data">
+    <header class="header">
+      <div class="header-content">
+        <a href="../../index.html" class="logo">
+          <div class="logo-icon">📊</div>
+          <span>Week 2</span>
+        </a>
+        <nav class="nav-links">
+          <a href="../index.html">← Endless Opportunities</a>
+          <a href="../week1-questions/">Week 1: Questions</a>
+          <a href="index.html" class="active">Week 2</a>
+          <a href="../week3-building/">Week 3: Building</a>
+        </nav>
+      </div>
+    </header>
+
+    <main class="container">
+      <div class="page-header">
+        <div class="breadcrumb">
+          <a href="../index.html">Endless Opportunities</a>
+          <span>/</span>
+          <span>Data Makes the Case</span>
+        </div>
+        <h1>📊 Data Makes the Case</h1>
+        <p>
+          Follow AJ, Nia, and Malik as Sage narrates how scattered signals turn
+          into proof, how intentional search beats passive feeds, and how clean
+          patterns reveal a real opportunity worth building.
+        </p>
+      </div>
+
+      <section class="section audio-info-section">
+        <div class="info-box compact">
+          <div class="info-header">
+            <div>
+              <h4>Narrated Story Experience</h4>
+              <p>
+                Follow the storyboard, tap the slide dots to jump between
+                frames, and complete the three activity sets after each story.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section">
+        <h2>🎬 Story Lens</h2>
+        <p>
+          Week 2 is where the trio stops trusting vibes alone. AJ notices the
+          signal first, Nia tests every claim against real behavior, and Malik
+          organizes the evidence until intuition turns into proof.
+        </p>
+        <div class="narrative-setup">
+          <article class="narrative-card">
+            <div class="narrative-card-step">01</div>
+            <h3>Catch the Signal</h3>
+            <p>
+              AJ starts noticing the same student frustrations repeated across
+              posts, reviews, comments, and DMs instead of treating them like
+              random noise.
+            </p>
+          </article>
+          <article class="narrative-card">
+            <div class="narrative-card-step">02</div>
+            <h3>Search on Purpose</h3>
+            <p>
+              Nia refuses to let the feed decide the story. The crew switches to
+              intentional search so the evidence comes from what people actually
+              said and did.
+            </p>
+          </article>
+          <article class="narrative-card">
+            <div class="narrative-card-step">03</div>
+            <h3>Turn Proof into Direction</h3>
+            <p>
+              Malik sorts repeated complaints, contradictions, and gaps into one
+              clear opportunity the crew can carry into week 3.
+            </p>
+          </article>
+        </div>
+      </section>
+
+      <section class="section" id="data-mindset-section">
+        <h2>Signals Hiding in Plain Sight</h2>
+        <p>
+          AJ keeps noticing the same complaint from students: after school,
+          there is nowhere nearby with good Wi-Fi, enough outlets, and space to
+          focus. Week 2 starts when the trio decides to treat those repeated
+          comments like evidence instead of background noise.
+        </p>
+
+        <div class="diagram-container" id="data-mindset-story-container">
+          <div class="diagram-header">
+            <span class="diagram-title">👀 Signals Before Conclusions</span>
+          </div>
+          <div
+            id="data-mindset-story"
+            class="diagram-canvas storytelling"
+          ></div>
+
+          <div class="diagram-story" id="data-mindset-story-caption">
+            <div class="story-step">
+              <div class="story-icon visible">🚀</div>
+              <div class="story-content">
+                <div class="story-title visible">Ready to Explore</div>
+                <div class="story-text visible">
+                  Click any progress dot below to jump to that step, or press
+                  Play to watch the full story unfold.
+                </div>
+                <div class="story-connection" style="display: none">
+                  <span class="arrow">→</span>
+                  <span class="connection-text"></span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="playback-controls">
+            <div class="playback-left">
+              <button class="diagram-btn play-btn" data-action="play">
+                ▶ Play
+              </button>
+            </div>
+            <div class="playback-center">
+              <div
+                class="story-progress"
+                id="data-mindset-story-progress"
+              ></div>
+            </div>
+            <div class="playback-right">
+              <button
+                class="diagram-btn small"
+                data-action="fit"
+                title="Fit to view"
+              >
+                Fit
+              </button>
+              <button
+                class="diagram-btn small"
+                data-action="reset"
+                title="Reset view"
+              >
+                Reset
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <div class="activity-carousels" data-story="data-mindset-story">
+          <div id="story1-comprehension" class="carousel-container"></div>
+          <div id="story1-application" class="carousel-container"></div>
+          <div id="story1-synthesis" class="carousel-container"></div>
+        </div>
+      </section>
+
+      <section class="section" id="algorithms-section">
+        <h2>Search Beats the Feed</h2>
+        <p>
+          The crew already has a hunch, but Nia will not let recommendation
+          feeds tell the story for them. They switch from passive scrolling to
+          deliberate search so they can compare claims, reviews, photos, and
+          local conversations on purpose.
+        </p>
+
+        <div class="diagram-container" id="algorithms-story-container">
+          <div class="diagram-header">
+            <span class="diagram-title">🔎 Intentional Search</span>
+          </div>
+          <div
+            id="algorithms-story"
+            class="diagram-canvas storytelling"
+          ></div>
+
+          <div class="diagram-story" id="algorithms-story-caption">
+            <div class="story-step">
+              <div class="story-icon visible">🚀</div>
+              <div class="story-content">
+                <div class="story-title visible">Ready to Explore</div>
+                <div class="story-text visible">
+                  Click any progress dot below to jump to that step, or press
+                  Play to watch the full story unfold.
+                </div>
+                <div class="story-connection" style="display: none">
+                  <span class="arrow">→</span>
+                  <span class="connection-text"></span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="playback-controls">
+            <div class="playback-left">
+              <button class="diagram-btn play-btn" data-action="play">
+                ▶ Play
+              </button>
+            </div>
+            <div class="playback-center">
+              <div
+                class="story-progress"
+                id="algorithms-story-progress"
+              ></div>
+            </div>
+            <div class="playback-right">
+              <button
+                class="diagram-btn small"
+                data-action="fit"
+                title="Fit to view"
+              >
+                Fit
+              </button>
+              <button
+                class="diagram-btn small"
+                data-action="reset"
+                title="Reset view"
+              >
+                Reset
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <div class="activity-carousels" data-story="algorithms-story">
+          <div id="story2-comprehension" class="carousel-container"></div>
+          <div id="story2-application" class="carousel-container"></div>
+          <div id="story2-synthesis" class="carousel-container"></div>
+        </div>
+      </section>
+
+      <section class="section" id="analysis-section">
+        <h2>Patterns Become Proof</h2>
+        <p>
+          Once the sources are collected, Malik starts tagging repeats and Nia
+          checks for contradictions. By the end of the story, AJ is not just
+          naming a problem. He can point to the gap and explain why it matters.
+        </p>
+
+        <div class="diagram-container" id="analysis-story-container">
+          <div class="diagram-header">
+            <span class="diagram-title">📌 From Evidence to Opportunity</span>
+          </div>
+          <div id="analysis-story" class="diagram-canvas storytelling"></div>
+
+          <div class="diagram-story" id="analysis-story-caption">
+            <div class="story-step">
+              <div class="story-icon visible">🚀</div>
+              <div class="story-content">
+                <div class="story-title visible">Ready to Explore</div>
+                <div class="story-text visible">
+                  Click any progress dot below to jump to that step, or press
+                  Play to watch the full story unfold.
+                </div>
+                <div class="story-connection" style="display: none">
+                  <span class="arrow">→</span>
+                  <span class="connection-text"></span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="playback-controls">
+            <div class="playback-left">
+              <button class="diagram-btn play-btn" data-action="play">
+                ▶ Play
+              </button>
+            </div>
+            <div class="playback-center">
+              <div
+                class="story-progress"
+                id="analysis-story-progress"
+              ></div>
+            </div>
+            <div class="playback-right">
+              <button
+                class="diagram-btn small"
+                data-action="fit"
+                title="Fit to view"
+              >
+                Fit
+              </button>
+              <button
+                class="diagram-btn small"
+                data-action="reset"
+                title="Reset view"
+              >
+                Reset
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <div class="activity-carousels" data-story="analysis-story">
+          <div id="story3-comprehension" class="carousel-container"></div>
+          <div id="story3-application" class="carousel-container"></div>
+          <div id="story3-synthesis" class="carousel-container"></div>
+        </div>
+      </section>
+
+      <section class="section">
+        <h2>Ready for Week 3?</h2>
+        <p>
+          The trio now has more than a hunch. They have proof. Week 3 is where
+          they use that evidence to build a first useful tool for the students
+          they have been studying.
+        </p>
+        <div class="cards-grid" style="grid-template-columns: repeat(2, 1fr)">
+          <a href="../week3-building/" class="card">
+            <div class="card-icon">🔨</div>
+            <h3>Week 3: Building Real Things</h3>
+            <p>
+              Turn the opportunity into a first working tool instead of leaving
+              it as a good idea.
+            </p>
+          </a>
+          <a href="../index.html" class="card">
+            <div class="card-icon">📚</div>
+            <h3>Course Overview</h3>
+            <p>Jump back to the full Endless Opportunities course map.</p>
+          </a>
+        </div>
+      </section>
+    </main>
+
+    <nav class="page-nav">
+      <h4>On This Page</h4>
+      <ul>
+        <li><a href="#data-mindset-section">Signals</a></li>
+        <li><a href="#algorithms-section">Search</a></li>
+        <li><a href="#analysis-section">Patterns</a></li>
+      </ul>
+    </nav>
+
+    <button class="back-to-top" title="Back to top">↑</button>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.2/anime.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/cytoscape/3.28.1/cytoscape.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/dagre/0.8.5/dagre.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/cytoscape-dagre@2.5.0/cytoscape-dagre.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/cytoscape-cose-bilkent@4.1.0/cytoscape-cose-bilkent.min.js"></script>
+
+    <script src="../../shared/js/interactive/diagram-utils.js"></script>
+    <script src="../../shared/js/interactive/audio-engine.js"></script>
+    <script src="../../shared/js/interactive/storytelling-diagram.js"></script>
+
+    <script src="https://www.gstatic.com/firebasejs/10.7.1/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/10.7.1/firebase-auth-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/10.7.1/firebase-firestore-compat.js"></script>
+    <script src="../../shared/js/firebase-config.js"></script>
+    <script src="../../shared/js/auth.js"></script>
+    <script src="../../shared/js/rbac.js"></script>
+    <script src="../../shared/js/route-guard.js"></script>
+    <script src="../../shared/js/data-service.js"></script>
+    <script src="../../shared/js/activity-tracker.js"></script>
+
+    <script src="../../shared/js/interactive/base-activity.js"></script>
+    <script src="../../shared/js/interactive/challenge-puzzle.js"></script>
+    <script src="../../shared/js/interactive/activities/quiz-activity.js"></script>
+    <script src="../../shared/js/interactive/activities/true-false-activity.js"></script>
+    <script src="../../shared/js/interactive/activities/fill-blank-activity.js"></script>
+    <script src="../../shared/js/interactive/activities/sequence-activity.js"></script>
+    <script src="../../shared/js/interactive/activities/drag-drop-activity.js"></script>
+    <script src="../../shared/js/interactive/activities/connect-edges-activity.js"></script>
+    <script src="../../shared/js/interactive/activities/scenario-activity.js"></script>
+    <script src="../../shared/js/interactive/activities/prediction-activity.js"></script>
+    <script src="../../shared/js/interactive/activities/reflection-activity.js"></script>
+    <script src="../../shared/js/interactive/activities/graph-builder-activity.js"></script>
+    <script src="../../shared/js/interactive/activity-carousel.js"></script>
+    <script src="../../shared/js/interactive/lesson-complete-banner.js"></script>
+
+    <script>
+      document.addEventListener("DOMContentLoaded", async () => {
+        if (window.FirebaseApp) {
+          window.FirebaseApp.init();
+        }
+
+        if (window.AuthService) {
+          window.AuthService.init();
+          await window.AuthService.waitForAuthState();
+        }
+
+        const courseId = document.body.dataset.course;
+        const lessonId = document.body.dataset.lesson;
+        if (courseId && lessonId && window.ActivityTracker) {
+          ActivityTracker.init(courseId, lessonId);
+        }
+        if (window.LessonCompleteBanner) {
+          window.LessonCompleteBanner.init();
+        }
+
+        DiagramUtils.initPageAnimations();
+        DiagramUtils.setupBackToTop();
+
+        const [storyResponse, storyboardResponse] = await Promise.all([
+          fetch("story.json"),
+          fetch("storyboards.json"),
+        ]);
+        const pageData = await storyResponse.json();
+        const storyboardData = await storyboardResponse.json();
+
+        const audioEngine = new AudioNarrationEngine("audio");
+        await audioEngine.waitForManifest();
+        audioEngine.setVoice("sage");
+
+        const diagramElements = {
+          "data-mindset": [
+            {
+              data: {
+                id: "signal-scroll",
+                label: "📱 Signals",
+                type: "external",
+                description: "Repeated posts, comments, and screenshots",
+              },
+            },
+            {
+              data: {
+                id: "claim-check",
+                label: "🧪 Claims vs Behavior",
+                type: "concept",
+                description: "Compare what places promise with what students say",
+              },
+            },
+            {
+              data: {
+                id: "evidence-board",
+                label: "📌 Evidence Board",
+                type: "service",
+                description: "Stack clues from multiple sources",
+              },
+            },
+            {
+              data: {
+                id: "proof-shift",
+                label: "✅ Proof",
+                type: "auth",
+                description: "Move from hunches to evidence",
+              },
+            },
+            { data: { source: "signal-scroll", target: "claim-check" } },
+            { data: { source: "claim-check", target: "evidence-board" } },
+            { data: { source: "evidence-board", target: "proof-shift" } },
+          ],
+          "algorithms": [
+            {
+              data: {
+                id: "feed-guessing",
+                label: "📲 Feed Guessing",
+                type: "auth",
+                description: "Recommendation decides what appears next",
+              },
+            },
+            {
+              data: {
+                id: "intentional-search",
+                label: "🔎 Search",
+                type: "concept",
+                description: "AJ asks for exactly what the team needs",
+              },
+            },
+            {
+              data: {
+                id: "cross-checking",
+                label: "🧭 Cross-Check",
+                type: "service",
+                description: "Nia compares maps, reviews, and photos",
+              },
+            },
+            {
+              data: {
+                id: "source-stack",
+                label: "🗂️ Source Stack",
+                type: "data",
+                description: "Malik organizes deliberate evidence",
+              },
+            },
+            {
+              data: {
+                id: "search-proof",
+                label: "🎯 Proof Trail",
+                type: "page",
+                description: "Intentional search creates defensible insight",
+              },
+            },
+            { data: { source: "feed-guessing", target: "intentional-search" } },
+            { data: { source: "intentional-search", target: "cross-checking" } },
+            { data: { source: "cross-checking", target: "source-stack" } },
+            { data: { source: "source-stack", target: "search-proof" } },
+          ],
+          "analysis": [
+            {
+              data: {
+                id: "question-frame",
+                label: "❓ Question",
+                type: "concept",
+                description: "What are students actually missing after school?",
+              },
+            },
+            {
+              data: {
+                id: "pattern-tags",
+                label: "🏷️ Patterns",
+                type: "data",
+                description: "Wi-Fi, outlets, noise, hours, price",
+              },
+            },
+            {
+              data: {
+                id: "contradictions",
+                label: "⚖️ Contradictions",
+                type: "auth",
+                description: "Marketing promises vs review reality",
+              },
+            },
+            {
+              data: {
+                id: "repeat-counts",
+                label: "🔁 Repeats",
+                type: "service",
+                description: "The same pain points keep showing up",
+              },
+            },
+            {
+              data: {
+                id: "gap-spot",
+                label: "🕳️ Gap",
+                type: "external",
+                description: "No nearby study spot serves students well",
+              },
+            },
+            {
+              data: {
+                id: "opportunity-call",
+                label: "🚀 Opportunity",
+                type: "page",
+                description: "Now the team can build with confidence",
+              },
+            },
+            { data: { source: "question-frame", target: "pattern-tags" } },
+            { data: { source: "pattern-tags", target: "contradictions" } },
+            { data: { source: "contradictions", target: "repeat-counts" } },
+            { data: { source: "repeat-counts", target: "gap-spot" } },
+            { data: { source: "gap-spot", target: "opportunity-call" } },
+          ],
+        };
+
+        const storyToDiagram = {
+          "data-mindset-story": "data-mindset",
+          "algorithms-story": "algorithms",
+          "analysis-story": "analysis",
+        };
+
+        pageData.stories.forEach((story) => {
+          const diagramKey = storyToDiagram[story.id];
+          if (!diagramKey) return;
+
+          new StorytellingDiagram(story.id, diagramElements[diagramKey], story.steps, {
+            audioEngine,
+            storyId: story.id,
+            forcedVoice: "sage",
+            storyboardFrames: storyboardData[story.id] || [],
+            storyboardOnly: true,
+          });
+        });
+
+        const carouselDefinitions = [
+          {
+            containerId: "story1-comprehension",
+            config: {
+              type: "comprehension",
+              sectionId: "data-mindset",
+              title: "Check Your Understanding",
+              activities: [
+                {
+                  type: "quiz",
+                  id: "w2-s1-c1",
+                  question: "What signal does AJ keep noticing at the start of the story?",
+                  options: [
+                    "Students want more homework help from teachers",
+                    "Students keep saying nearby spots are bad for studying after school",
+                    "Students want more sports highlights in their feeds",
+                    "Students only care about food prices",
+                  ],
+                  correct: 1,
+                  explanation:
+                    "AJ keeps catching the same complaint: students need a better place to work after school with Wi-Fi, outlets, and room to focus.",
+                  points: 10,
+                },
+                {
+                  type: "true-false",
+                  id: "w2-s1-c2",
+                  statement:
+                    "Nia treats one loud opinion as enough proof to make a decision.",
+                  correct: false,
+                  explanation:
+                    "Nia wants repeated evidence. She checks whether the same complaint appears across multiple sources before trusting it.",
+                  minReasoningWords: 5,
+                  points: 15,
+                },
+                {
+                  type: "fill-blank",
+                  id: "w2-s1-c3",
+                  statement:
+                    "By the end of the first story, the crew has moved from intuition to ___.",
+                  correctAnswers: ["proof", "evidence"],
+                  caseSensitive: false,
+                  hints: ["It is stronger than a hunch and comes from repeated signals."],
+                  explanation:
+                    "Week 2 is about moving from intuition to proof by stacking signals from more than one source.",
+                  points: 10,
+                },
+              ],
+            },
+          },
+          {
+            containerId: "story1-application",
+            config: {
+              type: "application",
+              sectionId: "data-mindset",
+              title: "Apply What You Learned",
+              activities: [
+                {
+                  type: "sequence",
+                  id: "w2-s1-a1",
+                  instruction: "Put AJ, Nia, and Malik's first investigation moves in order:",
+                  items: [
+                    { id: "a", text: "AJ notices the same complaint repeating" },
+                    { id: "b", text: "Nia compares claims to actual behavior" },
+                    { id: "c", text: "Malik pins the clues onto one evidence board" },
+                  ],
+                  correctOrder: ["a", "b", "c"],
+                  hints: {
+                    partial: "Start with the signal, then test it, then organize it.",
+                    wrong: "The team cannot organize proof before they see and test the signal.",
+                  },
+                  explanation:
+                    "The crew first spots the signal, then checks it, then organizes it into a usable evidence trail.",
+                  points: 20,
+                },
+                {
+                  type: "scenario",
+                  id: "w2-s1-a2",
+                  scenario:
+                    "Students in your neighborhood keep saying the local gym is 'never really usable after school.' You want to know whether that complaint is real or just loud.",
+                  question:
+                    "What free data sources would you check first, and what repeated signal would tell you the problem is real?",
+                  evaluation: {
+                    keywords: ["reviews", "comments", "maps", "posts", "photos", "hours", "reddit", "instagram", "repeat", "pattern"],
+                    minWords: 35,
+                    pointsPerKeyword: 3,
+                    depthBonus: 10,
+                  },
+                  modelAnswer:
+                    "Check reviews, map listings, recent photos, social posts, and local comments. If the same complaint keeps repeating across multiple sources, that turns a vibe into evidence.",
+                  points: 25,
+                },
+              ],
+            },
+          },
+          {
+            containerId: "story1-synthesis",
+            config: {
+              type: "synthesis",
+              sectionId: "data-mindset",
+              title: "Think Deeper",
+              activities: [
+                {
+                  type: "prediction",
+                  id: "w2-s1-s1",
+                  setup: {
+                    type: "text",
+                    content:
+                      "Team A starts building a solution the moment they hear one complaint. Team B waits until they find the same pain point in posts, reviews, photos, and comments.",
+                  },
+                  question: "Which team is more likely to build the right thing?",
+                  correctAnswer: "Team B",
+                  acceptableVariants: ["B", "team b", "the second team", "second"],
+                  explanation:
+                    "Team B has stronger proof. Repeated evidence lowers the chance that they are building for a fake or isolated problem.",
+                  commonMistakes: {
+                    "Team A": "Speed matters, but speed without proof often sends you toward the wrong problem.",
+                  },
+                  points: 15,
+                },
+                {
+                  type: "reflection",
+                  id: "w2-s1-s2",
+                  prompt:
+                    "Think about a complaint you hear all the time at school, in your neighborhood, or online. What would it take to prove that it is a real pattern instead of one person's frustration?",
+                  thinkingPrompts: [
+                    "Where would you look for repeated signals?",
+                    "What would count as stronger evidence?",
+                    "How would you know the complaint shows behavior, not just words?",
+                  ],
+                  evaluation: {
+                    minWords: 45,
+                    depthIndicators: [
+                      { pattern: "(review|comment|post|search|photo)", label: "Source awareness", points: 5 },
+                      { pattern: "(repeat|pattern|multiple|again)", label: "Pattern thinking", points: 5 },
+                      { pattern: "(proof|evidence|confirm|validate)", label: "Validation language", points: 5 },
+                    ],
+                    maxScore: 20,
+                  },
+                  points: 20,
+                },
+              ],
+            },
+          },
+          {
+            containerId: "story2-comprehension",
+            config: {
+              type: "comprehension",
+              sectionId: "algorithms",
+              title: "Check Your Understanding",
+              activities: [
+                {
+                  type: "quiz",
+                  id: "w2-s2-c1",
+                  question:
+                    "Why does Nia push the crew away from recommendation feeds in the second story?",
+                  options: [
+                    "Because feeds are too slow to load",
+                    "Because recommendation feeds choose the path for you instead of helping you investigate on purpose",
+                    "Because search engines never show ads",
+                    "Because feeds do not contain any data",
+                  ],
+                  correct: 1,
+                  explanation:
+                    "The problem is control. Recommendation feeds decide what appears next, while intentional search lets the crew test a specific question.",
+                  points: 10,
+                },
+                {
+                  type: "true-false",
+                  id: "w2-s2-c2",
+                  statement:
+                    "In the story, Malik uses search results from more than one source so the team can cross-check the evidence.",
+                  correct: true,
+                  explanation:
+                    "Malik stacks search results, map listings, reviews, and photos so one source can confirm or challenge another.",
+                  minReasoningWords: 5,
+                  points: 15,
+                },
+                {
+                  type: "fill-blank",
+                  id: "w2-s2-c3",
+                  statement:
+                    "Search helps the team stay ___ about what they want to learn next.",
+                  correctAnswers: ["intentional", "specific", "deliberate"],
+                  caseSensitive: false,
+                  hints: ["The opposite of passive scrolling."],
+                  explanation:
+                    "The story frames search as intentional investigation instead of passive consumption.",
+                  points: 10,
+                },
+              ],
+            },
+          },
+          {
+            containerId: "story2-application",
+            config: {
+              type: "application",
+              sectionId: "algorithms",
+              title: "Apply What You Learned",
+              activities: [
+                {
+                  type: "drag-drop",
+                  id: "w2-s2-a1",
+                  instruction: 'Sort each action into "Search" or "Recommendation":',
+                  items: [
+                    { id: "i1", text: 'Typing "late-night study cafe near me" into search' },
+                    { id: "i2", text: "Watching whatever the For You page serves next" },
+                    { id: "i3", text: 'Looking up recent reviews for "quiet coffee shop outlets"' },
+                    { id: "i4", text: "Tapping a suggested reel because the platform predicted you would like it" },
+                  ],
+                  zones: [
+                    { id: "search", label: "🔎 Search", correct: ["i1", "i3"] },
+                    { id: "recommendation", label: "📲 Recommendation", correct: ["i2", "i4"] },
+                  ],
+                  explanation:
+                    "Search starts with your question. Recommendation starts with the platform's guess.",
+                  points: 20,
+                },
+                {
+                  type: "scenario",
+                  id: "w2-s2-a2",
+                  scenario:
+                    "You need proof about whether your area has enough places for teens to work after school. You only have 20 minutes.",
+                  question:
+                    "What would you search first, and how would you avoid getting trapped in recommendation content that feels related but does not answer your question?",
+                  evaluation: {
+                    keywords: ["maps", "reviews", "hours", "wifi", "outlets", "search", "specific", "query", "ignore", "feed", "compare"],
+                    minWords: 40,
+                    pointsPerKeyword: 3,
+                    depthBonus: 12,
+                  },
+                  modelAnswer:
+                    "Use specific searches for nearby study spots, hours, Wi-Fi, outlets, and review patterns. Ignore feed suggestions and stick to sources that answer the actual question.",
+                  points: 25,
+                },
+              ],
+            },
+          },
+          {
+            containerId: "story2-synthesis",
+            config: {
+              type: "synthesis",
+              sectionId: "algorithms",
+              title: "Think Deeper",
+              activities: [
+                {
+                  type: "prediction",
+                  id: "w2-s2-s1",
+                  setup: {
+                    type: "text",
+                    content:
+                      "Person A researches a problem by searching exact terms across maps, reviews, and local threads. Person B waits to see what related videos and posts the platform recommends.",
+                  },
+                  question:
+                    "Whose evidence will be easier to defend when someone asks, 'How do you know?'",
+                  correctAnswer: "Person A",
+                  acceptableVariants: ["A", "person a", "the first person", "first"],
+                  explanation:
+                    "Intentional search creates a trail you can explain. Recommendation content may feel relevant, but it is harder to defend as a deliberate investigation.",
+                  commonMistakes: {
+                    "Person B": "Feeling informed is not the same as gathering evidence you can trace and justify.",
+                  },
+                  points: 15,
+                },
+                {
+                  type: "reflection",
+                  id: "w2-s2-s2",
+                  prompt:
+                    "Where in your own life do recommendation systems quietly shape what you believe is important? When would switching to search give you better evidence?",
+                  thinkingPrompts: [
+                    "What apps decide your next piece of information for you?",
+                    "What questions are better answered by deliberate search?",
+                    "How would your confidence change if you had to explain your evidence trail to someone else?",
+                  ],
+                  evaluation: {
+                    minWords: 45,
+                    depthIndicators: [
+                      { pattern: "(feed|recommend|for you|explore|suggested)", label: "Recommendation awareness", points: 5 },
+                      { pattern: "(search|look up|query|maps|reviews)", label: "Search strategy", points: 5 },
+                      { pattern: "(evidence|proof|defend|explain)", label: "Reasoning standard", points: 5 },
+                    ],
+                    maxScore: 20,
+                  },
+                  points: 20,
+                },
+              ],
+            },
+          },
+          {
+            containerId: "story3-comprehension",
+            config: {
+              type: "comprehension",
+              sectionId: "analysis",
+              title: "Check Your Understanding",
+              activities: [
+                {
+                  type: "quiz",
+                  id: "w2-s3-c1",
+                  question:
+                    "What does Malik do first once the crew has collected enough evidence?",
+                  options: [
+                    "He guesses the solution and moves on",
+                    "He tags repeated patterns so the same signals can be counted together",
+                    "He deletes the contradictory sources",
+                    "He switches back to the feed for more inspiration",
+                  ],
+                  correct: 1,
+                  explanation:
+                    "Malik organizes the evidence into repeatable categories so the team can see what keeps showing up.",
+                  points: 10,
+                },
+                {
+                  type: "true-false",
+                  id: "w2-s3-c2",
+                  statement:
+                    "Nia only cares about repeated complaints, not contradictions between what places promise and what students report.",
+                  correct: false,
+                  explanation:
+                    "Nia looks for contradictions too. When a place markets itself as study-friendly but reviews say the Wi-Fi fails and the music is too loud, that gap matters.",
+                  minReasoningWords: 5,
+                  points: 15,
+                },
+                {
+                  type: "fill-blank",
+                  id: "w2-s3-c3",
+                  statement:
+                    "By the final step, AJ can point to a clear ___ in the market instead of just repeating a complaint.",
+                  correctAnswers: ["gap", "opportunity", "opening"],
+                  caseSensitive: false,
+                  hints: ["It is what appears when a need is real but nobody nearby is meeting it well."],
+                  explanation:
+                    "The final move is identifying a gap or opportunity, not stopping at the complaint itself.",
+                  points: 10,
+                },
+              ],
+            },
+          },
+          {
+            containerId: "story3-application",
+            config: {
+              type: "application",
+              sectionId: "analysis",
+              title: "Apply What You Learned",
+              activities: [
+                {
+                  type: "sequence",
+                  id: "w2-s3-a1",
+                  instruction: "Put the week 2 analysis flow in order:",
+                  items: [
+                    { id: "p1", text: "Define the question clearly" },
+                    { id: "p2", text: "Tag repeated patterns across the evidence" },
+                    { id: "p3", text: "Check contradictions and counts" },
+                    { id: "p4", text: "Name the gap and opportunity" },
+                  ],
+                  correctOrder: ["p1", "p2", "p3", "p4"],
+                  hints: {
+                    partial: "Start with the question and end with the opportunity.",
+                    wrong: "You cannot name the opportunity before the patterns and contradictions are clear.",
+                  },
+                  explanation:
+                    "The team moves from question, to patterns, to contradiction checks, to a defendable opportunity.",
+                  points: 20,
+                },
+                {
+                  type: "connect-edges",
+                  id: "w2-s3-a2",
+                  instruction: "Connect each kind of evidence work to what it reveals:",
+                  nodes: [
+                    { id: "patterns", label: "🏷️ Tagging Patterns" },
+                    { id: "contradictions", label: "⚖️ Checking Contradictions" },
+                    { id: "counts", label: "🔁 Counting Repeats" },
+                    { id: "themes", label: "📌 Reliable Themes" },
+                    { id: "gaps", label: "🕳️ Broken Promises" },
+                    { id: "priority", label: "🎯 What matters most" },
+                  ],
+                  solution: {
+                    edges: [
+                      { source: "patterns", target: "themes" },
+                      { source: "contradictions", target: "gaps" },
+                      { source: "counts", target: "priority" },
+                    ],
+                  },
+                  nodeDescriptions: {
+                    patterns: "Grouping similar evidence together",
+                    contradictions: "Comparing promises to reality",
+                    counts: "Seeing which pain points repeat most",
+                    themes: "The stable pattern underneath the noise",
+                    gaps: "Places where current options fail people",
+                    priority: "The strongest target for action",
+                  },
+                  explanation:
+                    "Patterns reveal themes, contradictions reveal gaps, and counts reveal which problems deserve attention first.",
+                  points: 25,
+                },
+              ],
+            },
+          },
+          {
+            containerId: "story3-synthesis",
+            config: {
+              type: "synthesis",
+              sectionId: "analysis",
+              title: "Think Deeper",
+              activities: [
+                {
+                  type: "scenario",
+                  id: "w2-s3-s1",
+                  scenario:
+                    "You reviewed comments, ratings, and photos for five places students might use after school. The same pattern keeps appearing: one place is affordable but too loud, one has Wi-Fi but closes early, one stays open late but has no outlets, and none are designed for focused student work.",
+                  question:
+                    "What is the real opportunity, and what proof would you use to explain it to someone who says, 'That is just your opinion'?",
+                  evaluation: {
+                    keywords: ["gap", "pattern", "proof", "reviews", "photos", "repeat", "students", "wifi", "outlets", "hours", "evidence"],
+                    minWords: 50,
+                    pointsPerKeyword: 3,
+                    depthBonus: 12,
+                  },
+                  modelAnswer:
+                    "The opportunity is a student-focused after-school work spot or tool because the evidence shows the same unmet needs across multiple locations. The proof is the repeated pattern across reviews, photos, hours, and complaints.",
+                  points: 25,
+                },
+                {
+                  type: "reflection",
+                  id: "w2-s3-s2",
+                  prompt:
+                    "When does a repeated complaint become a build-worthy opportunity? Explain how you would decide whether the evidence is strong enough to carry into week 3.",
+                  thinkingPrompts: [
+                    "How many sources would you want?",
+                    "What patterns or contradictions would matter most?",
+                    "What would make the opportunity feel specific enough to build for real people?",
+                  ],
+                  evaluation: {
+                    minWords: 50,
+                    depthIndicators: [
+                      { pattern: "(source|review|comment|photo|search)", label: "Source standard", points: 5 },
+                      { pattern: "(pattern|repeat|contradiction|gap)", label: "Analysis language", points: 5 },
+                      { pattern: "(build|prototype|test|week 3|solution)", label: "Build readiness", points: 5 },
+                    ],
+                    maxScore: 20,
+                  },
+                  points: 20,
+                },
+              ],
+            },
+          },
+        ];
+
+        carouselDefinitions.forEach(({ containerId, config }) => {
+          const carousel = new ActivityCarousel(containerId, config);
+          carousel.init();
+        });
+      });
+    </script>
+  </body>
+</html>

@@ -1,0 +1,1008 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Endless Opportunities | Course Dashboard</title>
+    <meta
+      name="description"
+      content="Endless Opportunities is a mobile-first learning portal for guided AI problem solving, student progress, and weekly lesson access."
+    />
+    <meta property="og:title" content="Endless Opportunities | Course Dashboard" />
+    <meta
+      property="og:description"
+      content="Explore the weekly journey, sign in, create an account, and continue through the Endless Opportunities course."
+    />
+    <meta property="og:image" content="../assets/courses/course-endless-opportunities.png" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Endless Opportunities | Course Dashboard" />
+    <meta
+      name="twitter:description"
+      content="A focused learning portal for AI problem solving, course progress, and weekly lesson access."
+    />
+    <meta name="twitter:image" content="../assets/courses/course-endless-opportunities.png" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Space+Grotesk:wght@500;700&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      :root {
+        --bg: #07110c;
+        --bg-panel: rgba(11, 25, 19, 0.88);
+        --bg-panel-strong: rgba(13, 31, 23, 0.96);
+        --bg-soft: rgba(255, 255, 255, 0.04);
+        --line: rgba(255, 255, 255, 0.08);
+        --line-strong: rgba(127, 226, 159, 0.24);
+        --text: #f4f8f2;
+        --muted: #b3c5b7;
+        --muted-strong: #d5dfd5;
+        --accent: #7fe29f;
+        --accent-strong: #1f7a46;
+        --accent-warm: #f3c96b;
+        --ink: #07200f;
+        --shadow: 0 28px 70px rgba(0, 0, 0, 0.32);
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+
+      html {
+        scroll-behavior: smooth;
+      }
+
+      body {
+        margin: 0;
+        font-family: "Manrope", sans-serif;
+        color: var(--text);
+        background:
+          radial-gradient(circle at top left, rgba(127, 226, 159, 0.18), transparent 32%),
+          radial-gradient(circle at right 15%, rgba(243, 201, 107, 0.12), transparent 22%),
+          linear-gradient(180deg, #08120d 0%, #07110c 44%, #0a1510 100%);
+      }
+
+      a {
+        color: inherit;
+        text-decoration: none;
+      }
+
+      img {
+        display: block;
+        max-width: 100%;
+      }
+
+      .shell {
+        width: min(100% - 24px, 1120px);
+        margin: 0 auto;
+      }
+
+      .topbar {
+        position: sticky;
+        top: 0;
+        z-index: 20;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+        background: rgba(7, 17, 12, 0.78);
+        backdrop-filter: blur(18px);
+      }
+
+      .topbar-inner {
+        display: grid;
+        grid-template-columns: minmax(0, 1fr) auto;
+        align-items: center;
+        gap: 12px;
+        padding: 14px 0;
+      }
+
+      .brand {
+        display: inline-flex;
+        align-items: center;
+        gap: 12px;
+        min-width: 0;
+        flex: 1 1 auto;
+      }
+
+      .brand-mark {
+        width: 44px;
+        height: 44px;
+        border-radius: 14px;
+        display: grid;
+        place-items: center;
+        background: linear-gradient(135deg, var(--accent), var(--accent-warm));
+        color: var(--ink);
+        box-shadow: 0 14px 28px rgba(0, 0, 0, 0.24);
+        flex: 0 0 auto;
+      }
+
+      .brand-copy {
+        min-width: 0;
+        flex: 1 1 auto;
+      }
+
+      .brand-copy span {
+        display: block;
+      }
+
+      .brand-copy .eyebrow {
+        color: var(--accent);
+        font-size: 0.72rem;
+        text-transform: uppercase;
+        letter-spacing: 0.12em;
+        font-weight: 800;
+      }
+
+      .brand-copy .title {
+        font-family: "Space Grotesk", sans-serif;
+        font-size: 1rem;
+        letter-spacing: -0.03em;
+      }
+
+      .menu-toggle {
+        width: 48px;
+        height: 48px;
+        display: inline-grid;
+        place-items: center;
+        padding: 0;
+        border: 1px solid var(--line);
+        border-radius: 16px;
+        background: rgba(255, 255, 255, 0.03);
+        color: var(--text);
+        cursor: pointer;
+        transition: transform 0.2s ease, border-color 0.2s ease, background 0.2s ease;
+      }
+
+      .menu-toggle:hover {
+        transform: translateY(-1px);
+        border-color: var(--line-strong);
+        background: rgba(255, 255, 255, 0.05);
+      }
+
+      .menu-toggle svg {
+        width: 22px;
+        height: 22px;
+      }
+
+      .menu-toggle .menu-line {
+        transition: transform 0.28s ease, opacity 0.2s ease;
+        transform-origin: center;
+      }
+
+      .menu-toggle[aria-expanded="true"] .menu-line-top {
+        transform: translateY(5px) rotate(45deg);
+      }
+
+      .menu-toggle[aria-expanded="true"] .menu-line-middle {
+        opacity: 0;
+      }
+
+      .menu-toggle[aria-expanded="true"] .menu-line-bottom {
+        transform: translateY(-5px) rotate(-45deg);
+      }
+
+      .nav {
+        grid-column: 1 / -1;
+        display: grid;
+        gap: 8px;
+        max-height: 0;
+        margin-top: 0;
+        overflow: hidden;
+        opacity: 0;
+        pointer-events: none;
+        transform: translateY(-8px);
+        transition:
+          max-height 0.35s ease,
+          opacity 0.24s ease,
+          transform 0.24s ease,
+          margin-top 0.24s ease;
+      }
+
+      .nav.open {
+        max-height: 220px;
+        margin-top: 8px;
+        opacity: 1;
+        pointer-events: auto;
+        transform: translateY(0);
+      }
+
+      .nav a {
+        color: var(--muted);
+        font-size: 0.9rem;
+        width: 100%;
+        padding: 0.85rem 1rem;
+        border-radius: 18px;
+        border: 1px solid rgba(255, 255, 255, 0.06);
+        background: rgba(255, 255, 255, 0.03);
+        transition: background 0.2s ease, color 0.2s ease, transform 0.2s ease, border-color 0.2s ease;
+      }
+
+      .nav a:hover {
+        color: var(--text);
+        background: rgba(255, 255, 255, 0.06);
+        border-color: var(--line-strong);
+      }
+
+      .btn {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        gap: 8px;
+        min-height: 48px;
+        padding: 0.9rem 1.15rem;
+        border-radius: 999px;
+        font-weight: 800;
+        border: 1px solid transparent;
+        transition: transform 0.2s ease, box-shadow 0.2s ease, background 0.2s ease, border-color 0.2s ease;
+      }
+
+      .btn:hover {
+        transform: translateY(-1px);
+      }
+
+      .btn-primary {
+        background: linear-gradient(135deg, var(--accent-warm), var(--accent));
+        color: var(--ink);
+        box-shadow: 0 16px 34px rgba(127, 226, 159, 0.18);
+      }
+
+      .btn-secondary {
+        background: rgba(255, 255, 255, 0.03);
+        border-color: var(--line);
+        color: var(--text);
+      }
+
+      .btn-secondary:hover {
+        border-color: var(--line-strong);
+      }
+
+      .hero {
+        padding: 26px 0 18px;
+      }
+
+      .hero-grid {
+        display: grid;
+        gap: 14px;
+      }
+
+      .hero-card,
+      .panel,
+      .week-card,
+      .preview-card,
+      .cta-card {
+        border: 1px solid var(--line);
+        background: var(--bg-panel);
+        box-shadow: var(--shadow);
+      }
+
+      .hero-card,
+      .panel,
+      .cta-card {
+        border-radius: 28px;
+      }
+
+      .hero-card {
+        padding: 20px;
+      }
+
+      .eyebrow-pill {
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
+        padding: 0.55rem 0.85rem;
+        border-radius: 999px;
+        border: 1px solid rgba(127, 226, 159, 0.18);
+        background: rgba(127, 226, 159, 0.08);
+        color: var(--accent);
+        text-transform: uppercase;
+        letter-spacing: 0.09em;
+        font-size: 0.74rem;
+        font-weight: 800;
+      }
+
+      h1,
+      h2,
+      h3 {
+        margin: 0;
+        font-family: "Space Grotesk", sans-serif;
+        letter-spacing: -0.04em;
+      }
+
+      h1 {
+        margin-top: 14px;
+        font-size: clamp(2.2rem, 11vw, 4.8rem);
+        line-height: 0.95;
+      }
+
+      .hero-copy {
+        margin-top: 14px;
+        color: var(--muted);
+        font-size: 0.98rem;
+        line-height: 1.68;
+        max-width: 56ch;
+      }
+
+      .hero-actions,
+      .cta-actions {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 10px;
+        margin-top: 18px;
+      }
+
+      .hero-status {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 10px;
+        margin-top: 18px;
+      }
+
+      .status-pill {
+        padding: 0.9rem;
+        border-radius: 20px;
+        background: var(--bg-soft);
+        border: 1px solid rgba(255, 255, 255, 0.05);
+      }
+
+      .status-pill strong {
+        display: block;
+        font-size: 1rem;
+      }
+
+      .status-pill span {
+        display: block;
+        margin-top: 4px;
+        color: var(--muted);
+        font-size: 0.82rem;
+      }
+
+      .panel {
+        padding: 18px;
+      }
+
+      .panel h2 {
+        font-size: 1.35rem;
+      }
+
+      .panel p,
+      .preview-card p,
+      .cta-card p {
+        color: var(--muted);
+        line-height: 1.65;
+      }
+
+      .spotlight {
+        display: grid;
+        gap: 12px;
+        margin-top: 14px;
+      }
+
+      .spotlight-frame {
+        border-radius: 22px;
+        overflow: hidden;
+        border: 1px solid rgba(255, 255, 255, 0.08);
+        background: var(--bg-panel-strong);
+      }
+
+      .spotlight-copy {
+        display: grid;
+        gap: 10px;
+      }
+
+      .spotlight-points {
+        display: grid;
+        gap: 8px;
+      }
+
+      .spotlight-point {
+        padding: 0.85rem 0.95rem;
+        border-radius: 18px;
+        background: rgba(255, 255, 255, 0.03);
+        color: var(--muted-strong);
+        font-size: 0.92rem;
+      }
+
+      .section {
+        padding: 10px 0 18px;
+      }
+
+      .video-feature {
+        display: grid;
+        gap: 14px;
+      }
+
+      .video-frame {
+        border-radius: 26px;
+        overflow: hidden;
+        border: 1px solid var(--line);
+        background:
+          radial-gradient(circle at top left, rgba(127, 226, 159, 0.16), transparent 24%),
+          var(--bg-panel-strong);
+        box-shadow: var(--shadow);
+      }
+
+      .video-frame video {
+        width: 100%;
+        display: block;
+        aspect-ratio: 16 / 9;
+        background: #020604;
+      }
+
+      .video-copy {
+        display: grid;
+        gap: 10px;
+        padding: 18px;
+        border-radius: 24px;
+        border: 1px solid var(--line);
+        background: var(--bg-panel);
+        box-shadow: var(--shadow);
+      }
+
+      .video-copy p,
+      .video-copy li {
+        color: var(--muted);
+        line-height: 1.65;
+      }
+
+      .video-list {
+        display: grid;
+        gap: 8px;
+        margin: 0;
+        padding-left: 18px;
+      }
+
+      .section-head {
+        display: grid;
+        gap: 10px;
+        margin-bottom: 14px;
+      }
+
+      .section-head p {
+        color: var(--muted);
+        margin: 0;
+      }
+
+      .weeks-strip {
+        display: grid;
+        grid-auto-flow: column;
+        grid-auto-columns: minmax(230px, 1fr);
+        gap: 12px;
+        overflow-x: auto;
+        padding-bottom: 4px;
+        scroll-snap-type: x proximity;
+      }
+
+      .weeks-strip::-webkit-scrollbar {
+        height: 8px;
+      }
+
+      .weeks-strip::-webkit-scrollbar-thumb {
+        background: rgba(255, 255, 255, 0.1);
+        border-radius: 999px;
+      }
+
+      .week-card {
+        scroll-snap-align: start;
+        border-radius: 24px;
+        padding: 18px;
+        display: grid;
+        gap: 14px;
+      }
+
+      .week-top {
+        display: flex;
+        justify-content: space-between;
+        gap: 12px;
+        align-items: flex-start;
+      }
+
+      .week-kicker {
+        color: var(--accent);
+        font-size: 0.76rem;
+        text-transform: uppercase;
+        letter-spacing: 0.1em;
+        font-weight: 800;
+      }
+
+      .week-number {
+        color: var(--accent-warm);
+        font-weight: 800;
+      }
+
+      .week-card h3 {
+        font-size: 1.2rem;
+      }
+
+      .week-card p {
+        color: var(--muted);
+        font-size: 0.92rem;
+        line-height: 1.62;
+      }
+
+      .week-card .btn {
+        width: 100%;
+      }
+
+      .week-card .btn-secondary {
+        color: var(--muted-strong);
+      }
+
+      .week-card .btn.week0-btn {
+        background: linear-gradient(135deg, #f3c96b, #7fe29f);
+        color: #07200f;
+        border-color: transparent;
+      }
+
+      .two-up {
+        display: grid;
+        gap: 12px;
+      }
+
+      .preview-card {
+        border-radius: 24px;
+        overflow: hidden;
+      }
+
+      .preview-card img {
+        aspect-ratio: 16 / 10;
+        object-fit: cover;
+        width: 100%;
+      }
+
+      .preview-copy {
+        padding: 16px;
+        display: grid;
+        gap: 8px;
+      }
+
+      .cta-card {
+        padding: 20px;
+        display: grid;
+        gap: 12px;
+        background:
+          linear-gradient(120deg, rgba(127, 226, 159, 0.12), rgba(243, 201, 107, 0.1)),
+          var(--bg-panel);
+      }
+
+      .footer {
+        padding: 12px 0 34px;
+      }
+
+      .footer-card {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        padding-top: 16px;
+        border-top: 1px solid rgba(255, 255, 255, 0.08);
+        color: var(--muted);
+        font-size: 0.92rem;
+      }
+
+      .footer-card strong {
+        color: var(--text);
+      }
+
+      .auth-note {
+        color: var(--accent-warm);
+        font-size: 0.82rem;
+        font-weight: 700;
+        letter-spacing: 0.02em;
+      }
+
+      @media (min-width: 760px) {
+        .shell {
+          width: min(100% - 36px, 1120px);
+        }
+
+        .topbar-inner {
+          display: flex;
+          justify-content: space-between;
+          padding: 16px 0;
+        }
+
+        .menu-toggle {
+          display: none;
+        }
+
+        .nav {
+          grid-column: auto;
+          display: flex;
+          align-items: center;
+          gap: 8px;
+          flex-wrap: wrap;
+          justify-content: flex-end;
+          max-height: none;
+          margin-top: 0;
+          overflow: visible;
+          opacity: 1;
+          pointer-events: auto;
+          transform: none;
+        }
+
+        .nav a {
+          width: auto;
+          padding: 0.7rem 0.85rem;
+          border-radius: 999px;
+          border-color: transparent;
+          background: transparent;
+        }
+
+        .hero {
+          padding: 34px 0 22px;
+        }
+
+        .hero-grid,
+        .two-up {
+          grid-template-columns: repeat(2, minmax(0, 1fr));
+        }
+
+        .hero-card {
+          padding: 28px;
+        }
+
+        .panel,
+        .cta-card {
+          padding: 24px;
+        }
+
+        .weeks-strip {
+          grid-auto-flow: initial;
+          grid-template-columns: repeat(2, minmax(0, 1fr));
+          overflow: visible;
+        }
+      }
+
+      @media (min-width: 1040px) {
+        .hero-grid {
+          grid-template-columns: 1.08fr 0.92fr;
+          align-items: stretch;
+        }
+
+        .weeks-strip {
+          grid-template-columns: repeat(5, minmax(0, 1fr));
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <header class="topbar">
+      <div class="shell topbar-inner">
+        <a class="brand" href="../index.html">
+          <span class="brand-mark">🚀</span>
+          <span class="brand-copy">
+            <span class="eyebrow">Course Dashboard</span>
+            <span class="title">Endless Opportunities</span>
+          </span>
+        </a>
+        <button
+          class="menu-toggle"
+          id="menu-toggle"
+          type="button"
+          aria-expanded="false"
+          aria-controls="site-nav"
+          aria-label="Open navigation menu"
+        >
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round">
+            <line class="menu-line menu-line-top" x1="4" y1="7" x2="20" y2="7"></line>
+            <line class="menu-line menu-line-middle" x1="4" y1="12" x2="20" y2="12"></line>
+            <line class="menu-line menu-line-bottom" x1="4" y1="17" x2="20" y2="17"></line>
+          </svg>
+        </button>
+        <nav class="nav" id="site-nav">
+          <a href="../auth/login.html">Sign In</a>
+          <a href="../auth/register.html">Create Account</a>
+          <a href="../dashboard/progress.html?id=endless-opportunities">My Progress</a>
+        </nav>
+      </div>
+    </header>
+
+    <main>
+      <section class="hero">
+        <div class="shell hero-grid">
+          <article class="hero-card">
+            <span class="eyebrow-pill">Youth AI Problem Solving Academy</span>
+            <h1>Learn it. Build it. Show your work.</h1>
+            <p class="hero-copy">
+              Endless Opportunities is now running in its own focused portal. Students can sign in, track progress,
+              and move through each week from one clean dashboard built for phones first and still sharp on larger screens.
+            </p>
+            <div class="hero-actions">
+              <a class="btn btn-primary" data-auth-target="../endless-opportunities/week0-intro/" href="../auth/login.html">Start Week 0</a>
+              <a class="btn btn-secondary" href="../auth/register.html">Create Student Account</a>
+            </div>
+            <div class="hero-status">
+              <div class="status-pill">
+                <strong>5 weeks</strong>
+                <span>Curiosity, data, building, and portfolio work</span>
+              </div>
+              <div class="status-pill">
+                <strong>Protected access</strong>
+                <span>Sign-in and org-based lesson access are enforced</span>
+              </div>
+              <div class="status-pill">
+                <strong>Mobile first</strong>
+                <span>Compressed sections and swipeable week navigation</span>
+              </div>
+              <div class="status-pill">
+                <strong>Progress aware</strong>
+                <span>Students return to the dashboard and continue</span>
+              </div>
+            </div>
+          </article>
+
+          <aside class="panel">
+            <h2>One dashboard for students and instructors</h2>
+            <p>
+              The portal keeps the weekly journey visible, gives students a clean place to resume,
+              and preserves the analytics view instructors use to monitor class progress.
+            </p>
+            <div class="spotlight">
+              <div class="spotlight-frame">
+                <img src="../assets/courses/course-endless-opportunities.png" alt="Endless Opportunities course artwork" />
+              </div>
+              <div class="spotlight-copy">
+                <div class="spotlight-point">Students authenticate before entering lessons.</div>
+              <div class="spotlight-point">The back link from lesson pages returns to the student dashboard.</div>
+                <div class="spotlight-point">Week cards stay legible with higher-contrast actions.</div>
+              </div>
+            </div>
+          </aside>
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="shell video-feature">
+          <div class="section-head">
+            <div>
+              <span class="eyebrow-pill">New Promo Video</span>
+              <h2 style="margin-top: 12px;">See the product before you ever click into a week</h2>
+            </div>
+            <p>
+              This cut uses real EO screens, a generated voiceover, and motion-timed product shots to show how the course teaches through storytelling diagrams, interactive activities, and student progress feedback.
+            </p>
+          </div>
+
+          <div class="video-frame">
+            <video
+              controls
+              playsinline
+              preload="metadata"
+              poster="../assets/screenshots/dashboard-preview.png"
+            >
+              <source src="../assets/video/eo-course-promo.mp4" type="video/mp4" />
+            </video>
+          </div>
+
+          <div class="video-copy">
+            <h3>What the promo emphasizes</h3>
+            <ul class="video-list">
+              <li>Mobile-first landing and dashboard flow instead of a cluttered course homepage.</li>
+              <li>Interactive diagram lessons with narration and guided playback.</li>
+              <li>Embedded activities and progress analytics so students keep proving they learned it.</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="shell">
+          <div class="section-head">
+            <div>
+              <span class="eyebrow-pill">Weekly Journey</span>
+              <h2 style="margin-top: 12px;">Move through the course week by week</h2>
+            </div>
+            <p>Swipe on mobile or scan across on desktop. Students can always re-enter through the course dashboard.</p>
+          </div>
+
+          <div class="weeks-strip">
+            <article class="week-card">
+              <div class="week-top">
+                <div>
+                  <div class="week-kicker">Week 0</div>
+                  <h3>The Game We Live In</h3>
+                </div>
+                <div class="week-number">01</div>
+              </div>
+              <p>Frame life as a series of solvable problems and connect AI to real opportunity.</p>
+              <a class="btn week0-btn" data-auth-target="../endless-opportunities/week0-intro/" href="../auth/login.html">Open Week 0</a>
+            </article>
+
+            <article class="week-card">
+              <div class="week-top">
+                <div>
+                  <div class="week-kicker">Week 1</div>
+                  <h3>The Art of Questions</h3>
+                </div>
+                <div class="week-number">02</div>
+              </div>
+              <p>Train students to ask sharper questions so prompts, thinking, and outcomes improve together.</p>
+              <a class="btn btn-secondary" data-auth-target="../endless-opportunities/week1-questions/" href="../auth/login.html">Go to Week 1</a>
+            </article>
+
+            <article class="week-card">
+              <div class="week-top">
+                <div>
+                  <div class="week-kicker">Week 2</div>
+                  <h3>Working with Data</h3>
+                </div>
+                <div class="week-number">03</div>
+              </div>
+              <p>Show how information becomes useful once it is organized, compared, and interpreted well.</p>
+              <a class="btn btn-secondary" data-auth-target="../endless-opportunities/week2-data/" href="../auth/login.html">Go to Week 2</a>
+            </article>
+
+            <article class="week-card">
+              <div class="week-top">
+                <div>
+                  <div class="week-kicker">Week 3</div>
+                  <h3>Building Real Things</h3>
+                </div>
+                <div class="week-number">04</div>
+              </div>
+              <p>Shift from theory into making websites, tools, and practical solutions with AI.</p>
+              <a class="btn btn-secondary" data-auth-target="../endless-opportunities/week3-building/" href="../auth/login.html">Go to Week 3</a>
+            </article>
+
+            <article class="week-card">
+              <div class="week-top">
+                <div>
+                  <div class="week-kicker">Week 4</div>
+                  <h3>Problem Solver Portfolio</h3>
+                </div>
+                <div class="week-number">05</div>
+              </div>
+              <p>Package what students learned into work they can share, refine, and keep building on.</p>
+              <a class="btn btn-secondary" data-auth-target="../endless-opportunities/week4-portfolio/" href="../auth/login.html">Go to Week 4</a>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="shell two-up">
+          <article class="preview-card">
+            <img src="../assets/screenshots/dashboard-preview.png" alt="Preview of the student dashboard interface" />
+            <div class="preview-copy">
+              <h3>Student-facing dashboard</h3>
+              <p>Students get a single re-entry point instead of drifting through broken or mismatched routes.</p>
+            </div>
+          </article>
+          <article class="preview-card">
+            <img src="../assets/screenshots/analytics0preview.png" alt="Preview of the instructor analytics dashboard" />
+            <div class="preview-copy">
+              <h3>Instructor analytics</h3>
+              <p>Admins and instructors can still review progress, participation, and lesson signal from the EO analytics view.</p>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="shell">
+          <article class="cta-card">
+            <span class="eyebrow-pill">Ready To Continue</span>
+            <h2>Use this page as the course home and return point</h2>
+            <p>
+              Students can sign in or create an account here, then jump into the correct week. If they leave a lesson,
+              the Endless Opportunities back link now returns them to this dashboard.
+            </p>
+            <div class="cta-actions">
+              <a class="btn btn-primary" href="../auth/login.html">Student Sign In</a>
+              <a class="btn btn-secondary" href="../auth/register.html">Create Account</a>
+              <a class="btn btn-secondary" href="../dashboard/progress.html?id=endless-opportunities">Open My Progress</a>
+            </div>
+            <div class="auth-note" id="auth-note">Lesson entry points require sign-in.</div>
+          </article>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <div class="shell footer-card">
+        <div>
+          <strong>Endless Opportunities</strong>
+          <div>Course dashboard, weekly lesson access, and instructor visibility in one place.</div>
+        </div>
+        <div>
+          <strong>Current flow</strong>
+          <div>Sign in or create an account here, then continue through the protected weekly lessons.</div>
+        </div>
+      </div>
+    </footer>
+
+    <script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-auth-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-firestore-compat.js"></script>
+    <script src="../shared/js/firebase-config.js"></script>
+    <script src="../shared/js/auth.js"></script>
+    <script>
+      document.addEventListener("DOMContentLoaded", async () => {
+        const menuToggle = document.getElementById("menu-toggle");
+        const siteNav = document.getElementById("site-nav");
+        const gatedLinks = [...document.querySelectorAll("[data-auth-target]")];
+        const authNote = document.getElementById("auth-note");
+
+        const closeMenu = () => {
+          if (!menuToggle || !siteNav) return;
+          menuToggle.setAttribute("aria-expanded", "false");
+          menuToggle.setAttribute("aria-label", "Open navigation menu");
+          siteNav.classList.remove("open");
+        };
+
+        const openMenu = () => {
+          if (!menuToggle || !siteNav) return;
+          menuToggle.setAttribute("aria-expanded", "true");
+          menuToggle.setAttribute("aria-label", "Close navigation menu");
+          siteNav.classList.add("open");
+        };
+
+        if (menuToggle && siteNav) {
+          menuToggle.addEventListener("click", () => {
+            const isOpen = menuToggle.getAttribute("aria-expanded") === "true";
+            if (isOpen) {
+              closeMenu();
+            } else {
+              openMenu();
+            }
+          });
+
+          siteNav.querySelectorAll("a").forEach((link) => {
+            link.addEventListener("click", () => {
+              if (window.innerWidth < 760) {
+                closeMenu();
+              }
+            });
+          });
+
+          document.addEventListener("keydown", (event) => {
+            if (event.key === "Escape") {
+              closeMenu();
+            }
+          });
+
+          document.addEventListener("click", (event) => {
+            if (window.innerWidth >= 760) return;
+            if (!siteNav.classList.contains("open")) return;
+            if (siteNav.contains(event.target) || menuToggle.contains(event.target)) return;
+            closeMenu();
+          });
+
+          window.addEventListener("resize", () => {
+            if (window.innerWidth >= 760) {
+              closeMenu();
+            }
+          });
+        }
+
+        const requireAuthForTarget = (event, target) => {
+          if (window.AuthService?.isAuthenticated()) {
+            event.currentTarget.href = target;
+            return;
+          }
+
+          event.preventDefault();
+          window.AuthService?.setRedirectUrl(new URL(target, window.location.href).href);
+          window.location.href = "../auth/login.html";
+        };
+
+        gatedLinks.forEach((link) => {
+          const target = link.dataset.authTarget;
+          link.addEventListener("click", (event) => requireAuthForTarget(event, target));
+        });
+
+        if (!window.FirebaseApp?.init()) return;
+
+        await window.AuthService.init();
+        const user = await window.AuthService.waitForAuthState();
+
+        if (user) {
+          gatedLinks.forEach((link) => {
+            link.href = link.dataset.authTarget;
+          });
+          if (authNote) {
+            authNote.textContent = "You're signed in. Lesson buttons now open the actual week pages.";
+          }
+        }
+      });
+    </script>
+  </body>
+</html>

@@ -1,0 +1,180 @@
+{
+  "storyId": "capstone-journey-story",
+  "stepId": "step-0",
+  "voice": "sage",
+  "voiceLabel": "Sage Story Guide",
+  "text": "AJ practices opening with the exact moment the problem became impossible to ignore. That hook matters because it reminds the audience that the capstone began in real life, not in a random assignment prompt.",
+  "duration": 14.350000381469727,
+  "words": [
+    {
+      "word": "AJ",
+      "start": 0,
+      "end": 0.5799999833106995
+    },
+    {
+      "word": "practices",
+      "start": 0.5799999833106995,
+      "end": 1.4199999570846558
+    },
+    {
+      "word": "opening",
+      "start": 1.4199999570846558,
+      "end": 1.8799999952316284
+    },
+    {
+      "word": "with",
+      "start": 1.8799999952316284,
+      "end": 2.180000066757202
+    },
+    {
+      "word": "the",
+      "start": 2.180000066757202,
+      "end": 2.380000114440918
+    },
+    {
+      "word": "exact",
+      "start": 2.380000114440918,
+      "end": 2.9800000190734863
+    },
+    {
+      "word": "moment",
+      "start": 2.9800000190734863,
+      "end": 3.319999933242798
+    },
+    {
+      "word": "the",
+      "start": 3.319999933242798,
+      "end": 3.680000066757202
+    },
+    {
+      "word": "problem",
+      "start": 3.680000066757202,
+      "end": 4
+    },
+    {
+      "word": "became",
+      "start": 4,
+      "end": 4.440000057220459
+    },
+    {
+      "word": "impossible",
+      "start": 4.440000057220459,
+      "end": 5.099999904632568
+    },
+    {
+      "word": "to",
+      "start": 5.099999904632568,
+      "end": 5.800000190734863
+    },
+    {
+      "word": "ignore",
+      "start": 5.800000190734863,
+      "end": 5.800000190734863
+    },
+    {
+      "word": "That",
+      "start": 6.440000057220459,
+      "end": 6.639999866485596
+    },
+    {
+      "word": "hook",
+      "start": 6.639999866485596,
+      "end": 6.880000114440918
+    },
+    {
+      "word": "matters",
+      "start": 6.880000114440918,
+      "end": 7.340000152587891
+    },
+    {
+      "word": "because",
+      "start": 7.340000152587891,
+      "end": 7.900000095367432
+    },
+    {
+      "word": "it",
+      "start": 7.900000095367432,
+      "end": 8.260000228881836
+    },
+    {
+      "word": "reminds",
+      "start": 8.260000228881836,
+      "end": 8.539999961853027
+    },
+    {
+      "word": "the",
+      "start": 8.539999961853027,
+      "end": 8.899999618530273
+    },
+    {
+      "word": "audience",
+      "start": 8.899999618530273,
+      "end": 9.039999961853027
+    },
+    {
+      "word": "that",
+      "start": 9.039999961853027,
+      "end": 9.300000190734863
+    },
+    {
+      "word": "the",
+      "start": 9.300000190734863,
+      "end": 9.479999542236328
+    },
+    {
+      "word": "capstone",
+      "start": 9.479999542236328,
+      "end": 9.9399995803833
+    },
+    {
+      "word": "began",
+      "start": 9.9399995803833,
+      "end": 10.420000076293945
+    },
+    {
+      "word": "in",
+      "start": 10.420000076293945,
+      "end": 10.800000190734863
+    },
+    {
+      "word": "real",
+      "start": 10.800000190734863,
+      "end": 11.140000343322754
+    },
+    {
+      "word": "life",
+      "start": 11.140000343322754,
+      "end": 11.4399995803833
+    },
+    {
+      "word": "not",
+      "start": 12.199999809265137,
+      "end": 12.220000267028809
+    },
+    {
+      "word": "in",
+      "start": 12.220000267028809,
+      "end": 12.380000114440918
+    },
+    {
+      "word": "a",
+      "start": 12.380000114440918,
+      "end": 12.539999961853027
+    },
+    {
+      "word": "random",
+      "start": 12.539999961853027,
+      "end": 12.779999732971191
+    },
+    {
+      "word": "assignment",
+      "start": 12.779999732971191,
+      "end": 13.279999732971191
+    },
+    {
+      "word": "prompt",
+      "start": 13.279999732971191,
+      "end": 13.65999984741211
+    }
+  ]
+}

@@ -1,0 +1,298 @@
+{
+  "pageId": "week1-questions",
+  "courseId": "endless-opportunities",
+  "chapterMeta": {
+    "title": "The Art of Questions",
+    "icon": "❓",
+    "themeColor": "emerald"
+  },
+  "stories": [
+    {
+      "id": "curiosity-story",
+      "diagramId": "curiosity",
+      "title": "The First Answer Sounds Fine",
+      "steps": [
+        {
+          "nodeId": "surface-answer",
+          "icon": "🎯",
+          "title": "The First Answer",
+          "narration": "AJ looks at the low turnout for the after-school AI workshop and says what sounds obvious: maybe students just do not care enough. It lands clean for a second because first answers usually do. Then Nia pauses the whole thing before that surface answer hardens into a story about the students.",
+          "connectsTo": null
+        },
+        {
+          "nodeId": "nia-pushes",
+          "edges": [{ "from": "surface-answer", "to": "nia-pushes" }],
+          "icon": "🧠",
+          "title": "Nia Pushes Back",
+          "narration": "Nia asks the question AJ skipped. What makes us think they do not care? She points out that the same students watched the lunch demo, asked sharp questions, and said they wanted more. If the interest is real, the easy explanation is already breaking.",
+          "connectsTo": "The First Answer"
+        },
+        {
+          "nodeId": "malik-maps",
+          "edges": [{ "from": "nia-pushes", "to": "malik-maps" }],
+          "icon": "🗺️",
+          "title": "Malik Maps the System",
+          "narration": "Malik starts tracing what happens after the last bell. Some students have one bus home. Some have to pick up younger siblings. Some share phones and data plans, so staying late or checking updates later is not simple. The problem is turning from opinion into a system map.",
+          "connectsTo": "Nia Pushes Back"
+        },
+        {
+          "nodeId": "real-friction",
+          "edges": [{ "from": "malik-maps", "to": "real-friction" }],
+          "icon": "🔍",
+          "title": "The Real Friction",
+          "narration": "AJ sees it now. The shallow answer blamed motivation because motivation is the easiest thing to blame. The deeper answer is that the workshop collides with transportation, family responsibility, and access. The students were not the weak link. The design was.",
+          "connectsTo": "Malik Maps the System"
+        },
+        {
+          "nodeId": "investigation-mode",
+          "edges": [{ "from": "real-friction", "to": "investigation-mode" }],
+          "icon": "🚀",
+          "title": "From Opinion to Investigation",
+          "narration": "That shift matters. Week 1 is where AJ learns confidence is not the same as understanding, Nia keeps pressure on weak framing, and Malik turns the mess into something traceable. The crew is not hunting for fast answers anymore. They are investigating what is actually true.",
+          "connectsTo": "The Real Friction"
+        }
+      ]
+    },
+    {
+      "id": "six-levels-story",
+      "diagramId": "six-levels",
+      "title": "Six Levels to the Real Problem",
+      "steps": [
+        {
+          "nodeId": "frame-problem",
+          "icon": "❓",
+          "title": "Start With Why",
+          "narration": "Nia takes the workshop problem and turns it into a real Week 1 drill. If turnout is low, do not stop at the first explanation. Ask why again and again until the frame changes. That is the whole point of six levels deep.",
+          "connectsTo": null
+        },
+        {
+          "nodeId": "levels-1-2",
+          "edges": [{ "from": "frame-problem", "to": "levels-1-2" }],
+          "icon": "1️⃣",
+          "title": "Levels 1 and 2",
+          "narration": "Level one says turnout is low because students leave right after school. Level two asks why they leave, and the answer is simple but sharper: many of them have to catch the only bus they can take home. Already the lazy story is falling apart.",
+          "connectsTo": "Start With Why"
+        },
+        {
+          "nodeId": "levels-3-4",
+          "edges": [{ "from": "levels-1-2", "to": "levels-3-4" }],
+          "icon": "3️⃣",
+          "title": "Levels 3 and 4",
+          "narration": "Malik keeps the chain moving. Why does missing that bus matter so much? Because getting home late means younger siblings wait, family schedules break, and some students lose the little margin they have. Now the crew is looking at dependency, not attitude.",
+          "connectsTo": "Levels 1 and 2"
+        },
+        {
+          "nodeId": "levels-5-6",
+          "edges": [{ "from": "levels-3-4", "to": "levels-5-6" }],
+          "icon": "6️⃣",
+          "title": "Levels 5 and 6",
+          "narration": "Nia goes deeper one more time. Why was the workshop built in a way that ignored all of that? Because the adults who planned it designed for their own convenience instead of the students' real constraints. The root problem is access and design, not effort.",
+          "connectsTo": "Levels 3 and 4"
+        },
+        {
+          "nodeId": "new-solution",
+          "edges": [{ "from": "levels-5-6", "to": "new-solution" }],
+          "icon": "🛠️",
+          "title": "A Better Move",
+          "narration": "Once AJ, Nia, and Malik can name the real problem, the solution changes too. They talk about shorter lunch previews, bus-safe timing, and mobile follow-ups that do not punish students for their schedule. Better questions do not just sound smarter. They produce better builds.",
+          "connectsTo": "Levels 5 and 6"
+        }
+      ]
+    },
+    {
+      "id": "comprehension-story",
+      "diagramId": "comprehension",
+      "title": "Proof That You Understand",
+      "steps": [
+        {
+          "nodeId": "proof-starts",
+          "icon": "🧩",
+          "title": "Understanding Has Evidence",
+          "narration": "Sage makes the Week 1 lesson plain. Real understanding is not a vibe. It leaves evidence. If the crew truly understands the workshop problem, they should be able to explain it, connect it, predict what happens next, and use the insight somewhere new.",
+          "connectsTo": null
+        },
+        {
+          "nodeId": "explain-simple",
+          "edges": [{ "from": "proof-starts", "to": "explain-simple" }],
+          "icon": "🗣️",
+          "title": "Explain It Simply",
+          "narration": "AJ proves the first part by saying it in plain language. The workshop was not empty because students were lazy. It was empty because the plan ignored how students actually get home and take care of family. If you can say it simply, you probably understand it.",
+          "connectsTo": "Understanding Has Evidence"
+        },
+        {
+          "nodeId": "connect-patterns",
+          "edges": [{ "from": "explain-simple", "to": "connect-patterns" }],
+          "icon": "🔗",
+          "title": "Connect the Pattern",
+          "narration": "Nia connects the same pattern to other systems. Clinics with long lines, school forms nobody finishes, and apps that assume constant Wi-Fi all fail the same way. Somebody designs from the top and ignores the reality underneath. That is a transferable pattern.",
+          "connectsTo": "Explain It Simply"
+        },
+        {
+          "nodeId": "predict-results",
+          "edges": [{ "from": "connect-patterns", "to": "predict-results" }],
+          "icon": "🔮",
+          "title": "Predict the Outcome",
+          "narration": "Malik takes the next step and makes a prediction. If the workshop moves to a bus-safe slot and sends short mobile challenges students can finish on their own time, attendance should rise and the questions should get better. Prediction is what comprehension sounds like in motion.",
+          "connectsTo": "Connect the Pattern"
+        },
+        {
+          "nodeId": "apply-insight",
+          "edges": [{ "from": "predict-results", "to": "apply-insight" }],
+          "icon": "⚡",
+          "title": "Apply It Somewhere New",
+          "narration": "The deepest proof is transfer. The crew can now walk into a different problem and ask who got blamed too fast, what constraints were ignored, and what the real dependency chain looks like. That is where Week 1 ends. Not with opinions, but with a method they can carry forward.",
+          "connectsTo": "Predict the Outcome"
+        }
+      ]
+    }
+  ],
+  "quizzes": [
+    {
+      "storyId": "curiosity-story",
+      "questions": [
+        {
+          "question": "What was AJ's first surface explanation for the weak workshop turnout?",
+          "options": [
+            "The room was too small",
+            "Students did not care enough",
+            "The teacher forgot to post reminders",
+            "The lesson was too advanced"
+          ],
+          "correct": 1,
+          "explanation": "AJ starts with the explanation that sounds clean and fast: maybe students just do not care enough."
+        },
+        {
+          "question": "What evidence does Nia use to challenge that first answer?",
+          "options": [
+            "She saw a teacher change the lesson plan",
+            "She found a problem in the attendance app",
+            "Students had already shown interest during the lunch demo",
+            "Another school had a better workshop"
+          ],
+          "correct": 2,
+          "explanation": "Nia points out that students watched the lunch demo, asked good questions, and said they wanted more."
+        },
+        {
+          "question": "What does Malik do once the easy explanation breaks?",
+          "options": [
+            "He cancels the workshop",
+            "He maps the actual system around transportation and family duties",
+            "He tells AJ to ignore the data",
+            "He blames the bus company"
+          ],
+          "correct": 1,
+          "explanation": "Malik traces what happens after school so the crew can see the dependency chain clearly."
+        },
+        {
+          "question": "What is the crew's end-state in this first story?",
+          "options": [
+            "They accept a faster opinion",
+            "They decide motivation can never matter",
+            "They move from opinion to investigation",
+            "They stop asking questions"
+          ],
+          "correct": 2,
+          "explanation": "The whole point of the first story is the shift from a shallow opinion to real investigation."
+        }
+      ]
+    },
+    {
+      "storyId": "six-levels-story",
+      "questions": [
+        {
+          "question": "What does level two reveal about why students leave right after school?",
+          "options": [
+            "They prefer sports instead",
+            "They forgot the workshop existed",
+            "Many need to catch the only bus home",
+            "Their parents banned clubs"
+          ],
+          "correct": 2,
+          "explanation": "Level two sharpens the problem: many students leave because the bus window is not flexible."
+        },
+        {
+          "question": "What kind of issue shows up at levels three and four?",
+          "options": [
+            "A grading problem",
+            "A family dependency problem",
+            "A hardware problem",
+            "A personality problem"
+          ],
+          "correct": 1,
+          "explanation": "Levels three and four surface the family responsibilities and schedule dependencies behind the bus issue."
+        },
+        {
+          "question": "According to the story, what is the root problem at levels five and six?",
+          "options": [
+            "Students need stronger discipline",
+            "The adults planned around convenience instead of student reality",
+            "AI is too confusing for beginners",
+            "The school should stop offering clubs"
+          ],
+          "correct": 1,
+          "explanation": "The root cause is design misalignment, not lack of effort."
+        },
+        {
+          "question": "Why do better questions matter in this story?",
+          "options": [
+            "They make the problem sound more academic",
+            "They help the crew produce a better solution",
+            "They replace evidence with opinion",
+            "They prove AJ was wrong about everything"
+          ],
+          "correct": 1,
+          "explanation": "The story ends by showing that better questions change the solution itself."
+        }
+      ]
+    },
+    {
+      "storyId": "comprehension-story",
+      "questions": [
+        {
+          "question": "Which move shows AJ can explain the problem simply?",
+          "options": [
+            "He uses more technical words than everyone else",
+            "He blames transportation without context",
+            "He says the design ignored how students actually get home and care for family",
+            "He repeats Nia's exact phrasing"
+          ],
+          "correct": 2,
+          "explanation": "AJ proves comprehension by explaining the core issue in plain language."
+        },
+        {
+          "question": "What does Nia do to show the insight is transferable?",
+          "options": [
+            "She connects the same design mistake to other systems like clinics and school forms",
+            "She rewrites the bus schedule herself",
+            "She abandons the workshop example",
+            "She avoids making comparisons"
+          ],
+          "correct": 0,
+          "explanation": "Nia shows the pattern appears in multiple systems, which is a sign of deep understanding."
+        },
+        {
+          "question": "What prediction does Malik make?",
+          "options": [
+            "Students will never join after-school programs",
+            "Attendance should rise if the design fits real student constraints",
+            "Every student will prefer online learning",
+            "The workshop should only happen on weekends"
+          ],
+          "correct": 1,
+          "explanation": "Malik predicts that bus-safe timing and flexible mobile follow-ups should improve both turnout and question quality."
+        },
+        {
+          "question": "What is the deepest proof of understanding in the final story?",
+          "options": [
+            "Memorizing the six levels",
+            "Winning an argument fast",
+            "Applying the same method to a new problem",
+            "Using the most detailed diagram"
+          ],
+          "correct": 2,
+          "explanation": "Transfer is the deepest proof because it shows the method can work beyond the original example."
+        }
+      ]
+    }
+  ]
+}

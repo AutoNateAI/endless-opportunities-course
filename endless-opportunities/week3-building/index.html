@@ -1,0 +1,961 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Building Real Things | Endless Opportunities</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=JetBrains+Mono&family=Space+Grotesk:wght@500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="../../shared/css/lesson-interactive.css" />
+    <link rel="stylesheet" href="../../shared/css/activity-carousel.css" />
+    <style>
+      :root {
+        --chapter-color: #f59e0b;
+        --chapter-gradient: linear-gradient(135deg, #b45309, #f59e0b);
+      }
+    </style>
+  </head>
+  <body data-course="endless-opportunities" data-lesson="week3-building">
+    <header class="header">
+      <div class="header-content">
+        <a href="../../index.html" class="logo">
+          <div class="logo-icon">🛠️</div>
+          <span>Week 3</span>
+        </a>
+        <nav class="nav-links">
+          <a href="../index.html">← Endless Opportunities</a>
+          <a href="../week2-data/">Week 2: Data</a>
+          <a href="index.html" class="active">Week 3</a>
+          <a href="../week4-portfolio/">Week 4: Portfolio</a>
+        </nav>
+      </div>
+    </header>
+
+    <main class="container">
+      <div class="page-header">
+        <div class="breadcrumb">
+          <a href="../index.html">Endless Opportunities</a>
+          <span>/</span>
+          <span>Building Real Things</span>
+        </div>
+        <h1>🛠️ Building Real Things</h1>
+        <p>
+          Week 3 is where AJ, Nia, and Malik stop circling the idea and build a
+          first real tool. Sage guides the crew from naming the user, to
+          narrowing the scope, to shaping prompts that produce something usable.
+        </p>
+      </div>
+
+      <section class="section audio-info-section">
+        <div class="info-box compact">
+          <div class="info-header">
+            <div>
+              <h4>Narrated Story Experience</h4>
+              <p>
+                Follow the week 3 build arc with narrated storyboard slides, tap
+                the dots to move frame by frame, then complete the three aligned
+                activity sets after each sequence.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section">
+        <h2>🎬 Story Lens</h2>
+        <p>
+          Week 3 moves the course from research into action. AJ chooses what is
+          worth building and who it should help. Nia forces the requirements to
+          get specific. Malik tests the first versions until the build feels
+          real instead of hypothetical.
+        </p>
+        <div class="narrative-setup">
+          <article class="narrative-card">
+            <div class="narrative-card-step">01</div>
+            <h3>AJ Names the Build</h3>
+            <p>
+              AJ starts with a real user and a real problem so the build has a
+              purpose instead of just looking impressive.
+            </p>
+          </article>
+          <article class="narrative-card">
+            <div class="narrative-card-step">02</div>
+            <h3>Nia Forces Precision</h3>
+            <p>
+              Nia cuts the scope, tightens the prompts, and keeps the crew from
+              drifting into vague feature talk.
+            </p>
+          </article>
+          <article class="narrative-card">
+            <div class="narrative-card-step">03</div>
+            <h3>Malik Tests the Prototype</h3>
+            <p>
+              Malik uses preview and iteration to turn the first rough output
+              into something that can actually help people.
+            </p>
+          </article>
+        </div>
+      </section>
+
+      <section class="section" id="builder-mindset-section">
+        <h2>The Builder Mindset</h2>
+        <p>
+          The point of building is not showing off the fanciest tool. It is
+          choosing a real problem, a real user, and the first useful version
+          worth shipping.
+        </p>
+
+        <div class="diagram-container" id="builder-mindset-story-container">
+          <div class="diagram-header">
+            <span class="diagram-title">🧭 From Problem to First Prototype</span>
+          </div>
+          <div id="builder-mindset-story" class="diagram-canvas storytelling"></div>
+
+          <div class="diagram-story" id="builder-mindset-story-caption">
+            <div class="story-step">
+              <div class="story-icon visible">🚀</div>
+              <div class="story-content">
+                <div class="story-title visible">Ready to Explore</div>
+                <div class="story-text visible">
+                  Click any progress dot below to jump to that step, or press
+                  Play to watch the full story unfold.
+                </div>
+                <div class="story-connection" style="display: none">
+                  <span class="arrow">→</span>
+                  <span class="connection-text"></span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="playback-controls">
+            <div class="playback-left">
+              <button class="diagram-btn play-btn" data-action="play">▶ Play</button>
+            </div>
+            <div class="playback-center">
+              <div class="story-progress" id="builder-mindset-story-progress"></div>
+            </div>
+            <div class="playback-right">
+              <button class="diagram-btn small" data-action="fit" title="Fit to view">
+                Fit
+              </button>
+              <button class="diagram-btn small" data-action="reset" title="Reset view">
+                Reset
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <div class="activity-carousels" data-story="builder-mindset-story">
+          <div id="story1-comprehension" class="carousel-container"></div>
+          <div id="story1-application" class="carousel-container"></div>
+          <div id="story1-synthesis" class="carousel-container"></div>
+        </div>
+      </section>
+
+      <section class="section" id="art-of-building-section">
+        <h2>The Art of AI Building</h2>
+        <p>
+          Building with AI works best when the crew treats version one like a
+          draft, uses preview as evidence, and asks for revisions that are clear
+          enough to change the result.
+        </p>
+
+        <div class="diagram-container" id="art-of-building-story-container">
+          <div class="diagram-header">
+            <span class="diagram-title">🔁 Describe, Preview, Revise, Test</span>
+          </div>
+          <div id="art-of-building-story" class="diagram-canvas storytelling"></div>
+
+          <div class="diagram-story" id="art-of-building-story-caption">
+            <div class="story-step">
+              <div class="story-icon visible">🚀</div>
+              <div class="story-content">
+                <div class="story-title visible">Ready to Explore</div>
+                <div class="story-text visible">
+                  Click any progress dot below to jump to that step, or press
+                  Play to watch the full story unfold.
+                </div>
+                <div class="story-connection" style="display: none">
+                  <span class="arrow">→</span>
+                  <span class="connection-text"></span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="playback-controls">
+            <div class="playback-left">
+              <button class="diagram-btn play-btn" data-action="play">▶ Play</button>
+            </div>
+            <div class="playback-center">
+              <div class="story-progress" id="art-of-building-story-progress"></div>
+            </div>
+            <div class="playback-right">
+              <button class="diagram-btn small" data-action="fit" title="Fit to view">
+                Fit
+              </button>
+              <button class="diagram-btn small" data-action="reset" title="Reset view">
+                Reset
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <div class="activity-carousels" data-story="art-of-building-story">
+          <div id="story2-comprehension" class="carousel-container"></div>
+          <div id="story2-application" class="carousel-container"></div>
+          <div id="story2-synthesis" class="carousel-container"></div>
+        </div>
+      </section>
+
+      <section class="section" id="clear-prompts-section">
+        <h2>Clear Prompts Build Better Tools</h2>
+        <p>
+          Prompt quality shapes build quality. The stronger request names the
+          user, the required features, and the design constraints the tool has
+          to respect.
+        </p>
+
+        <div class="diagram-container" id="clear-prompts-story-container">
+          <div class="diagram-header">
+            <span class="diagram-title">🎯 Vague Request to Strong Prompt</span>
+          </div>
+          <div id="clear-prompts-story" class="diagram-canvas storytelling"></div>
+
+          <div class="diagram-story" id="clear-prompts-story-caption">
+            <div class="story-step">
+              <div class="story-icon visible">🚀</div>
+              <div class="story-content">
+                <div class="story-title visible">Ready to Explore</div>
+                <div class="story-text visible">
+                  Click any progress dot below to jump to that step, or press
+                  Play to watch the full story unfold.
+                </div>
+                <div class="story-connection" style="display: none">
+                  <span class="arrow">→</span>
+                  <span class="connection-text"></span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="playback-controls">
+            <div class="playback-left">
+              <button class="diagram-btn play-btn" data-action="play">▶ Play</button>
+            </div>
+            <div class="playback-center">
+              <div class="story-progress" id="clear-prompts-story-progress"></div>
+            </div>
+            <div class="playback-right">
+              <button class="diagram-btn small" data-action="fit" title="Fit to view">
+                Fit
+              </button>
+              <button class="diagram-btn small" data-action="reset" title="Reset view">
+                Reset
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <div class="activity-carousels" data-story="clear-prompts-story">
+          <div id="story3-comprehension" class="carousel-container"></div>
+          <div id="story3-application" class="carousel-container"></div>
+          <div id="story3-synthesis" class="carousel-container"></div>
+        </div>
+      </section>
+
+      <section class="section">
+        <h2>Ready for Week 4?</h2>
+        <p>
+          The crew has a real build now. Next week they tighten the evidence,
+          the explanation, and the presentation so the solution can stand on
+          its own.
+        </p>
+        <div class="cards-grid" style="grid-template-columns: repeat(2, 1fr)">
+          <a href="../week4-portfolio/" class="card">
+            <div class="card-icon">🏆</div>
+            <h3>Week 4: Problem Solver Portfolio</h3>
+            <p>Turn the build, the logic, and the proof into a final story.</p>
+          </a>
+          <a href="../index.html" class="card">
+            <div class="card-icon">📚</div>
+            <h3>Course Overview</h3>
+            <p>See the full Endless Opportunities sequence.</p>
+          </a>
+        </div>
+      </section>
+    </main>
+
+    <nav class="page-nav">
+      <h4>On This Page</h4>
+      <ul>
+        <li><a href="#builder-mindset-section">Builder Mindset</a></li>
+        <li><a href="#art-of-building-section">Art of Building</a></li>
+        <li><a href="#clear-prompts-section">Clear Prompts</a></li>
+      </ul>
+    </nav>
+
+    <button class="back-to-top" title="Back to top">↑</button>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.2/anime.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/cytoscape/3.28.1/cytoscape.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/dagre/0.8.5/dagre.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/cytoscape-dagre@2.5.0/cytoscape-dagre.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/cytoscape-cose-bilkent@4.1.0/cytoscape-cose-bilkent.min.js"></script>
+
+    <script src="../../shared/js/interactive/diagram-utils.js"></script>
+    <script src="../../shared/js/interactive/audio-engine.js"></script>
+    <script src="../../shared/js/interactive/storytelling-diagram.js"></script>
+
+    <script src="https://www.gstatic.com/firebasejs/10.7.1/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/10.7.1/firebase-auth-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/10.7.1/firebase-firestore-compat.js"></script>
+    <script src="../../shared/js/firebase-config.js"></script>
+    <script src="../../shared/js/auth.js"></script>
+    <script src="../../shared/js/rbac.js"></script>
+    <script src="../../shared/js/route-guard.js"></script>
+    <script src="../../shared/js/data-service.js"></script>
+    <script src="../../shared/js/activity-tracker.js"></script>
+
+    <script src="../../shared/js/interactive/base-activity.js"></script>
+    <script src="../../shared/js/interactive/challenge-puzzle.js"></script>
+    <script src="../../shared/js/interactive/activities/quiz-activity.js"></script>
+    <script src="../../shared/js/interactive/activities/true-false-activity.js"></script>
+    <script src="../../shared/js/interactive/activities/fill-blank-activity.js"></script>
+    <script src="../../shared/js/interactive/activities/sequence-activity.js"></script>
+    <script src="../../shared/js/interactive/activities/drag-drop-activity.js"></script>
+    <script src="../../shared/js/interactive/activities/connect-edges-activity.js"></script>
+    <script src="../../shared/js/interactive/activities/scenario-activity.js"></script>
+    <script src="../../shared/js/interactive/activities/prediction-activity.js"></script>
+    <script src="../../shared/js/interactive/activities/reflection-activity.js"></script>
+    <script src="../../shared/js/interactive/activities/graph-builder-activity.js"></script>
+    <script src="../../shared/js/interactive/activity-carousel.js"></script>
+    <script src="../../shared/js/interactive/lesson-complete-banner.js"></script>
+
+    <script>
+      document.addEventListener("DOMContentLoaded", async () => {
+        if (window.FirebaseApp) {
+          window.FirebaseApp.init();
+        }
+
+        if (window.AuthService) {
+          window.AuthService.init();
+          await window.AuthService.waitForAuthState();
+        }
+
+        const courseId = document.body.dataset.course;
+        const lessonId = document.body.dataset.lesson;
+        if (courseId && lessonId && window.ActivityTracker) {
+          ActivityTracker.init(courseId, lessonId);
+        }
+        if (window.LessonCompleteBanner) {
+          window.LessonCompleteBanner.init();
+        }
+
+        DiagramUtils.initPageAnimations();
+        DiagramUtils.setupBackToTop();
+
+        const [storyResponse, storyboardResponse] = await Promise.all([
+          fetch("story.json"),
+          fetch("storyboards.json"),
+        ]);
+        const pageData = await storyResponse.json();
+        const storyboardData = await storyboardResponse.json();
+
+        const audioEngine = new AudioNarrationEngine("audio");
+        await audioEngine.waitForManifest();
+        audioEngine.setVoice("sage");
+
+        const diagramElements = {
+          "builder-mindset": [
+            {
+              data: {
+                id: "problem-worth-solving",
+                label: "🧭 Real Problem",
+                type: "concept",
+                description: "Choose a real problem worth solving",
+              },
+            },
+            {
+              data: {
+                id: "who-it-helps",
+                label: "🎯 Specific User",
+                type: "service",
+                description: "Name exactly who the tool is for",
+              },
+            },
+            {
+              data: {
+                id: "first-useful-version",
+                label: "✂️ First Useful Version",
+                type: "auth",
+                description: "Cut the scope to what helps first",
+              },
+            },
+            {
+              data: {
+                id: "build-brief",
+                label: "📝 Build Brief",
+                type: "data",
+                description: "Translate the idea into clear instructions",
+              },
+            },
+            {
+              data: {
+                id: "first-prototype",
+                label: "🧪 First Prototype",
+                type: "page",
+                description: "Get a real version you can preview and test",
+              },
+            },
+            {
+              data: {
+                id: "agency",
+                label: "🚀 Agency",
+                type: "concept",
+                description: "The build now feels possible and real",
+              },
+            },
+            { data: { source: "problem-worth-solving", target: "who-it-helps" } },
+            { data: { source: "who-it-helps", target: "first-useful-version" } },
+            { data: { source: "first-useful-version", target: "build-brief" } },
+            { data: { source: "build-brief", target: "first-prototype" } },
+            { data: { source: "first-prototype", target: "agency" } },
+          ],
+          "art-of-building": [
+            {
+              data: {
+                id: "draft-not-finish",
+                label: "💡 Version One",
+                type: "concept",
+                description: "The first output is a start, not the finish",
+              },
+            },
+            {
+              data: {
+                id: "describe-flow",
+                label: "🗺️ User Flow",
+                type: "service",
+                description: "Explain what the user should see and do",
+              },
+            },
+            {
+              data: {
+                id: "preview-truth",
+                label: "👀 Preview",
+                type: "data",
+                description: "Use the preview to tell the truth",
+              },
+            },
+            {
+              data: {
+                id: "specific-revisions",
+                label: "🔧 Revisions",
+                type: "auth",
+                description: "Ask for exact changes with direction",
+              },
+            },
+            {
+              data: {
+                id: "iterate-with-purpose",
+                label: "🔁 Iterate",
+                type: "page",
+                description: "Keep testing until the build gets useful",
+              },
+            },
+            { data: { source: "draft-not-finish", target: "describe-flow" } },
+            { data: { source: "describe-flow", target: "preview-truth" } },
+            { data: { source: "preview-truth", target: "specific-revisions" } },
+            { data: { source: "specific-revisions", target: "iterate-with-purpose" } },
+          ],
+          "clear-prompts": [
+            {
+              data: {
+                id: "vague-start",
+                label: "🌫️ Vague Prompt",
+                type: "concept",
+                description: "Loose requests force the model to guess",
+              },
+            },
+            {
+              data: {
+                id: "what-and-who",
+                label: "📣 What and Who",
+                type: "service",
+                description: "Name the tool and the user clearly",
+              },
+            },
+            {
+              data: {
+                id: "must-have-features",
+                label: "📋 Must-Haves",
+                type: "data",
+                description: "List the features the first build needs",
+              },
+            },
+            {
+              data: {
+                id: "style-and-constraints",
+                label: "🎨 Style and Constraints",
+                type: "auth",
+                description: "Set the design tone and mobile-safe limits",
+              },
+            },
+            {
+              data: {
+                id: "stronger-output",
+                label: "✅ Better Build",
+                type: "page",
+                description: "Clear prompts produce stronger results",
+              },
+            },
+            { data: { source: "vague-start", target: "what-and-who" } },
+            { data: { source: "what-and-who", target: "must-have-features" } },
+            { data: { source: "must-have-features", target: "style-and-constraints" } },
+            { data: { source: "style-and-constraints", target: "stronger-output" } },
+          ],
+        };
+
+        const storyToDiagram = {
+          "builder-mindset-story": "builder-mindset",
+          "art-of-building-story": "art-of-building",
+          "clear-prompts-story": "clear-prompts",
+        };
+
+        pageData.stories.forEach((story) => {
+          const diagramKey = storyToDiagram[story.id];
+          if (!diagramKey) return;
+
+          new StorytellingDiagram(story.id, diagramElements[diagramKey], story.steps, {
+            audioEngine,
+            storyId: story.id,
+            forcedVoice: "sage",
+            storyboardFrames: storyboardData[story.id] || [],
+            storyboardOnly: true,
+          });
+        });
+
+        const activityConfigs = [
+          {
+            containerId: "story1-comprehension",
+            type: "comprehension",
+            sectionId: "builder-mindset",
+            title: "Check Your Understanding",
+            activities: [
+              {
+                type: "quiz",
+                id: "bm-quiz-real-problem",
+                question: "What real problem does AJ choose in the story?",
+                options: [
+                  "Students want a new social network",
+                  "Students keep missing club updates because information is scattered",
+                  "Teachers need a grading app",
+                  "The school wants a new mascot website",
+                ],
+                correct: 1,
+                explanation: "AJ starts with a real communication problem: club updates are scattered across too many places.",
+                points: 10,
+              },
+              {
+                type: "true-false",
+                id: "bm-tf-nia-scope",
+                statement: "Nia pushes the crew to add extra features before the first version ships.",
+                correct: false,
+                explanation: "Nia does the opposite. She cuts the scope down to the first useful version.",
+                minReasoningWords: 5,
+                points: 15,
+              },
+              {
+                type: "fill-blank",
+                id: "bm-fill-brief",
+                statement: "Malik turns the idea into a build ___ the AI can actually follow.",
+                correctAnswers: ["brief", "plan", "spec", "outline"],
+                caseSensitive: false,
+                hints: ["It is the document that translates the idea into clear instructions."],
+                explanation: "The story says Malik translates the plan into a build brief with mobile-safe structure and required content.",
+                points: 10,
+              },
+            ],
+          },
+          {
+            containerId: "story1-application",
+            type: "application",
+            sectionId: "builder-mindset",
+            title: "Apply What You Learned",
+            activities: [
+              {
+                type: "sequence",
+                id: "bm-seq-build-order",
+                instruction: "Put the week 3 build process in the same order the story teaches it:",
+                items: [
+                  { id: "bm1", text: "Get the first prototype back" },
+                  { id: "bm2", text: "Name the real user and problem" },
+                  { id: "bm3", text: "Cut the idea to the first useful version" },
+                  { id: "bm4", text: "Write the build brief" },
+                ],
+                correctOrder: ["bm2", "bm3", "bm4", "bm1"],
+                hints: {
+                  partial: "Start with the user and the problem before you think about the output.",
+                  wrong: "The build brief comes after scope and before the first prototype.",
+                },
+                explanation: "The crew starts with the problem, narrows the scope, writes the build brief, and only then gets the first prototype.",
+                points: 20,
+              },
+              {
+                type: "quiz",
+                id: "bm-quiz-first-version",
+                question: "Which idea matches Nia's rule for the first useful version?",
+                options: [
+                  "A full app with chat, profiles, video, and rankings",
+                  "One page with the club schedule, reminders, and a signup form",
+                  "A huge site for every club in the district",
+                  "A design system before the page exists",
+                ],
+                correct: 1,
+                explanation: "Nia cuts the first version down to the smallest version that still helps the user right away.",
+                points: 10,
+              },
+              {
+                type: "true-false",
+                id: "bm-tf-agency",
+                statement: "The story says agency shows up after the crew turns an intimidating idea into a real prototype they can test.",
+                correct: true,
+                explanation: "That shift from intimidation to something buildable is the week's end state.",
+                minReasoningWords: 5,
+                points: 15,
+              },
+            ],
+          },
+          {
+            containerId: "story1-synthesis",
+            type: "synthesis",
+            sectionId: "builder-mindset",
+            title: "Make the Idea Stronger",
+            activities: [
+              {
+                type: "quiz",
+                id: "bm-quiz-user-focus",
+                question: "A friend says, \"Let's build an app for everybody at school.\" What is the best week 3 response?",
+                options: [
+                  "Start building now and figure out the user later",
+                  "Pick one clear user and one real problem first",
+                  "Add more features so it feels worth building",
+                  "Wait until you know how to code everything yourself",
+                ],
+                correct: 1,
+                explanation: "Week 3 says real builds start with a real user and problem, not a vague audience.",
+                points: 10,
+              },
+              {
+                type: "fill-blank",
+                id: "bm-fill-agency",
+                statement: "Week 3 moves the crew from intimidation to ___.",
+                correctAnswers: ["agency", "confidence", "action"],
+                caseSensitive: false,
+                hints: ["It is the word Sage uses for the feeling that the build is possible."],
+                explanation: "The story ends by naming agency as the new feeling the crew has about building.",
+                points: 10,
+              },
+              {
+                type: "quiz",
+                id: "bm-quiz-best-brief-detail",
+                question: "Which detail belongs in Malik's build brief?",
+                options: [
+                  "Do whatever feels right",
+                  "One mobile-friendly page with upcoming events and a join form",
+                  "Use mystery features that surprise the user",
+                  "Ignore the phone layout until the final version",
+                ],
+                correct: 1,
+                explanation: "Malik's build brief gives concrete structure and mobile-safe requirements the model can follow.",
+                points: 10,
+              },
+            ],
+          },
+          {
+            containerId: "story2-comprehension",
+            type: "comprehension",
+            sectionId: "art-of-building",
+            title: "Check Your Understanding",
+            activities: [
+              {
+                type: "quiz",
+                id: "ab-quiz-version-one",
+                question: "How does the story describe version one of a build?",
+                options: [
+                  "It should already be final",
+                  "It is a starting point, not the finish",
+                  "It matters only if the colors look good",
+                  "It should stay hidden until perfect",
+                ],
+                correct: 1,
+                explanation: "Sage frames the first output as a draft that gives the crew something real to improve.",
+                points: 10,
+              },
+              {
+                type: "fill-blank",
+                id: "ab-fill-preview",
+                statement: "Malik uses the ___ to tell the truth about what landed and what still needs work.",
+                correctAnswers: ["preview", "prototype", "page"],
+                caseSensitive: false,
+                hints: ["It is the place where the build shows what is actually happening."],
+                explanation: "The preview is where Malik checks whether the build really works on mobile and in the browser.",
+                points: 10,
+              },
+              {
+                type: "true-false",
+                id: "ab-tf-specific",
+                statement: "AJ learns that saying make it better is less helpful than asking for exact revisions.",
+                correct: true,
+                explanation: "Specific revision requests give the next version direction.",
+                minReasoningWords: 5,
+                points: 15,
+              },
+            ],
+          },
+          {
+            containerId: "story2-application",
+            type: "application",
+            sectionId: "art-of-building",
+            title: "Apply What You Learned",
+            activities: [
+              {
+                type: "sequence",
+                id: "ab-seq-loop",
+                instruction: "Order the iteration loop the same way the story teaches it:",
+                items: [
+                  { id: "ab1", text: "Ask for specific revisions" },
+                  { id: "ab2", text: "Describe the user flow clearly" },
+                  { id: "ab3", text: "Check the preview on mobile" },
+                  { id: "ab4", text: "Test the next version again" },
+                ],
+                correctOrder: ["ab2", "ab3", "ab1", "ab4"],
+                hints: {
+                  partial: "The preview happens before revision requests.",
+                  wrong: "Describe first, then inspect the preview, then revise, then test again.",
+                },
+                explanation: "The crew describes, previews, revises, and tests again with purpose.",
+                points: 20,
+              },
+              {
+                type: "quiz",
+                id: "ab-quiz-best-feedback",
+                question: "Which revision request sounds most like AJ in the story?",
+                options: [
+                  "Make it better somehow",
+                  "Try anything random",
+                  "Tighten the header, improve the contrast, and keep the signup button visible",
+                  "Start over from nothing without telling me why",
+                ],
+                correct: 2,
+                explanation: "AJ improves after he starts asking for precise changes instead of vague improvement.",
+                points: 10,
+              },
+              {
+                type: "true-false",
+                id: "ab-tf-iteration-purpose",
+                statement: "Iteration in week 3 means random repetition until something lucky happens.",
+                correct: false,
+                explanation: "The story says iteration has a purpose: each round should respond to what the preview showed.",
+                minReasoningWords: 5,
+                points: 15,
+              },
+            ],
+          },
+          {
+            containerId: "story2-synthesis",
+            type: "synthesis",
+            sectionId: "art-of-building",
+            title: "Make the Build Better",
+            activities: [
+              {
+                type: "quiz",
+                id: "ab-quiz-mobile-truth",
+                question: "The page looks fine on a laptop but breaks on a phone. What would Malik do next?",
+                options: [
+                  "Ignore it until launch day",
+                  "Use the preview as evidence and ask for a mobile-specific fix",
+                  "Assume users will rotate their phones",
+                  "Add more features before testing again",
+                ],
+                correct: 1,
+                explanation: "Malik treats the preview like evidence and uses what it shows to guide the next revision.",
+                points: 10,
+              },
+              {
+                type: "fill-blank",
+                id: "ab-fill-purpose",
+                statement: "Iteration is how the work gets ___.",
+                correctAnswers: ["good", "better", "stronger", "usable"],
+                caseSensitive: false,
+                hints: ["The story says repetition has value when it improves the build."],
+                explanation: "Week 3 frames iteration as the path to a stronger, more useful result.",
+                points: 10,
+              },
+              {
+                type: "quiz",
+                id: "ab-quiz-flow",
+                question: "What does Nia want the model to understand before it starts building?",
+                options: [
+                  "The user flow and what the page should make easy",
+                  "Only the color palette",
+                  "A list of advanced programming terms",
+                  "The school mascot and slogan",
+                ],
+                correct: 0,
+                explanation: "Nia pushes for a clear user flow so the build reflects how someone will actually use the page.",
+                points: 10,
+              },
+            ],
+          },
+          {
+            containerId: "story3-comprehension",
+            type: "comprehension",
+            sectionId: "clear-prompts",
+            title: "Check Your Understanding",
+            activities: [
+              {
+                type: "quiz",
+                id: "cp-quiz-vague",
+                question: "Why does AJ's first prompt produce a weak result?",
+                options: [
+                  "The model refuses to build club tools",
+                  "The request is vague, so the model has to guess",
+                  "The page has too many features already",
+                  "The school blocked the prompt",
+                ],
+                correct: 1,
+                explanation: "Nia explains that vague requests force guesswork, which leads to generic outputs.",
+                points: 10,
+              },
+              {
+                type: "fill-blank",
+                id: "cp-fill-user",
+                statement: "A stronger prompt says what the tool is and who it ___.",
+                correctAnswers: ["serves", "helps", "supports", "is for"],
+                caseSensitive: false,
+                hints: ["The answer is about the user, not just the feature list."],
+                explanation: "The story improves when the prompt names the tool and the people it is for.",
+                points: 10,
+              },
+              {
+                type: "true-false",
+                id: "cp-tf-style",
+                statement: "Style and constraints help shape the experience instead of acting like extra decoration only.",
+                correct: true,
+                explanation: "Nia uses style and constraints to keep the output readable, clean, and mobile-safe.",
+                minReasoningWords: 5,
+                points: 15,
+              },
+            ],
+          },
+          {
+            containerId: "story3-application",
+            type: "application",
+            sectionId: "clear-prompts",
+            title: "Apply What You Learned",
+            activities: [
+              {
+                type: "sequence",
+                id: "cp-seq-prompt",
+                instruction: "Order the prompt upgrades the same way the story improves them:",
+                items: [
+                  { id: "cp1", text: "Add style and mobile-friendly constraints" },
+                  { id: "cp2", text: "List the must-have features" },
+                  { id: "cp3", text: "Say what the tool is and who it serves" },
+                  { id: "cp4", text: "Start with the vague request" },
+                ],
+                correctOrder: ["cp4", "cp3", "cp2", "cp1"],
+                hints: {
+                  partial: "The prompt gets better in layers: audience first, features next, constraints last.",
+                  wrong: "It begins vague, then adds what and who, then features, then style and constraints.",
+                },
+                explanation: "The crew strengthens the prompt in a clear order instead of dumping random details into it.",
+                points: 20,
+              },
+              {
+                type: "quiz",
+                id: "cp-quiz-best-line",
+                question: "Which line sounds most like the stronger prompt from the story?",
+                options: [
+                  "Build something cool for students",
+                  "Make a website, whatever you think works",
+                  "Build a mobile-friendly update page for a robotics club with events, reminders, and a join form",
+                  "Create a random design and I will decide later",
+                ],
+                correct: 2,
+                explanation: "The stronger prompt names the tool, the user, and the must-have features directly.",
+                points: 10,
+              },
+              {
+                type: "true-false",
+                id: "cp-tf-features",
+                statement: "Must-have features give the build a clear finish line.",
+                correct: true,
+                explanation: "Malik adds the must-have features so the request becomes functional instead of abstract.",
+                minReasoningWords: 5,
+                points: 15,
+              },
+            ],
+          },
+          {
+            containerId: "story3-synthesis",
+            type: "synthesis",
+            sectionId: "clear-prompts",
+            title: "Build a Stronger Prompt",
+            activities: [
+              {
+                type: "quiz",
+                id: "cp-quiz-missing-piece",
+                question: "A prompt names the tool and the features but ignores phone layout. What important week 3 piece is still missing?",
+                options: [
+                  "Style and constraints",
+                  "A random extra feature",
+                  "A longer story title",
+                  "A promise that coding is impossible",
+                ],
+                correct: 0,
+                explanation: "The week 3 prompt gets stronger when the crew adds style and mobile-safe constraints.",
+                points: 10,
+              },
+              {
+                type: "fill-blank",
+                id: "cp-fill-better",
+                statement: "Better prompt, better ___.",
+                correctAnswers: ["build", "output", "result", "tool"],
+                caseSensitive: false,
+                hints: ["The story says clearer instructions lead to a stronger finished page."],
+                explanation: "The lesson keeps tying stronger instructions to stronger build quality.",
+                points: 10,
+              },
+              {
+                type: "quiz",
+                id: "cp-quiz-nia-role",
+                question: "What role does Nia play in the prompt rewrite?",
+                options: [
+                  "She removes all constraints so the model feels free",
+                  "She finishes the prompt with design tone and clear limits",
+                  "She tells AJ to stop naming the user",
+                  "She replaces the feature list with a motivational speech",
+                ],
+                correct: 1,
+                explanation: "Nia completes the stronger prompt by locking in style, readability, and simplicity constraints.",
+                points: 10,
+              },
+            ],
+          },
+        ];
+
+        activityConfigs.forEach(({ containerId, ...config }) => {
+          const carousel = new ActivityCarousel(containerId, config);
+          carousel.init();
+        });
+      });
+    </script>
+  </body>
+</html>

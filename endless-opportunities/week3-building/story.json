@@ -1,0 +1,273 @@
+{
+  "pageId": "week3-building",
+  "courseId": "endless-opportunities",
+  "chapterMeta": {
+    "title": "Building Real Things",
+    "icon": "🛠️",
+    "themeColor": "amber"
+  },
+  "stories": [
+    {
+      "id": "builder-mindset-story",
+      "diagramId": "builder-mindset",
+      "title": "The Builder Mindset",
+      "steps": [
+        {
+          "nodeId": "problem-worth-solving",
+          "icon": "🧭",
+          "title": "Find the Real Build",
+          "narration": "By week three, AJ is done talking about someday. He points at a real problem right in front of them: students keep missing club updates because announcements are scattered across texts, screenshots, and hallway talk. If they are going to build, it needs to help somebody for real.",
+          "connectsTo": null
+        },
+        {
+          "nodeId": "who-it-helps",
+          "edges": [{ "from": "problem-worth-solving", "to": "who-it-helps" }],
+          "icon": "🎯",
+          "title": "Name Who It Helps",
+          "narration": "AJ gets specific about the user. This is not for everybody on earth. It is for students who need one clean place to check meeting times, reminders, and last-minute changes without chasing five different messages.",
+          "connectsTo": "Real Problem"
+        },
+        {
+          "nodeId": "first-useful-version",
+          "edges": [{ "from": "who-it-helps", "to": "first-useful-version" }],
+          "icon": "✂️",
+          "title": "Cut It to the First Useful Version",
+          "narration": "Nia shuts down the giant dream app talk fast. No chat system, no social feed, no extra fluff. The first version just needs a schedule, a reminder section, and a simple signup form. She keeps the build honest by forcing the scope down to what people would use first.",
+          "connectsTo": "Specific User"
+        },
+        {
+          "nodeId": "build-brief",
+          "edges": [{ "from": "first-useful-version", "to": "build-brief" }],
+          "icon": "📝",
+          "title": "Turn the Idea into a Build Brief",
+          "narration": "Malik translates the plan into a build brief the model can actually follow. One mobile-friendly page. Club name at the top. Upcoming events. A reminder list. A button to join the mailing list. Clean colors. Fast to read. Now the idea is clear enough to build.",
+          "connectsTo": "First Useful Version"
+        },
+        {
+          "nodeId": "first-prototype",
+          "edges": [{ "from": "build-brief", "to": "first-prototype" }],
+          "icon": "🧪",
+          "title": "Get the First Prototype",
+          "narration": "The AI returns a first prototype, and the crew finally has something they can touch. AJ sees the page take shape. Nia immediately spots what feels generic. Malik checks whether the sections actually work on a phone. The point is not perfection. The point is getting a real version into the world early.",
+          "connectsTo": "Build Brief"
+        },
+        {
+          "nodeId": "agency",
+          "edges": [{ "from": "first-prototype", "to": "agency" }],
+          "icon": "🚀",
+          "title": "Move from Intimidation to Agency",
+          "narration": "That shift is the whole lesson. AJ names what should exist. Nia forces it to get specific. Malik tests the early build until it becomes usable. What looked intimidating a week ago now feels buildable. That is agency.",
+          "connectsTo": "First Prototype"
+        }
+      ]
+    },
+    {
+      "id": "art-of-building-story",
+      "diagramId": "art-of-building",
+      "title": "The Art of AI Building",
+      "steps": [
+        {
+          "nodeId": "draft-not-finish",
+          "icon": "💡",
+          "title": "The First Draft Is Not the Finish",
+          "narration": "Sage keeps the crew moving with one rule: the first output is just a starting point. AJ does not need to panic if the first version is rough. Builders expect version one to be incomplete.",
+          "connectsTo": null
+        },
+        {
+          "nodeId": "describe-flow",
+          "edges": [{ "from": "draft-not-finish", "to": "describe-flow" }],
+          "icon": "🗺️",
+          "title": "Describe the User Flow",
+          "narration": "Nia pushes for a clearer request. She wants the model to understand what a student sees first, what they tap next, and what the page should make easy. A strong build starts with a strong flow, not random features stacked together.",
+          "connectsTo": "Version One"
+        },
+        {
+          "nodeId": "preview-truth",
+          "edges": [{ "from": "describe-flow", "to": "preview-truth" }],
+          "icon": "👀",
+          "title": "Use the Preview to Tell the Truth",
+          "narration": "Malik opens the preview and treats it like evidence. Is the page readable? Do the buttons work? Does the layout hold up on mobile? Preview is where the build tells the truth about what landed and what still needs work.",
+          "connectsTo": "User Flow"
+        },
+        {
+          "nodeId": "specific-revisions",
+          "edges": [{ "from": "preview-truth", "to": "specific-revisions" }],
+          "icon": "🔧",
+          "title": "Ask for Specific Revisions",
+          "narration": "AJ learns not to say make it better and hope for magic. He asks for exact revisions: tighten the header, make the event cards easier to scan, improve the contrast, keep the signup button visible. Specific feedback gives the next version direction.",
+          "connectsTo": "Preview"
+        },
+        {
+          "nodeId": "iterate-with-purpose",
+          "edges": [{ "from": "specific-revisions", "to": "iterate-with-purpose" }],
+          "icon": "🔁",
+          "title": "Iterate with Purpose",
+          "narration": "Now the rhythm makes sense. Describe. Preview. Revise. Test again. Malik keeps checking the results, Nia keeps the requirements sharp, and AJ keeps the build aimed at a real user. Iteration is not random repetition. It is how the work gets good.",
+          "connectsTo": "Specific Revisions"
+        }
+      ]
+    },
+    {
+      "id": "clear-prompts-story",
+      "diagramId": "clear-prompts",
+      "title": "Clear Prompts Build Better Tools",
+      "steps": [
+        {
+          "nodeId": "vague-start",
+          "icon": "🌫️",
+          "title": "Vague Prompts Create Guesswork",
+          "narration": "AJ starts with something loose like build a club website, and the output comes back bland. Nia is not surprised. If the request is vague, the model has to guess, and guesses are where weak builds begin.",
+          "connectsTo": null
+        },
+        {
+          "nodeId": "what-and-who",
+          "edges": [{ "from": "vague-start", "to": "what-and-who" }],
+          "icon": "📣",
+          "title": "Say What It Is and Who It Serves",
+          "narration": "So the crew rewrites the prompt. Build a mobile-friendly update page for a high school robotics club. Show next meetings, deadlines, and a signup form for new members. Now the model knows the kind of tool and the people it is for.",
+          "connectsTo": "Vague Prompt"
+        },
+        {
+          "nodeId": "must-have-features",
+          "edges": [{ "from": "what-and-who", "to": "must-have-features" }],
+          "icon": "📋",
+          "title": "List the Must-Have Features",
+          "narration": "Malik adds the non-negotiables: a hero title, three upcoming events, a reminder checklist, and a join form. Features turn a general idea into a functional request with a clear finish line.",
+          "connectsTo": "What and Who"
+        },
+        {
+          "nodeId": "style-and-constraints",
+          "edges": [{ "from": "must-have-features", "to": "style-and-constraints" }],
+          "icon": "🎨",
+          "title": "Add Style and Constraints",
+          "narration": "Nia finishes the job by setting the tone and the limits. Make it clean, bold, and easy to scan on a phone. Use dark text on light cards. Keep the layout simple. Good prompts do not just ask for features. They shape the experience.",
+          "connectsTo": "Must-Have Features"
+        },
+        {
+          "nodeId": "stronger-output",
+          "edges": [{ "from": "style-and-constraints", "to": "stronger-output" }],
+          "icon": "✅",
+          "title": "Better Prompt, Better Build",
+          "narration": "The new output is stronger because the instructions are stronger. AJ can see the difference, Malik can test the difference, and Nia can explain the difference. Clear prompts are not extra polish. They are part of the build itself.",
+          "connectsTo": "Style and Constraints"
+        }
+      ]
+    }
+  ],
+  "quizzes": [
+    {
+      "storyId": "builder-mindset-story",
+      "questions": [
+        {
+          "question": "What problem does AJ choose to build around in the story?",
+          "options": [
+            "Students need better grades in every class",
+            "Students keep missing club updates because information is scattered",
+            "The school needs a full social network",
+            "Teachers need a new attendance system"
+          ],
+          "correct": 1,
+          "explanation": "AJ chooses a real, immediate problem: club updates are scattered across too many channels, so students miss important information."
+        },
+        {
+          "question": "What does Nia force the crew to do before they build?",
+          "options": [
+            "Add as many features as possible",
+            "Learn full-stack coding first",
+            "Cut the idea down to the first useful version",
+            "Wait until every edge case is solved"
+          ],
+          "correct": 2,
+          "explanation": "Nia keeps the scope tight by forcing the crew to define the first useful version instead of chasing a giant dream app."
+        },
+        {
+          "question": "What does Malik contribute before the first prototype appears?",
+          "options": [
+            "A build brief with a clear mobile-friendly structure",
+            "A speech about startup funding",
+            "A complete marketing campaign",
+            "A list of advanced coding tutorials"
+          ],
+          "correct": 0,
+          "explanation": "Malik translates the idea into a build brief the model can follow, including structure, content, and mobile-safe requirements."
+        }
+      ]
+    },
+    {
+      "storyId": "art-of-building-story",
+      "questions": [
+        {
+          "question": "How does Sage frame the first version of a build?",
+          "options": [
+            "As the finished product",
+            "As proof the AI already knows everything",
+            "As a starting point that will need revision",
+            "As something to hide until it is perfect"
+          ],
+          "correct": 2,
+          "explanation": "The story treats version one as a draft, not the finish line."
+        },
+        {
+          "question": "What does Malik use the preview for?",
+          "options": [
+            "To admire the color palette only",
+            "To tell the truth about what landed and what still needs work",
+            "To replace testing completely",
+            "To generate new prompts automatically"
+          ],
+          "correct": 1,
+          "explanation": "Malik uses the preview as evidence, checking usability, layout, and mobile behavior."
+        },
+        {
+          "question": "What kind of revision request helps the most?",
+          "options": [
+            "Make it better somehow",
+            "Surprise me with anything",
+            "Tighten the header and keep the signup button visible",
+            "Do whatever you want"
+          ],
+          "correct": 2,
+          "explanation": "Specific revision requests give the next version direction, while vague requests create guesswork."
+        }
+      ]
+    },
+    {
+      "storyId": "clear-prompts-story",
+      "questions": [
+        {
+          "question": "Why does AJ's first vague prompt produce a weak result?",
+          "options": [
+            "The model refuses to build school tools",
+            "The AI has to guess because the request is too loose",
+            "The page has too many features",
+            "The club idea is impossible to build"
+          ],
+          "correct": 1,
+          "explanation": "A vague prompt leaves too much to guess, which is why the first output comes back generic."
+        },
+        {
+          "question": "Which detail belongs in the stronger prompt from the story?",
+          "options": [
+            "Use any design you want",
+            "Make something cool for whoever",
+            "Build a mobile-friendly update page for a robotics club",
+            "Figure out the audience later"
+          ],
+          "correct": 2,
+          "explanation": "The stronger prompt specifies what the tool is, who it serves, and how it should behave."
+        },
+        {
+          "question": "What is the role of style and constraints in the final prompt?",
+          "options": [
+            "They are optional decoration only",
+            "They help shape the user experience and keep the output on track",
+            "They replace the need for features",
+            "They matter only after launch"
+          ],
+          "correct": 1,
+          "explanation": "Style and constraints guide the experience, especially on mobile, and help the model avoid drifting into a mismatched design."
+        }
+      ]
+    }
+  ]
+}

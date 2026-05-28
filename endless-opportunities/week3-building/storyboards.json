@@ -1,0 +1,104 @@
+{
+  "builder-mindset-story": [
+    {
+      "src": "storyboards/generated/builder-mindset-story-step-0.png",
+      "alt": "Find the Real Build. By week three, AJ is done talking about someday. He points at a real problem right in front of them: students keep missing club updates because announcements are scattered across texts, screenshots, and hallway talk. If they are going to build, it needs to help somebody for real.",
+      "title": "Find the Real Build",
+      "caption": "By week three, AJ is done talking about someday"
+    },
+    {
+      "src": "storyboards/generated/builder-mindset-story-step-1.png",
+      "alt": "Name Who It Helps. AJ gets specific about the user. This is not for everybody on earth. It is for students who need one clean place to check meeting times, reminders, and last-minute changes without chasing five different messages.",
+      "title": "Name Who It Helps",
+      "caption": "AJ gets specific about the user"
+    },
+    {
+      "src": "storyboards/generated/builder-mindset-story-step-2.png",
+      "alt": "Cut It to the First Useful Version. Nia shuts down the giant dream app talk fast. No chat system, no social feed, no extra fluff. The first version just needs a schedule, a reminder section, and a simple signup form. She keeps the build honest by forcing the scope down to what people would use first.",
+      "title": "Cut It to the First Useful Version",
+      "caption": "Nia shuts down the giant dream app talk fast"
+    },
+    {
+      "src": "storyboards/generated/builder-mindset-story-step-3.png",
+      "alt": "Turn the Idea into a Build Brief. Malik translates the plan into a build brief the model can actually follow. One mobile-friendly page. Club name at the top. Upcoming events. A reminder list. A button to join the mailing list. Clean colors. Fast to read. Now the idea is clear enough to build.",
+      "title": "Turn the Idea into a Build Brief",
+      "caption": "Malik translates the plan into a build brief the model can actually follow"
+    },
+    {
+      "src": "storyboards/generated/builder-mindset-story-step-4.png",
+      "alt": "Get the First Prototype. The AI returns a first prototype, and the crew finally has something they can touch. AJ sees the page take shape. Nia immediately spots what feels generic. Malik checks whether the sections actually work on a phone. The point is not perfection. The point is getting a real version into the world early.",
+      "title": "Get the First Prototype",
+      "caption": "The AI returns a first prototype, and the crew finally has something they can touch"
+    },
+    {
+      "src": "storyboards/generated/builder-mindset-story-step-5.png",
+      "alt": "Move from Intimidation to Agency. That shift is the whole lesson. AJ names what should exist. Nia forces it to get specific. Malik tests the early build until it becomes usable. What looked intimidating a week ago now feels buildable. That is agency.",
+      "title": "Move from Intimidation to Agency",
+      "caption": "That shift is the whole lesson"
+    }
+  ],
+  "art-of-building-story": [
+    {
+      "src": "storyboards/generated/art-of-building-story-step-0.png",
+      "alt": "The First Draft Is Not the Finish. Sage keeps the crew moving with one rule: the first output is just a starting point. AJ does not need to panic if the first version is rough. Builders expect version one to be incomplete.",
+      "title": "The First Draft Is Not the Finish",
+      "caption": "Sage keeps the crew moving with one rule: the first output is just a starting point"
+    },
+    {
+      "src": "storyboards/generated/art-of-building-story-step-1.png",
+      "alt": "Describe the User Flow. Nia pushes for a clearer request. She wants the model to understand what a student sees first, what they tap next, and what the page should make easy. A strong build starts with a strong flow, not random features stacked together.",
+      "title": "Describe the User Flow",
+      "caption": "Nia pushes for a clearer request"
+    },
+    {
+      "src": "storyboards/generated/art-of-building-story-step-2.png",
+      "alt": "Use the Preview to Tell the Truth. Malik opens the preview and treats it like evidence. Is the page readable? Do the buttons work? Does the layout hold up on mobile? Preview is where the build tells the truth about what landed and what still needs work.",
+      "title": "Use the Preview to Tell the Truth",
+      "caption": "Malik opens the preview and treats it like evidence"
+    },
+    {
+      "src": "storyboards/generated/art-of-building-story-step-3.png",
+      "alt": "Ask for Specific Revisions. AJ learns not to say make it better and hope for magic. He asks for exact revisions: tighten the header, make the event cards easier to scan, improve the contrast, keep the signup button visible. Specific feedback gives the next version direction.",
+      "title": "Ask for Specific Revisions",
+      "caption": "AJ learns not to say make it better and hope for magic"
+    },
+    {
+      "src": "storyboards/generated/art-of-building-story-step-4.png",
+      "alt": "Iterate with Purpose. Now the rhythm makes sense. Describe. Preview. Revise. Test again. Malik keeps checking the results, Nia keeps the requirements sharp, and AJ keeps the build aimed at a real user. Iteration is not random repetition. It is how the work gets good.",
+      "title": "Iterate with Purpose",
+      "caption": "Now the rhythm makes sense"
+    }
+  ],
+  "clear-prompts-story": [
+    {
+      "src": "storyboards/generated/clear-prompts-story-step-0.png",
+      "alt": "Vague Prompts Create Guesswork. AJ starts with something loose like build a club website, and the output comes back bland. Nia is not surprised. If the request is vague, the model has to guess, and guesses are where weak builds begin.",
+      "title": "Vague Prompts Create Guesswork",
+      "caption": "AJ starts with something loose like build a club website, and the output comes back bland"
+    },
+    {
+      "src": "storyboards/generated/clear-prompts-story-step-1.png",
+      "alt": "Say What It Is and Who It Serves. So the crew rewrites the prompt. Build a mobile-friendly update page for a high school robotics club. Show next meetings, deadlines, and a signup form for new members. Now the model knows the kind of tool and the people it is for.",
+      "title": "Say What It Is and Who It Serves",
+      "caption": "So the crew rewrites the prompt"
+    },
+    {
+      "src": "storyboards/generated/clear-prompts-story-step-2.png",
+      "alt": "List the Must-Have Features. Malik adds the non-negotiables: a hero title, three upcoming events, a reminder checklist, and a join form. Features turn a general idea into a functional request with a clear finish line.",
+      "title": "List the Must-Have Features",
+      "caption": "Malik adds the non-negotiables: a hero title, three upcoming events, a reminder checklist, and a join form"
+    },
+    {
+      "src": "storyboards/generated/clear-prompts-story-step-3.png",
+      "alt": "Add Style and Constraints. Nia finishes the job by setting the tone and the limits. Make it clean, bold, and easy to scan on a phone. Use dark text on light cards. Keep the layout simple. Good prompts do not just ask for features. They shape the experience.",
+      "title": "Add Style and Constraints",
+      "caption": "Nia finishes the job by setting the tone and the limits"
+    },
+    {
+      "src": "storyboards/generated/clear-prompts-story-step-4.png",
+      "alt": "Better Prompt, Better Build. The new output is stronger because the instructions are stronger. AJ can see the difference, Malik can test the difference, and Nia can explain the difference. Clear prompts are not extra polish. They are part of the build itself.",
+      "title": "Better Prompt, Better Build",
+      "caption": "The new output is stronger because the instructions are stronger"
+    }
+  ]
+}

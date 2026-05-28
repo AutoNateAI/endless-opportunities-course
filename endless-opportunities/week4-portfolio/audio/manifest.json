@@ -1,0 +1,3143 @@
+{
+  "voices": {
+    "sage": {
+      "name": "sage",
+      "label": "Sage Story Guide"
+    }
+  },
+  "defaultVoice": "sage",
+  "generatedAt": "2026-03-27T23:23:33.818Z",
+  "stories": [
+    "problem-solving-process-story",
+    "capstone-journey-story",
+    "portfolio-celebration-story"
+  ],
+  "sage": {
+    "problem-solving-process-story": [
+      {
+        "storyId": "problem-solving-process-story",
+        "stepId": "step-0",
+        "voice": "sage",
+        "voiceLabel": "Sage Story Guide",
+        "text": "AJ starts the final week by choosing one problem that still feels real in his chest, not just one that sounds impressive on a slide. He wants the presentation to begin with a lived frustration people can recognize right away.",
+        "duration": 17.350000381469727,
+        "words": [
+          {
+            "word": "AJ",
+            "start": 0,
+            "end": 0.5600000023841858
+          },
+          {
+            "word": "starts",
+            "start": 0.5600000023841858,
+            "end": 1.100000023841858
+          },
+          {
+            "word": "the",
+            "start": 1.100000023841858,
+            "end": 1.4199999570846558
+          },
+          {
+            "word": "final",
+            "start": 1.4199999570846558,
+            "end": 1.8799999952316284
+          },
+          {
+            "word": "week",
+            "start": 1.8799999952316284,
+            "end": 2.180000066757202
+          },
+          {
+            "word": "by",
+            "start": 2.180000066757202,
+            "end": 2.680000066757202
+          },
+          {
+            "word": "choosing",
+            "start": 2.680000066757202,
+            "end": 2.9800000190734863
+          },
+          {
+            "word": "one",
+            "start": 2.9800000190734863,
+            "end": 3.5399999618530273
+          },
+          {
+            "word": "problem",
+            "start": 3.5399999618530273,
+            "end": 3.9000000953674316
+          },
+          {
+            "word": "that",
+            "start": 3.9000000953674316,
+            "end": 4.260000228881836
+          },
+          {
+            "word": "still",
+            "start": 4.260000228881836,
+            "end": 4.739999771118164
+          },
+          {
+            "word": "feels",
+            "start": 4.739999771118164,
+            "end": 5.099999904632568
+          },
+          {
+            "word": "real",
+            "start": 5.099999904632568,
+            "end": 5.539999961853027
+          },
+          {
+            "word": "in",
+            "start": 5.539999961853027,
+            "end": 5.800000190734863
+          },
+          {
+            "word": "his",
+            "start": 5.800000190734863,
+            "end": 6.099999904632568
+          },
+          {
+            "word": "chest",
+            "start": 6.099999904632568,
+            "end": 6.440000057220459
+          },
+          {
+            "word": "not",
+            "start": 7.300000190734863,
+            "end": 7.300000190734863
+          },
+          {
+            "word": "just",
+            "start": 7.300000190734863,
+            "end": 7.639999866485596
+          },
+          {
+            "word": "one",
+            "start": 7.639999866485596,
+            "end": 7.840000152587891
+          },
+          {
+            "word": "that",
+            "start": 7.840000152587891,
+            "end": 8.180000305175781
+          },
+          {
+            "word": "sounds",
+            "start": 8.180000305175781,
+            "end": 8.399999618530273
+          },
+          {
+            "word": "impressive",
+            "start": 8.399999618530273,
+            "end": 8.880000114440918
+          },
+          {
+            "word": "on",
+            "start": 8.880000114440918,
+            "end": 9.140000343322754
+          },
+          {
+            "word": "a",
+            "start": 9.140000343322754,
+            "end": 9.399999618530273
+          },
+          {
+            "word": "slide",
+            "start": 9.399999618530273,
+            "end": 9.680000305175781
+          },
+          {
+            "word": "He",
+            "start": 10.640000343322754,
+            "end": 10.979999542236328
+          },
+          {
+            "word": "wants",
+            "start": 10.979999542236328,
+            "end": 11.220000267028809
+          },
+          {
+            "word": "the",
+            "start": 11.220000267028809,
+            "end": 11.600000381469727
+          },
+          {
+            "word": "presentation",
+            "start": 11.600000381469727,
+            "end": 11.819999694824219
+          },
+          {
+            "word": "to",
+            "start": 11.819999694824219,
+            "end": 12.460000038146973
+          },
+          {
+            "word": "begin",
+            "start": 12.460000038146973,
+            "end": 12.680000305175781
+          },
+          {
+            "word": "with",
+            "start": 12.680000305175781,
+            "end": 12.899999618530273
+          },
+          {
+            "word": "a",
+            "start": 12.899999618530273,
+            "end": 13.399999618530273
+          },
+          {
+            "word": "lived",
+            "start": 13.399999618530273,
+            "end": 13.479999542236328
+          },
+          {
+            "word": "frustration",
+            "start": 13.479999542236328,
+            "end": 14.100000381469727
+          },
+          {
+            "word": "people",
+            "start": 14.100000381469727,
+            "end": 15.039999961853027
+          },
+          {
+            "word": "can",
+            "start": 15.039999961853027,
+            "end": 15.399999618530273
+          },
+          {
+            "word": "recognize",
+            "start": 15.399999618530273,
+            "end": 15.880000114440918
+          },
+          {
+            "word": "right",
+            "start": 15.880000114440918,
+            "end": 16.34000015258789
+          },
+          {
+            "word": "away",
+            "start": 16.34000015258789,
+            "end": 16.600000381469727
+          }
+        ]
+      },
+      {
+        "storyId": "problem-solving-process-story",
+        "stepId": "step-1",
+        "voice": "sage",
+        "voiceLabel": "Sage Story Guide",
+        "text": "Nia cuts out every exaggerated claim and rewrites the setup so the crew names the actual user, the actual pain point, and the actual limit of what their solution can do. If the explanation is honest, the audience can trust the rest.",
+        "duration": 17.299999237060547,
+        "words": [
+          {
+            "word": "Nia",
+            "start": 0,
+            "end": 0.4399999976158142
+          },
+          {
+            "word": "cuts",
+            "start": 0.4399999976158142,
+            "end": 0.8799999952316284
+          },
+          {
+            "word": "out",
+            "start": 0.8799999952316284,
+            "end": 1.2400000095367432
+          },
+          {
+            "word": "every",
+            "start": 1.2400000095367432,
+            "end": 1.840000033378601
+          },
+          {
+            "word": "exaggerated",
+            "start": 1.840000033378601,
+            "end": 2.5199999809265137
+          },
+          {
+            "word": "claim",
+            "start": 2.5199999809265137,
+            "end": 2.9600000381469727
+          },
+          {
+            "word": "and",
+            "start": 2.9600000381469727,
+            "end": 3.799999952316284
+          },
+          {
+            "word": "rewrites",
+            "start": 3.799999952316284,
+            "end": 4.179999828338623
+          },
+          {
+            "word": "the",
+            "start": 4.179999828338623,
+            "end": 4.519999980926514
+          },
+          {
+            "word": "setup",
+            "start": 4.519999980926514,
+            "end": 4.800000190734863
+          },
+          {
+            "word": "so",
+            "start": 4.800000190734863,
+            "end": 5.360000133514404
+          },
+          {
+            "word": "the",
+            "start": 5.360000133514404,
+            "end": 5.619999885559082
+          },
+          {
+            "word": "crew",
+            "start": 5.619999885559082,
+            "end": 5.860000133514404
+          },
+          {
+            "word": "names",
+            "start": 5.860000133514404,
+            "end": 6.199999809265137
+          },
+          {
+            "word": "the",
+            "start": 6.199999809265137,
+            "end": 6.440000057220459
+          },
+          {
+            "word": "actual",
+            "start": 6.440000057220459,
+            "end": 7
+          },
+          {
+            "word": "user",
+            "start": 7,
+            "end": 7.380000114440918
+          },
+          {
+            "word": "the",
+            "start": 8.0600004196167,
+            "end": 8.100000381469727
+          },
+          {
+            "word": "actual",
+            "start": 8.100000381469727,
+            "end": 8.600000381469727
+          },
+          {
+            "word": "pain",
+            "start": 8.600000381469727,
+            "end": 8.899999618530273
+          },
+          {
+            "word": "point",
+            "start": 8.899999618530273,
+            "end": 9.220000267028809
+          },
+          {
+            "word": "and",
+            "start": 9.699999809265137,
+            "end": 9.779999732971191
+          },
+          {
+            "word": "the",
+            "start": 9.779999732971191,
+            "end": 10.079999923706055
+          },
+          {
+            "word": "actual",
+            "start": 10.079999923706055,
+            "end": 10.579999923706055
+          },
+          {
+            "word": "limit",
+            "start": 10.579999923706055,
+            "end": 10.859999656677246
+          },
+          {
+            "word": "of",
+            "start": 10.859999656677246,
+            "end": 11.100000381469727
+          },
+          {
+            "word": "what",
+            "start": 11.100000381469727,
+            "end": 11.300000190734863
+          },
+          {
+            "word": "their",
+            "start": 11.300000190734863,
+            "end": 11.5600004196167
+          },
+          {
+            "word": "solution",
+            "start": 11.5600004196167,
+            "end": 11.920000076293945
+          },
+          {
+            "word": "can",
+            "start": 11.920000076293945,
+            "end": 12.279999732971191
+          },
+          {
+            "word": "do",
+            "start": 12.279999732971191,
+            "end": 12.479999542236328
+          },
+          {
+            "word": "If",
+            "start": 13,
+            "end": 13.34000015258789
+          },
+          {
+            "word": "the",
+            "start": 13.34000015258789,
+            "end": 13.680000305175781
+          },
+          {
+            "word": "explanation",
+            "start": 13.680000305175781,
+            "end": 14.020000457763672
+          },
+          {
+            "word": "is",
+            "start": 14.020000457763672,
+            "end": 14.699999809265137
+          },
+          {
+            "word": "honest",
+            "start": 14.699999809265137,
+            "end": 14.699999809265137
+          },
+          {
+            "word": "the",
+            "start": 15.15999984741211,
+            "end": 15.760000228881836
+          },
+          {
+            "word": "audience",
+            "start": 15.760000228881836,
+            "end": 15.760000228881836
+          },
+          {
+            "word": "can",
+            "start": 15.760000228881836,
+            "end": 16.1200008392334
+          },
+          {
+            "word": "trust",
+            "start": 16.1200008392334,
+            "end": 16.420000076293945
+          },
+          {
+            "word": "the",
+            "start": 16.420000076293945,
+            "end": 16.639999389648438
+          },
+          {
+            "word": "rest",
+            "start": 16.639999389648438,
+            "end": 16.940000534057617
+          }
+        ]
+      },
+      {
+        "storyId": "problem-solving-process-story",
+        "stepId": "step-2",
+        "voice": "sage",
+        "voiceLabel": "Sage Story Guide",
+        "text": "Malik lays out the evidence trail: the questions they asked, the comments and examples they collected, and the pattern that kept showing up. The point is not to drown people in data. The point is to show that the build came from proof, not guessing.",
+        "duration": 17.65999984741211,
+        "words": [
+          {
+            "word": "Malik",
+            "start": 0,
+            "end": 0.5799999833106995
+          },
+          {
+            "word": "lays",
+            "start": 0.5799999833106995,
+            "end": 1.1799999475479126
+          },
+          {
+            "word": "out",
+            "start": 1.1799999475479126,
+            "end": 1.440000057220459
+          },
+          {
+            "word": "the",
+            "start": 1.440000057220459,
+            "end": 1.7000000476837158
+          },
+          {
+            "word": "evidence",
+            "start": 1.7000000476837158,
+            "end": 2.0399999618530273
+          },
+          {
+            "word": "trail",
+            "start": 2.0399999618530273,
+            "end": 2.4600000381469727
+          },
+          {
+            "word": "the",
+            "start": 3.059999942779541,
+            "end": 3.259999990463257
+          },
+          {
+            "word": "questions",
+            "start": 3.259999990463257,
+            "end": 3.680000066757202
+          },
+          {
+            "word": "they",
+            "start": 3.680000066757202,
+            "end": 3.9800000190734863
+          },
+          {
+            "word": "asked",
+            "start": 3.9800000190734863,
+            "end": 4.28000020980835
+          },
+          {
+            "word": "the",
+            "start": 4.900000095367432,
+            "end": 5.400000095367432
+          },
+          {
+            "word": "comments",
+            "start": 5.400000095367432,
+            "end": 5.400000095367432
+          },
+          {
+            "word": "and",
+            "start": 5.400000095367432,
+            "end": 5.78000020980835
+          },
+          {
+            "word": "examples",
+            "start": 5.78000020980835,
+            "end": 6.139999866485596
+          },
+          {
+            "word": "they",
+            "start": 6.139999866485596,
+            "end": 6.460000038146973
+          },
+          {
+            "word": "collected",
+            "start": 6.460000038146973,
+            "end": 6.78000020980835
+          },
+          {
+            "word": "and",
+            "start": 7.260000228881836,
+            "end": 7.5
+          },
+          {
+            "word": "the",
+            "start": 7.5,
+            "end": 7.880000114440918
+          },
+          {
+            "word": "pattern",
+            "start": 7.880000114440918,
+            "end": 8.039999961853027
+          },
+          {
+            "word": "that",
+            "start": 8.039999961853027,
+            "end": 8.420000076293945
+          },
+          {
+            "word": "kept",
+            "start": 8.420000076293945,
+            "end": 8.699999809265137
+          },
+          {
+            "word": "showing",
+            "start": 8.699999809265137,
+            "end": 9.039999961853027
+          },
+          {
+            "word": "up",
+            "start": 9.039999961853027,
+            "end": 9.460000038146973
+          },
+          {
+            "word": "The",
+            "start": 9.9399995803833,
+            "end": 10.359999656677246
+          },
+          {
+            "word": "point",
+            "start": 10.359999656677246,
+            "end": 10.640000343322754
+          },
+          {
+            "word": "is",
+            "start": 10.640000343322754,
+            "end": 10.880000114440918
+          },
+          {
+            "word": "not",
+            "start": 10.880000114440918,
+            "end": 11.079999923706055
+          },
+          {
+            "word": "to",
+            "start": 11.079999923706055,
+            "end": 11.539999961853027
+          },
+          {
+            "word": "drown",
+            "start": 11.539999961853027,
+            "end": 11.539999961853027
+          },
+          {
+            "word": "people",
+            "start": 11.539999961853027,
+            "end": 11.9399995803833
+          },
+          {
+            "word": "in",
+            "start": 11.9399995803833,
+            "end": 12.420000076293945
+          },
+          {
+            "word": "data",
+            "start": 12.420000076293945,
+            "end": 12.420000076293945
+          },
+          {
+            "word": "The",
+            "start": 13.039999961853027,
+            "end": 13.220000267028809
+          },
+          {
+            "word": "point",
+            "start": 13.220000267028809,
+            "end": 13.479999542236328
+          },
+          {
+            "word": "is",
+            "start": 13.479999542236328,
+            "end": 13.739999771118164
+          },
+          {
+            "word": "to",
+            "start": 13.739999771118164,
+            "end": 13.979999542236328
+          },
+          {
+            "word": "show",
+            "start": 13.979999542236328,
+            "end": 14.15999984741211
+          },
+          {
+            "word": "that",
+            "start": 14.15999984741211,
+            "end": 14.359999656677246
+          },
+          {
+            "word": "the",
+            "start": 14.359999656677246,
+            "end": 14.5600004196167
+          },
+          {
+            "word": "build",
+            "start": 14.5600004196167,
+            "end": 14.84000015258789
+          },
+          {
+            "word": "came",
+            "start": 14.84000015258789,
+            "end": 15.15999984741211
+          },
+          {
+            "word": "from",
+            "start": 15.15999984741211,
+            "end": 15.479999542236328
+          },
+          {
+            "word": "proof",
+            "start": 15.479999542236328,
+            "end": 15.84000015258789
+          },
+          {
+            "word": "not",
+            "start": 16.440000534057617,
+            "end": 16.780000686645508
+          },
+          {
+            "word": "guessing",
+            "start": 16.780000686645508,
+            "end": 17.280000686645508
+          }
+        ]
+      },
+      {
+        "storyId": "problem-solving-process-story",
+        "stepId": "step-3",
+        "voice": "sage",
+        "voiceLabel": "Sage Story Guide",
+        "text": "AJ and Malik turn the messy building process into a clean story: first prompt, rough prototype, broken version, feedback, and stronger revision. Now the audience can see the workflow instead of imagining magic.",
+        "duration": 17.15999984741211,
+        "words": [
+          {
+            "word": "Ajay",
+            "start": 0,
+            "end": 0.6800000071525574
+          },
+          {
+            "word": "and",
+            "start": 0.6800000071525574,
+            "end": 1.0800000429153442
+          },
+          {
+            "word": "Malik",
+            "start": 1.0800000429153442,
+            "end": 1.4800000190734863
+          },
+          {
+            "word": "turned",
+            "start": 1.4800000190734863,
+            "end": 2.180000066757202
+          },
+          {
+            "word": "the",
+            "start": 2.180000066757202,
+            "end": 2.5199999809265137
+          },
+          {
+            "word": "messy",
+            "start": 2.5199999809265137,
+            "end": 2.880000114440918
+          },
+          {
+            "word": "building",
+            "start": 2.880000114440918,
+            "end": 3.319999933242798
+          },
+          {
+            "word": "process",
+            "start": 3.319999933242798,
+            "end": 3.9200000762939453
+          },
+          {
+            "word": "into",
+            "start": 3.9200000762939453,
+            "end": 4.28000020980835
+          },
+          {
+            "word": "a",
+            "start": 4.28000020980835,
+            "end": 4.679999828338623
+          },
+          {
+            "word": "clean",
+            "start": 4.679999828338623,
+            "end": 5
+          },
+          {
+            "word": "story",
+            "start": 5,
+            "end": 5.639999866485596
+          },
+          {
+            "word": "First",
+            "start": 6.519999980926514,
+            "end": 6.539999961853027
+          },
+          {
+            "word": "prompt",
+            "start": 6.539999961853027,
+            "end": 6.940000057220459
+          },
+          {
+            "word": "rough",
+            "start": 7.519999980926514,
+            "end": 7.71999979019165
+          },
+          {
+            "word": "prototype",
+            "start": 7.71999979019165,
+            "end": 8.279999732971191
+          },
+          {
+            "word": "broken",
+            "start": 8.760000228881836,
+            "end": 9.119999885559082
+          },
+          {
+            "word": "version",
+            "start": 9.119999885559082,
+            "end": 9.520000457763672
+          },
+          {
+            "word": "feedback",
+            "start": 10.479999542236328,
+            "end": 10.479999542236328
+          },
+          {
+            "word": "and",
+            "start": 10.880000114440918,
+            "end": 11.239999771118164
+          },
+          {
+            "word": "stronger",
+            "start": 11.239999771118164,
+            "end": 11.579999923706055
+          },
+          {
+            "word": "revision",
+            "start": 11.579999923706055,
+            "end": 12.039999961853027
+          },
+          {
+            "word": "Now",
+            "start": 12.779999732971191,
+            "end": 12.9399995803833
+          },
+          {
+            "word": "the",
+            "start": 12.9399995803833,
+            "end": 13.34000015258789
+          },
+          {
+            "word": "audience",
+            "start": 13.34000015258789,
+            "end": 13.5600004196167
+          },
+          {
+            "word": "can",
+            "start": 13.5600004196167,
+            "end": 13.880000114440918
+          },
+          {
+            "word": "see",
+            "start": 13.880000114440918,
+            "end": 14.260000228881836
+          },
+          {
+            "word": "the",
+            "start": 14.260000228881836,
+            "end": 14.619999885559082
+          },
+          {
+            "word": "workflow",
+            "start": 14.619999885559082,
+            "end": 14.899999618530273
+          },
+          {
+            "word": "instead",
+            "start": 14.899999618530273,
+            "end": 15.539999961853027
+          },
+          {
+            "word": "of",
+            "start": 15.539999961853027,
+            "end": 16.31999969482422
+          },
+          {
+            "word": "imagining",
+            "start": 16.31999969482422,
+            "end": 16.31999969482422
+          },
+          {
+            "word": "magic",
+            "start": 16.31999969482422,
+            "end": 16.81999969482422
+          }
+        ]
+      },
+      {
+        "storyId": "problem-solving-process-story",
+        "stepId": "step-4",
+        "voice": "sage",
+        "voiceLabel": "Sage Story Guide",
+        "text": "With the facts in place, the crew shapes the final talk into one clear arc: here is the problem, here is what we learned, here is what we built, and here is why it matters. Week 4 is not about sounding polished. It is about making the learning visible.",
+        "duration": 19.239999771118164,
+        "words": [
+          {
+            "word": "With",
+            "start": 0,
+            "end": 0.3400000035762787
+          },
+          {
+            "word": "the",
+            "start": 0.3400000035762787,
+            "end": 0.9200000166893005
+          },
+          {
+            "word": "facts",
+            "start": 0.9200000166893005,
+            "end": 0.9800000190734863
+          },
+          {
+            "word": "in",
+            "start": 0.9800000190734863,
+            "end": 1.3799999952316284
+          },
+          {
+            "word": "place",
+            "start": 1.3799999952316284,
+            "end": 1.6799999475479126
+          },
+          {
+            "word": "the",
+            "start": 1.9600000381469727,
+            "end": 2.200000047683716
+          },
+          {
+            "word": "crew",
+            "start": 2.200000047683716,
+            "end": 2.4600000381469727
+          },
+          {
+            "word": "shapes",
+            "start": 2.4600000381469727,
+            "end": 2.859999895095825
+          },
+          {
+            "word": "the",
+            "start": 2.859999895095825,
+            "end": 3.180000066757202
+          },
+          {
+            "word": "final",
+            "start": 3.180000066757202,
+            "end": 3.5399999618530273
+          },
+          {
+            "word": "talk",
+            "start": 3.5399999618530273,
+            "end": 3.880000114440918
+          },
+          {
+            "word": "into",
+            "start": 3.880000114440918,
+            "end": 4.239999771118164
+          },
+          {
+            "word": "one",
+            "start": 4.239999771118164,
+            "end": 4.78000020980835
+          },
+          {
+            "word": "clear",
+            "start": 4.78000020980835,
+            "end": 5.260000228881836
+          },
+          {
+            "word": "arc",
+            "start": 5.260000228881836,
+            "end": 5.619999885559082
+          },
+          {
+            "word": "Here",
+            "start": 6.5,
+            "end": 6.519999980926514
+          },
+          {
+            "word": "is",
+            "start": 6.519999980926514,
+            "end": 6.679999828338623
+          },
+          {
+            "word": "the",
+            "start": 6.679999828338623,
+            "end": 7.039999961853027
+          },
+          {
+            "word": "problem",
+            "start": 7.039999961853027,
+            "end": 7.21999979019165
+          },
+          {
+            "word": "Here",
+            "start": 8.0600004196167,
+            "end": 8.079999923706055
+          },
+          {
+            "word": "is",
+            "start": 8.079999923706055,
+            "end": 8.300000190734863
+          },
+          {
+            "word": "what",
+            "start": 8.300000190734863,
+            "end": 8.4399995803833
+          },
+          {
+            "word": "we",
+            "start": 8.4399995803833,
+            "end": 8.680000305175781
+          },
+          {
+            "word": "learned",
+            "start": 8.680000305175781,
+            "end": 8.979999542236328
+          },
+          {
+            "word": "Here",
+            "start": 9.760000228881836,
+            "end": 9.760000228881836
+          },
+          {
+            "word": "is",
+            "start": 9.760000228881836,
+            "end": 9.960000038146973
+          },
+          {
+            "word": "what",
+            "start": 9.960000038146973,
+            "end": 10.119999885559082
+          },
+          {
+            "word": "we",
+            "start": 10.119999885559082,
+            "end": 10.5
+          },
+          {
+            "word": "built",
+            "start": 10.5,
+            "end": 10.539999961853027
+          },
+          {
+            "word": "And",
+            "start": 11.0600004196167,
+            "end": 11.300000190734863
+          },
+          {
+            "word": "here",
+            "start": 11.300000190734863,
+            "end": 11.579999923706055
+          },
+          {
+            "word": "is",
+            "start": 11.579999923706055,
+            "end": 12
+          },
+          {
+            "word": "why",
+            "start": 12,
+            "end": 12.239999771118164
+          },
+          {
+            "word": "it",
+            "start": 12.239999771118164,
+            "end": 12.600000381469727
+          },
+          {
+            "word": "matters",
+            "start": 12.600000381469727,
+            "end": 12.819999694824219
+          },
+          {
+            "word": "Week",
+            "start": 13.779999732971191,
+            "end": 13.899999618530273
+          },
+          {
+            "word": "four",
+            "start": 13.899999618530273,
+            "end": 14.220000267028809
+          },
+          {
+            "word": "is",
+            "start": 14.220000267028809,
+            "end": 14.520000457763672
+          },
+          {
+            "word": "not",
+            "start": 14.520000457763672,
+            "end": 14.899999618530273
+          },
+          {
+            "word": "about",
+            "start": 14.899999618530273,
+            "end": 15.260000228881836
+          },
+          {
+            "word": "sounding",
+            "start": 15.260000228881836,
+            "end": 15.619999885559082
+          },
+          {
+            "word": "polished",
+            "start": 15.619999885559082,
+            "end": 16.139999389648438
+          },
+          {
+            "word": "It",
+            "start": 16.3799991607666,
+            "end": 16.739999771118164
+          },
+          {
+            "word": "is",
+            "start": 16.739999771118164,
+            "end": 16.920000076293945
+          },
+          {
+            "word": "about",
+            "start": 16.920000076293945,
+            "end": 17.18000030517578
+          },
+          {
+            "word": "making",
+            "start": 17.18000030517578,
+            "end": 17.6200008392334
+          },
+          {
+            "word": "the",
+            "start": 17.6200008392334,
+            "end": 18.3799991607666
+          },
+          {
+            "word": "learning",
+            "start": 18.3799991607666,
+            "end": 18.3799991607666
+          },
+          {
+            "word": "visible",
+            "start": 18.3799991607666,
+            "end": 18.8799991607666
+          }
+        ]
+      }
+    ],
+    "capstone-journey-story": [
+      {
+        "storyId": "capstone-journey-story",
+        "stepId": "step-0",
+        "voice": "sage",
+        "voiceLabel": "Sage Story Guide",
+        "text": "AJ practices opening with the exact moment the problem became impossible to ignore. That hook matters because it reminds the audience that the capstone began in real life, not in a random assignment prompt.",
+        "duration": 14.350000381469727,
+        "words": [
+          {
+            "word": "AJ",
+            "start": 0,
+            "end": 0.5799999833106995
+          },
+          {
+            "word": "practices",
+            "start": 0.5799999833106995,
+            "end": 1.4199999570846558
+          },
+          {
+            "word": "opening",
+            "start": 1.4199999570846558,
+            "end": 1.8799999952316284
+          },
+          {
+            "word": "with",
+            "start": 1.8799999952316284,
+            "end": 2.180000066757202
+          },
+          {
+            "word": "the",
+            "start": 2.180000066757202,
+            "end": 2.380000114440918
+          },
+          {
+            "word": "exact",
+            "start": 2.380000114440918,
+            "end": 2.9800000190734863
+          },
+          {
+            "word": "moment",
+            "start": 2.9800000190734863,
+            "end": 3.319999933242798
+          },
+          {
+            "word": "the",
+            "start": 3.319999933242798,
+            "end": 3.680000066757202
+          },
+          {
+            "word": "problem",
+            "start": 3.680000066757202,
+            "end": 4
+          },
+          {
+            "word": "became",
+            "start": 4,
+            "end": 4.440000057220459
+          },
+          {
+            "word": "impossible",
+            "start": 4.440000057220459,
+            "end": 5.099999904632568
+          },
+          {
+            "word": "to",
+            "start": 5.099999904632568,
+            "end": 5.800000190734863
+          },
+          {
+            "word": "ignore",
+            "start": 5.800000190734863,
+            "end": 5.800000190734863
+          },
+          {
+            "word": "That",
+            "start": 6.440000057220459,
+            "end": 6.639999866485596
+          },
+          {
+            "word": "hook",
+            "start": 6.639999866485596,
+            "end": 6.880000114440918
+          },
+          {
+            "word": "matters",
+            "start": 6.880000114440918,
+            "end": 7.340000152587891
+          },
+          {
+            "word": "because",
+            "start": 7.340000152587891,
+            "end": 7.900000095367432
+          },
+          {
+            "word": "it",
+            "start": 7.900000095367432,
+            "end": 8.260000228881836
+          },
+          {
+            "word": "reminds",
+            "start": 8.260000228881836,
+            "end": 8.539999961853027
+          },
+          {
+            "word": "the",
+            "start": 8.539999961853027,
+            "end": 8.899999618530273
+          },
+          {
+            "word": "audience",
+            "start": 8.899999618530273,
+            "end": 9.039999961853027
+          },
+          {
+            "word": "that",
+            "start": 9.039999961853027,
+            "end": 9.300000190734863
+          },
+          {
+            "word": "the",
+            "start": 9.300000190734863,
+            "end": 9.479999542236328
+          },
+          {
+            "word": "capstone",
+            "start": 9.479999542236328,
+            "end": 9.9399995803833
+          },
+          {
+            "word": "began",
+            "start": 9.9399995803833,
+            "end": 10.420000076293945
+          },
+          {
+            "word": "in",
+            "start": 10.420000076293945,
+            "end": 10.800000190734863
+          },
+          {
+            "word": "real",
+            "start": 10.800000190734863,
+            "end": 11.140000343322754
+          },
+          {
+            "word": "life",
+            "start": 11.140000343322754,
+            "end": 11.4399995803833
+          },
+          {
+            "word": "not",
+            "start": 12.199999809265137,
+            "end": 12.220000267028809
+          },
+          {
+            "word": "in",
+            "start": 12.220000267028809,
+            "end": 12.380000114440918
+          },
+          {
+            "word": "a",
+            "start": 12.380000114440918,
+            "end": 12.539999961853027
+          },
+          {
+            "word": "random",
+            "start": 12.539999961853027,
+            "end": 12.779999732971191
+          },
+          {
+            "word": "assignment",
+            "start": 12.779999732971191,
+            "end": 13.279999732971191
+          },
+          {
+            "word": "prompt",
+            "start": 13.279999732971191,
+            "end": 13.65999984741211
+          }
+        ]
+      },
+      {
+        "storyId": "capstone-journey-story",
+        "stepId": "step-1",
+        "voice": "sage",
+        "voiceLabel": "Sage Story Guide",
+        "text": "Nia listens like a tough editor. Every time the crew says always, everyone, or best, she stops them and asks for proof. If they cannot defend a claim with evidence from the project, it does not make the final version.",
+        "duration": 14.15999984741211,
+        "words": [
+          {
+            "word": "Mia",
+            "start": 0,
+            "end": 0.6200000047683716
+          },
+          {
+            "word": "listens",
+            "start": 0.6200000047683716,
+            "end": 1.2400000095367432
+          },
+          {
+            "word": "like",
+            "start": 1.2400000095367432,
+            "end": 1.4800000190734863
+          },
+          {
+            "word": "a",
+            "start": 1.4800000190734863,
+            "end": 1.7400000095367432
+          },
+          {
+            "word": "tough",
+            "start": 1.7400000095367432,
+            "end": 2.0799999237060547
+          },
+          {
+            "word": "editor",
+            "start": 2.0799999237060547,
+            "end": 2.4200000762939453
+          },
+          {
+            "word": "Every",
+            "start": 3.140000104904175,
+            "end": 3.299999952316284
+          },
+          {
+            "word": "time",
+            "start": 3.299999952316284,
+            "end": 3.5399999618530273
+          },
+          {
+            "word": "the",
+            "start": 3.5399999618530273,
+            "end": 3.799999952316284
+          },
+          {
+            "word": "crew",
+            "start": 3.799999952316284,
+            "end": 3.940000057220459
+          },
+          {
+            "word": "says",
+            "start": 3.940000057220459,
+            "end": 4.260000228881836
+          },
+          {
+            "word": "always",
+            "start": 4.840000152587891,
+            "end": 4.840000152587891
+          },
+          {
+            "word": "everyone",
+            "start": 4.960000038146973,
+            "end": 5.460000038146973
+          },
+          {
+            "word": "or",
+            "start": 5.619999885559082,
+            "end": 5.840000152587891
+          },
+          {
+            "word": "best",
+            "start": 5.840000152587891,
+            "end": 6.119999885559082
+          },
+          {
+            "word": "she",
+            "start": 6.599999904632568,
+            "end": 6.739999771118164
+          },
+          {
+            "word": "stops",
+            "start": 6.739999771118164,
+            "end": 7.139999866485596
+          },
+          {
+            "word": "them",
+            "start": 7.139999866485596,
+            "end": 7.400000095367432
+          },
+          {
+            "word": "and",
+            "start": 7.400000095367432,
+            "end": 7.820000171661377
+          },
+          {
+            "word": "asks",
+            "start": 7.820000171661377,
+            "end": 8
+          },
+          {
+            "word": "for",
+            "start": 8,
+            "end": 8.319999694824219
+          },
+          {
+            "word": "proof",
+            "start": 8.319999694824219,
+            "end": 8.539999961853027
+          },
+          {
+            "word": "If",
+            "start": 9.119999885559082,
+            "end": 9.260000228881836
+          },
+          {
+            "word": "they",
+            "start": 9.260000228881836,
+            "end": 9.5
+          },
+          {
+            "word": "cannot",
+            "start": 9.5,
+            "end": 9.84000015258789
+          },
+          {
+            "word": "defend",
+            "start": 9.84000015258789,
+            "end": 10.180000305175781
+          },
+          {
+            "word": "a",
+            "start": 10.180000305175781,
+            "end": 10.5600004196167
+          },
+          {
+            "word": "claim",
+            "start": 10.5600004196167,
+            "end": 10.5600004196167
+          },
+          {
+            "word": "with",
+            "start": 10.5600004196167,
+            "end": 10.859999656677246
+          },
+          {
+            "word": "evidence",
+            "start": 10.859999656677246,
+            "end": 11.15999984741211
+          },
+          {
+            "word": "from",
+            "start": 11.15999984741211,
+            "end": 11.359999656677246
+          },
+          {
+            "word": "the",
+            "start": 11.359999656677246,
+            "end": 11.539999961853027
+          },
+          {
+            "word": "project",
+            "start": 11.539999961853027,
+            "end": 11.920000076293945
+          },
+          {
+            "word": "it",
+            "start": 12.300000190734863,
+            "end": 12.5
+          },
+          {
+            "word": "does",
+            "start": 12.5,
+            "end": 12.720000267028809
+          },
+          {
+            "word": "not",
+            "start": 12.720000267028809,
+            "end": 13.020000457763672
+          },
+          {
+            "word": "make",
+            "start": 13.020000457763672,
+            "end": 13.180000305175781
+          },
+          {
+            "word": "the",
+            "start": 13.180000305175781,
+            "end": 13.359999656677246
+          },
+          {
+            "word": "final",
+            "start": 13.359999656677246,
+            "end": 13.619999885559082
+          },
+          {
+            "word": "version",
+            "start": 13.619999885559082,
+            "end": 13.899999618530273
+          }
+        ]
+      },
+      {
+        "storyId": "capstone-journey-story",
+        "stepId": "step-2",
+        "voice": "sage",
+        "voiceLabel": "Sage Story Guide",
+        "text": "Malik gets the live demo ready by checking the flow, saving screenshots, and preparing a backup path in case the internet acts strange. A strong presentation is not only about confidence. It is about planning for reality.",
+        "duration": 16.049999237060547,
+        "words": [
+          {
+            "word": "Malik",
+            "start": 0,
+            "end": 0.5400000214576721
+          },
+          {
+            "word": "gets",
+            "start": 0.5400000214576721,
+            "end": 1.0399999618530273
+          },
+          {
+            "word": "the",
+            "start": 1.0399999618530273,
+            "end": 1.2599999904632568
+          },
+          {
+            "word": "live",
+            "start": 1.2599999904632568,
+            "end": 1.6200000047683716
+          },
+          {
+            "word": "demo",
+            "start": 1.6200000047683716,
+            "end": 1.899999976158142
+          },
+          {
+            "word": "ready",
+            "start": 1.899999976158142,
+            "end": 2.259999990463257
+          },
+          {
+            "word": "by",
+            "start": 2.259999990463257,
+            "end": 2.880000114440918
+          },
+          {
+            "word": "checking",
+            "start": 2.880000114440918,
+            "end": 3.2200000286102295
+          },
+          {
+            "word": "the",
+            "start": 3.2200000286102295,
+            "end": 3.4800000190734863
+          },
+          {
+            "word": "flow",
+            "start": 3.4800000190734863,
+            "end": 3.799999952316284
+          },
+          {
+            "word": "saving",
+            "start": 4.619999885559082,
+            "end": 4.659999847412109
+          },
+          {
+            "word": "screenshots",
+            "start": 4.659999847412109,
+            "end": 5.380000114440918
+          },
+          {
+            "word": "and",
+            "start": 5.900000095367432,
+            "end": 6.039999961853027
+          },
+          {
+            "word": "preparing",
+            "start": 6.039999961853027,
+            "end": 6.5
+          },
+          {
+            "word": "a",
+            "start": 6.5,
+            "end": 6.800000190734863
+          },
+          {
+            "word": "backup",
+            "start": 6.800000190734863,
+            "end": 7.099999904632568
+          },
+          {
+            "word": "path",
+            "start": 7.099999904632568,
+            "end": 7.599999904632568
+          },
+          {
+            "word": "in",
+            "start": 7.599999904632568,
+            "end": 8.020000457763672
+          },
+          {
+            "word": "case",
+            "start": 8.020000457763672,
+            "end": 8.180000305175781
+          },
+          {
+            "word": "the",
+            "start": 8.180000305175781,
+            "end": 8.460000038146973
+          },
+          {
+            "word": "internet",
+            "start": 8.460000038146973,
+            "end": 8.739999771118164
+          },
+          {
+            "word": "acts",
+            "start": 8.739999771118164,
+            "end": 9.180000305175781
+          },
+          {
+            "word": "strange",
+            "start": 9.180000305175781,
+            "end": 9.680000305175781
+          },
+          {
+            "word": "A",
+            "start": 10.380000114440918,
+            "end": 10.600000381469727
+          },
+          {
+            "word": "strong",
+            "start": 10.600000381469727,
+            "end": 10.920000076293945
+          },
+          {
+            "word": "presentation",
+            "start": 10.920000076293945,
+            "end": 11.5
+          },
+          {
+            "word": "is",
+            "start": 11.5,
+            "end": 12.180000305175781
+          },
+          {
+            "word": "not",
+            "start": 12.180000305175781,
+            "end": 12.420000076293945
+          },
+          {
+            "word": "only",
+            "start": 12.420000076293945,
+            "end": 12.760000228881836
+          },
+          {
+            "word": "about",
+            "start": 12.760000228881836,
+            "end": 13.0600004196167
+          },
+          {
+            "word": "confidence",
+            "start": 13.0600004196167,
+            "end": 13.619999885559082
+          },
+          {
+            "word": "it's",
+            "start": 13.779999732971191,
+            "end": 14.420000076293945
+          },
+          {
+            "word": "about",
+            "start": 14.420000076293945,
+            "end": 14.720000267028809
+          },
+          {
+            "word": "planning",
+            "start": 14.720000267028809,
+            "end": 15.039999961853027
+          },
+          {
+            "word": "for",
+            "start": 15.039999961853027,
+            "end": 15.479999542236328
+          },
+          {
+            "word": "reality",
+            "start": 15.479999542236328,
+            "end": 15.899999618530273
+          }
+        ]
+      },
+      {
+        "storyId": "capstone-journey-story",
+        "stepId": "step-3",
+        "voice": "sage",
+        "voiceLabel": "Sage Story Guide",
+        "text": "The crew runs the talk for a small practice audience and listens for the moment people lean in, get confused, or ask follow-up questions. That reaction becomes feedback they can actually use before the final presentation.",
+        "duration": 16.600000381469727,
+        "words": [
+          {
+            "word": "The",
+            "start": 0,
+            "end": 0.3199999928474426
+          },
+          {
+            "word": "crew",
+            "start": 0.3199999928474426,
+            "end": 0.6800000071525574
+          },
+          {
+            "word": "runs",
+            "start": 0.6800000071525574,
+            "end": 1.1799999475479126
+          },
+          {
+            "word": "the",
+            "start": 1.1799999475479126,
+            "end": 1.4199999570846558
+          },
+          {
+            "word": "talk",
+            "start": 1.4199999570846558,
+            "end": 1.7799999713897705
+          },
+          {
+            "word": "for",
+            "start": 1.7799999713897705,
+            "end": 2.180000066757202
+          },
+          {
+            "word": "a",
+            "start": 2.180000066757202,
+            "end": 2.4200000762939453
+          },
+          {
+            "word": "small",
+            "start": 2.4200000762939453,
+            "end": 2.7200000286102295
+          },
+          {
+            "word": "practice",
+            "start": 2.7200000286102295,
+            "end": 3.200000047683716
+          },
+          {
+            "word": "audience",
+            "start": 3.200000047683716,
+            "end": 3.640000104904175
+          },
+          {
+            "word": "and",
+            "start": 3.640000104904175,
+            "end": 4.480000019073486
+          },
+          {
+            "word": "listens",
+            "start": 4.480000019073486,
+            "end": 4.78000020980835
+          },
+          {
+            "word": "for",
+            "start": 4.78000020980835,
+            "end": 5.059999942779541
+          },
+          {
+            "word": "the",
+            "start": 5.059999942779541,
+            "end": 5.239999771118164
+          },
+          {
+            "word": "moment",
+            "start": 5.239999771118164,
+            "end": 5.539999961853027
+          },
+          {
+            "word": "people",
+            "start": 5.539999961853027,
+            "end": 6.019999980926514
+          },
+          {
+            "word": "lean",
+            "start": 6.019999980926514,
+            "end": 6.300000190734863
+          },
+          {
+            "word": "in",
+            "start": 6.300000190734863,
+            "end": 6.639999866485596
+          },
+          {
+            "word": "get",
+            "start": 7.099999904632568,
+            "end": 7.21999979019165
+          },
+          {
+            "word": "confused",
+            "start": 7.21999979019165,
+            "end": 7.78000020980835
+          },
+          {
+            "word": "or",
+            "start": 8.100000381469727,
+            "end": 8.579999923706055
+          },
+          {
+            "word": "ask",
+            "start": 8.579999923706055,
+            "end": 8.920000076293945
+          },
+          {
+            "word": "follow",
+            "start": 8.920000076293945,
+            "end": 9.319999694824219
+          },
+          {
+            "word": "up",
+            "start": 9.319999694824219,
+            "end": 9.4399995803833
+          },
+          {
+            "word": "questions",
+            "start": 9.4399995803833,
+            "end": 9.960000038146973
+          },
+          {
+            "word": "That",
+            "start": 10.399999618530273,
+            "end": 11.100000381469727
+          },
+          {
+            "word": "reaction",
+            "start": 11.100000381469727,
+            "end": 11.579999923706055
+          },
+          {
+            "word": "becomes",
+            "start": 11.579999923706055,
+            "end": 12.039999961853027
+          },
+          {
+            "word": "feedback",
+            "start": 12.039999961853027,
+            "end": 12.420000076293945
+          },
+          {
+            "word": "they",
+            "start": 12.420000076293945,
+            "end": 12.779999732971191
+          },
+          {
+            "word": "can",
+            "start": 12.779999732971191,
+            "end": 12.979999542236328
+          },
+          {
+            "word": "actually",
+            "start": 12.979999542236328,
+            "end": 13.579999923706055
+          },
+          {
+            "word": "use",
+            "start": 13.579999923706055,
+            "end": 14
+          },
+          {
+            "word": "before",
+            "start": 14,
+            "end": 14.800000190734863
+          },
+          {
+            "word": "the",
+            "start": 14.800000190734863,
+            "end": 15.119999885559082
+          },
+          {
+            "word": "final",
+            "start": 15.119999885559082,
+            "end": 15.5
+          },
+          {
+            "word": "presentation",
+            "start": 15.5,
+            "end": 16.059999465942383
+          }
+        ]
+      },
+      {
+        "storyId": "capstone-journey-story",
+        "stepId": "step-4",
+        "voice": "sage",
+        "voiceLabel": "Sage Story Guide",
+        "text": "AJ tightens the hook, Nia cleans the logic, and Malik sharpens the demo sequence. The final version is stronger because they tested it in public first. That is the Week 4 move: test, sharpen, present.",
+        "duration": 16.100000381469727,
+        "words": [
+          {
+            "word": "AJ",
+            "start": 0,
+            "end": 0.5799999833106995
+          },
+          {
+            "word": "tightens",
+            "start": 0.5799999833106995,
+            "end": 1.159999966621399
+          },
+          {
+            "word": "the",
+            "start": 1.159999966621399,
+            "end": 1.659999966621399
+          },
+          {
+            "word": "hook",
+            "start": 1.659999966621399,
+            "end": 1.659999966621399
+          },
+          {
+            "word": "Nia",
+            "start": 2.5,
+            "end": 2.5
+          },
+          {
+            "word": "cleans",
+            "start": 2.5,
+            "end": 2.9600000381469727
+          },
+          {
+            "word": "the",
+            "start": 2.9600000381469727,
+            "end": 3.559999942779541
+          },
+          {
+            "word": "logic",
+            "start": 3.559999942779541,
+            "end": 3.559999942779541
+          },
+          {
+            "word": "and",
+            "start": 4.039999961853027,
+            "end": 4.300000190734863
+          },
+          {
+            "word": "Malik",
+            "start": 4.300000190734863,
+            "end": 4.519999980926514
+          },
+          {
+            "word": "sharpens",
+            "start": 4.519999980926514,
+            "end": 5.139999866485596
+          },
+          {
+            "word": "the",
+            "start": 5.139999866485596,
+            "end": 5.420000076293945
+          },
+          {
+            "word": "demo",
+            "start": 5.420000076293945,
+            "end": 5.659999847412109
+          },
+          {
+            "word": "sequence",
+            "start": 5.659999847412109,
+            "end": 6.139999866485596
+          },
+          {
+            "word": "The",
+            "start": 6.940000057220459,
+            "end": 7.099999904632568
+          },
+          {
+            "word": "final",
+            "start": 7.099999904632568,
+            "end": 7.519999980926514
+          },
+          {
+            "word": "version",
+            "start": 7.519999980926514,
+            "end": 7.840000152587891
+          },
+          {
+            "word": "is",
+            "start": 7.840000152587891,
+            "end": 8.260000228881836
+          },
+          {
+            "word": "stronger",
+            "start": 8.260000228881836,
+            "end": 8.680000305175781
+          },
+          {
+            "word": "because",
+            "start": 8.680000305175781,
+            "end": 9.4399995803833
+          },
+          {
+            "word": "they",
+            "start": 9.4399995803833,
+            "end": 9.720000267028809
+          },
+          {
+            "word": "tested",
+            "start": 9.720000267028809,
+            "end": 10.100000381469727
+          },
+          {
+            "word": "it",
+            "start": 10.100000381469727,
+            "end": 10.319999694824219
+          },
+          {
+            "word": "in",
+            "start": 10.319999694824219,
+            "end": 10.579999923706055
+          },
+          {
+            "word": "public",
+            "start": 10.579999923706055,
+            "end": 10.899999618530273
+          },
+          {
+            "word": "first",
+            "start": 10.899999618530273,
+            "end": 11.359999656677246
+          },
+          {
+            "word": "That",
+            "start": 12.0600004196167,
+            "end": 12.239999771118164
+          },
+          {
+            "word": "is",
+            "start": 12.239999771118164,
+            "end": 12.4399995803833
+          },
+          {
+            "word": "the",
+            "start": 12.4399995803833,
+            "end": 12.65999984741211
+          },
+          {
+            "word": "Week",
+            "start": 12.65999984741211,
+            "end": 12.920000076293945
+          },
+          {
+            "word": "4",
+            "start": 12.920000076293945,
+            "end": 13.15999984741211
+          },
+          {
+            "word": "move",
+            "start": 13.15999984741211,
+            "end": 13.579999923706055
+          },
+          {
+            "word": "Test",
+            "start": 14.34000015258789,
+            "end": 14.4399995803833
+          },
+          {
+            "word": "Sharpen",
+            "start": 15.039999961853027,
+            "end": 15.100000381469727
+          },
+          {
+            "word": "Present",
+            "start": 15.5600004196167,
+            "end": 15.65999984741211
+          }
+        ]
+      }
+    ],
+    "portfolio-celebration-story": [
+      {
+        "storyId": "portfolio-celebration-story",
+        "stepId": "step-0",
+        "voice": "sage",
+        "voiceLabel": "Sage Story Guide",
+        "text": "When the portfolio comes together, Malik makes sure it leads with evidence: the problem statement, the research trail, the build decisions, and the finished capstone. The portfolio is not decoration. It is proof that the crew can solve real problems.",
+        "duration": 16.40999984741211,
+        "words": [
+          {
+            "word": "When",
+            "start": 0,
+            "end": 0.3400000035762787
+          },
+          {
+            "word": "the",
+            "start": 0.3400000035762787,
+            "end": 0.5600000023841858
+          },
+          {
+            "word": "portfolio",
+            "start": 0.5600000023841858,
+            "end": 1.059999942779541
+          },
+          {
+            "word": "comes",
+            "start": 1.059999942779541,
+            "end": 1.6200000047683716
+          },
+          {
+            "word": "together",
+            "start": 1.6200000047683716,
+            "end": 2.0999999046325684
+          },
+          {
+            "word": "Malik",
+            "start": 2.819999933242798,
+            "end": 2.8399999141693115
+          },
+          {
+            "word": "makes",
+            "start": 2.8399999141693115,
+            "end": 3.180000066757202
+          },
+          {
+            "word": "sure",
+            "start": 3.180000066757202,
+            "end": 3.4600000381469727
+          },
+          {
+            "word": "it",
+            "start": 3.4600000381469727,
+            "end": 3.619999885559082
+          },
+          {
+            "word": "leads",
+            "start": 3.619999885559082,
+            "end": 3.880000114440918
+          },
+          {
+            "word": "with",
+            "start": 3.880000114440918,
+            "end": 4.179999828338623
+          },
+          {
+            "word": "evidence",
+            "start": 4.179999828338623,
+            "end": 4.599999904632568
+          },
+          {
+            "word": "the",
+            "start": 5.059999942779541,
+            "end": 5.239999771118164
+          },
+          {
+            "word": "problem",
+            "start": 5.239999771118164,
+            "end": 5.599999904632568
+          },
+          {
+            "word": "statement",
+            "start": 5.599999904632568,
+            "end": 6.019999980926514
+          },
+          {
+            "word": "the",
+            "start": 6.400000095367432,
+            "end": 6.599999904632568
+          },
+          {
+            "word": "research",
+            "start": 6.599999904632568,
+            "end": 6.820000171661377
+          },
+          {
+            "word": "trail",
+            "start": 6.820000171661377,
+            "end": 7.21999979019165
+          },
+          {
+            "word": "the",
+            "start": 7.539999961853027,
+            "end": 7.619999885559082
+          },
+          {
+            "word": "build",
+            "start": 7.619999885559082,
+            "end": 7.860000133514404
+          },
+          {
+            "word": "decisions",
+            "start": 7.860000133514404,
+            "end": 8.34000015258789
+          },
+          {
+            "word": "and",
+            "start": 8.619999885559082,
+            "end": 8.739999771118164
+          },
+          {
+            "word": "the",
+            "start": 8.739999771118164,
+            "end": 9.199999809265137
+          },
+          {
+            "word": "finished",
+            "start": 9.199999809265137,
+            "end": 9.220000267028809
+          },
+          {
+            "word": "capstone",
+            "start": 9.220000267028809,
+            "end": 9.84000015258789
+          },
+          {
+            "word": "The",
+            "start": 10.479999542236328,
+            "end": 10.720000267028809
+          },
+          {
+            "word": "portfolio",
+            "start": 10.720000267028809,
+            "end": 11.100000381469727
+          },
+          {
+            "word": "is",
+            "start": 11.100000381469727,
+            "end": 11.5600004196167
+          },
+          {
+            "word": "not",
+            "start": 11.5600004196167,
+            "end": 11.84000015258789
+          },
+          {
+            "word": "decoration",
+            "start": 11.84000015258789,
+            "end": 12.359999656677246
+          },
+          {
+            "word": "It",
+            "start": 12.960000038146973,
+            "end": 13.039999961853027
+          },
+          {
+            "word": "is",
+            "start": 13.039999961853027,
+            "end": 13.359999656677246
+          },
+          {
+            "word": "proof",
+            "start": 13.359999656677246,
+            "end": 13.640000343322754
+          },
+          {
+            "word": "that",
+            "start": 13.640000343322754,
+            "end": 13.880000114440918
+          },
+          {
+            "word": "the",
+            "start": 13.880000114440918,
+            "end": 14.180000305175781
+          },
+          {
+            "word": "crew",
+            "start": 14.180000305175781,
+            "end": 14.239999771118164
+          },
+          {
+            "word": "can",
+            "start": 14.239999771118164,
+            "end": 14.640000343322754
+          },
+          {
+            "word": "solve",
+            "start": 14.640000343322754,
+            "end": 14.960000038146973
+          },
+          {
+            "word": "real",
+            "start": 14.960000038146973,
+            "end": 15.420000076293945
+          },
+          {
+            "word": "problems",
+            "start": 15.420000076293945,
+            "end": 15.899999618530273
+          }
+        ]
+      },
+      {
+        "storyId": "portfolio-celebration-story",
+        "stepId": "step-1",
+        "voice": "sage",
+        "voiceLabel": "Sage Story Guide",
+        "text": "AJ presents without apologizing for what is unfinished. He focuses on what the crew learned, what the tool does right now, and why the problem was worth solving. Confidence here means ownership, not pretending the work is perfect.",
+        "duration": 17.399999618530273,
+        "words": [
+          {
+            "word": "AJ",
+            "start": 0,
+            "end": 0.5799999833106995
+          },
+          {
+            "word": "presents",
+            "start": 0.5799999833106995,
+            "end": 1.2000000476837158
+          },
+          {
+            "word": "without",
+            "start": 1.2000000476837158,
+            "end": 1.7400000095367432
+          },
+          {
+            "word": "apologizing",
+            "start": 1.7400000095367432,
+            "end": 2.5399999618530273
+          },
+          {
+            "word": "for",
+            "start": 2.5399999618530273,
+            "end": 3.0999999046325684
+          },
+          {
+            "word": "what",
+            "start": 3.0999999046325684,
+            "end": 3.359999895095825
+          },
+          {
+            "word": "is",
+            "start": 3.359999895095825,
+            "end": 3.700000047683716
+          },
+          {
+            "word": "unfinished",
+            "start": 3.700000047683716,
+            "end": 4.28000020980835
+          },
+          {
+            "word": "He",
+            "start": 5.260000228881836,
+            "end": 5.420000076293945
+          },
+          {
+            "word": "focuses",
+            "start": 5.420000076293945,
+            "end": 5.800000190734863
+          },
+          {
+            "word": "on",
+            "start": 5.800000190734863,
+            "end": 6.159999847412109
+          },
+          {
+            "word": "what",
+            "start": 6.159999847412109,
+            "end": 6.320000171661377
+          },
+          {
+            "word": "the",
+            "start": 6.320000171661377,
+            "end": 6.619999885559082
+          },
+          {
+            "word": "crew",
+            "start": 6.619999885559082,
+            "end": 6.78000020980835
+          },
+          {
+            "word": "learned",
+            "start": 6.78000020980835,
+            "end": 7.21999979019165
+          },
+          {
+            "word": "what",
+            "start": 8.020000457763672,
+            "end": 8.100000381469727
+          },
+          {
+            "word": "the",
+            "start": 8.100000381469727,
+            "end": 8.319999694824219
+          },
+          {
+            "word": "tool",
+            "start": 8.319999694824219,
+            "end": 8.5600004196167
+          },
+          {
+            "word": "does",
+            "start": 8.5600004196167,
+            "end": 8.920000076293945
+          },
+          {
+            "word": "right",
+            "start": 8.920000076293945,
+            "end": 9.260000228881836
+          },
+          {
+            "word": "now",
+            "start": 9.260000228881836,
+            "end": 9.619999885559082
+          },
+          {
+            "word": "and",
+            "start": 9.859999656677246,
+            "end": 10.359999656677246
+          },
+          {
+            "word": "why",
+            "start": 10.359999656677246,
+            "end": 10.619999885559082
+          },
+          {
+            "word": "the",
+            "start": 10.619999885559082,
+            "end": 10.9399995803833
+          },
+          {
+            "word": "problem",
+            "start": 10.9399995803833,
+            "end": 11.140000343322754
+          },
+          {
+            "word": "was",
+            "start": 11.140000343322754,
+            "end": 11.539999961853027
+          },
+          {
+            "word": "worth",
+            "start": 11.539999961853027,
+            "end": 11.739999771118164
+          },
+          {
+            "word": "solving",
+            "start": 11.739999771118164,
+            "end": 12.119999885559082
+          },
+          {
+            "word": "Confidence",
+            "start": 13.239999771118164,
+            "end": 13.420000076293945
+          },
+          {
+            "word": "here",
+            "start": 13.420000076293945,
+            "end": 13.819999694824219
+          },
+          {
+            "word": "means",
+            "start": 13.819999694824219,
+            "end": 14.079999923706055
+          },
+          {
+            "word": "ownership",
+            "start": 14.079999923706055,
+            "end": 14.720000267028809
+          },
+          {
+            "word": "not",
+            "start": 15.399999618530273,
+            "end": 15.619999885559082
+          },
+          {
+            "word": "pretending",
+            "start": 15.619999885559082,
+            "end": 16.040000915527344
+          },
+          {
+            "word": "the",
+            "start": 16.040000915527344,
+            "end": 16.31999969482422
+          },
+          {
+            "word": "work",
+            "start": 16.31999969482422,
+            "end": 16.5
+          },
+          {
+            "word": "is",
+            "start": 16.5,
+            "end": 16.760000228881836
+          },
+          {
+            "word": "perfect",
+            "start": 16.760000228881836,
+            "end": 17.15999984741211
+          }
+        ]
+      },
+      {
+        "storyId": "portfolio-celebration-story",
+        "stepId": "step-2",
+        "voice": "sage",
+        "voiceLabel": "Sage Story Guide",
+        "text": "Nia handles tough questions by staying grounded. If the answer is known, she gives it plainly. If the answer is not known yet, she says what the crew would test next. Honest answers make the presentation stronger than fake certainty ever could.",
+        "duration": 17.200000762939453,
+        "words": [
+          {
+            "word": "Nia",
+            "start": 0,
+            "end": 0.5400000214576721
+          },
+          {
+            "word": "handles",
+            "start": 0.5400000214576721,
+            "end": 1.159999966621399
+          },
+          {
+            "word": "tough",
+            "start": 1.159999966621399,
+            "end": 1.5800000429153442
+          },
+          {
+            "word": "questions",
+            "start": 1.5800000429153442,
+            "end": 2.0799999237060547
+          },
+          {
+            "word": "by",
+            "start": 2.0799999237060547,
+            "end": 2.5399999618530273
+          },
+          {
+            "word": "staying",
+            "start": 2.5399999618530273,
+            "end": 2.9000000953674316
+          },
+          {
+            "word": "grounded",
+            "start": 2.9000000953674316,
+            "end": 3.3399999141693115
+          },
+          {
+            "word": "If",
+            "start": 4.039999961853027,
+            "end": 4.059999942779541
+          },
+          {
+            "word": "the",
+            "start": 4.059999942779541,
+            "end": 4.440000057220459
+          },
+          {
+            "word": "answer",
+            "start": 4.440000057220459,
+            "end": 4.5
+          },
+          {
+            "word": "is",
+            "start": 4.5,
+            "end": 4.739999771118164
+          },
+          {
+            "word": "known",
+            "start": 4.739999771118164,
+            "end": 5
+          },
+          {
+            "word": "she",
+            "start": 5.480000019073486,
+            "end": 5.599999904632568
+          },
+          {
+            "word": "gives",
+            "start": 5.599999904632568,
+            "end": 5.820000171661377
+          },
+          {
+            "word": "it",
+            "start": 5.820000171661377,
+            "end": 6.079999923706055
+          },
+          {
+            "word": "plainly",
+            "start": 6.079999923706055,
+            "end": 6.579999923706055
+          },
+          {
+            "word": "If",
+            "start": 7.199999809265137,
+            "end": 7.320000171661377
+          },
+          {
+            "word": "the",
+            "start": 7.320000171661377,
+            "end": 7.71999979019165
+          },
+          {
+            "word": "answer",
+            "start": 7.71999979019165,
+            "end": 7.71999979019165
+          },
+          {
+            "word": "is",
+            "start": 7.71999979019165,
+            "end": 7.960000038146973
+          },
+          {
+            "word": "not",
+            "start": 7.960000038146973,
+            "end": 8.220000267028809
+          },
+          {
+            "word": "known",
+            "start": 8.220000267028809,
+            "end": 8.420000076293945
+          },
+          {
+            "word": "yet",
+            "start": 8.420000076293945,
+            "end": 8.720000267028809
+          },
+          {
+            "word": "she",
+            "start": 9.180000305175781,
+            "end": 9.399999618530273
+          },
+          {
+            "word": "says",
+            "start": 9.399999618530273,
+            "end": 9.699999809265137
+          },
+          {
+            "word": "what",
+            "start": 9.699999809265137,
+            "end": 9.899999618530273
+          },
+          {
+            "word": "the",
+            "start": 9.899999618530273,
+            "end": 10.140000343322754
+          },
+          {
+            "word": "crew",
+            "start": 10.140000343322754,
+            "end": 10.279999732971191
+          },
+          {
+            "word": "would",
+            "start": 10.279999732971191,
+            "end": 10.579999923706055
+          },
+          {
+            "word": "test",
+            "start": 10.579999923706055,
+            "end": 10.859999656677246
+          },
+          {
+            "word": "next",
+            "start": 10.859999656677246,
+            "end": 11.300000190734863
+          },
+          {
+            "word": "Honest",
+            "start": 12.100000381469727,
+            "end": 12.279999732971191
+          },
+          {
+            "word": "answers",
+            "start": 12.279999732971191,
+            "end": 12.720000267028809
+          },
+          {
+            "word": "make",
+            "start": 12.720000267028809,
+            "end": 13.260000228881836
+          },
+          {
+            "word": "the",
+            "start": 13.260000228881836,
+            "end": 13.579999923706055
+          },
+          {
+            "word": "presentation",
+            "start": 13.579999923706055,
+            "end": 14.0600004196167
+          },
+          {
+            "word": "stronger",
+            "start": 14.0600004196167,
+            "end": 14.680000305175781
+          },
+          {
+            "word": "than",
+            "start": 14.680000305175781,
+            "end": 15.020000457763672
+          },
+          {
+            "word": "fake",
+            "start": 15.020000457763672,
+            "end": 15.380000114440918
+          },
+          {
+            "word": "certainty",
+            "start": 15.380000114440918,
+            "end": 15.84000015258789
+          },
+          {
+            "word": "ever",
+            "start": 15.84000015258789,
+            "end": 16.540000915527344
+          },
+          {
+            "word": "could",
+            "start": 16.540000915527344,
+            "end": 16.760000228881836
+          }
+        ]
+      },
+      {
+        "storyId": "portfolio-celebration-story",
+        "stepId": "step-3",
+        "voice": "sage",
+        "voiceLabel": "Sage Story Guide",
+        "text": "Malik opens the repo, the prompts, and the working demo to show the actual workflow behind the final product. The audience gets to see that this crew does not just talk about ideas. They can document, build, and iterate in public.",
+        "duration": 18.040000915527344,
+        "words": [
+          {
+            "word": "Malik",
+            "start": 0,
+            "end": 0.5799999833106995
+          },
+          {
+            "word": "opens",
+            "start": 0.5799999833106995,
+            "end": 1.2799999713897705
+          },
+          {
+            "word": "the",
+            "start": 1.2799999713897705,
+            "end": 1.5399999618530273
+          },
+          {
+            "word": "repo",
+            "start": 1.5399999618530273,
+            "end": 1.840000033378601
+          },
+          {
+            "word": "the",
+            "start": 2.440000057220459,
+            "end": 2.880000114440918
+          },
+          {
+            "word": "prompts",
+            "start": 2.880000114440918,
+            "end": 2.880000114440918
+          },
+          {
+            "word": "and",
+            "start": 3.299999952316284,
+            "end": 3.4000000953674316
+          },
+          {
+            "word": "the",
+            "start": 3.4000000953674316,
+            "end": 3.619999885559082
+          },
+          {
+            "word": "working",
+            "start": 3.619999885559082,
+            "end": 4.019999980926514
+          },
+          {
+            "word": "demo",
+            "start": 4.019999980926514,
+            "end": 4.380000114440918
+          },
+          {
+            "word": "to",
+            "start": 4.380000114440918,
+            "end": 4.960000038146973
+          },
+          {
+            "word": "show",
+            "start": 4.960000038146973,
+            "end": 5.199999809265137
+          },
+          {
+            "word": "the",
+            "start": 5.199999809265137,
+            "end": 5.5
+          },
+          {
+            "word": "actual",
+            "start": 5.5,
+            "end": 6.059999942779541
+          },
+          {
+            "word": "workflow",
+            "start": 6.059999942779541,
+            "end": 6.5
+          },
+          {
+            "word": "behind",
+            "start": 6.5,
+            "end": 6.960000038146973
+          },
+          {
+            "word": "the",
+            "start": 6.960000038146973,
+            "end": 7.239999771118164
+          },
+          {
+            "word": "final",
+            "start": 7.239999771118164,
+            "end": 7.539999961853027
+          },
+          {
+            "word": "product",
+            "start": 7.539999961853027,
+            "end": 7.980000019073486
+          },
+          {
+            "word": "The",
+            "start": 8.760000228881836,
+            "end": 8.9399995803833
+          },
+          {
+            "word": "audience",
+            "start": 8.9399995803833,
+            "end": 9.34000015258789
+          },
+          {
+            "word": "gets",
+            "start": 9.34000015258789,
+            "end": 9.5600004196167
+          },
+          {
+            "word": "to",
+            "start": 9.5600004196167,
+            "end": 9.979999542236328
+          },
+          {
+            "word": "see",
+            "start": 9.979999542236328,
+            "end": 10.100000381469727
+          },
+          {
+            "word": "that",
+            "start": 10.100000381469727,
+            "end": 10.640000343322754
+          },
+          {
+            "word": "this",
+            "start": 10.640000343322754,
+            "end": 11.020000457763672
+          },
+          {
+            "word": "crew",
+            "start": 11.020000457763672,
+            "end": 11.220000267028809
+          },
+          {
+            "word": "does",
+            "start": 11.220000267028809,
+            "end": 11.5600004196167
+          },
+          {
+            "word": "not",
+            "start": 11.5600004196167,
+            "end": 11.819999694824219
+          },
+          {
+            "word": "just",
+            "start": 11.819999694824219,
+            "end": 12.260000228881836
+          },
+          {
+            "word": "talk",
+            "start": 12.260000228881836,
+            "end": 12.399999618530273
+          },
+          {
+            "word": "about",
+            "start": 12.399999618530273,
+            "end": 12.779999732971191
+          },
+          {
+            "word": "ideas",
+            "start": 12.779999732971191,
+            "end": 13.199999809265137
+          },
+          {
+            "word": "They",
+            "start": 13.920000076293945,
+            "end": 14.15999984741211
+          },
+          {
+            "word": "can",
+            "start": 14.15999984741211,
+            "end": 14.479999542236328
+          },
+          {
+            "word": "document",
+            "start": 14.479999542236328,
+            "end": 14.960000038146973
+          },
+          {
+            "word": "build",
+            "start": 15.779999732971191,
+            "end": 15.779999732971191
+          },
+          {
+            "word": "and",
+            "start": 15.84000015258789,
+            "end": 16.81999969482422
+          },
+          {
+            "word": "iterate",
+            "start": 16.81999969482422,
+            "end": 16.81999969482422
+          },
+          {
+            "word": "in",
+            "start": 16.81999969482422,
+            "end": 17.479999542236328
+          },
+          {
+            "word": "public",
+            "start": 17.479999542236328,
+            "end": 17.739999771118164
+          }
+        ]
+      },
+      {
+        "storyId": "portfolio-celebration-story",
+        "stepId": "step-4",
+        "voice": "sage",
+        "voiceLabel": "Sage Story Guide",
+        "text": "By the end, AJ, Nia, and Malik are not framed as kids who completed a course. They are framed as problem solvers who can notice a need, investigate it, build a response, and explain their thinking. That is the real graduation moment.",
+        "duration": 18.15999984741211,
+        "words": [
+          {
+            "word": "By",
+            "start": 0,
+            "end": 0.3799999952316284
+          },
+          {
+            "word": "the",
+            "start": 0.3799999952316284,
+            "end": 0.6399999856948853
+          },
+          {
+            "word": "end",
+            "start": 0.6399999856948853,
+            "end": 0.9399999976158142
+          },
+          {
+            "word": "AJ",
+            "start": 1.659999966621399,
+            "end": 1.8200000524520874
+          },
+          {
+            "word": "Mia",
+            "start": 2.5,
+            "end": 2.5199999809265137
+          },
+          {
+            "word": "and",
+            "start": 2.640000104904175,
+            "end": 3.140000104904175
+          },
+          {
+            "word": "Malik",
+            "start": 3.140000104904175,
+            "end": 3.140000104904175
+          },
+          {
+            "word": "are",
+            "start": 3.140000104904175,
+            "end": 3.619999885559082
+          },
+          {
+            "word": "not",
+            "start": 3.619999885559082,
+            "end": 4.079999923706055
+          },
+          {
+            "word": "framed",
+            "start": 4.079999923706055,
+            "end": 4.21999979019165
+          },
+          {
+            "word": "as",
+            "start": 4.21999979019165,
+            "end": 4.599999904632568
+          },
+          {
+            "word": "kids",
+            "start": 4.599999904632568,
+            "end": 4.78000020980835
+          },
+          {
+            "word": "who",
+            "start": 4.78000020980835,
+            "end": 5
+          },
+          {
+            "word": "completed",
+            "start": 5,
+            "end": 5.440000057220459
+          },
+          {
+            "word": "a",
+            "start": 5.440000057220459,
+            "end": 6
+          },
+          {
+            "word": "course",
+            "start": 6,
+            "end": 6
+          },
+          {
+            "word": "They",
+            "start": 6.760000228881836,
+            "end": 7.159999847412109
+          },
+          {
+            "word": "are",
+            "start": 7.159999847412109,
+            "end": 7.5
+          },
+          {
+            "word": "framed",
+            "start": 7.5,
+            "end": 7.619999885559082
+          },
+          {
+            "word": "as",
+            "start": 7.619999885559082,
+            "end": 8.079999923706055
+          },
+          {
+            "word": "problem",
+            "start": 8.079999923706055,
+            "end": 8.4399995803833
+          },
+          {
+            "word": "solvers",
+            "start": 8.4399995803833,
+            "end": 8.819999694824219
+          },
+          {
+            "word": "who",
+            "start": 8.819999694824219,
+            "end": 9.34000015258789
+          },
+          {
+            "word": "can",
+            "start": 9.34000015258789,
+            "end": 9.640000343322754
+          },
+          {
+            "word": "notice",
+            "start": 9.640000343322754,
+            "end": 9.920000076293945
+          },
+          {
+            "word": "a",
+            "start": 9.920000076293945,
+            "end": 10.359999656677246
+          },
+          {
+            "word": "need",
+            "start": 10.359999656677246,
+            "end": 10.359999656677246
+          },
+          {
+            "word": "investigate",
+            "start": 11.15999984741211,
+            "end": 11.15999984741211
+          },
+          {
+            "word": "it",
+            "start": 11.15999984741211,
+            "end": 11.520000457763672
+          },
+          {
+            "word": "build",
+            "start": 12.039999961853027,
+            "end": 12.039999961853027
+          },
+          {
+            "word": "a",
+            "start": 12.039999961853027,
+            "end": 12.65999984741211
+          },
+          {
+            "word": "response",
+            "start": 12.65999984741211,
+            "end": 12.65999984741211
+          },
+          {
+            "word": "and",
+            "start": 13.079999923706055,
+            "end": 13.300000190734863
+          },
+          {
+            "word": "explain",
+            "start": 13.300000190734863,
+            "end": 13.779999732971191
+          },
+          {
+            "word": "their",
+            "start": 13.779999732971191,
+            "end": 14.140000343322754
+          },
+          {
+            "word": "thinking",
+            "start": 14.140000343322754,
+            "end": 14.4399995803833
+          },
+          {
+            "word": "That",
+            "start": 14.960000038146973,
+            "end": 15.420000076293945
+          },
+          {
+            "word": "is",
+            "start": 15.420000076293945,
+            "end": 15.699999809265137
+          },
+          {
+            "word": "the",
+            "start": 15.699999809265137,
+            "end": 15.979999542236328
+          },
+          {
+            "word": "real",
+            "start": 15.979999542236328,
+            "end": 16.3799991607666
+          },
+          {
+            "word": "graduation",
+            "start": 16.3799991607666,
+            "end": 16.920000076293945
+          },
+          {
+            "word": "moment",
+            "start": 16.920000076293945,
+            "end": 17.360000610351562
+          }
+        ]
+      }
+    ]
+  }
+}

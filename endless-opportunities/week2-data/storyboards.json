@@ -1,0 +1,98 @@
+{
+  "data-mindset-story": [
+    {
+      "src": "storyboards/generated/data-mindset-story-step-0.png",
+      "alt": "Signals in the Scroll. AJ keeps catching the same complaint while he scrolls after school. Students are saying there is nowhere nearby with strong Wi-Fi, enough outlets, and enough calm to lock in. What looked random yesterday starts feeling repeated today. Sage frames it clean: the signal is not one post. The signal is the same frustration showing up again and again.",
+      "title": "Signals in the Scroll",
+      "caption": "AJ keeps catching the same complaint while he scrolls after school"
+    },
+    {
+      "src": "storyboards/generated/data-mindset-story-step-1.png",
+      "alt": "Claims Versus Behavior. Nia refuses to call it proof yet. She wants to compare what places claim with what students actually do and say. If a cafe calls itself study-friendly but the comments say the music is loud, the outlets are dead, and people leave after fifteen minutes, that contradiction matters. She is not chasing vibes. She is testing reality.",
+      "title": "Claims Versus Behavior",
+      "caption": "Nia refuses to call it proof yet"
+    },
+    {
+      "src": "storyboards/generated/data-mindset-story-step-2.png",
+      "alt": "Build the Evidence Board. Malik starts pinning the clues together. Screenshots from comments, map listings, review snippets, student DMs, even posted photos of crowded tables and dead laptop batteries all land in one place. Suddenly the story is easier to see. The issue is not just that students are complaining. It is that the same need is appearing across different sources.",
+      "title": "Build the Evidence Board",
+      "caption": "Malik starts pinning the clues together"
+    },
+    {
+      "src": "storyboards/generated/data-mindset-story-step-3.png",
+      "alt": "From Hunch to Proof. By the end of the first pass, AJ can feel the shift. At the start, he had a hunch. Now the crew has evidence. Nia trusts it more because it survived comparison. Malik trusts it more because the pattern repeats. That is the week two move: intuition starts the search, but proof earns the next step.",
+      "title": "From Hunch to Proof",
+      "caption": "By the end of the first pass, AJ can feel the shift"
+    }
+  ],
+  "algorithms-story": [
+    {
+      "src": "storyboards/generated/algorithms-story-step-0.png",
+      "alt": "The Feed Is Guessing. AJ notices how easy it would be to let the feed tell the whole story. One study tips clip becomes ten more. One cafe review turns into random productivity content. Nia shuts that down fast. Recommendation feeds are built to keep attention moving, not to answer the exact question the crew is trying to solve.",
+      "title": "The Feed Is Guessing",
+      "caption": "AJ notices how easy it would be to let the feed tell the whole story"
+    },
+    {
+      "src": "storyboards/generated/algorithms-story-step-1.png",
+      "alt": "AJ Switches to Search. So AJ gets specific. He searches for late study spots near school, quiet coffee shops with outlets, student-friendly spaces, and after-school work areas. The energy changes immediately because search forces a target. Instead of waiting to be shown something interesting, he is asking for something useful.",
+      "title": "AJ Switches to Search",
+      "caption": "So AJ gets specific"
+    },
+    {
+      "src": "storyboards/generated/algorithms-story-step-2.png",
+      "alt": "Nia Cross-Checks the Trail. Nia takes the search results and cross-checks them. A place might look perfect on its homepage, but what do the reviews say about the Wi-Fi, the noise level, and the closing time. Do the photos match the promise. Do the comments line up with the rating. She keeps asking the same week one question underneath the data: what is actually true here.",
+      "title": "Nia Cross-Checks the Trail",
+      "caption": "Nia takes the search results and cross-checks them"
+    },
+    {
+      "src": "storyboards/generated/algorithms-story-step-3.png",
+      "alt": "Malik Stacks Sources. Malik loves this part because it becomes a system. Search results, maps, photos, review text, and local threads each add a layer. No single source has to carry the whole argument. Together they create a stronger picture than a feed ever could. The point is not more content. The point is cleaner evidence.",
+      "title": "Malik Stacks Sources",
+      "caption": "Malik loves this part because it becomes a system"
+    },
+    {
+      "src": "storyboards/generated/algorithms-story-step-4.png",
+      "alt": "Intentional Search Creates Proof. Now AJ can answer the question that matters: how do you know. He knows because the team searched on purpose, checked what people claimed against what they reported, and stacked sources that pointed in the same direction. Search did more than find information. It made the evidence defendable.",
+      "title": "Intentional Search Creates Proof",
+      "caption": "Now AJ can answer the question that matters: how do you know"
+    }
+  ],
+  "analysis-story": [
+    {
+      "src": "storyboards/generated/analysis-story-step-0.png",
+      "alt": "Start with the Question. Malik says the team needs one clean question before they go any further. What are students actually missing after school. Not what looks cool. Not what might go viral. What need keeps showing up when the evidence is lined up. Once the question is tight, the data gets easier to sort.",
+      "title": "Start with the Question",
+      "caption": "Malik says the team needs one clean question before they go any further"
+    },
+    {
+      "src": "storyboards/generated/analysis-story-step-1.png",
+      "alt": "Tag the Patterns. The trio starts tagging the evidence. Wi-Fi problems. Not enough outlets. Places too loud to focus. Spaces closing too early. Prices that push students out. AJ sees how repeated complaints stop feeling random when they are grouped this way. Patterns are the first sign that the problem has structure.",
+      "title": "Tag the Patterns",
+      "caption": "The trio starts tagging the evidence"
+    },
+    {
+      "src": "storyboards/generated/analysis-story-step-2.png",
+      "alt": "Notice the Contradictions. Nia looks for the tension points. A place markets itself as a calm workspace, but students say they cannot hear themselves think. Another boasts free Wi-Fi, but reviews keep mentioning dropped connections. Those contradictions matter because they reveal where the offer breaks. Weak promises create useful openings.",
+      "title": "Notice the Contradictions",
+      "caption": "Nia looks for the tension points"
+    },
+    {
+      "src": "storyboards/generated/analysis-story-step-3.png",
+      "alt": "Count the Repeats. Malik counts what keeps coming back. Not to worship numbers for their own sake, but to see which pain points carry the most weight. If bad Wi-Fi appears once, that is a detail. If it appears across maps, comments, and reviews, that becomes a priority. Repetition tells the team where to pay attention.",
+      "title": "Count the Repeats",
+      "caption": "Malik counts what keeps coming back"
+    },
+    {
+      "src": "storyboards/generated/analysis-story-step-4.png",
+      "alt": "Spot the Gap. AJ finally says the quiet part out loud. The real gap is not just one bad cafe. The gap is that students nearby do not have a place built around their actual after-school workflow. They need affordable time, reliable Wi-Fi, power, and focus. The market keeps offering pieces of that, but not the full thing.",
+      "title": "Spot the Gap",
+      "caption": "AJ finally says the quiet part out loud"
+    },
+    {
+      "src": "storyboards/generated/analysis-story-step-5.png",
+      "alt": "Call the Opportunity. That is the moment intuition becomes direction. Nia is satisfied because the claim is rooted in evidence. Malik is satisfied because the pattern is clear enough to design around. AJ is energized because the crew is no longer just naming a problem. They can now move into week three with a real opportunity worth building for.",
+      "title": "Call the Opportunity",
+      "caption": "That is the moment intuition becomes direction"
+    }
+  ]
+}

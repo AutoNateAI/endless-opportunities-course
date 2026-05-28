@@ -1,0 +1,98 @@
+{
+  "problem-solving-process-story": [
+    {
+      "src": "storyboards/generated/problem-solving-process-story-step-0.png",
+      "alt": "Pick the Real Problem. AJ starts the final week by choosing one problem that still feels real in his chest, not just one that sounds impressive on a slide. He wants the presentation to begin with a lived frustration people can recognize right away.",
+      "title": "Pick the Real Problem",
+      "caption": "AJ starts the final week by choosing one problem that still feels real in his chest, not just one that sounds impressive on a slide"
+    },
+    {
+      "src": "storyboards/generated/problem-solving-process-story-step-1.png",
+      "alt": "Frame It Honestly. Nia cuts out every exaggerated claim and rewrites the setup so the crew names the actual user, the actual pain point, and the actual limit of what their solution can do. If the explanation is honest, the audience can trust the rest.",
+      "title": "Frame It Honestly",
+      "caption": "Nia cuts out every exaggerated claim and rewrites the setup so the crew names the actual user, the actual pain point, and the actual limit of what their solution can do"
+    },
+    {
+      "src": "storyboards/generated/problem-solving-process-story-step-2.png",
+      "alt": "Show the Proof Trail. Malik lays out the evidence trail: the questions they asked, the comments and examples they collected, and the pattern that kept showing up. The point is not to drown people in data. The point is to show that the build came from proof, not guessing.",
+      "title": "Show the Proof Trail",
+      "caption": "Malik lays out the evidence trail: the questions they asked, the comments and examples they collected, and the pattern that kept showing up"
+    },
+    {
+      "src": "storyboards/generated/problem-solving-process-story-step-3.png",
+      "alt": "Walk Through the Build. AJ and Malik turn the messy building process into a clean story: first prompt, rough prototype, broken version, feedback, and stronger revision. Now the audience can see the workflow instead of imagining magic.",
+      "title": "Walk Through the Build",
+      "caption": "AJ and Malik turn the messy building process into a clean story: first prompt, rough prototype, broken version, feedback, and stronger revision"
+    },
+    {
+      "src": "storyboards/generated/problem-solving-process-story-step-4.png",
+      "alt": "Shape the Presentation Arc. With the facts in place, the crew shapes the final talk into one clear arc: here is the problem, here is what we learned, here is what we built, and here is why it matters. Week 4 is not about sounding polished. It is about making the learning visible.",
+      "title": "Shape the Presentation Arc",
+      "caption": "With the facts in place, the crew shapes the final talk into one clear arc: here is the problem, here is what we learned, here is what we built, and here is why it matters"
+    }
+  ],
+  "capstone-journey-story": [
+    {
+      "src": "storyboards/generated/capstone-journey-story-step-0.png",
+      "alt": "Open With the Hook. AJ practices opening with the exact moment the problem became impossible to ignore. That hook matters because it reminds the audience that the capstone began in real life, not in a random assignment prompt.",
+      "title": "Open With the Hook",
+      "caption": "AJ practices opening with the exact moment the problem became impossible to ignore"
+    },
+    {
+      "src": "storyboards/generated/capstone-journey-story-step-1.png",
+      "alt": "Stress-Test Every Claim. Nia listens like a tough editor. Every time the crew says always, everyone, or best, she stops them and asks for proof. If they cannot defend a claim with evidence from the project, it does not make the final version.",
+      "title": "Stress-Test Every Claim",
+      "caption": "Nia listens like a tough editor"
+    },
+    {
+      "src": "storyboards/generated/capstone-journey-story-step-2.png",
+      "alt": "Make the Demo Safe. Malik gets the live demo ready by checking the flow, saving screenshots, and preparing a backup path in case the internet acts strange. A strong presentation is not only about confidence. It is about planning for reality.",
+      "title": "Make the Demo Safe",
+      "caption": "Malik gets the live demo ready by checking the flow, saving screenshots, and preparing a backup path in case the internet acts strange"
+    },
+    {
+      "src": "storyboards/generated/capstone-journey-story-step-3.png",
+      "alt": "Practice in Front of People. The crew runs the talk for a small practice audience and listens for the moment people lean in, get confused, or ask follow-up questions. That reaction becomes feedback they can actually use before the final presentation.",
+      "title": "Practice in Front of People",
+      "caption": "The crew runs the talk for a small practice audience and listens for the moment people lean in, get confused, or ask follow-up questions"
+    },
+    {
+      "src": "storyboards/generated/capstone-journey-story-step-4.png",
+      "alt": "Revise for Clarity. AJ tightens the hook, Nia cleans the logic, and Malik sharpens the demo sequence. The final version is stronger because they tested it in public first. That is the Week 4 move: test, sharpen, present.",
+      "title": "Revise for Clarity",
+      "caption": "AJ tightens the hook, Nia cleans the logic, and Malik sharpens the demo sequence"
+    }
+  ],
+  "portfolio-celebration-story": [
+    {
+      "src": "storyboards/generated/portfolio-celebration-story-step-0.png",
+      "alt": "Lead With Evidence of Learning. When the portfolio comes together, Malik makes sure it leads with evidence: the problem statement, the research trail, the build decisions, and the finished capstone. The portfolio is not decoration. It is proof that the crew can solve real problems.",
+      "title": "Lead With Evidence of Learning",
+      "caption": "When the portfolio comes together, Malik makes sure it leads with evidence: the problem statement, the research trail, the build decisions, and the finished capstone"
+    },
+    {
+      "src": "storyboards/generated/portfolio-celebration-story-step-1.png",
+      "alt": "Tell the Story With Confidence. AJ presents without apologizing for what is unfinished. He focuses on what the crew learned, what the tool does right now, and why the problem was worth solving. Confidence here means ownership, not pretending the work is perfect.",
+      "title": "Tell the Story With Confidence",
+      "caption": "AJ presents without apologizing for what is unfinished"
+    },
+    {
+      "src": "storyboards/generated/portfolio-celebration-story-step-2.png",
+      "alt": "Answer Questions Honestly. Nia handles tough questions by staying grounded. If the answer is known, she gives it plainly. If the answer is not known yet, she says what the crew would test next. Honest answers make the presentation stronger than fake certainty ever could.",
+      "title": "Answer Questions Honestly",
+      "caption": "Nia handles tough questions by staying grounded"
+    },
+    {
+      "src": "storyboards/generated/portfolio-celebration-story-step-3.png",
+      "alt": "Show the Workflow. Malik opens the repo, the prompts, and the working demo to show the actual workflow behind the final product. The audience gets to see that this crew does not just talk about ideas. They can document, build, and iterate in public.",
+      "title": "Show the Workflow",
+      "caption": "Malik opens the repo, the prompts, and the working demo to show the actual workflow behind the final product"
+    },
+    {
+      "src": "storyboards/generated/portfolio-celebration-story-step-4.png",
+      "alt": "Leave as Problem Solvers. By the end, AJ, Nia, and Malik are not framed as kids who completed a course. They are framed as problem solvers who can notice a need, investigate it, build a response, and explain their thinking. That is the real graduation moment.",
+      "title": "Leave as Problem Solvers",
+      "caption": "By the end, AJ, Nia, and Malik are not framed as kids who completed a course"
+    }
+  ]
+}

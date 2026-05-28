@@ -1,0 +1,265 @@
+{
+  "pageId": "week2-data",
+  "courseId": "endless-opportunities",
+  "chapterMeta": {
+    "title": "Data Makes the Case",
+    "icon": "📊",
+    "themeColor": "blue"
+  },
+  "stories": [
+    {
+      "id": "data-mindset-story",
+      "diagramId": "data-mindset",
+      "title": "Signals Hiding in Plain Sight",
+      "steps": [
+        {
+          "nodeId": "signal-scroll",
+          "icon": "📱",
+          "title": "Signals in the Scroll",
+          "narration": "AJ keeps catching the same complaint while he scrolls after school. Students are saying there is nowhere nearby with strong Wi-Fi, enough outlets, and enough calm to lock in. What looked random yesterday starts feeling repeated today. Sage frames it clean: the signal is not one post. The signal is the same frustration showing up again and again.",
+          "connectsTo": null
+        },
+        {
+          "nodeId": "claim-check",
+          "edges": [{ "from": "signal-scroll", "to": "claim-check" }],
+          "icon": "🧪",
+          "title": "Claims Versus Behavior",
+          "narration": "Nia refuses to call it proof yet. She wants to compare what places claim with what students actually do and say. If a cafe calls itself study-friendly but the comments say the music is loud, the outlets are dead, and people leave after fifteen minutes, that contradiction matters. She is not chasing vibes. She is testing reality.",
+          "connectsTo": "Signals in the Scroll"
+        },
+        {
+          "nodeId": "evidence-board",
+          "edges": [{ "from": "claim-check", "to": "evidence-board" }],
+          "icon": "📌",
+          "title": "Build the Evidence Board",
+          "narration": "Malik starts pinning the clues together. Screenshots from comments, map listings, review snippets, student DMs, even posted photos of crowded tables and dead laptop batteries all land in one place. Suddenly the story is easier to see. The issue is not just that students are complaining. It is that the same need is appearing across different sources.",
+          "connectsTo": "Claims Versus Behavior"
+        },
+        {
+          "nodeId": "proof-shift",
+          "edges": [{ "from": "evidence-board", "to": "proof-shift" }],
+          "icon": "✅",
+          "title": "From Hunch to Proof",
+          "narration": "By the end of the first pass, AJ can feel the shift. At the start, he had a hunch. Now the crew has evidence. Nia trusts it more because it survived comparison. Malik trusts it more because the pattern repeats. That is the week two move: intuition starts the search, but proof earns the next step.",
+          "connectsTo": "Build the Evidence Board"
+        }
+      ]
+    },
+    {
+      "id": "algorithms-story",
+      "diagramId": "algorithms",
+      "title": "Search Beats the Feed",
+      "steps": [
+        {
+          "nodeId": "feed-guessing",
+          "icon": "📲",
+          "title": "The Feed Is Guessing",
+          "narration": "AJ notices how easy it would be to let the feed tell the whole story. One study tips clip becomes ten more. One cafe review turns into random productivity content. Nia shuts that down fast. Recommendation feeds are built to keep attention moving, not to answer the exact question the crew is trying to solve.",
+          "connectsTo": null
+        },
+        {
+          "nodeId": "intentional-search",
+          "edges": [{ "from": "feed-guessing", "to": "intentional-search" }],
+          "icon": "🔎",
+          "title": "AJ Switches to Search",
+          "narration": "So AJ gets specific. He searches for late study spots near school, quiet coffee shops with outlets, student-friendly spaces, and after-school work areas. The energy changes immediately because search forces a target. Instead of waiting to be shown something interesting, he is asking for something useful.",
+          "connectsTo": "The Feed Is Guessing"
+        },
+        {
+          "nodeId": "cross-checking",
+          "edges": [{ "from": "intentional-search", "to": "cross-checking" }],
+          "icon": "🧭",
+          "title": "Nia Cross-Checks the Trail",
+          "narration": "Nia takes the search results and cross-checks them. A place might look perfect on its homepage, but what do the reviews say about the Wi-Fi, the noise level, and the closing time. Do the photos match the promise. Do the comments line up with the rating. She keeps asking the same week one question underneath the data: what is actually true here.",
+          "connectsTo": "AJ Switches to Search"
+        },
+        {
+          "nodeId": "source-stack",
+          "edges": [{ "from": "cross-checking", "to": "source-stack" }],
+          "icon": "🗂️",
+          "title": "Malik Stacks Sources",
+          "narration": "Malik loves this part because it becomes a system. Search results, maps, photos, review text, and local threads each add a layer. No single source has to carry the whole argument. Together they create a stronger picture than a feed ever could. The point is not more content. The point is cleaner evidence.",
+          "connectsTo": "Nia Cross-Checks the Trail"
+        },
+        {
+          "nodeId": "search-proof",
+          "edges": [{ "from": "source-stack", "to": "search-proof" }],
+          "icon": "🎯",
+          "title": "Intentional Search Creates Proof",
+          "narration": "Now AJ can answer the question that matters: how do you know. He knows because the team searched on purpose, checked what people claimed against what they reported, and stacked sources that pointed in the same direction. Search did more than find information. It made the evidence defendable.",
+          "connectsTo": "Malik Stacks Sources"
+        }
+      ]
+    },
+    {
+      "id": "analysis-story",
+      "diagramId": "analysis",
+      "title": "Patterns Become Proof",
+      "steps": [
+        {
+          "nodeId": "question-frame",
+          "icon": "❓",
+          "title": "Start with the Question",
+          "narration": "Malik says the team needs one clean question before they go any further. What are students actually missing after school. Not what looks cool. Not what might go viral. What need keeps showing up when the evidence is lined up. Once the question is tight, the data gets easier to sort.",
+          "connectsTo": null
+        },
+        {
+          "nodeId": "pattern-tags",
+          "edges": [{ "from": "question-frame", "to": "pattern-tags" }],
+          "icon": "🏷️",
+          "title": "Tag the Patterns",
+          "narration": "The trio starts tagging the evidence. Wi-Fi problems. Not enough outlets. Places too loud to focus. Spaces closing too early. Prices that push students out. AJ sees how repeated complaints stop feeling random when they are grouped this way. Patterns are the first sign that the problem has structure.",
+          "connectsTo": "Start with the Question"
+        },
+        {
+          "nodeId": "contradictions",
+          "edges": [{ "from": "pattern-tags", "to": "contradictions" }],
+          "icon": "⚖️",
+          "title": "Notice the Contradictions",
+          "narration": "Nia looks for the tension points. A place markets itself as a calm workspace, but students say they cannot hear themselves think. Another boasts free Wi-Fi, but reviews keep mentioning dropped connections. Those contradictions matter because they reveal where the offer breaks. Weak promises create useful openings.",
+          "connectsTo": "Tag the Patterns"
+        },
+        {
+          "nodeId": "repeat-counts",
+          "edges": [{ "from": "contradictions", "to": "repeat-counts" }],
+          "icon": "🔁",
+          "title": "Count the Repeats",
+          "narration": "Malik counts what keeps coming back. Not to worship numbers for their own sake, but to see which pain points carry the most weight. If bad Wi-Fi appears once, that is a detail. If it appears across maps, comments, and reviews, that becomes a priority. Repetition tells the team where to pay attention.",
+          "connectsTo": "Notice the Contradictions"
+        },
+        {
+          "nodeId": "gap-spot",
+          "edges": [{ "from": "repeat-counts", "to": "gap-spot" }],
+          "icon": "🕳️",
+          "title": "Spot the Gap",
+          "narration": "AJ finally says the quiet part out loud. The real gap is not just one bad cafe. The gap is that students nearby do not have a place built around their actual after-school workflow. They need affordable time, reliable Wi-Fi, power, and focus. The market keeps offering pieces of that, but not the full thing.",
+          "connectsTo": "Count the Repeats"
+        },
+        {
+          "nodeId": "opportunity-call",
+          "edges": [{ "from": "gap-spot", "to": "opportunity-call" }],
+          "icon": "🚀",
+          "title": "Call the Opportunity",
+          "narration": "That is the moment intuition becomes direction. Nia is satisfied because the claim is rooted in evidence. Malik is satisfied because the pattern is clear enough to design around. AJ is energized because the crew is no longer just naming a problem. They can now move into week three with a real opportunity worth building for.",
+          "connectsTo": "Spot the Gap"
+        }
+      ]
+    }
+  ],
+  "quizzes": [
+    {
+      "storyId": "data-mindset-story",
+      "questions": [
+        {
+          "question": "What turns AJ's first hunch into something the crew can trust more?",
+          "options": [
+            "A single viral post",
+            "Repeated signals across different sources",
+            "A recommendation algorithm",
+            "One perfect review"
+          ],
+          "correct": 1,
+          "explanation": "The story treats proof as repeated signals across more than one source, not one loud example."
+        },
+        {
+          "question": "Why does Nia compare what places promise with what students actually say and do?",
+          "options": [
+            "To make the story longer",
+            "To test whether the claims match reality",
+            "To avoid reading reviews",
+            "To prove every place is bad"
+          ],
+          "correct": 1,
+          "explanation": "Nia uses contradictions to test what is actually true instead of trusting the marketing."
+        },
+        {
+          "question": "What is Malik doing when he starts pinning screenshots, reviews, and map notes together?",
+          "options": [
+            "Building an evidence board",
+            "Creating a recommendation feed",
+            "Picking the solution already",
+            "Ignoring the data"
+          ],
+          "correct": 0,
+          "explanation": "Malik organizes multiple clues in one place so the pattern is easier to see."
+        }
+      ]
+    },
+    {
+      "storyId": "algorithms-story",
+      "questions": [
+        {
+          "question": "What is the main advantage of search in the second story?",
+          "options": [
+            "It automatically knows the truth",
+            "It forces the crew to be intentional about what they want to learn",
+            "It removes the need to compare sources",
+            "It always gives the cheapest option"
+          ],
+          "correct": 1,
+          "explanation": "Search is useful because it starts with a deliberate question instead of passive recommendation."
+        },
+        {
+          "question": "Why is recommendation content weaker evidence for the crew's investigation?",
+          "options": [
+            "Because it only exists on phones",
+            "Because it is chosen to keep attention moving, not to answer the exact question",
+            "Because reviews never appear there",
+            "Because search has no bias"
+          ],
+          "correct": 1,
+          "explanation": "Recommendation systems are optimized for engagement, not for building a defendable evidence trail."
+        },
+        {
+          "question": "How does Malik strengthen the investigation once AJ starts searching?",
+          "options": [
+            "He stops collecting sources",
+            "He stacks maps, reviews, photos, and local threads together",
+            "He waits for more recommended videos",
+            "He only trusts the first result"
+          ],
+          "correct": 1,
+          "explanation": "Malik makes the evidence stronger by combining deliberate sources instead of leaning on one result."
+        }
+      ]
+    },
+    {
+      "storyId": "analysis-story",
+      "questions": [
+        {
+          "question": "Why does Malik start the last story by tightening the question?",
+          "options": [
+            "Because data gets easier to sort when the target is clear",
+            "Because questions are less important than patterns",
+            "Because he wants fewer sources",
+            "Because counting comes first"
+          ],
+          "correct": 0,
+          "explanation": "A clear question makes it easier to group the evidence and decide what matters."
+        },
+        {
+          "question": "What do contradictions reveal in the story?",
+          "options": [
+            "That all reviews are fake",
+            "Where promises break against real experience",
+            "That numbers are unnecessary",
+            "Which post is the most popular"
+          ],
+          "correct": 1,
+          "explanation": "Contradictions expose the gap between what a place claims and what students actually experience."
+        },
+        {
+          "question": "What is AJ able to name by the end of the final story?",
+          "options": [
+            "A random complaint",
+            "A clear gap and opportunity worth building for",
+            "A better recommendation feed",
+            "A final finished product"
+          ],
+          "correct": 1,
+          "explanation": "The end state of week 2 is moving from scattered complaints to a clear opportunity supported by proof."
+        }
+      ]
+    }
+  ]
+}

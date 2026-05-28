@@ -1,0 +1,1672 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>The Game We Live In | Endless Opportunities</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=JetBrains+Mono&family=Space+Grotesk:wght@500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="../../shared/css/lesson-interactive.css" />
+    <link rel="stylesheet" href="../../shared/css/activity-carousel.css" />
+    <style>
+      :root {
+        --chapter-color: #4caf50;
+        --chapter-gradient: linear-gradient(135deg, #2e7d32, #4caf50);
+      }
+    </style>
+  </head>
+  <body data-course="endless-opportunities" data-lesson="week0-intro">
+    <header class="header">
+      <div class="header-content">
+        <a href="../../index.html" class="logo">
+          <div class="logo-icon">🎮</div>
+          <span>Week 0</span>
+        </a>
+        <nav class="nav-links">
+          <a href="../../course/endless-opportunities.html"
+            >← Endless Opportunities</a
+          >
+          <a href="index.html" class="active">Week 0</a>
+          <a href="../week1-questions/">Week 1: Art of Questions</a>
+        </nav>
+      </div>
+    </header>
+
+    <main class="container">
+      <div class="page-header">
+        <div class="breadcrumb">
+          <a href="../../course/endless-opportunities.html"
+            >Endless Opportunities</a
+          >
+          <span>/</span>
+          <span>The Game We Live In</span>
+        </div>
+        <h1>🎮 The Game We Live In</h1>
+        <p>
+          Follow AJ, Nia, and Malik as Sage narrates how problems become
+          opportunities, AI changes the rules, and deeper questions reveal the
+          path forward.
+        </p>
+      </div>
+
+      <!-- Audio Info -->
+      <section class="section audio-info-section">
+        <div class="info-box compact">
+          <div class="info-header">
+            <div>
+              <h4>Narrated Story Experience</h4>
+              <p>
+                Follow the AJ, Nia, and Malik story with guided narration, tap
+                the dots to move through each slide deck, and then answer the
+                three question sets after each sequence.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section">
+        <h2>🎬 Story Lens</h2>
+        <p>
+          Week 0 frames the course like an origin episode: AJ sees the game,
+          Nia checks the logic, and Malik tracks the technical openings while
+          Sage keeps the narration focused on what each graph beat means.
+        </p>
+        <div class="narrative-setup">
+          <article class="narrative-card">
+            <div class="narrative-card-step">01</div>
+            <h3>Read the Game</h3>
+            <p>
+              AJ, Nia, and Malik notice that problems are not random noise.
+              They are the map, and the graph shows where the value lives.
+            </p>
+          </article>
+          <article class="narrative-card">
+            <div class="narrative-card-step">02</div>
+            <h3>Use AI as Leverage</h3>
+            <p>
+              The trio sees AI as a faster path to better solutions, not a way
+              to skip thinking. Sage keeps the story focused on leverage.
+            </p>
+          </article>
+          <article class="narrative-card">
+            <div class="narrative-card-step">03</div>
+            <h3>Follow the Story</h3>
+            <p>
+              Each narrated frame builds on the last one, so the lesson feels
+              like a guided story the students can follow, explain, and apply.
+            </p>
+          </article>
+        </div>
+      </section>
+
+      <!-- Story 1: Life is a Game of Problems -->
+      <section class="section" id="problem-game-story-section">
+        <h2>Life is a Game of Problems</h2>
+        <p>
+          The world is full of problems waiting to be solved. The harder the
+          problem, the bigger the reward.
+        </p>
+
+        <div class="diagram-container" id="problem-game-story-container">
+          <div class="diagram-header">
+            <span class="diagram-title">🎮 The Problem-Solving Game</span>
+          </div>
+          <div
+            id="problem-game-story"
+            class="diagram-canvas storytelling"
+          ></div>
+
+          <div class="diagram-story" id="problem-game-story-caption">
+            <div class="story-step">
+              <div class="story-icon visible">🚀</div>
+              <div class="story-content">
+                <div class="story-title visible">Ready to Explore</div>
+                <div class="story-text visible">
+                  Click any progress dot below to jump to that step, or press
+                  Play to watch the full story unfold.
+                </div>
+                <div class="story-connection" style="display: none">
+                  <span class="arrow">→</span>
+                  <span class="connection-text"></span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="playback-controls">
+            <div class="playback-left">
+              <button class="diagram-btn play-btn" data-action="play">
+                ▶ Play
+              </button>
+            </div>
+            <div class="playback-center">
+              <div
+                class="story-progress"
+                id="problem-game-story-progress"
+              ></div>
+            </div>
+            <div class="playback-right">
+              <button
+                class="diagram-btn small"
+                data-action="fit"
+                title="Fit to view"
+              >
+                Fit
+              </button>
+              <button
+                class="diagram-btn small"
+                data-action="reset"
+                title="Reset view"
+              >
+                Reset
+              </button>
+            </div>
+          </div>
+
+        </div>
+
+        <!-- Activity Carousels for Story 1: Problem Game -->
+        <div class="activity-carousels" data-story="problem-game-story">
+          <div id="story1-comprehension" class="carousel-container"></div>
+          <div id="story1-application" class="carousel-container"></div>
+          <div id="story1-synthesis" class="carousel-container"></div>
+          <!-- Quiz carousel (knowledge check) after activities -->
+        </div>
+      </section>
+
+      <!-- Story 2: AI Changes Everything -->
+      <section class="section" id="ai-revolution-story-section">
+        <h2>AI Changes Everything</h2>
+        <p>
+          The old path required years of school and expensive degrees. AI
+          creates a faster way for everyone.
+        </p>
+
+        <div class="diagram-container" id="ai-revolution-story-container">
+          <div class="diagram-header">
+            <span class="diagram-title">⚡ The AI Revolution</span>
+          </div>
+          <div
+            id="ai-revolution-story"
+            class="diagram-canvas storytelling"
+          ></div>
+
+          <div class="diagram-story" id="ai-revolution-story-caption">
+            <div class="story-step">
+              <div class="story-icon visible">🚀</div>
+              <div class="story-content">
+                <div class="story-title visible">Ready to Explore</div>
+                <div class="story-text visible">
+                  Click any progress dot below to jump to that step, or press
+                  Play to watch the full story unfold.
+                </div>
+                <div class="story-connection" style="display: none">
+                  <span class="arrow">→</span>
+                  <span class="connection-text"></span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="playback-controls">
+            <div class="playback-left">
+              <button class="diagram-btn play-btn" data-action="play">
+                ▶ Play
+              </button>
+            </div>
+            <div class="playback-center">
+              <div
+                class="story-progress"
+                id="ai-revolution-story-progress"
+              ></div>
+            </div>
+            <div class="playback-right">
+              <button
+                class="diagram-btn small"
+                data-action="fit"
+                title="Fit to view"
+              >
+                Fit
+              </button>
+              <button
+                class="diagram-btn small"
+                data-action="reset"
+                title="Reset view"
+              >
+                Reset
+              </button>
+            </div>
+          </div>
+
+        </div>
+
+        <!-- Activity Carousels for Story 2: AI Revolution -->
+        <div class="activity-carousels" data-story="ai-revolution-story">
+          <div id="story2-comprehension" class="carousel-container"></div>
+          <div id="story2-application" class="carousel-container"></div>
+          <div id="story2-synthesis" class="carousel-container"></div>
+          <!-- Quiz carousel (knowledge check) after activities -->
+        </div>
+      </section>
+
+      <!-- Story 3: 6 Levels Deep -->
+      <section class="section" id="six-levels-story-section">
+        <h2>The Art of Questions: 6 Levels Deep</h2>
+        <p>
+          Real understanding comes from going deeper than surface-level answers.
+          Learn to ask "why?" again and again.
+        </p>
+
+        <div class="diagram-container" id="six-levels-story-container">
+          <div class="diagram-header">
+            <span class="diagram-title">❓ 6 Levels Deep Framework</span>
+          </div>
+          <div id="six-levels-story" class="diagram-canvas storytelling"></div>
+
+          <div class="diagram-story" id="six-levels-story-caption">
+            <div class="story-step">
+              <div class="story-icon visible">🚀</div>
+              <div class="story-content">
+                <div class="story-title visible">Ready to Explore</div>
+                <div class="story-text visible">
+                  Click any progress dot below to jump to that step, or press
+                  Play to watch the full story unfold.
+                </div>
+                <div class="story-connection" style="display: none">
+                  <span class="arrow">→</span>
+                  <span class="connection-text"></span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="playback-controls">
+            <div class="playback-left">
+              <button class="diagram-btn play-btn" data-action="play">
+                ▶ Play
+              </button>
+            </div>
+            <div class="playback-center">
+              <div class="story-progress" id="six-levels-story-progress"></div>
+            </div>
+            <div class="playback-right">
+              <button
+                class="diagram-btn small"
+                data-action="fit"
+                title="Fit to view"
+              >
+                Fit
+              </button>
+              <button
+                class="diagram-btn small"
+                data-action="reset"
+                title="Reset view"
+              >
+                Reset
+              </button>
+            </div>
+          </div>
+
+        </div>
+
+        <!-- Activity Carousels for Story 3: Six Levels Deep -->
+        <div class="activity-carousels" data-story="six-levels-story">
+          <div id="story3-comprehension" class="carousel-container"></div>
+          <div id="story3-application" class="carousel-container"></div>
+          <div id="story3-synthesis" class="carousel-container"></div>
+          <!-- Quiz carousel (knowledge check) after activities -->
+        </div>
+      </section>
+
+      <!-- Next Steps -->
+      <section class="section">
+        <h2>Next Steps</h2>
+        <p>
+          You've learned the foundation. Now it's time to master the Art of
+          Questions and become a world-class problem finder.
+        </p>
+        <div class="cards-grid" style="grid-template-columns: repeat(2, 1fr)">
+          <a href="../week1-questions/" class="card">
+            <div class="card-icon">❓</div>
+            <h3>Week 1: The Art of Questions</h3>
+            <p>
+              Master the 6 Levels Deep framework and become a world-class
+              questioner.
+            </p>
+          </a>
+          <a href="../../course/endless-opportunities.html" class="card">
+            <div class="card-icon">📚</div>
+            <h3>Course Overview</h3>
+            <p>See all weeks in Endless Opportunities.</p>
+          </a>
+        </div>
+      </section>
+    </main>
+
+    <nav class="page-nav">
+      <h4>On This Page</h4>
+      <ul>
+        <li>
+          <a href="#problem-game-story-section">Life is a Game of Problems</a>
+        </li>
+        <li>
+          <a href="#ai-revolution-story-section">AI Changes Everything</a>
+        </li>
+        <li><a href="#six-levels-story-section">6 Levels Deep</a></li>
+      </ul>
+    </nav>
+
+    <button class="back-to-top" title="Back to top">↑</button>
+
+    <!-- External Libraries -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.2/anime.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/cytoscape/3.28.1/cytoscape.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/dagre/0.8.5/dagre.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/cytoscape-dagre@2.5.0/cytoscape-dagre.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/cytoscape-cose-bilkent@4.1.0/cytoscape-cose-bilkent.min.js"></script>
+
+  <!-- Interactive Engines -->
+  <script src="../../shared/js/interactive/diagram-utils.js"></script>
+  <script src="../../shared/js/interactive/audio-engine.js"></script>
+  <script src="../../shared/js/interactive/storytelling-diagram.js"></script>
+
+  <!-- Activity Carousel System -->
+      <!-- Firebase & Activity Tracking -->
+  <script src="https://www.gstatic.com/firebasejs/10.7.1/firebase-app-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/10.7.1/firebase-auth-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/10.7.1/firebase-firestore-compat.js"></script>
+  <script src="../../shared/js/firebase-config.js"></script>
+  <script src="../../shared/js/auth.js"></script>
+  <script src="../../shared/js/rbac.js"></script>
+  <script src="../../shared/js/route-guard.js"></script>
+  <script src="../../shared/js/data-service.js"></script>
+  <script src="../../shared/js/activity-tracker.js"></script>
+
+  <script src="../../shared/js/interactive/base-activity.js"></script>
+    <script src="../../shared/js/interactive/challenge-puzzle.js"></script>
+    <script src="../../shared/js/interactive/activities/quiz-activity.js"></script>
+    <script src="../../shared/js/interactive/activities/true-false-activity.js"></script>
+    <script src="../../shared/js/interactive/activities/fill-blank-activity.js"></script>
+    <script src="../../shared/js/interactive/activities/sequence-activity.js"></script>
+    <script src="../../shared/js/interactive/activities/drag-drop-activity.js"></script>
+    <script src="../../shared/js/interactive/activities/connect-edges-activity.js"></script>
+    <script src="../../shared/js/interactive/activities/scenario-activity.js"></script>
+    <script src="../../shared/js/interactive/activities/prediction-activity.js"></script>
+    <script src="../../shared/js/interactive/activities/reflection-activity.js"></script>
+    <script src="../../shared/js/interactive/activities/graph-builder-activity.js"></script>
+    <script src="../../shared/js/interactive/activity-carousel.js"></script>
+    <script src="../../shared/js/interactive/lesson-complete-banner.js"></script>
+
+    <script>
+      document.addEventListener("DOMContentLoaded", async () => {
+      // Initialize Firebase FIRST
+      if (window.FirebaseApp) {
+        window.FirebaseApp.init();
+        console.log('✅ Firebase initialized');
+      }
+      
+      // Initialize AuthService and wait for auth state
+      if (window.AuthService) {
+        window.AuthService.init();
+        await window.AuthService.waitForAuthState();
+        console.log('👤 Auth ready:', window.AuthService.getUser()?.email || 'not signed in');
+      }
+      
+      // Initialize ActivityTracker AFTER auth is ready
+      const courseId = document.body.dataset.course;
+      const lessonId = document.body.dataset.lesson;
+      if (courseId && lessonId && window.ActivityTracker) {
+        ActivityTracker.init(courseId, lessonId);
+        console.log('🎯 ActivityTracker initialized:', courseId, lessonId);
+      }
+      if (window.LessonCompleteBanner) {
+        window.LessonCompleteBanner.init();
+      }
+
+        // Initialize page animations
+        DiagramUtils.initPageAnimations();
+        DiagramUtils.setupBackToTop();
+
+        // Load story and storyboard data from JSON
+        const [storyResponse, storyboardResponse] = await Promise.all([
+          fetch("story.json"),
+          fetch("storyboards.json"),
+        ]);
+        const pageData = await storyResponse.json();
+        const storyboardData = await storyboardResponse.json();
+
+        // Create a shared audio engine pointing to the audio folder
+        const audioEngine = new AudioNarrationEngine("audio");
+        await audioEngine.waitForManifest();
+        audioEngine.setVoice("sage");
+
+        // ============================================
+        // DIAGRAM ELEMENTS (Cytoscape data)
+        // ============================================
+
+        const diagramElements = {
+          "problem-game": [
+            {
+              data: {
+                id: "world-problems",
+                label: "🌍 Problems Everywhere",
+                type: "concept",
+                description:
+                  "The world is full of problems waiting to be solved",
+              },
+            },
+            {
+              data: {
+                id: "secret",
+                label: "🔑 The Secret",
+                type: "concept",
+                description: "Getting good at solving problems = success",
+              },
+            },
+            {
+              data: {
+                id: "simple-problems",
+                label: "🍔 Simple Problems",
+                type: "example",
+                description: "Small problems = small rewards",
+              },
+            },
+            {
+              data: {
+                id: "medium-problems",
+                label: "💻 Medium Problems",
+                type: "example",
+                description: "Bigger problems = bigger rewards",
+              },
+            },
+            {
+              data: {
+                id: "hard-problems",
+                label: "🏆 Hard Problems",
+                type: "service",
+                description: "Hardest problems = massive rewards",
+              },
+            },
+            // Edges
+            { data: { source: "world-problems", target: "secret" } },
+            { data: { source: "secret", target: "simple-problems" } },
+            { data: { source: "simple-problems", target: "medium-problems" } },
+            { data: { source: "medium-problems", target: "hard-problems" } },
+          ],
+          "ai-revolution": [
+            {
+              data: {
+                id: "old-way",
+                label: "📜 The Old Way",
+                type: "external",
+                description:
+                  "Years of education, expensive degrees, lucky breaks",
+              },
+            },
+            {
+              data: {
+                id: "old-years",
+                label: "📚 Years of School",
+                type: "external",
+                description: "The long, expensive path",
+              },
+            },
+            {
+              data: {
+                id: "new-way",
+                label: "⚡ The New Way",
+                type: "concept",
+                description: "Problem → Questions → AI → Solution",
+              },
+            },
+            {
+              data: {
+                id: "real-skill",
+                label: "🧠 The Real Skill",
+                type: "concept",
+                description: "Knowing what questions to ask",
+              },
+            },
+            {
+              data: {
+                id: "patient-teacher",
+                label: "🤖 Infinitely Patient",
+                type: "service",
+                description: "AI never gets tired of questions",
+              },
+            },
+            {
+              data: {
+                id: "your-power",
+                label: "💪 Your Superpower",
+                type: "auth",
+                description: "Curiosity + questions = unlimited potential",
+              },
+            },
+            // Edges
+            { data: { source: "old-way", target: "old-years" } },
+            { data: { source: "old-years", target: "new-way" } },
+            { data: { source: "new-way", target: "real-skill" } },
+            { data: { source: "real-skill", target: "patient-teacher" } },
+            { data: { source: "patient-teacher", target: "your-power" } },
+          ],
+          "six-levels": [
+            {
+              data: {
+                id: "surface-level",
+                label: "🏊 Surface Level",
+                type: "external",
+                description: "Where most people stop",
+              },
+            },
+            {
+              data: {
+                id: "level-1",
+                label: "1️⃣ Level 1: Why?",
+                type: "concept",
+                description: "First question reveals surface problem",
+              },
+            },
+            {
+              data: {
+                id: "level-2",
+                label: "2️⃣ Level 2: Why?",
+                type: "concept",
+                description: "Going deeper",
+              },
+            },
+            {
+              data: {
+                id: "level-3",
+                label: "3️⃣ Level 3: Why?",
+                type: "concept",
+                description: "Starting to see real problem",
+              },
+            },
+            {
+              data: {
+                id: "level-4-5",
+                label: "4️⃣ Levels 4 & 5",
+                type: "concept",
+                description: "Almost at the root",
+              },
+            },
+            {
+              data: {
+                id: "level-6",
+                label: "6️⃣ Level 6: Root",
+                type: "service",
+                description: "The solvable problem!",
+              },
+            },
+            {
+              data: {
+                id: "key-insight",
+                label: "🎯 Key Insight",
+                type: "auth",
+                description: "2-3 levels deeper = ahead of 99%",
+              },
+            },
+            // Edges
+            { data: { source: "surface-level", target: "level-1" } },
+            { data: { source: "level-1", target: "level-2" } },
+            { data: { source: "level-2", target: "level-3" } },
+            { data: { source: "level-3", target: "level-4-5" } },
+            { data: { source: "level-4-5", target: "level-6" } },
+            { data: { source: "level-6", target: "key-insight" } },
+          ],
+        };
+
+        // ============================================
+        // INITIALIZE STORYTELLING DIAGRAMS
+        // ============================================
+
+        const storyToDiagram = {
+          "problem-game-story": "problem-game",
+          "ai-revolution-story": "ai-revolution",
+          "six-levels-story": "six-levels",
+        };
+
+        pageData.stories.forEach((story) => {
+          const diagramKey = storyToDiagram[story.id];
+          if (!diagramKey) return;
+
+          const elements = diagramElements[diagramKey];
+          if (!elements) return;
+
+          new StorytellingDiagram(story.id, elements, story.steps, {
+            audioEngine,
+            storyId: story.id,
+            forcedVoice: "sage",
+            storyboardFrames: storyboardData[story.id] || [],
+            storyboardOnly: true,
+          });
+        });
+
+        // ============================================
+        // ACTIVITY CAROUSELS
+        // ============================================
+
+        // Story 1: Life is a Game of Problems - Comprehension
+        const story1Comprehension = new ActivityCarousel('story1-comprehension', {
+          type: 'comprehension',
+          sectionId: 'problem-game',
+          title: 'Check Your Understanding',
+          activities: [
+            {
+              type: 'quiz',
+              id: 'pg-quiz-problems-everywhere',
+              question: 'When AJ, Nia, and Malik look around, what do they realize is everywhere?',
+              options: [
+                'Problems waiting to be solved',
+                'People waiting for permission',
+                'Easy money hiding everywhere',
+                'Perfect answers already built'
+              ],
+              correct: 1,
+              explanation: 'The story opens with AJ, Nia, and Malik noticing the same thing sharp people eventually notice: the world is full of problems, and problems are where value starts.',
+              points: 10
+            },
+            {
+              type: 'quiz',
+              id: 'pg-quiz-success-secret',
+              question: 'What secret do AJ, Nia, and Malik spot in the story?',
+              options: [
+                'Working longer hours than everyone else',
+                'Waiting for a lucky break',
+                'Getting really good at solving problems',
+                'Avoiding hard problems completely'
+              ],
+              correct: 2,
+              explanation: 'The trio realizes that people who create the most money, impact, and opportunity are the ones who get very good at solving problems.',
+              points: 10
+            },
+            {
+              type: 'true-false',
+              id: 'pg-tf-simple-problems',
+              statement: 'Solving a simple problem like making food for someone still creates real value, even if the reward is small.',
+              correct: true,
+              explanation: 'AJ sees that even the smallest useful work matters. Simple problems create small rewards, but they still create real value.',
+              minReasoningWords: 5,
+              points: 15
+            },
+            {
+              type: 'true-false',
+              id: 'pg-tf-hard-problems-only',
+              statement: 'The lesson says you should skip simple problems and only focus on hard problems.',
+              correct: false,
+              explanation: 'The story shows a progression. AJ, Nia, and Malik start with simple problems, then move up to bigger ones. That is how skill compounds.',
+              minReasoningWords: 5,
+              points: 15
+            },
+            {
+              type: 'fill-blank',
+              id: 'pg-fill-harder-problem',
+              statement: 'The ___ the problem you can solve, the bigger the reward.',
+              correctAnswers: ['harder', 'bigger', 'more difficult', 'tougher'],
+              caseSensitive: false,
+              hints: ['Think about the relationship between difficulty and reward'],
+              explanation: 'The lesson ties difficulty to value: harder problems are rarer to solve, so they usually create bigger rewards.',
+              points: 10
+            },
+            {
+              type: 'fill-blank',
+              id: 'pg-fill-solving-problems',
+              statement: 'Getting really good at solving ___ is the secret the trio notices.',
+              correctAnswers: ['problems', 'problem', 'challenges', 'issues'],
+              caseSensitive: false,
+              hints: ['What are we learning to solve in this course?'],
+              explanation: 'The story keeps coming back to the same idea: problem-solving is the skill that unlocks everything else.',
+              points: 10
+            },
+            {
+              type: 'quiz',
+              id: 'pg-quiz-medium-example',
+              question: 'Which example is the medium problem in the story?',
+              options: [
+                'Someone is hungry, so AJ makes them food',
+                'A local business needs a website',
+                'A community needs a full education overhaul',
+                'A friend needs a quick ride home'
+              ],
+              correct: 1,
+              explanation: 'The story places a business website squarely in the middle: more work than a simple favor, but not as massive as changing an entire community system.',
+              points: 10
+            }
+          ]
+        });
+        story1Comprehension.init();
+
+        // Story 1: Life is a Game of Problems - Application
+        const story1Application = new ActivityCarousel('story1-application', {
+          type: 'application',
+          sectionId: 'problem-game',
+          title: 'Apply What You Learned',
+          activities: [
+            {
+              type: 'sequence',
+              id: 'pg-seq-problem-progression',
+              instruction: 'Order these problems from simplest to hardest based on the story:',
+              items: [
+                { id: 'p1', text: '🍔 Make a meal for a hungry friend' },
+                { id: 'p2', text: '💻 Build a website for a local business' },
+                { id: 'p3', text: '📱 Create an app that helps students learn' },
+                { id: 'p4', text: '🏫 Improve education in your community' }
+              ],
+              correctOrder: ['p1', 'p2', 'p3', 'p4'],
+              hints: {
+                partial: 'Think about scope - how many people are affected and how complex is the solution?',
+                wrong: 'Start with immediate, one-person solutions, then scale up to community-wide impact.'
+              },
+              explanation: 'The story moves from one person, to a business, to a broader tool, to a community-wide change.',
+              points: 20
+            },
+            {
+              type: 'drag-drop',
+              id: 'pg-dd-problem-categories',
+              instruction: 'Match each story-style problem to its difficulty level:',
+              items: [
+                { id: 'item1', text: 'Help a neighbor carry groceries' },
+                { id: 'item2', text: 'Build online ordering for a bakery' },
+                { id: 'item3', text: 'Create a student learning app for a school' },
+                { id: 'item4', text: 'Fix a broken bike for a friend' }
+              ],
+              zones: [
+                { id: 'simple', label: '🍔 Simple Problem', correct: ['item1', 'item4'] },
+                { id: 'medium', label: '💻 Medium Problem', correct: ['item2'] },
+                { id: 'hard', label: '🏆 Hard Problem', correct: ['item3'] }
+              ],
+              explanation: 'Simple problems are immediate and personal. Medium problems need real building work. Hard problems affect larger systems and take more sustained effort.',
+              points: 20
+            },
+            {
+              type: 'connect-edges',
+              id: 'pg-ce-value-chain',
+              instruction: 'Connect each problem type to what it gives the solver in the story:',
+              nodes: [
+                { id: 'simple', label: '🍔 Simple Problems' },
+                { id: 'medium', label: '💻 Medium Problems' },
+                { id: 'hard', label: '🏆 Hard Problems' },
+                { id: 'skill', label: '🛠️ Skill Building' },
+                { id: 'income', label: '💰 Steady Income' },
+                { id: 'impact', label: '🌟 Massive Impact' }
+              ],
+              solution: {
+                edges: [
+                  { source: 'simple', target: 'skill' },
+                  { source: 'medium', target: 'income' },
+                { source: 'hard', target: 'impact' }
+                ]
+              },
+              nodeDescriptions: {
+                'simple': 'Quick, everyday challenges',
+                'medium': 'Professional-level work',
+                'hard': 'Community or industry-changing solutions',
+                'skill': 'Practice and experience',
+                'income': 'Reliable compensation',
+                'impact': 'Lasting change and recognition'
+              },
+              explanation: 'The story says the value changes with the size of the problem: simple work builds skill, medium work pays, and hard work can change a lot of lives.',
+              points: 25
+            },
+            {
+              type: 'quiz',
+              id: 'pg-quiz-apply-scenario',
+              question: 'Nia sees a local bakery with no online ordering. Using the story\'s framework, what level problem is this?',
+              options: [
+                'Simple - just tell them to try harder',
+                'Medium - it requires building a real solution for a business',
+                'Hard - it changes the whole school district',
+                'Not a real problem - bakeries do not need websites'
+              ],
+              correct: 1,
+              explanation: 'That is a medium problem in the story: it takes real building skill, it helps the business, and it is bigger than a one-time favor.',
+              points: 15
+            },
+            {
+              type: 'sequence',
+              id: 'pg-seq-solve-process',
+              instruction: 'Put these problem-solving steps in the order AJ and the crew use them:',
+              items: [
+                { id: 's1', text: 'Notice that a problem exists' },
+                { id: 's2', text: 'Understand how big it is' },
+                { id: 's3', text: 'Build or implement a solution' },
+                { id: 's4', text: 'Receive reward, learning, or impact' }
+              ],
+              correctOrder: ['s1', 's2', 's3', 's4'],
+              hints: {
+                partial: 'You can\'t solve what you haven\'t identified.',
+                wrong: 'Think about the logical flow: find, assess, fix, benefit.'
+              },
+              explanation: 'The story follows a clean flow: notice the problem, size it up, solve it, then get the reward that comes from value creation.',
+              points: 20
+            },
+            {
+              type: 'drag-drop',
+              id: 'pg-dd-rewards-match',
+              instruction: 'Match each story example to its most likely reward type:',
+              items: [
+                { id: 'r1', text: 'Help a friend move apartments' },
+                { id: 'r2', text: 'Build a website for a bakery' },
+                { id: 'r3', text: 'Launch a student learning startup' }
+              ],
+              zones: [
+                { id: 'gratitude', label: '🙏 Gratitude & Goodwill', correct: ['r1'] },
+                { id: 'payment', label: '💵 Direct Payment', correct: ['r2'] },
+                { id: 'wealth', label: '💎 Wealth & Influence', correct: ['r3'] }
+              ],
+              explanation: 'The story maps the rewards the same way: small favors build goodwill, medium work pays directly, and hard work can create bigger influence.',
+              points: 20
+            }
+          ]
+        });
+        story1Application.init();
+
+        // Story 1: Life is a Game of Problems - Synthesis
+        const story1Synthesis = new ActivityCarousel('story1-synthesis', {
+          type: 'synthesis',
+          sectionId: 'problem-game',
+          title: 'Think Deeper',
+          activities: [
+            {
+              type: 'scenario',
+              id: 'pg-scenario-neighborhood',
+              scenario: 'AJ notices a corner bakery with no website and no online ordering. Nia says customers keep walking by, and Malik says the system is leaking value.',
+              question: 'Using the problem difficulty framework, analyze this: Is this simple, medium, or hard? What would make it harder or easier to solve?',
+              evaluation: {
+                keywords: ['medium', 'consistent', 'organize', 'system', 'scale', 'volunteers', 'schedule', 'community'],
+                minWords: 30,
+                pointsPerKeyword: 4,
+                depthBonus: 10
+              },
+              modelAnswer: 'This is a medium problem. It needs a real solution for a business, but it is not a whole community system overhaul. It gets easier if AJ keeps the fix simple, like a clean site and ordering flow, and harder if the owner wants extra features, multiple locations, or a custom app.',
+              points: 25
+            },
+            {
+              type: 'prediction',
+              id: 'pg-predict-only-simple',
+              setup: {
+                type: 'text',
+                content: 'AJ decides he will only solve simple problems - quick favors for friends and family. He helps dozens of people each week but never tackles anything that takes more than an hour.'
+              },
+              question: 'After 5 years, what is AJ likely to have? What is he likely to be missing?',
+              correctAnswer: 'relationships',
+              acceptableVariants: ['friends', 'goodwill', 'trust', 'gratitude', 'reputation', 'connections', 'network'],
+              explanation: 'AJ will likely build trust, goodwill, and relationships. What he may miss is deeper expertise, bigger income, and the chance to tackle work with larger impact.',
+              commonMistakes: {
+                'nothing': 'Simple problems DO create value! AJ will have real benefits, just not financial wealth or large-scale impact.',
+                'money': 'Simple problems rarely generate significant income. AJ will build social capital, not financial capital.'
+              },
+              points: 15
+            },
+            {
+              type: 'reflection',
+              id: 'pg-reflect-your-problems',
+              prompt: 'Think about your daily life. What problems do you see around you - at home, at school, at work, or in your community? List at least one simple, one medium, and one hard problem you have noticed.',
+              thinkingPrompts: [
+                'What frustrates you or people around you?',
+                'What would make someone\'s day easier?',
+                'What would you change if you had unlimited resources?'
+              ],
+              evaluation: {
+                minWords: 50,
+                depthIndicators: [
+                  { pattern: 'I (see|notice|observe|found)', label: 'Personal observation', points: 5 },
+                  { pattern: '(simple|easy|quick)', label: 'Simple problem identified', points: 4 },
+                  { pattern: '(medium|moderate|takes time)', label: 'Medium problem identified', points: 4 },
+                  { pattern: '(hard|difficult|complex|systemic)', label: 'Hard problem identified', points: 5 },
+                  { pattern: '(community|neighborhood|school|work)', label: 'Context awareness', points: 3 }
+                ],
+                maxScore: 21
+              },
+              points: 20
+            },
+            {
+              type: 'scenario',
+              id: 'pg-scenario-choice',
+              scenario: 'Nia offers AJ two opportunities: (A) Help build a simple landing page for a local bakery for $100 in 2 hours. (B) Join a bigger project that tries to redesign how small businesses handle orders using AI.',
+              question: 'Using the problem difficulty framework, analyze both options. Which provides what type of value? What factors would influence your choice?',
+              evaluation: {
+                keywords: ['simple', 'medium', 'hard', 'guaranteed', 'risk', 'reward', 'immediate', 'long-term', 'learning', 'impact', 'income'],
+                minWords: 40,
+                pointsPerKeyword: 3,
+                depthBonus: 12
+              },
+              modelAnswer: 'Option A is a simple-to-medium problem with guaranteed, immediate reward. Option B is a harder problem with bigger upside and more uncertainty. AJ would weigh money now, learning, risk, and the size of the impact.',
+              points: 25
+            },
+            {
+              type: 'prediction',
+              id: 'pg-predict-skill-jump',
+              setup: {
+                type: 'text',
+                content: 'Nia has only solved simple problems her whole life. Malik suddenly asks her to lead a project solving a hard community problem - organizing a school resource program for 100 students.'
+              },
+              question: 'What challenge will Nia likely face, and what would have prepared her better?',
+              correctAnswer: 'experience',
+              acceptableVariants: ['skills', 'practice', 'preparation', 'medium problems', 'complexity', 'overwhelmed', 'scope'],
+              explanation: 'The challenge is experience and scope. Working through medium problems first would have built the organizing, communication, and planning skills needed for a harder project.',
+              commonMistakes: {
+                'fail': 'Nia might struggle, but failure is not guaranteed. The question asks what challenge she will face, not whether she will succeed.',
+                'money': 'Funding might be an issue, but the core challenge is skill readiness - she has not built up to this level of complexity.'
+              },
+              points: 15
+            },
+            {
+              type: 'graph-builder',
+              id: 'pg-graph-your-progression',
+              instruction: 'Build a diagram showing a problem-solving journey like AJ, Nia, and Malik\'s: start with a simple problem, connect it to a medium problem, then to a hard problem.',
+              nodeTypes: [
+                { type: 'simple', label: '🍔 Simple Problem', color: '#66bb6a' },
+                { type: 'medium', label: '💻 Medium Problem', color: '#42a5f5' },
+                { type: 'hard', label: '🏆 Hard Problem', color: '#ef5350' },
+                { type: 'skill', label: '🛠️ Skill Gained', color: '#ffd54f' }
+              ],
+              validation: {
+                requiredNodes: ['simple', 'medium', 'hard'],
+                requiredEdges: [
+                  { from: 'simple', to: 'medium' },
+                  { from: 'medium', to: 'hard' }
+                ],
+                optionalNodes: ['skill'],
+                minNodes: 3,
+                maxNodes: 6
+              },
+              hints: [
+                'Start with something you could do this week',
+                'What skill would that build that helps with something bigger?',
+                'What\'s your dream impact? Work backward from there.'
+              ],
+              points: 30
+            }
+          ]
+        });
+        story1Synthesis.init();
+
+        // Story 2: AI Changes Everything - Comprehension
+        const story2Comprehension = new ActivityCarousel('story2-comprehension', {
+          type: 'comprehension',
+          sectionId: 'ai-revolution',
+          title: 'Check Your Understanding',
+          activities: [
+            {
+              type: 'quiz',
+              id: 'ai-quiz-old-way',
+              question: 'What did AJ, Nia, and Malik see as the "old way" of solving hard problems?',
+              options: [
+                'Years of education, expensive degrees, and lucky opportunities',
+                'Just hard work and determination',
+                'Only access to the internet',
+                'A secret code word'
+              ],
+              correct: 0,
+              explanation: 'The story says the old path was gatekept by schooling, expensive credentials, and luck before you could even get started.',
+              points: 10
+            },
+            {
+              type: 'quiz',
+              id: 'ai-quiz-new-way',
+              question: 'What is the "new way" AJ and the crew describe for solving problems with AI?',
+              options: [
+                'School → Degree → Job → Problems',
+                'Problem → Questions → AI → Solution',
+                'AI → Answer → Done',
+                'Luck → Opportunity → Success'
+              ],
+              correct: 1,
+              explanation: 'The new path is simple and direct in the story: see the problem, ask questions, use AI, and build the solution.',
+              points: 10
+            },
+            {
+              type: 'true-false',
+              id: 'ai-tf-real-skill',
+              statement: 'According to the story, the "real skill" is knowing how to code.',
+              correct: false,
+              explanation: 'The story says the real skill is knowing what questions to ask. Coding can help, but the question quality drives the outcome.',
+              minReasoningWords: 5,
+              points: 15
+            },
+            {
+              type: 'true-false',
+              id: 'ai-tf-patient-teacher',
+              statement: 'AI is described as an "infinitely patient teacher" because it never gets tired of questions.',
+              correct: true,
+              explanation: 'That is exactly the point in the story. AI can keep answering while AJ, Nia, and Malik keep pushing for better understanding.',
+              minReasoningWords: 5,
+              points: 15
+            },
+            {
+              type: 'fill-blank',
+              id: 'ai-fill-superpower',
+              statement: 'According to the lesson, your new superpower is ___ and the willingness to ask questions.',
+              correctAnswers: ['curiosity', 'being curious', 'curiousity'],
+              caseSensitive: false,
+              hints: ['What drives someone to keep asking and learning?'],
+              explanation: 'Curiosity is the engine in the story. Without it, even the best AI tool is just a blank screen.',
+              points: 10
+            },
+            {
+              type: 'fill-blank',
+              id: 'ai-fill-knowledge',
+              statement: 'AI is like having access to all the world\'s ___.',
+              correctAnswers: ['knowledge', 'information', 'wisdom'],
+              caseSensitive: false,
+              hints: ['What does AI have that was previously locked behind expensive education?'],
+              explanation: 'The story frames AI as access to the world\'s knowledge, which lowers the barrier to learning and building.',
+              points: 10
+            },
+            {
+              type: 'quiz',
+              id: 'ai-quiz-separates',
+              question: 'What separates problem-solvers from everyone else in the story?',
+              options: [
+                'Having the latest AI tools',
+                'Knowing what questions to ask',
+                'Having a technical background',
+                'Being naturally intelligent'
+              ],
+              correct: 1,
+              explanation: 'AJ, Nia, and Malik notice that the quality of the questions shapes the quality of the answers.',
+              points: 10
+            }
+          ]
+        });
+        story2Comprehension.init();
+
+        // Story 2: AI Changes Everything - Application
+        const story2Application = new ActivityCarousel('story2-application', {
+          type: 'application',
+          sectionId: 'ai-revolution',
+          title: 'Apply What You Learned',
+          activities: [
+            {
+              type: 'sequence',
+              id: 'ai-seq-old-path',
+              instruction: 'Order the steps in the "old way" the trio describes:',
+              items: [
+                { id: 'o1', text: '📚 Years of formal schooling' },
+                { id: 'o2', text: '🎓 Obtain expensive degree' },
+                { id: 'o3', text: '🍀 Get lucky with an opportunity' },
+                { id: 'o4', text: '💼 Finally solve meaningful problems' }
+              ],
+              correctOrder: ['o1', 'o2', 'o3', 'o4'],
+              hints: {
+                partial: 'Think about the traditional career path - what comes first?',
+                wrong: 'Start with the foundation (education) and work toward the goal (solving problems).'
+              },
+              explanation: 'The old path is linear and gatekept: school, degree, luck, then finally the chance to solve real problems.',
+              points: 20
+            },
+            {
+              type: 'sequence',
+              id: 'ai-seq-new-path',
+              instruction: 'Order the steps in the "new way" of solving problems with AI:',
+              items: [
+                { id: 'n1', text: '👀 See a problem' },
+                { id: 'n2', text: '❓ Ask questions' },
+                { id: 'n3', text: '🤖 Use AI' },
+                { id: 'n4', text: '🔧 Build a solution' }
+              ],
+              correctOrder: ['n1', 'n2', 'n3', 'n4'],
+              hints: {
+                partial: 'You can\'t solve what you haven\'t identified.',
+                wrong: 'Start with awareness, move to inquiry, then to tools, then to action.'
+              },
+              explanation: 'The new path starts with the problem itself, then moves into questions, AI, and a real solution.',
+              points: 20
+            },
+            {
+              type: 'drag-drop',
+              id: 'ai-dd-question-quality',
+              instruction: 'Sort these AI prompts by quality (drag to the appropriate category):',
+              items: [
+                { id: 'q1', text: '"How do I code?"' },
+                { id: 'q2', text: '"I\'m helping a bakery build a website. What should I ask the owner before I start?"' },
+                { id: 'q3', text: '"Explain how to build a contact form that validates emails and stores submissions"' },
+                { id: 'q4', text: '"Make me an app"' }
+              ],
+              zones: [
+                { id: 'poor', label: '❌ Vague/Poor Questions', correct: ['q1', 'q4'] },
+                { id: 'good', label: '✅ Specific Questions', correct: ['q3'] },
+                { id: 'great', label: '⭐ Strategic Questions', correct: ['q2'] }
+              ],
+              explanation: 'Great questions include context, show thinking, and help AI think with you instead of just giving a shallow answer.',
+              points: 25
+            },
+            {
+              type: 'connect-edges',
+              id: 'ai-ce-path-comparison',
+              instruction: 'Connect each path to its characteristics in the story:',
+              nodes: [
+                { id: 'old', label: '📜 Old Way' },
+                { id: 'new', label: '⚡ New Way' },
+                { id: 'years', label: '⏰ Years to Start' },
+                { id: 'immediate', label: '🚀 Start Immediately' },
+                { id: 'expensive', label: '💸 Expensive' },
+                { id: 'free', label: '🆓 Free/Low Cost' }
+              ],
+              solution: {
+                edges: [
+                  { source: 'old', target: 'years' },
+                  { source: 'old', target: 'expensive' },
+                  { source: 'new', target: 'immediate' },
+                  { source: 'new', target: 'free' }
+                ]
+              },
+              nodeDescriptions: {
+                'old': 'Traditional education and career path',
+                'new': 'Problem-first approach with AI',
+                'years': 'Requires long preparation time',
+                'immediate': 'Begin solving problems now',
+                'expensive': 'Requires significant investment',
+                'free': 'Accessible tools available to all'
+              },
+              explanation: 'The story shows the shift clearly: from expensive, slow gatekeeping to immediate, accessible problem-solving.',
+              points: 25
+            },
+            {
+              type: 'quiz',
+              id: 'ai-quiz-apply-curious',
+              question: 'AJ wants to help a local bakery but does not know where to start. According to the story, what should he do first?',
+              options: [
+                'Give up because AI cannot help with real problems',
+                'Enroll in a 4-year computer science program first',
+                'Start asking AI questions about the bakery problem, one question at a time',
+                'Wait until he has more experience'
+              ],
+              correct: 2,
+              explanation: 'The story says curiosity plus questions is the move. AJ can start learning immediately by asking specific questions.',
+              points: 15
+            },
+            {
+              type: 'drag-drop',
+              id: 'ai-dd-ai-benefits',
+              instruction: 'Match each AI benefit to the barrier it removes in the story:',
+              items: [
+                { id: 'b1', text: 'Never gets tired of questions' },
+                { id: 'b2', text: 'Available 24/7' },
+                { id: 'b3', text: 'Free or low cost' },
+                { id: 'b4', text: 'Explains at any level' }
+              ],
+              zones: [
+                { id: 'cost', label: '💸 Cost Barrier', correct: ['b3'] },
+                { id: 'time', label: '⏰ Time Barrier', correct: ['b2'] },
+                { id: 'shame', label: '😓 Shame Barrier', correct: ['b1'] },
+                { id: 'level', label: '📚 Knowledge Barrier', correct: ['b4'] }
+              ],
+              explanation: 'The story highlights that AI removes cost, time, shame, and knowledge barriers at the same time.',
+              points: 20
+            }
+          ]
+        });
+        story2Application.init();
+
+        // Story 2: AI Changes Everything - Synthesis
+        const story2Synthesis = new ActivityCarousel('story2-synthesis', {
+          type: 'synthesis',
+          sectionId: 'ai-revolution',
+          title: 'Think Deeper',
+          activities: [
+            {
+              type: 'scenario',
+              id: 'ai-scenario-stuck',
+              scenario: 'Nia wants to help a small corner store sell online this month. She has no degree, no coding background, and no design experience, but she does have AI.',
+              question: 'How could Nia use the "new way" to get started this month? What specific questions might she ask AI?',
+              evaluation: {
+                keywords: ['store', 'online', 'website', 'ordering', 'owner', 'questions', 'AI', 'step', 'plan', 'start', 'learn'],
+                minWords: 40,
+                pointsPerKeyword: 3,
+                depthBonus: 12
+              },
+              modelAnswer: 'Nia could ask AI: "What is the simplest way to get this store online?" "What do I need before building a site?" "How do I set up online ordering?" "What should I ask the owner first?" Each question builds the path forward.',
+              points: 25
+            },
+            {
+              type: 'prediction',
+              id: 'ai-predict-no-questions',
+              setup: {
+                type: 'text',
+                content: 'Two people both have access to ChatGPT. Person A asks 100 thoughtful questions per week about topics they want to master. Person B uses it occasionally for quick answers and never asks follow-up questions.'
+              },
+              question: 'After 6 months, how will their skill levels compare? Why?',
+              correctAnswer: 'Person A',
+              acceptableVariants: ['A', 'the first person', 'questioner', 'curious one', 'A will be ahead', 'A learns more'],
+              explanation: 'Person A will be much further ahead. In the story, every good question compounds because it builds better understanding and better future questions.',
+              commonMistakes: {
+                'same': 'Access to the tool isn\'t what matters - it\'s how actively and thoughtfully you use it. Passive users learn passively.',
+                'Person B': 'Quick answers without follow-up don\'t build understanding. Person A\'s questioning creates compounding knowledge.'
+              },
+              points: 15
+            },
+            {
+              type: 'reflection',
+              id: 'ai-reflect-barriers',
+              prompt: 'Think about something you have wanted to learn or build but felt was out of reach. What barriers did you perceive? How might AI change what is possible for you?',
+              thinkingPrompts: [
+                'What did you think you needed to start? (Degree? Money? Connections?)',
+                'What questions could you ask AI right now to take the first step?',
+                'What\'s the smallest action you could take this week?'
+              ],
+              evaluation: {
+                minWords: 50,
+                depthIndicators: [
+                  { pattern: 'I (wanted|wished|dreamed|always)', label: 'Personal aspiration', points: 5 },
+                  { pattern: '(thought|believed|assumed|felt)', label: 'Barrier awareness', points: 4 },
+                  { pattern: '(now|could|might|can)', label: 'Possibility shift', points: 5 },
+                  { pattern: '(ask|question|learn|start)', label: 'Action orientation', points: 4 },
+                  { pattern: '\\?', label: 'Active questioning', points: 3 }
+                ],
+                maxScore: 21
+              },
+              points: 20
+            },
+            {
+              type: 'scenario',
+              id: 'ai-scenario-teacher-vs-ai',
+              scenario: 'A student is struggling with calculus. They can either: (A) Wait for their professor\'s office hours next week, or (B) Ask AI to explain the concept in multiple ways right now. The story calls AI an "infinitely patient teacher."',
+              question: 'What are the advantages and limitations of each approach? When might you choose one over the other?',
+              evaluation: {
+                keywords: ['immediate', 'patient', 'personalized', 'human', 'relationship', 'office hours', 'verify', 'depth', 'feedback', 'explain', 'practice'],
+                minWords: 40,
+                pointsPerKeyword: 3,
+                depthBonus: 12
+              },
+              modelAnswer: 'AI gives immediate help, infinite patience, and multiple explanations. A professor gives deeper expertise, feedback, and mentorship. The best move is to use both when possible.',
+              points: 25
+            },
+            {
+              type: 'prediction',
+              id: 'ai-predict-curiosity-vs-tools',
+              setup: {
+                type: 'text',
+                content: 'Nia has basic AI tools but keeps asking great questions. Malik has advanced AI tools but barely asks anything because he thinks he already knows most things.'
+              },
+              question: 'Who will become a better problem solver over time? Why?',
+              correctAnswer: 'Nia',
+              acceptableVariants: ['the curious one', 'first person', 'Nia will', 'curious person', 'questioner'],
+              explanation: 'Nia will grow faster because curiosity multiplies the tool. The story says better questions beat advanced tools used passively.',
+              commonMistakes: {
+                'Malik': 'Advanced tools without curiosity are not enough. The tool does not ask the important questions - the person does.',
+                'both': 'They will diverge significantly. Curiosity compounds; complacency stagnates.'
+              },
+              points: 15
+            },
+            {
+              type: 'graph-builder',
+              id: 'ai-graph-learning-path',
+              instruction: 'Build a diagram showing how AI accelerates learning in the story: show how a curious person goes from "I don\'t know" to "I can do it."',
+              nodeTypes: [
+                { type: 'start', label: '❓ Don\'t Know', color: '#ef5350' },
+                { type: 'question', label: '🔍 Ask AI', color: '#42a5f5' },
+                { type: 'learn', label: '💡 Understand', color: '#ffd54f' },
+                { type: 'practice', label: '🛠️ Practice', color: '#66bb6a' },
+                { type: 'master', label: '⭐ Can Do It', color: '#ab47bc' }
+              ],
+              validation: {
+                requiredNodes: ['start', 'question', 'master'],
+                requiredEdges: [
+                  { from: 'start', to: 'question' }
+                ],
+                optionalNodes: ['learn', 'practice'],
+                minNodes: 3,
+                maxNodes: 6
+              },
+              hints: [
+                'Start with not knowing something',
+                'What\'s the first action you take with AI?',
+                'How do you go from understanding to ability?'
+              ],
+              points: 30
+            }
+          ]
+        });
+        story2Synthesis.init();
+
+        // Story 3: Six Levels Deep - Comprehension
+        const story3Comprehension = new ActivityCarousel('story3-comprehension', {
+          type: 'comprehension',
+          sectionId: 'six-levels',
+          title: 'Check Your Understanding',
+          activities: [
+            {
+              type: 'quiz',
+              id: 'sl-quiz-surface',
+              question: 'According to the lesson, where do most people stop when asking questions?',
+              options: [
+                'They never start asking questions',
+                'Level 6 - they go all the way deep',
+                'Surface level - after 1-2 questions',
+                'Level 4 - almost at the root'
+              ],
+              correct: 2,
+              explanation: 'Most people ask one or two questions and think they understand. The story says that is just the surface.',
+              points: 10
+            },
+            {
+              type: 'quiz',
+              id: 'sl-quiz-key-insight',
+              question: 'What is the "key insight" the lesson reveals about going deep with questions?',
+              options: [
+                'You need to ask exactly 6 questions every time',
+                'Going 2-3 levels deeper puts you ahead of 99% of the world',
+                'Only experts can ask deep questions',
+                'More questions always means better answers'
+              ],
+              correct: 1,
+              explanation: 'The story says even 2-3 levels deeper than most people gives you a big advantage.',
+              points: 10
+            },
+            {
+              type: 'true-false',
+              id: 'sl-tf-level-six',
+              statement: 'In the story\'s business example, Level 6 reveals that the owners do not know about AI tools that could help them get online.',
+              correct: true,
+              explanation: 'That is the root cause in the story. Once AJ and the crew get deep enough, they see the AI tooling gap behind the missing customers.',
+              minReasoningWords: 5,
+              points: 15
+            },
+            {
+              type: 'true-false',
+              id: 'sl-tf-instant',
+              statement: 'You can reach Level 6 understanding in a single conversation if you rush through the why questions.',
+              correct: false,
+              explanation: 'The story makes depth a process, not a speed run. Rushing through the why questions misses the point.',
+              minReasoningWords: 5,
+              points: 15
+            },
+            {
+              type: 'fill-blank',
+              id: 'sl-fill-ahead',
+              statement: 'If you can get just 2-3 levels deeper than most people, you\'re ahead of ___% of the world.',
+              correctAnswers: ['99', 'ninety-nine', 'ninety nine'],
+              caseSensitive: false,
+              hints: ['It\'s a very high percentage'],
+              explanation: 'The story frames deeper questioning as rare, which is why even a small jump in depth matters so much.',
+              points: 10
+            },
+            {
+              type: 'fill-blank',
+              id: 'sl-fill-root',
+              statement: 'Level 6 helps you find the ___ of a problem, not just the symptoms.',
+              correctAnswers: ['root', 'root cause', 'source', 'origin', 'core'],
+              caseSensitive: false,
+              hints: ['What\'s at the bottom of a tree?'],
+              explanation: 'Root cause analysis goes beyond symptoms to find the underlying issue that can actually move the whole chain.',
+              points: 10
+            },
+            {
+              type: 'quiz',
+              id: 'sl-quiz-business-example',
+              question: 'In the business example, what was the Level 6 root cause of "not enough customers"?',
+              options: [
+                'Bad products',
+                'Not knowing about free AI tools for online presence',
+                'Poor location',
+                'High prices'
+              ],
+              correct: 1,
+              explanation: 'The story chain goes: no customers → people do not know about them → no online presence → seems too technical or expensive → do not know about AI tools.',
+              points: 10
+            }
+          ]
+        });
+        story3Comprehension.init();
+
+        // Story 3: Six Levels Deep - Application
+        const story3Application = new ActivityCarousel('story3-application', {
+          type: 'application',
+          sectionId: 'six-levels',
+          title: 'Apply What You Learned',
+          activities: [
+            {
+              type: 'sequence',
+              id: 'sl-seq-business-levels',
+              instruction: 'Put the business example\'s levels in the correct order (from surface to root):',
+              items: [
+                { id: 'l1', text: 'Business is struggling' },
+                { id: 'l2', text: 'Not enough customers' },
+                { id: 'l3', text: 'People don\'t know about them' },
+                { id: 'l4', text: 'No online presence' },
+                { id: 'l5', text: 'Don\'t know about AI tools' }
+              ],
+              correctOrder: ['l1', 'l2', 'l3', 'l4', 'l5'],
+              hints: {
+                partial: 'The most obvious symptom is at the top; the hidden root is at the bottom.',
+                wrong: 'Start with "business is struggling" - that\'s what everyone notices first.'
+              },
+              explanation: 'Each "why" peels back a layer: visible problem → direct cause → underlying factor → barrier → root cause.',
+              points: 20
+            },
+            {
+              type: 'drag-drop',
+              id: 'sl-dd-level-type',
+              instruction: 'Categorize where each type of insight is typically found:',
+              items: [
+                { id: 'i1', text: '"Sales are down"' },
+                { id: 'i2', text: '"Customers still cannot find the bakery online"' },
+                { id: 'i3', text: '"We need a marketing strategy"' },
+                { id: 'i4', text: '"The owners do not know about AI tools that make online setup easier"' }
+              ],
+              zones: [
+                { id: 'surface', label: '🏊 Surface (Levels 1-2)', correct: ['i1', 'i3'] },
+                { id: 'deep', label: '🤿 Deep (Levels 5-6)', correct: ['i2', 'i4'] }
+              ],
+              explanation: 'Surface insights are obvious and actionable. Deep insights reveal systemic issues that explain why surface solutions often fail.',
+              points: 20
+            },
+            {
+              type: 'sequence',
+              id: 'sl-seq-student-levels',
+              instruction: 'A student at AJ\'s school is failing math. Put these "why" levels in order from surface to root:',
+              items: [
+                { id: 'm1', text: 'Failing math class' },
+                { id: 'm2', text: 'Not doing homework' },
+                { id: 'm3', text: 'Doesn\'t understand the material' },
+                { id: 'm4', text: 'Afraid to ask questions in class' },
+                { id: 'm5', text: 'Was embarrassed when asking a question last year' }
+              ],
+              correctOrder: ['m1', 'm2', 'm3', 'm4', 'm5'],
+              hints: {
+                partial: 'Think about what causes what - the visible outcome is at the top.',
+                wrong: 'Start with the observable problem (failing), then dig into why at each step.'
+              },
+              explanation: 'The root cause is emotional (past embarrassment), but the visible symptom is academic (failing). Surface solutions like more homework will not fix that.',
+              points: 25
+            },
+            {
+              type: 'connect-edges',
+              id: 'sl-ce-question-depth',
+              instruction: 'Connect each question type to what it typically reveals:',
+              nodes: [
+                { id: 'what', label: '❓ "What is wrong?"' },
+                { id: 'how', label: '🔧 "How did this happen?"' },
+                { id: 'why', label: '🤔 "Why is this happening?"' },
+                { id: 'symptom', label: '🩹 Symptoms' },
+                { id: 'process', label: '⚙️ Process Failures' },
+                { id: 'root', label: '🌱 Root Causes' }
+              ],
+              solution: {
+                edges: [
+                  { source: 'what', target: 'symptom' },
+                  { source: 'how', target: 'process' },
+                  { source: 'why', target: 'root' }
+                ]
+              },
+              nodeDescriptions: {
+                'what': 'Identifies the problem',
+                'how': 'Traces the mechanism',
+                'why': 'Uncovers the cause',
+                'symptom': 'Observable outcomes',
+                'process': 'Steps that went wrong',
+                'root': 'Underlying reasons'
+              },
+              explanation: '"What" questions find symptoms. "How" questions trace processes. "Why" questions dig to root causes.',
+              points: 25
+            },
+            {
+              type: 'quiz',
+              id: 'sl-quiz-apply-deeper',
+              question: 'A friend says "I\'m always tired." Most people would say "get more sleep." What is a deeper question you could ask?',
+              options: [
+                '"How many hours do you sleep?"',
+                '"Why do you stay up late?"',
+                '"What keeps you awake when you\'re trying to sleep?"',
+                '"Why do you think sleep isn\'t restful for you?"'
+              ],
+              correct: 3,
+              explanation: 'The deepest question gets past hours and timing and asks why the sleep itself is not restoring them.',
+              points: 15
+            },
+            {
+              type: 'drag-drop',
+              id: 'sl-dd-solutions-match',
+              instruction: 'Match each solution type to the level of understanding it represents:',
+              items: [
+                { id: 's1', text: '"Just work harder"' },
+                { id: 's2', text: '"Let\'s fix the underlying process"' },
+                { id: 's3', text: '"We need to address the root cause"' },
+                { id: 's4', text: '"Try this quick fix"' }
+              ],
+              zones: [
+                { id: 'shallow', label: '🏊 Surface-Level Solutions', correct: ['s1', 's4'] },
+                { id: 'deep', label: '🤿 Root-Level Solutions', correct: ['s2', 's3'] }
+              ],
+              explanation: 'Surface solutions address symptoms and often fail. Root solutions address causes and create lasting change.',
+              points: 20
+            }
+          ]
+        });
+        story3Application.init();
+
+        // Story 3: Six Levels Deep - Synthesis
+        const story3Synthesis = new ActivityCarousel('story3-synthesis', {
+          type: 'synthesis',
+          sectionId: 'six-levels',
+          title: 'Think Deeper',
+          activities: [
+            {
+              type: 'scenario',
+              id: 'sl-scenario-procrastination',
+              scenario: 'Your friend says: "I keep procrastinating on important tasks. I\'ve tried to-do lists, timers, and apps, but nothing works." These are all surface-level solutions.',
+              question: 'Apply the 6 Levels Deep framework. What "why" questions would you ask to dig toward the root cause?',
+              evaluation: {
+                keywords: ['why', 'feel', 'fear', 'perfectionism', 'anxiety', 'overwhelm', 'avoid', 'emotion', 'past', 'experience', 'underlying'],
+                minWords: 40,
+                pointsPerKeyword: 3,
+                depthBonus: 12
+              },
+              modelAnswer: 'Possible questions: "Why do you procrastinate on these specific tasks?" "Why do those tasks feel harder than others?" "Why does starting feel difficult?" "What are you afraid might happen?" Often procrastination roots in fear of failure, perfectionism, or past negative experiences - not laziness.',
+              points: 25
+            },
+            {
+              type: 'prediction',
+              id: 'sl-predict-surface-solution',
+              setup: {
+                type: 'text',
+                content: 'A bakery notices customer traffic is low. They respond with a surface-level solution: more flyers in the neighborhood. Meanwhile, the root cause is that people still cannot find them online.'
+              },
+              question: 'What will happen to customer traffic after 3 months of more flyers?',
+              correctAnswer: 'same',
+              acceptableVariants: ['low', 'unchanged', 'no change', 'still low', 'worse', 'temporary', 'no difference'],
+              explanation: 'Surface solutions create temporary bumps but do not address root causes. The bakery still has the same visibility problem if the online presence stays weak.',
+              commonMistakes: {
+                'improve': 'Flyers are nice, but they do not fix the real issue if customers still cannot find the business online.',
+                'high': 'Surface fixes rarely create lasting change when the root problem is visibility and access.'
+              },
+              points: 15
+            },
+            {
+              type: 'reflection',
+              id: 'sl-reflect-personal',
+              prompt: 'Think of a recurring problem in your own life - something that keeps happening despite your attempts to fix it. Try asking yourself "why" at least 3 levels deep. What root cause might you discover?',
+              thinkingPrompts: [
+                'What problem keeps recurring for you?',
+                'What have you tried that hasn\'t worked?',
+                'What might be the deeper cause you haven\'t addressed?'
+              ],
+              evaluation: {
+                minWords: 60,
+                depthIndicators: [
+                  { pattern: 'I (keep|always|often|repeatedly)', label: 'Pattern recognition', points: 5 },
+                  { pattern: '(tried|attempted|used to)', label: 'Past attempts', points: 4 },
+                  { pattern: '(why|because|root|deeper)', label: 'Causal thinking', points: 5 },
+                  { pattern: '(realize|discover|understand|see)', label: 'Insight emergence', points: 5 },
+                  { pattern: '(feel|afraid|avoid|emotion)', label: 'Emotional awareness', points: 4 }
+                ],
+                maxScore: 23
+              },
+              points: 25
+            },
+            {
+              type: 'scenario',
+              id: 'sl-scenario-city-traffic',
+              scenario: 'A city has terrible traffic. The surface-level solution everyone proposes is "build more roads." But every time they build more roads, traffic eventually gets worse again.',
+              question: 'Apply the 6 Levels framework. What deeper questions might reveal why more roads don\'t solve traffic?',
+              evaluation: {
+                keywords: ['why', 'driving', 'public transit', 'housing', 'sprawl', 'jobs', 'remote', 'induced demand', 'behavior', 'choice', 'incentive'],
+                minWords: 40,
+                pointsPerKeyword: 3,
+                depthBonus: 12
+              },
+              modelAnswer: 'Deeper questions: "Why do so many people need to drive?" "Why is public transit not an option?" "Why do people live so far from work?" "Why are jobs concentrated in one area?" Root causes might include urban sprawl, lack of public transit investment, or zoning laws - not insufficient road capacity.',
+              points: 25
+            },
+            {
+              type: 'prediction',
+              id: 'sl-predict-two-people',
+              setup: {
+                type: 'text',
+                content: 'Two people want to lose weight. Person A asks "How do I lose weight?" and gets the answer "Eat less, exercise more." Person B asks "Why do I overeat?" and discovers they stress-eat due to work anxiety.'
+              },
+              question: 'Who is more likely to succeed long-term? Why?',
+              correctAnswer: 'Person B',
+              acceptableVariants: ['B', 'the second person', 'second', 'root cause person', 'why person'],
+              explanation: 'Person B addressed the root cause (stress-eating from anxiety). Person A will fight symptoms forever without addressing why they overeat. Surface solutions require constant willpower; root solutions create lasting change.',
+              commonMistakes: {
+                'A': 'Person A knows WHAT to do but not WHY they struggle. Without addressing root causes, most diets fail.',
+                'both': 'They will have very different outcomes. Root cause awareness is a significant predictor of behavior change success.'
+              },
+              points: 15
+            },
+            {
+              type: 'graph-builder',
+              id: 'sl-graph-root-cause',
+              instruction: 'Build a "6 Levels Deep" diagram for a problem you care about. Show how asking "why" at each level reveals deeper causes.',
+              nodeTypes: [
+                { type: 'problem', label: '🔴 Visible Problem', color: '#ef5350' },
+                { type: 'why1', label: '1️⃣ Why? (Level 1)', color: '#ff7043' },
+                { type: 'why2', label: '2️⃣ Why? (Level 2)', color: '#ffa726' },
+                { type: 'why3', label: '3️⃣ Why? (Level 3)', color: '#ffca28' },
+                { type: 'root', label: '🌱 Root Cause', color: '#66bb6a' },
+                { type: 'solution', label: '💡 Real Solution', color: '#42a5f5' }
+              ],
+              validation: {
+                requiredNodes: ['problem', 'root'],
+                requiredEdges: [
+                  { from: 'problem', to: 'why1' }
+                ],
+                optionalNodes: ['why1', 'why2', 'why3', 'solution'],
+                minNodes: 3,
+                maxNodes: 7
+              },
+              hints: [
+                'Start with a problem you actually care about',
+                'Each level should answer "why" the previous level exists',
+                'The root cause is where real solutions become possible'
+              ],
+              points: 30
+            }
+          ]
+        });
+        story3Synthesis.init();
+
+        console.log('🎮 Week 0 activity carousels initialized!');
+      });
+    </script>
+  </body>
+</html>

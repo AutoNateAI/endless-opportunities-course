@@ -1,0 +1,386 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My Progress | Endless Opportunities</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../shared/css/dashboard.css">
+  <style>
+    .dashboard { display: none !important; }
+    .dashboard.ready { display: flex !important; }
+    .auth-loading { position: fixed; inset: 0; display: flex; align-items: center; justify-content: center; background: var(--bg-primary); z-index: 9999; }
+    .auth-loading.hidden { display: none; }
+    .loading-spinner { width: 40px; height: 40px; border: 3px solid rgba(121, 134, 203, 0.25); border-top-color: var(--accent-primary); border-radius: 50%; margin: 0 auto 1rem; animation: spin 0.8s linear infinite; }
+    @keyframes spin { to { transform: rotate(360deg); } }
+
+    .progress-layout {
+      display: grid;
+      gap: var(--space-lg);
+    }
+    .hero-panel,
+    .analytics-card {
+      background: var(--bg-card);
+      border: 1px solid rgba(255,255,255,0.06);
+      border-radius: var(--radius-lg);
+      padding: 1.35rem;
+    }
+    .hero-panel {
+      background:
+        linear-gradient(120deg, rgba(77, 182, 172, 0.12), rgba(121, 134, 203, 0.1)),
+        var(--bg-card);
+    }
+    .hero-panel h2,
+    .analytics-card h2 {
+      font-family: var(--font-display);
+      margin-bottom: 0.6rem;
+    }
+    .hero-panel p { color: var(--text-secondary); max-width: 62ch; }
+    .progress-columns {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: var(--space-lg);
+    }
+    .metric-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+      gap: var(--space-md);
+    }
+    .metric-tile {
+      padding: 1rem;
+      border-radius: 14px;
+      background: rgba(255,255,255,0.03);
+      border: 1px solid rgba(255,255,255,0.04);
+    }
+    .metric-tile__value {
+      font-family: var(--font-display);
+      font-size: 1.7rem;
+    }
+    .metric-tile__label {
+      color: var(--text-muted);
+      font-size: 0.82rem;
+      margin-top: 0.3rem;
+    }
+    .bar-list {
+      display: grid;
+      gap: 0.8rem;
+    }
+    .bar-item {
+      display: grid;
+      gap: 0.35rem;
+    }
+    .bar-item__head {
+      display: flex;
+      justify-content: space-between;
+      gap: 1rem;
+      font-size: 0.9rem;
+    }
+    .bar-item__track {
+      height: 9px;
+      border-radius: 999px;
+      overflow: hidden;
+      background: rgba(255,255,255,0.06);
+    }
+    .bar-item__fill {
+      height: 100%;
+      border-radius: 999px;
+      background: linear-gradient(90deg, var(--accent-primary), var(--accent-secondary));
+    }
+    .timeline-list {
+      display: grid;
+      gap: 0.75rem;
+    }
+    .timeline-item {
+      padding: 0.95rem 1rem;
+      border-radius: 14px;
+      background: rgba(255,255,255,0.03);
+      border: 1px solid rgba(255,255,255,0.04);
+    }
+    .timeline-item__meta {
+      color: var(--text-secondary);
+      font-size: 0.83rem;
+      margin-top: 0.3rem;
+    }
+    .empty-state {
+      color: var(--text-secondary);
+      padding: 1rem;
+      border-radius: 14px;
+      background: rgba(255,255,255,0.03);
+      border: 1px dashed rgba(255,255,255,0.1);
+    }
+    @media (max-width: 980px) {
+      .progress-columns { grid-template-columns: 1fr; }
+    }
+  </style>
+  <script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-app-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-auth-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-firestore-compat.js"></script>
+</head>
+<body>
+  <div class="auth-loading" id="auth-loading">
+    <div style="text-align:center;">
+      <div class="loading-spinner"></div>
+      <p>Loading progress details...</p>
+    </div>
+  </div>
+
+  <div class="dashboard" id="dashboard-content">
+    <aside class="sidebar" id="sidebar">
+      <a href="../course/endless-opportunities.html" class="sidebar-logo">
+        <div class="logo-icon">🚀</div>
+        <span class="logo-text">Endless Opportunities</span>
+      </a>
+      <nav class="sidebar-nav">
+        <div class="nav-section">
+          <span class="nav-section-title">Student</span>
+          <ul class="nav-list">
+            <li class="nav-item">
+              <a href="course.html?id=endless-opportunities" class="nav-link">
+                <span class="nav-icon">🏠</span>
+                <span class="nav-text">Dashboard</span>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a href="progress.html?id=endless-opportunities" class="nav-link active">
+                <span class="nav-icon">📈</span>
+                <span class="nav-text">My Progress</span>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a href="../course/endless-opportunities.html" class="nav-link">
+                <span class="nav-icon">🧭</span>
+                <span class="nav-text">Course Home</span>
+              </a>
+            </li>
+          </ul>
+        </div>
+        <div class="nav-section">
+          <span class="nav-section-title">Account</span>
+          <ul class="nav-list">
+            <li class="nav-item">
+              <a href="#" class="nav-link" id="logout-link">
+                <span class="nav-icon">🚪</span>
+                <span class="nav-text">Sign Out</span>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+      <div class="sidebar-user">
+        <div class="user-card">
+          <div class="user-avatar" id="user-avatar">?</div>
+          <div class="user-info">
+            <div class="user-name" id="user-name">Loading...</div>
+            <div class="user-streak" id="user-streak">Building your timeline</div>
+          </div>
+        </div>
+      </div>
+      <button class="sidebar-toggle" id="sidebar-toggle" type="button">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <polyline points="15 18 9 12 15 6"></polyline>
+        </svg>
+      </button>
+    </aside>
+    <div class="sidebar-overlay" id="sidebar-overlay"></div>
+
+    <main class="main-content">
+      <header class="main-header">
+        <div class="header-left">
+          <button class="mobile-menu-btn" id="mobile-menu-btn">☰</button>
+          <h1 class="page-title">My Progress</h1>
+        </div>
+      </header>
+
+      <div class="content-area progress-layout">
+        <section class="hero-panel">
+          <h2 id="hero-title">Detailed progress view</h2>
+          <p id="hero-copy">Your EO analytics are computed from lesson progress and activity attempts, then surfaced here for student reflection.</p>
+        </section>
+
+        <section class="metric-grid" id="metric-grid"></section>
+
+        <section class="progress-columns">
+          <article class="analytics-card">
+            <h2>Strength areas</h2>
+            <div class="bar-list" id="strength-list"></div>
+          </article>
+
+          <article class="analytics-card">
+            <h2>Growth areas</h2>
+            <div class="bar-list" id="growth-list"></div>
+          </article>
+        </section>
+
+        <section class="progress-columns">
+          <article class="analytics-card">
+            <h2>Engagement patterns</h2>
+            <div class="metric-grid" id="engagement-grid"></div>
+          </article>
+
+          <article class="analytics-card">
+            <h2>Recent timeline</h2>
+            <div class="timeline-list" id="timeline-list"></div>
+          </article>
+        </section>
+      </div>
+    </main>
+  </div>
+
+  <script src="../shared/js/firebase-config.js"></script>
+  <script src="../shared/js/auth.js"></script>
+  <script src="../shared/js/route-guard.js"></script>
+  <script src="../shared/js/data-service.js"></script>
+  <script src="../shared/js/user-analytics-service.js"></script>
+  <script>
+    const COURSE_ID = 'endless-opportunities';
+
+    function setupSidebar() {
+      const sidebar = document.getElementById('sidebar');
+      const overlay = document.getElementById('sidebar-overlay');
+      document.getElementById('mobile-menu-btn')?.addEventListener('click', () => sidebar.classList.toggle('open'));
+      document.getElementById('sidebar-toggle')?.addEventListener('click', () => sidebar.classList.toggle('collapsed'));
+      overlay?.addEventListener('click', () => sidebar.classList.remove('open'));
+    }
+
+    function formatTimestamp(value) {
+      const date = value?.toDate?.()
+        || (value?._seconds ? new Date(value._seconds * 1000) : null)
+        || (value ? new Date(value) : null);
+      if (!date) return 'No timestamp';
+      return date.toLocaleString(undefined, { month: 'short', day: 'numeric' });
+    }
+
+    function renderBarList(targetId, items, emptyText) {
+      const container = document.getElementById(targetId);
+      if (!items?.length) {
+        container.innerHTML = `<div class="empty-state">${emptyText}</div>`;
+        return;
+      }
+
+      container.innerHTML = items.map((item) => {
+        const score = Math.round((item.score || 0) * 100);
+        return `
+          <div class="bar-item">
+            <div class="bar-item__head">
+              <span>${item.displayTitle || window.UserAnalyticsService.formatTopic(item.topic)}</span>
+              <span>${score}%</span>
+            </div>
+            <div class="bar-item__track">
+              <div class="bar-item__fill" style="width:${score}%"></div>
+            </div>
+          </div>
+        `;
+      }).join('');
+    }
+
+    document.addEventListener('DOMContentLoaded', async () => {
+      setupSidebar();
+
+      if (window.FirebaseApp) {
+        window.FirebaseApp.init();
+      }
+
+      await window.AuthService.init();
+      const user = await window.AuthService.waitForAuthState();
+
+      if (!user) {
+        window.AuthService.setRedirectUrl(window.location.href);
+        window.location.href = '../auth/login.html';
+        return;
+      }
+
+      await window.AuthService.ensureDefaultCourseAccess(user);
+
+      const snapshot = await window.UserAnalyticsService.getStudentSnapshot(user.uid, COURSE_ID, { recentLimit: 8 });
+      const { analytics, insights, courseProgress } = snapshot;
+
+      document.getElementById('user-name').textContent = user.displayName || user.email || 'Student';
+      document.getElementById('user-avatar').textContent = (user.displayName || user.email || 'S').trim().charAt(0).toUpperCase();
+      document.getElementById('user-streak').textContent = analytics?.engagementPatterns?.currentStreak
+        ? `🔥 ${analytics.engagementPatterns.currentStreak}-day streak`
+        : 'No active streak yet';
+
+      const completedLessons = window.DataService.getCompletedLessonsCount(courseProgress, COURSE_ID);
+      const totalLessons = window.DataService.getLessonsStructure(COURSE_ID).totalLessons;
+      const recalculatedProgressPercent = totalLessons ? Math.round((completedLessons / totalLessons) * 100) : 0;
+      const progressPercent = Math.max(courseProgress?.progressPercent || 0, recalculatedProgressPercent);
+      const accuracy = analytics?.persistenceMetrics?.overallAccuracy ? Math.round(analytics.persistenceMetrics.overallAccuracy * 100) : 0;
+      const avgScore = analytics?.summaryStats?.averageScore ? Math.round(analytics.summaryStats.averageScore * 100) : 0;
+      const retryRate = analytics?.persistenceMetrics?.retryAfterFailure ? Math.round(analytics.persistenceMetrics.retryAfterFailure * 100) : 0;
+      const primaryGrowthTitle = insights.primaryGrowth?.title || `${window.UserAnalyticsService.formatLearningStyle(analytics?.learningStyle?.primary).icon} ${window.UserAnalyticsService.formatLearningStyle(analytics?.learningStyle?.primary).name}`;
+      const primaryGrowthCopy = insights.primaryGrowth?.description || 'These metrics are computed from lesson completions and activity attempts.';
+
+      document.getElementById('hero-title').textContent = primaryGrowthTitle;
+      document.getElementById('hero-copy').textContent = primaryGrowthCopy;
+
+      document.getElementById('metric-grid').innerHTML = `
+        <div class="metric-tile">
+          <div class="metric-tile__value">${progressPercent}%</div>
+          <div class="metric-tile__label">Course completion</div>
+        </div>
+        <div class="metric-tile">
+          <div class="metric-tile__value">${completedLessons} / ${totalLessons}</div>
+          <div class="metric-tile__label">Weeks complete</div>
+        </div>
+        <div class="metric-tile">
+          <div class="metric-tile__value">${accuracy}%</div>
+          <div class="metric-tile__label">Accuracy</div>
+        </div>
+        <div class="metric-tile">
+          <div class="metric-tile__value">${avgScore}%</div>
+          <div class="metric-tile__label">Average score</div>
+        </div>
+      `;
+
+      renderBarList('strength-list', insights.strengths, 'Finish more EO activities to reveal your strongest topics.');
+      renderBarList('growth-list', insights.growthAreas, 'No clear growth areas yet. More activity will sharpen the signal.');
+
+      document.getElementById('engagement-grid').innerHTML = `
+        <div class="metric-tile">
+          <div class="metric-tile__value">${analytics?.engagementPatterns?.currentStreak || 0}</div>
+          <div class="metric-tile__label">Current streak</div>
+        </div>
+        <div class="metric-tile">
+          <div class="metric-tile__value">${analytics?.engagementPatterns?.streakRecord || 0}</div>
+          <div class="metric-tile__label">Best streak</div>
+        </div>
+        <div class="metric-tile">
+          <div class="metric-tile__value">${analytics?.engagementPatterns?.avgSessionLength || 0}m</div>
+          <div class="metric-tile__label">Average session</div>
+        </div>
+        <div class="metric-tile">
+          <div class="metric-tile__value">${analytics?.summaryStats?.activitiesCompleted || 0}</div>
+          <div class="metric-tile__label">Activities completed</div>
+        </div>
+        <div class="metric-tile">
+          <div class="metric-tile__value">${retryRate}%</div>
+          <div class="metric-tile__label">Retry after failure</div>
+        </div>
+      `;
+
+      const timeline = document.getElementById('timeline-list');
+      if (!snapshot.recentActivity.length) {
+        timeline.innerHTML = '<div class="empty-state">No recent attempts yet. Once you work through a lesson, your timeline will show up here.</div>';
+      } else {
+        timeline.innerHTML = snapshot.recentActivity.map((attempt) => `
+          <div class="timeline-item">
+            <div>${attempt.correct ? '✅' : '📝'} ${attempt.activityLabel}</div>
+            <div class="timeline-item__meta">${attempt.lessonName} · ${attempt.cognitiveLabel}${attempt.carouselLabel ? ` · ${attempt.carouselLabel}` : ''} · ${formatTimestamp(attempt.createdAt || attempt.completedAt)}</div>
+          </div>
+        `).join('');
+      }
+
+      document.getElementById('logout-link').addEventListener('click', async (event) => {
+        event.preventDefault();
+        await window.AuthService.logout();
+        window.location.href = '../course/endless-opportunities.html';
+      });
+
+      document.getElementById('auth-loading').classList.add('hidden');
+      document.getElementById('dashboard-content').classList.add('ready');
+    });
+  </script>
+</body>
+</html>

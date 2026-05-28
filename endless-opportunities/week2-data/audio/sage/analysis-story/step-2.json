@@ -1,0 +1,250 @@
+{
+  "storyId": "analysis-story",
+  "stepId": "step-2",
+  "voice": "sage",
+  "voiceLabel": "Sage Story Guide",
+  "text": "Nia looks for the tension points. A place markets itself as a calm workspace, but students say they cannot hear themselves think. Another boasts free Wi-Fi, but reviews keep mentioning dropped connections. Those contradictions matter because they reveal where the offer breaks. Weak promises create useful openings.",
+  "duration": 22.75,
+  "words": [
+    {
+      "word": "Nia",
+      "start": 0,
+      "end": 0.4399999976158142
+    },
+    {
+      "word": "looks",
+      "start": 0.4399999976158142,
+      "end": 0.800000011920929
+    },
+    {
+      "word": "for",
+      "start": 0.800000011920929,
+      "end": 1.0199999809265137
+    },
+    {
+      "word": "the",
+      "start": 1.0199999809265137,
+      "end": 1.2000000476837158
+    },
+    {
+      "word": "tension",
+      "start": 1.2000000476837158,
+      "end": 1.5800000429153442
+    },
+    {
+      "word": "points",
+      "start": 1.5800000429153442,
+      "end": 2
+    },
+    {
+      "word": "A",
+      "start": 2.859999895095825,
+      "end": 3.0999999046325684
+    },
+    {
+      "word": "place",
+      "start": 3.0999999046325684,
+      "end": 3.2799999713897705
+    },
+    {
+      "word": "markets",
+      "start": 3.2799999713897705,
+      "end": 3.740000009536743
+    },
+    {
+      "word": "itself",
+      "start": 3.740000009536743,
+      "end": 4.159999847412109
+    },
+    {
+      "word": "as",
+      "start": 4.159999847412109,
+      "end": 4.420000076293945
+    },
+    {
+      "word": "a",
+      "start": 4.420000076293945,
+      "end": 4.599999904632568
+    },
+    {
+      "word": "calm",
+      "start": 4.599999904632568,
+      "end": 4.920000076293945
+    },
+    {
+      "word": "workspace",
+      "start": 4.920000076293945,
+      "end": 5.539999961853027
+    },
+    {
+      "word": "but",
+      "start": 5.960000038146973,
+      "end": 6.239999771118164
+    },
+    {
+      "word": "students",
+      "start": 6.239999771118164,
+      "end": 6.559999942779541
+    },
+    {
+      "word": "say",
+      "start": 6.559999942779541,
+      "end": 6.920000076293945
+    },
+    {
+      "word": "they",
+      "start": 6.920000076293945,
+      "end": 7.179999828338623
+    },
+    {
+      "word": "cannot",
+      "start": 7.179999828338623,
+      "end": 7.480000019073486
+    },
+    {
+      "word": "hear",
+      "start": 7.480000019073486,
+      "end": 7.820000171661377
+    },
+    {
+      "word": "themselves",
+      "start": 7.820000171661377,
+      "end": 8.260000228881836
+    },
+    {
+      "word": "think",
+      "start": 8.260000228881836,
+      "end": 8.640000343322754
+    },
+    {
+      "word": "Another",
+      "start": 9.539999961853027,
+      "end": 9.819999694824219
+    },
+    {
+      "word": "boasts",
+      "start": 9.819999694824219,
+      "end": 10.239999771118164
+    },
+    {
+      "word": "free",
+      "start": 10.239999771118164,
+      "end": 10.65999984741211
+    },
+    {
+      "word": "Wi",
+      "start": 10.65999984741211,
+      "end": 10.899999618530273
+    },
+    {
+      "word": "Fi",
+      "start": 10.899999618530273,
+      "end": 11.0600004196167
+    },
+    {
+      "word": "but",
+      "start": 11.600000381469727,
+      "end": 11.859999656677246
+    },
+    {
+      "word": "reviews",
+      "start": 11.859999656677246,
+      "end": 12.34000015258789
+    },
+    {
+      "word": "keep",
+      "start": 12.34000015258789,
+      "end": 12.819999694824219
+    },
+    {
+      "word": "mentioning",
+      "start": 12.819999694824219,
+      "end": 13.239999771118164
+    },
+    {
+      "word": "dropped",
+      "start": 13.239999771118164,
+      "end": 13.680000305175781
+    },
+    {
+      "word": "connections",
+      "start": 13.680000305175781,
+      "end": 14.319999694824219
+    },
+    {
+      "word": "Those",
+      "start": 15.15999984741211,
+      "end": 15.4399995803833
+    },
+    {
+      "word": "contradictions",
+      "start": 15.4399995803833,
+      "end": 16.079999923706055
+    },
+    {
+      "word": "matter",
+      "start": 16.079999923706055,
+      "end": 16.559999465942383
+    },
+    {
+      "word": "because",
+      "start": 16.559999465942383,
+      "end": 17.260000228881836
+    },
+    {
+      "word": "they",
+      "start": 17.260000228881836,
+      "end": 17.579999923706055
+    },
+    {
+      "word": "reveal",
+      "start": 17.579999923706055,
+      "end": 17.979999542236328
+    },
+    {
+      "word": "where",
+      "start": 17.979999542236328,
+      "end": 18.219999313354492
+    },
+    {
+      "word": "the",
+      "start": 18.219999313354492,
+      "end": 18.399999618530273
+    },
+    {
+      "word": "offer",
+      "start": 18.399999618530273,
+      "end": 18.780000686645508
+    },
+    {
+      "word": "breaks",
+      "start": 18.780000686645508,
+      "end": 19.18000030517578
+    },
+    {
+      "word": "Weak",
+      "start": 20.18000030517578,
+      "end": 20.34000015258789
+    },
+    {
+      "word": "promises",
+      "start": 20.34000015258789,
+      "end": 20.81999969482422
+    },
+    {
+      "word": "create",
+      "start": 20.81999969482422,
+      "end": 21.3799991607666
+    },
+    {
+      "word": "useful",
+      "start": 21.3799991607666,
+      "end": 21.899999618530273
+    },
+    {
+      "word": "openings",
+      "start": 21.899999618530273,
+      "end": 22.360000610351562
+    }
+  ]
+}

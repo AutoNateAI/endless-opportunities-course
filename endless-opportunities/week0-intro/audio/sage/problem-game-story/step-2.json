@@ -1,0 +1,160 @@
+{
+  "storyId": "problem-game-story",
+  "stepId": "step-2",
+  "voice": "sage",
+  "voiceLabel": "Sage Story Guide",
+  "text": "AJ sees the simple version first. Somebody's hungry? That's a problem. Make them food, problem solved. Small reward, but real value created. Nia calls it proof that useful work compounds.",
+  "duration": 17.25,
+  "words": [
+    {
+      "word": "AJ",
+      "start": 0,
+      "end": 0.6600000262260437
+    },
+    {
+      "word": "sees",
+      "start": 0.6600000262260437,
+      "end": 1.159999966621399
+    },
+    {
+      "word": "the",
+      "start": 1.159999966621399,
+      "end": 1.4800000190734863
+    },
+    {
+      "word": "simple",
+      "start": 1.4800000190734863,
+      "end": 1.8200000524520874
+    },
+    {
+      "word": "version",
+      "start": 1.8200000524520874,
+      "end": 2.2200000286102295
+    },
+    {
+      "word": "first",
+      "start": 2.2200000286102295,
+      "end": 2.859999895095825
+    },
+    {
+      "word": "Somebody's",
+      "start": 3.5999999046325684,
+      "end": 4.320000171661377
+    },
+    {
+      "word": "hungry",
+      "start": 4.320000171661377,
+      "end": 4.320000171661377
+    },
+    {
+      "word": "That's",
+      "start": 4.900000095367432,
+      "end": 5.119999885559082
+    },
+    {
+      "word": "a",
+      "start": 5.119999885559082,
+      "end": 5.639999866485596
+    },
+    {
+      "word": "problem",
+      "start": 5.639999866485596,
+      "end": 5.639999866485596
+    },
+    {
+      "word": "Make",
+      "start": 6.420000076293945,
+      "end": 6.5
+    },
+    {
+      "word": "them",
+      "start": 6.5,
+      "end": 6.840000152587891
+    },
+    {
+      "word": "food",
+      "start": 6.840000152587891,
+      "end": 7.199999809265137
+    },
+    {
+      "word": "problem",
+      "start": 7.539999961853027,
+      "end": 7.940000057220459
+    },
+    {
+      "word": "solved",
+      "start": 7.940000057220459,
+      "end": 8.399999618530273
+    },
+    {
+      "word": "Small",
+      "start": 9.199999809265137,
+      "end": 9.380000114440918
+    },
+    {
+      "word": "reward",
+      "start": 9.380000114440918,
+      "end": 9.899999618530273
+    },
+    {
+      "word": "but",
+      "start": 10.319999694824219,
+      "end": 10.640000343322754
+    },
+    {
+      "word": "real",
+      "start": 10.640000343322754,
+      "end": 11
+    },
+    {
+      "word": "value",
+      "start": 11,
+      "end": 11.399999618530273
+    },
+    {
+      "word": "created",
+      "start": 11.399999618530273,
+      "end": 11.979999542236328
+    },
+    {
+      "word": "Nia",
+      "start": 12.979999542236328,
+      "end": 12.979999542236328
+    },
+    {
+      "word": "calls",
+      "start": 12.979999542236328,
+      "end": 13.359999656677246
+    },
+    {
+      "word": "it",
+      "start": 13.359999656677246,
+      "end": 13.699999809265137
+    },
+    {
+      "word": "proof",
+      "start": 13.699999809265137,
+      "end": 13.979999542236328
+    },
+    {
+      "word": "that",
+      "start": 13.979999542236328,
+      "end": 14.579999923706055
+    },
+    {
+      "word": "useful",
+      "start": 14.579999923706055,
+      "end": 15
+    },
+    {
+      "word": "work",
+      "start": 15,
+      "end": 15.479999542236328
+    },
+    {
+      "word": "compounds",
+      "start": 15.479999542236328,
+      "end": 16.139999389648438
+    }
+  ]
+}

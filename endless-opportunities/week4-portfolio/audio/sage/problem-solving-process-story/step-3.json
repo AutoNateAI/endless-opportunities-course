@@ -1,0 +1,175 @@
+{
+  "storyId": "problem-solving-process-story",
+  "stepId": "step-3",
+  "voice": "sage",
+  "voiceLabel": "Sage Story Guide",
+  "text": "AJ and Malik turn the messy building process into a clean story: first prompt, rough prototype, broken version, feedback, and stronger revision. Now the audience can see the workflow instead of imagining magic.",
+  "duration": 17.15999984741211,
+  "words": [
+    {
+      "word": "Ajay",
+      "start": 0,
+      "end": 0.6800000071525574
+    },
+    {
+      "word": "and",
+      "start": 0.6800000071525574,
+      "end": 1.0800000429153442
+    },
+    {
+      "word": "Malik",
+      "start": 1.0800000429153442,
+      "end": 1.4800000190734863
+    },
+    {
+      "word": "turned",
+      "start": 1.4800000190734863,
+      "end": 2.180000066757202
+    },
+    {
+      "word": "the",
+      "start": 2.180000066757202,
+      "end": 2.5199999809265137
+    },
+    {
+      "word": "messy",
+      "start": 2.5199999809265137,
+      "end": 2.880000114440918
+    },
+    {
+      "word": "building",
+      "start": 2.880000114440918,
+      "end": 3.319999933242798
+    },
+    {
+      "word": "process",
+      "start": 3.319999933242798,
+      "end": 3.9200000762939453
+    },
+    {
+      "word": "into",
+      "start": 3.9200000762939453,
+      "end": 4.28000020980835
+    },
+    {
+      "word": "a",
+      "start": 4.28000020980835,
+      "end": 4.679999828338623
+    },
+    {
+      "word": "clean",
+      "start": 4.679999828338623,
+      "end": 5
+    },
+    {
+      "word": "story",
+      "start": 5,
+      "end": 5.639999866485596
+    },
+    {
+      "word": "First",
+      "start": 6.519999980926514,
+      "end": 6.539999961853027
+    },
+    {
+      "word": "prompt",
+      "start": 6.539999961853027,
+      "end": 6.940000057220459
+    },
+    {
+      "word": "rough",
+      "start": 7.519999980926514,
+      "end": 7.71999979019165
+    },
+    {
+      "word": "prototype",
+      "start": 7.71999979019165,
+      "end": 8.279999732971191
+    },
+    {
+      "word": "broken",
+      "start": 8.760000228881836,
+      "end": 9.119999885559082
+    },
+    {
+      "word": "version",
+      "start": 9.119999885559082,
+      "end": 9.520000457763672
+    },
+    {
+      "word": "feedback",
+      "start": 10.479999542236328,
+      "end": 10.479999542236328
+    },
+    {
+      "word": "and",
+      "start": 10.880000114440918,
+      "end": 11.239999771118164
+    },
+    {
+      "word": "stronger",
+      "start": 11.239999771118164,
+      "end": 11.579999923706055
+    },
+    {
+      "word": "revision",
+      "start": 11.579999923706055,
+      "end": 12.039999961853027
+    },
+    {
+      "word": "Now",
+      "start": 12.779999732971191,
+      "end": 12.9399995803833
+    },
+    {
+      "word": "the",
+      "start": 12.9399995803833,
+      "end": 13.34000015258789
+    },
+    {
+      "word": "audience",
+      "start": 13.34000015258789,
+      "end": 13.5600004196167
+    },
+    {
+      "word": "can",
+      "start": 13.5600004196167,
+      "end": 13.880000114440918
+    },
+    {
+      "word": "see",
+      "start": 13.880000114440918,
+      "end": 14.260000228881836
+    },
+    {
+      "word": "the",
+      "start": 14.260000228881836,
+      "end": 14.619999885559082
+    },
+    {
+      "word": "workflow",
+      "start": 14.619999885559082,
+      "end": 14.899999618530273
+    },
+    {
+      "word": "instead",
+      "start": 14.899999618530273,
+      "end": 15.539999961853027
+    },
+    {
+      "word": "of",
+      "start": 15.539999961853027,
+      "end": 16.31999969482422
+    },
+    {
+      "word": "imagining",
+      "start": 16.31999969482422,
+      "end": 16.31999969482422
+    },
+    {
+      "word": "magic",
+      "start": 16.31999969482422,
+      "end": 16.81999969482422
+    }
+  ]
+}

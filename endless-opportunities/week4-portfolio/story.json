@@ -1,0 +1,265 @@
+{
+  "pageId": "week4-portfolio",
+  "courseId": "endless-opportunities",
+  "chapterMeta": {
+    "title": "Problem Solver Portfolio",
+    "icon": "🏆",
+    "themeColor": "capstone"
+  },
+  "stories": [
+    {
+      "id": "problem-solving-process-story",
+      "diagramId": "problem-solving-process",
+      "title": "Choose the Story Worth Presenting",
+      "steps": [
+        {
+          "nodeId": "real-problem",
+          "icon": "🎯",
+          "title": "Pick the Real Problem",
+          "narration": "AJ starts the final week by choosing one problem that still feels real in his chest, not just one that sounds impressive on a slide. He wants the presentation to begin with a lived frustration people can recognize right away.",
+          "connectsTo": null
+        },
+        {
+          "nodeId": "honest-framing",
+          "edges": [{ "from": "real-problem", "to": "honest-framing" }],
+          "icon": "🧭",
+          "title": "Frame It Honestly",
+          "narration": "Nia cuts out every exaggerated claim and rewrites the setup so the crew names the actual user, the actual pain point, and the actual limit of what their solution can do. If the explanation is honest, the audience can trust the rest.",
+          "connectsTo": "Pick the Real Problem"
+        },
+        {
+          "nodeId": "proof-trail",
+          "edges": [{ "from": "honest-framing", "to": "proof-trail" }],
+          "icon": "📊",
+          "title": "Show the Proof Trail",
+          "narration": "Malik lays out the evidence trail: the questions they asked, the comments and examples they collected, and the pattern that kept showing up. The point is not to drown people in data. The point is to show that the build came from proof, not guessing.",
+          "connectsTo": "Frame It Honestly"
+        },
+        {
+          "nodeId": "workflow",
+          "edges": [{ "from": "proof-trail", "to": "workflow" }],
+          "icon": "🛠️",
+          "title": "Walk Through the Build",
+          "narration": "AJ and Malik turn the messy building process into a clean story: first prompt, rough prototype, broken version, feedback, and stronger revision. Now the audience can see the workflow instead of imagining magic.",
+          "connectsTo": "Show the Proof Trail"
+        },
+        {
+          "nodeId": "presentation-arc",
+          "edges": [{ "from": "workflow", "to": "presentation-arc" }],
+          "icon": "🎤",
+          "title": "Shape the Presentation Arc",
+          "narration": "With the facts in place, the crew shapes the final talk into one clear arc: here is the problem, here is what we learned, here is what we built, and here is why it matters. Week 4 is not about sounding polished. It is about making the learning visible.",
+          "connectsTo": "Walk Through the Build"
+        }
+      ]
+    },
+    {
+      "id": "capstone-journey-story",
+      "diagramId": "capstone-journey",
+      "title": "Test and Sharpen the Capstone",
+      "steps": [
+        {
+          "nodeId": "hook",
+          "icon": "🎬",
+          "title": "Open With the Hook",
+          "narration": "AJ practices opening with the exact moment the problem became impossible to ignore. That hook matters because it reminds the audience that the capstone began in real life, not in a random assignment prompt.",
+          "connectsTo": null
+        },
+        {
+          "nodeId": "claim-check",
+          "edges": [{ "from": "hook", "to": "claim-check" }],
+          "icon": "🔎",
+          "title": "Stress-Test Every Claim",
+          "narration": "Nia listens like a tough editor. Every time the crew says always, everyone, or best, she stops them and asks for proof. If they cannot defend a claim with evidence from the project, it does not make the final version.",
+          "connectsTo": "Open With the Hook"
+        },
+        {
+          "nodeId": "demo-readiness",
+          "edges": [{ "from": "claim-check", "to": "demo-readiness" }],
+          "icon": "💻",
+          "title": "Make the Demo Safe",
+          "narration": "Malik gets the live demo ready by checking the flow, saving screenshots, and preparing a backup path in case the internet acts strange. A strong presentation is not only about confidence. It is about planning for reality.",
+          "connectsTo": "Stress-Test Every Claim"
+        },
+        {
+          "nodeId": "practice-feedback",
+          "edges": [{ "from": "demo-readiness", "to": "practice-feedback" }],
+          "icon": "🗣️",
+          "title": "Practice in Front of People",
+          "narration": "The crew runs the talk for a small practice audience and listens for the moment people lean in, get confused, or ask follow-up questions. That reaction becomes feedback they can actually use before the final presentation.",
+          "connectsTo": "Make the Demo Safe"
+        },
+        {
+          "nodeId": "revision",
+          "edges": [{ "from": "practice-feedback", "to": "revision" }],
+          "icon": "✨",
+          "title": "Revise for Clarity",
+          "narration": "AJ tightens the hook, Nia cleans the logic, and Malik sharpens the demo sequence. The final version is stronger because they tested it in public first. That is the Week 4 move: test, sharpen, present.",
+          "connectsTo": "Practice in Front of People"
+        }
+      ]
+    },
+    {
+      "id": "portfolio-celebration-story",
+      "diagramId": "portfolio-celebration",
+      "title": "Present the Portfolio With Proof",
+      "steps": [
+        {
+          "nodeId": "portfolio-proof",
+          "icon": "📁",
+          "title": "Lead With Evidence of Learning",
+          "narration": "When the portfolio comes together, Malik makes sure it leads with evidence: the problem statement, the research trail, the build decisions, and the finished capstone. The portfolio is not decoration. It is proof that the crew can solve real problems.",
+          "connectsTo": null
+        },
+        {
+          "nodeId": "confident-story",
+          "edges": [{ "from": "portfolio-proof", "to": "confident-story" }],
+          "icon": "🎙️",
+          "title": "Tell the Story With Confidence",
+          "narration": "AJ presents without apologizing for what is unfinished. He focuses on what the crew learned, what the tool does right now, and why the problem was worth solving. Confidence here means ownership, not pretending the work is perfect.",
+          "connectsTo": "Lead With Evidence of Learning"
+        },
+        {
+          "nodeId": "honest-answers",
+          "edges": [{ "from": "confident-story", "to": "honest-answers" }],
+          "icon": "💬",
+          "title": "Answer Questions Honestly",
+          "narration": "Nia handles tough questions by staying grounded. If the answer is known, she gives it plainly. If the answer is not known yet, she says what the crew would test next. Honest answers make the presentation stronger than fake certainty ever could.",
+          "connectsTo": "Tell the Story With Confidence"
+        },
+        {
+          "nodeId": "show-workflow",
+          "edges": [{ "from": "honest-answers", "to": "show-workflow" }],
+          "icon": "🧰",
+          "title": "Show the Workflow",
+          "narration": "Malik opens the repo, the prompts, and the working demo to show the actual workflow behind the final product. The audience gets to see that this crew does not just talk about ideas. They can document, build, and iterate in public.",
+          "connectsTo": "Answer Questions Honestly"
+        },
+        {
+          "nodeId": "problem-solvers",
+          "edges": [{ "from": "show-workflow", "to": "problem-solvers" }],
+          "icon": "🚀",
+          "title": "Leave as Problem Solvers",
+          "narration": "By the end, AJ, Nia, and Malik are not framed as kids who completed a course. They are framed as problem solvers who can notice a need, investigate it, build a response, and explain their thinking. That is the real graduation moment.",
+          "connectsTo": "Show the Workflow"
+        }
+      ]
+    }
+  ],
+  "quizzes": [
+    {
+      "storyId": "problem-solving-process-story",
+      "questions": [
+        {
+          "question": "Why does AJ start the presentation with a real problem instead of the most impressive-sounding one?",
+          "options": [
+            "Real problems are easier to explain and defend with evidence",
+            "Impressive problems are usually too easy",
+            "Teachers only like personal examples",
+            "Real problems require less research"
+          ],
+          "correct": 0,
+          "explanation": "A real problem gives the crew a concrete opening and stronger evidence. The audience can feel that the project came from lived experience rather than hype."
+        },
+        {
+          "question": "What is Nia protecting when she removes exaggerated claims from the presentation?",
+          "options": [
+            "The runtime of the slideshow",
+            "The technical depth of the repo",
+            "The audience's trust in the story",
+            "AJ's confidence on stage"
+          ],
+          "correct": 2,
+          "explanation": "Honest framing makes the rest of the project credible. If the opening claims are shaky, the audience doubts everything else."
+        },
+        {
+          "question": "Why does Malik show the proof trail instead of every piece of research the crew collected?",
+          "options": [
+            "Because the audience only cares about the final tool",
+            "Because a selective evidence trail shows how the build came from proof rather than guessing",
+            "Because the crew forgot most of their research",
+            "Because screenshots are easier than data"
+          ],
+          "correct": 1,
+          "explanation": "The goal is to show the logic of the project, not flood people with raw data. The evidence trail shows how the team moved from problem to build."
+        }
+      ]
+    },
+    {
+      "storyId": "capstone-journey-story",
+      "questions": [
+        {
+          "question": "What does Nia do when the crew uses big claims like 'everyone' or 'best' during practice?",
+          "options": [
+            "She leaves them in to make the project sound stronger",
+            "She replaces them with proof-backed language or cuts them",
+            "She turns them into jokes",
+            "She moves them to the end of the talk"
+          ],
+          "correct": 1,
+          "explanation": "Week 4 is about sharpening the story. Claims that cannot be defended with project evidence do not survive rehearsal."
+        },
+        {
+          "question": "Why does Malik prepare screenshots and a backup path for the demo?",
+          "options": [
+            "Because the final product is unfinished",
+            "Because planning for real conditions is part of a strong presentation",
+            "Because screenshots are more interesting than live demos",
+            "Because audiences prefer static slides"
+          ],
+          "correct": 1,
+          "explanation": "A good presentation accounts for reality. Backup materials protect the story if live conditions go sideways."
+        },
+        {
+          "question": "What is the value of practicing in front of a small audience before the final presentation?",
+          "options": [
+            "It guarantees everyone will like the capstone",
+            "It creates usable feedback about confusion, interest, and pacing",
+            "It makes the final presentation unnecessary",
+            "It replaces testing the actual tool"
+          ],
+          "correct": 1,
+          "explanation": "Practice reveals where people lean in or get lost. That reaction helps the crew sharpen the final talk."
+        }
+      ]
+    },
+    {
+      "storyId": "portfolio-celebration-story",
+      "questions": [
+        {
+          "question": "What should the portfolio lead with in Week 4?",
+          "options": [
+            "Decorative screenshots and polished colors",
+            "Evidence of learning, problem framing, and build decisions",
+            "A long biography of the presenter",
+            "Every file in the repository"
+          ],
+          "correct": 1,
+          "explanation": "The portfolio is proof, not decoration. It should show how the crew thought, researched, built, and learned."
+        },
+        {
+          "question": "What makes Nia's approach to tough audience questions strong?",
+          "options": [
+            "She answers every question with total certainty",
+            "She keeps answers honest and points to the next test when the crew does not know yet",
+            "She avoids questions that sound critical",
+            "She turns questions back on the audience"
+          ],
+          "correct": 1,
+          "explanation": "Honest answers build trust. Saying what you know and what you would test next is stronger than fake certainty."
+        },
+        {
+          "question": "Why does Malik show the repo and workflow during the portfolio presentation?",
+          "options": [
+            "To prove the crew can document, build, and iterate in public",
+            "To make the presentation longer",
+            "To hide weaknesses in the demo",
+            "To avoid explaining the problem"
+          ],
+          "correct": 0,
+          "explanation": "Showing the workflow makes the learning visible. It proves the team can move from idea to documented build process."
+        }
+      ]
+    }
+  ]
+}
